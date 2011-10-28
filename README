@@ -3,6 +3,8 @@ ConvML
 
 Znacznikowy język opisu konfiguracji przenośników taśmowych.
 
+Wersja: 1.1 (rozwojowa)
+
 
 Pliki i katalogi w repozytorium
 -------------------------------
@@ -20,28 +22,28 @@ Pliki i katalogi w repozytorium
 Przyjęte konwencje
 ------------------
 
-# Wersjonowanie
+### Wersjonowanie
 
 Od wersji 1.1 pliki ze schemą nazywane są convml_WERSJABEZKROPKI.xsd. Numery
 wersji zakończone liczbą nieparzystą oznaczają wersje rozwojowe, a zakończone
 liczbą parzystą wersje stabilne.
 
-# Nazwy elementów i atrybutów
+### Nazwy elementów i atrybutów
 
 Nazwy elementów zapisywane są za pomocą tzw. *Camel Case* oraz pierwszy znak jest
 zapisywany wielką literą. Nazwy atrybutów zapisywane są również przy użyciu
 *Camel Case* ale zaczynają się małą literą.
 
-# XSD
+### XSD
 
-Schemę zorganizowano według wzorca projektowego "Ventian Blind" opisanego na
-stronie http://www.xfront.com/GlobalVersusLocal.html. Wyjątkiem jest jedynie
-element *Meta* gdzie świadomie zrezygnowano z tego wzorca.
+Schemę zorganizowano według wzorca projektowego "Venetian Blind" opisanego na
+stronie [xFront](http://www.xfront.com/GlobalVersusLocal.html). Wyjątkiem jest
+jedynie element *Meta* gdzie świadomie zrezygnowano z tego wzorca.
 
 Grupy atrybutów mają dodany do nazwy dodany sufiks *AttrGroup*. Do nazwy typów
 dodawany jest sufiks *Type*.
 
-# Referencje
+### Referencje
 
 Wewnątrz instancji dokumentu mogą być utrzymywane relacje pomiędzy elementami
 które nie znajdują się w bezpośrednim sąsiedztwie.
@@ -66,7 +68,7 @@ ten język. Są to pliki:
 
 Plik są zgodne z formatem *Java properties*.
 
-Uwaga: pliki te najlepiej edytować dedykowanym edytorem ponieważ są one kodowane
+Uwaga!: pliki te najlepiej edytować dedykowanym edytorem ponieważ są one kodowane
 za pomocą ISO-8859-1. Znaki UNICODE są zapisywane za pomocą sekwencji \uHHHH,
 gdzie HHHH to hexadecymalny kod znaku UNICODE. Edytor programu NetBeans ukrywa
 ten szczegół przed użytkownikiem co znacznie ułatwia pracę.
@@ -75,7 +77,7 @@ ten szczegół przed użytkownikiem co znacznie ułatwia pracę.
 XSLT
 ----
 
-W katalogu xslt znajduje się szablon transformacji convml_update_10to12.xslt
+W katalogu xslt znajduje się szablon transformacji convml_update_10to12.xslt,
 który służy do transformacji dokumentów ConvML 1.0 do ConvML 1.2.
 
 
