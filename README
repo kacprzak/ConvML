@@ -13,7 +13,7 @@ Pliki i katalogi w repozytorium
 * convml_11_template.xml - minimalny szablon dla wersji ConvML 1.2.
 
 * docs - opisowa dokumentacja języka ConvML.
-* xslt - szablony transforamacji w języku XSLT.
+* xslt - szablony transformacji w języku XSLT.
 * translations - tłumaczenia elementów i atrybutów.
 
 
@@ -22,20 +22,20 @@ Przyjęte konwencje
 
 # Wersjonowanie
 
-Od wersji 1.1 pliki zw schemą nazywane są convml_WERSJABEZKROPKI.xsd. Numery
-wesji zakończone liczbą nieparzystą oznaczają wersje rozwojowe, a zakończone
+Od wersji 1.1 pliki ze schemą nazywane są convml_WERSJABEZKROPKI.xsd. Numery
+wersji zakończone liczbą nieparzystą oznaczają wersje rozwojowe, a zakończone
 liczbą parzystą wersje stabilne.
 
-# Nazwy elemetów i atrybutów
+# Nazwy elementów i atrybutów
 
-Nazwy elemetów zapisywane są za pomocą tzw. CamelCase oraz pierwszy znak jest
-zapisywany wielką literą. Nazwy atrybutów zapiswane są również przy użyciu
-camelCase ale zaczynają się małą literą.
+Nazwy elementów zapisywane są za pomocą tzw. *Camel Case* oraz pierwszy znak jest
+zapisywany wielką literą. Nazwy atrybutów zapisywane są również przy użyciu
+*Camel Case* ale zaczynają się małą literą.
 
 # XSD
 
 Schemę zorganizowano według wzorca projektowego "Ventian Blind" opisanego na
-stronie http://www.xfront.com/GlobalVersusLocal.html. Wyjątekiem jest jedynie
+stronie http://www.xfront.com/GlobalVersusLocal.html. Wyjątkiem jest jedynie
 element *Meta* gdzie świadomie zrezygnowano z tego wzorca.
 
 Grupy atrybutów mają dodany do nazwy dodany sufiks *AttrGroup*. Do nazwy typów
@@ -43,14 +43,14 @@ dodawany jest sufiks *Type*.
 
 # Referencje
 
-Wewnątrz instancji dokumentu mogą być utryzmywane relacje pomiędzy elementami
+Wewnątrz instancji dokumentu mogą być utrzymywane relacje pomiędzy elementami
 które nie znajdują się w bezpośrednim sąsiedztwie.
 
 Przykładowo element *Material* za pomocą atrybutu *type* może wskazywać na
 element *MaterialType*, którego wartość atrybutu *typeId* zgadza się z
 wartością atrybutu *type* elementu odwołującego się.
 
-Do zamodelowania takich powiązań wykorzystano technikę key/keyref będącą częścią
+Do modelowania takich powiązań wykorzystano technikę key/keyref będącą częścią
 standardu XML Schema.
 
 
@@ -58,7 +58,7 @@ Tłumaczenia
 -----------
 
 W katalogu translations znajdują się opisy elementów i atrybutów języka ConvML
-przeznaczone do wykorzystania w interfejsie użytkownia aplikacji wykorzystującej
+przeznaczone do wykorzystania w interfejsie użytkownika aplikacji wykorzystującej
 ten język. Są to pliki:
 
 * attribute.properties - dla atrybutów
