@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ConvML version="1.2" xsi:schemaLocation="http://www.entertech.com.pl/bcml http://www.entertech.com.pl/bcml/beltconv.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <BeltConveyor>
+    <Conditions/>
+    <Belt>
+      <BeltSegment/>
+      <BeltSplice/>
+    </Belt>
+    <Tail length="50" angle="5">
+      <Pulley y="2" diameter="2"/>
+      <Carry>
+	<Chute>
+	  <Material/>
+	</Chute>
+      </Carry>
+      <Return/>
+    </Tail>
+    <Route>
+      <RouteSection length="50">
+	<RouteSegment>
+	  <Carry/>
+	  <Return/>
+	</RouteSegment>
+      </RouteSection>
+    </Route>
+    <Head length="50" angle="5">
+      <Pulley y="2" x="50" diameter="2">
+	<DriveUnit>
+	  <Motor/>
+	  <Coupling/>
+	  <Gearbox/>
+	  <ElectricalEquipment/>
+	</DriveUnit>
+      </Pulley>
+      <Carry/>
+      <Return/>
+    </Head>
+    <ConvElectricalEquipment>
+      <ControlSystem/>
+      <EmergencySystem/>
+      <SignalSystem/>
+      <FireSystem/>
+    </ConvElectricalEquipment>
+  </BeltConveyor>
+</ConvML>

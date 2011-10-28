@@ -1,0 +1,81 @@
+ConvML
+======
+
+Znacznikowy język opisu konfiguracji przenośników taśmowych.
+
+
+Pliki i katalogi w repozytorium
+-------------------------------
+
+* beltconv.xsd - wersja 1.0 ConvML'a (stabilna).
+* convml_10_template.xml - najprostszy plik w ConvML'a 1.0 (minimalny szablon).
+* convml_11.xsd - wersja 1.2 ConvML'a (developerska).
+* convml_11_template.xml - minimalny szablon dla wersji ConvML 1.2.
+
+* docs - opisowa dokumentacja języka ConvML.
+* xslt - szablony transforamacji w języku XSLT.
+* translations - tłumaczenia elementów i atrybutów.
+
+
+Przyjęte konwencje
+------------------
+
+# Wersjonowanie
+
+Od wersji 1.1 pliki zw schemą nazywane są convml_WERSJABEZKROPKI.xsd. Numery
+wesji zakończone liczbą nieparzystą oznaczają wersje rozwojowe, a zakończone
+liczbą parzystą wersje stabilne.
+
+# Nazwy elemetów i atrybutów
+
+Nazwy elemetów zapisywane są za pomocą tzw. CamelCase oraz pierwszy znak jest
+zapisywany wielką literą. Nazwy atrybutów zapiswane są również przy użyciu
+camelCase ale zaczynają się małą literą.
+
+# XSD
+
+Schemę zorganizowano według wzorca projektowego "Ventian Blind" opisanego na
+stronie http://www.xfront.com/GlobalVersusLocal.html. Wyjątekiem jest jedynie
+element *Meta* gdzie świadomie zrezygnowano z tego wzorca.
+
+Grupy atrybutów mają dodany do nazwy dodany sufiks *AttrGroup*. Do nazwy typów
+dodawany jest sufiks *Type*.
+
+# Referencje
+
+Wewnątrz instancji dokumentu mogą być utryzmywane relacje pomiędzy elementami
+które nie znajdują się w bezpośrednim sąsiedztwie.
+
+Przykładowo element *Material* za pomocą atrybutu *type* może wskazywać na
+element *MaterialType*, którego wartość atrybutu *typeId* zgadza się z
+wartością atrybutu *type* elementu odwołującego się.
+
+Do zamodelowania takich powiązań wykorzystano technikę key/keyref będącą częścią
+standardu XML Schema.
+
+
+Tłumaczenia
+-----------
+
+W katalogu translations znajdują się opisy elementów i atrybutów języka ConvML
+przeznaczone do wykorzystania w interfejsie użytkownia aplikacji wykorzystującej
+ten język. Są to pliki:
+
+* attribute.properties - dla atrybutów
+* element.properties - dla elementów
+
+Plik są zgodne z formatem *Java properties*.
+
+Uwaga: pliki te najlepiej edytować dedykowanym edytorem ponieważ są one kodowane
+za pomocą ISO-8859-1. Znaki UNICODE są zapisywane za pomocą sekwencji \uHHHH,
+gdzie HHHH to hexadecymalny kod znaku UNICODE. Edytor programu NetBeans ukrywa
+ten szczegół przed użytkownikiem co znacznie ułatwia pracę.
+
+
+XSLT
+----
+
+W katalogu xslt znajduje się szablon transformacji convml_update_10to12.xslt
+który służy do transformacji dokumentów ConvML 1.0 do ConvML 1.2.
+
+
