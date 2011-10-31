@@ -1,0 +1,26 @@
+task :default => :pdf
+
+file "convml.pdf" => ["convml.tex"] do
+  sh "pdflatex convml.tex"
+end
+
+task :html do
+     sh "plastex convml.tex"
+     sh <<CMD
+for f in convml/images/*.png
+do
+  convert -verbose -resize '600X600>' $f $f
+done
+CMD
+end
+
+task :deploy => [:html, "convml.pdf"] do
+  target = "entertech@entertech.com.pl:~/public_html"
+  source = "convml"
+
+  sh "cp convml.pdf convml/"
+
+  sh <<CMD
+scp -r #{source} #{target}
+CMD
+end
