@@ -14,18 +14,23 @@
 \frenchspacing                                  % Odstępy międzyzdaniowe
 
 \title{ConvML 1.2}
-\author{Marcin Kacprzak \and Piotr Kulinowski}
+\author{Marcin Kacprzak\\ marcin.kacprzak@entertech.com.pl\\
+  \and Piotr Kulinowski\\ piotr.kulinowski@entertech.com.pl}
 \date{\today}
 
 \begin{document}
 
 \maketitle
+
+\begin{abstract}
+Ten dokument zawiera opis funkcji i składni języka ConvML.  ConvML jest językiem
+do zapisu strukturalnego modelu przenośnika taśmowego w formacie XML [XML10].
+\end{abstract}
+
 \tableofcontents
 
-\section{Wstęp}
-Ten dokument zawiera opis funkcji i składni języka ConvML.  ConvML jest językiem
-do zapisu strukturalnego modelu przenośnika taśmowego w XML'u[XML10].
 
+\section{Wstęp}
 Potrzeba opracowania modelu strukturalnego przenośnika taśmowego wynikła z
 informatycznej konieczności wprowadzenia procedury zapisu pełnej informacji o
 urządzeniu, która jednoznacznie i spójnie opisywałaby parametry
@@ -49,25 +54,26 @@ utraty przejrzystości struktury.  Każdy z elementów posiada grupę atrybutów
 opisujących jego cechy, mogące być zarówno parametrami technicznymi jak i
 ekonomicznymi.
 
+
 \section{Konwencje}
 Nazwa ConvML pochodzi od Conveyor Meta Language.  Typowy dokument ConvML ma
 postać pliku tekstowego o rozszerzeniu xml lub convml.  Zalecane kodowanie to
 UTF-8.
 
 Dokument ConvML do zapisu informacji o strykturze przenośnika wykorzystuje
-elementy, a do zapisu właściwości używane są atrybuty języka XML.  Elementy w
-języku ConvML mogą zawierać inne elementy oraz atrybuty, nie używa się natomiast
-tekstu zawartego pomiędzy znacznikami do zapisu informacji o przenośniku
-taśmowym.
+\emph{elementy}, a do zapisu właściwości używane są \emph{atrybuty} języka XML.
+Elementy w języku ConvML mogą zawierać inne elementy oraz atrybuty, nie używa
+się natomiast tekstu zawartego pomiędzy znacznikami do zapisu informacji o
+przenośniku taśmowym.
 
 Elementy języka ConvML należą do przestrzeni nazw:
 http://www.entertech.com.pl/bcml.
 
-\section{Struktura dokumentu: element ConvML}
 
-Głównym elementem dokumentu jest element ConvML. Podelementy Meta oraz Types są
+\section{Struktura dokumentu}
+Głównym elementem dokumentu jest ConvML.  Podelementy Meta oraz Types są
 opcjonalne. Element BeltConveyor musi wystąpić co najmniej raz aby dokument był
-poprawny. Przykładowa instancja dokumentu może mieć następującą postać:
+poprawny.  Przykładowa instancja dokumentu może mieć następującą postać:
 
 \begin{verbatim}
 <?xml version="1.0" encoding="utf-8"?>
@@ -78,7 +84,8 @@ poprawny. Przykładowa instancja dokumentu może mieć następującą postać:
 </ConvML>
 \end{verbatim}  
 
-\subsection{ConvML}
+
+\subsection{Element główny <ConvML>}
 
 \begin{figure}[h]
   \centering
@@ -91,5 +98,19 @@ poprawny. Przykładowa instancja dokumentu może mieć następującą postać:
 \begin{description}
 \item[version] zastosowana w dokumencie wersja języka ConvML.
 \end{description}
+
+
+\subsection{Przenośnik taśmowy <BeltConveyor>}
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.6\textwidth]{png/przenosnik_xsd}
+  \caption{Definicja elementu BeltConveyor}
+  \label{fig:przenosnik-xsd}
+\end{figure}
+
+
+\subsection{Warunki pracy <Conditions>}
+
 
 \end{document}
