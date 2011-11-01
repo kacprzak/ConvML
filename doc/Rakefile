@@ -1,4 +1,4 @@
-task :default => :pdf
+task :default => "convml.pdf"
 
 file "convml.pdf" => ["convml.tex"] do
   sh "pdflatex convml.tex"
@@ -9,7 +9,7 @@ task :html do
      sh <<CMD
 for f in convml/images/*.png
 do
-  convert -verbose -resize '600X600>' $f $f
+  convert -verbose -resize '700X700>' $f $f
 done
 CMD
 end
@@ -19,8 +19,13 @@ task :deploy => [:html, "convml.pdf"] do
   source = "convml"
 
   sh "cp convml.pdf convml/"
-
   sh <<CMD
 scp -r #{source} #{target}
 CMD
+end
+
+task :clean do
+  sh "rm *.toc *.aux *.paux *.out *.log"
+  sh "rm convml.pdf"
+  sh "rm -R convml"
 end

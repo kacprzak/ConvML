@@ -4,8 +4,8 @@
 \usepackage[utf8]{inputenc}                     % Kodowanie dokumentu
 \usepackage[T1]{fontenc}                        % Kodowanie fontów
 %\usepackage{lmodern}
-\usepackage{times}
-\usepackage[cm]{fullpage}                       % Cała strona
+\usepackage{times}                              % Font wektorowy
+\usepackage[cm]{fullpage}                       % Cała szerokość strony
 \usepackage[pdftex,bookmarks,colorlinks]{hyperref} % Linki w dokumencie PDF
 \usepackage{indentfirst}                        % Wcięcia akapitów
 \usepackage{graphicx}                           % Grafika w png, jpeg, gif
@@ -23,10 +23,8 @@
 \tableofcontents
 
 \section{Wstęp}
-Ten dokument zawiera opis opsi fukcji i składni języka ConvML.
-
-ConvML jest językiem do zapisu strukturalnego modelu przenośnika taśmowego w
-XML'u[XML10].
+Ten dokument zawiera opis funkcji i składni języka ConvML.  ConvML jest językiem
+do zapisu strukturalnego modelu przenośnika taśmowego w XML'u[XML10].
 
 Potrzeba opracowania modelu strukturalnego przenośnika taśmowego wynikła z
 informatycznej konieczności wprowadzenia procedury zapisu pełnej informacji o
@@ -36,10 +34,10 @@ uniwersalność zapisu i chęć popularyzacji modelu strukturalnego wprowadzono
 anglojęzyczne nazewnictwo poszczególnych podzespołów.
 
 \begin{figure}
-\centering
-\includegraphics[width=\textwidth]{png/przenosnik}
-\caption{Podstawowe podzespoły przenosnika taśmowego}
-\label{fig:przenosnik}
+  \centering
+  \includegraphics[width=\textwidth]{png/przenosnik}
+  \caption{Podstawowe podzespoły przenośnika taśmowego}
+  \label{fig:przenosnik}
 \end{figure}
 
 Do opracowania systemu zapisu modelu strukturalnego przenośnika taśmowego
@@ -53,12 +51,12 @@ ekonomicznymi.
 
 \section{Konwencje}
 Nazwa ConvML pochodzi od Conveyor Meta Language.  Typowy dokument ConvML ma
-postać pliku tekstoweg o rozszerzeniu xml lub convml.  Zalecane kodowanie to
+postać pliku tekstowego o rozszerzeniu xml lub convml.  Zalecane kodowanie to
 UTF-8.
 
 Dokument ConvML do zapisu informacji o strykturze przenośnika wykorzystuje
 elementy, a do zapisu właściwości używane są atrybuty języka XML.  Elementy w
-języku ConvML mogą zawierać inne elemety oraz atrybuty, nie używa się natomiast
+języku ConvML mogą zawierać inne elementy oraz atrybuty, nie używa się natomiast
 tekstu zawartego pomiędzy znacznikami do zapisu informacji o przenośniku
 taśmowym.
 
@@ -67,10 +65,9 @@ http://www.entertech.com.pl/bcml.
 
 \section{Struktura dokumentu: element ConvML}
 
-Głównym (Root) elementem dokumentu jest element ConvML. Podelemety Meta oraz
-Types są opcjonalne. Element BeltConveyor musi wysąpić co najmniej raz aby
-dokument był poprawny. Przykładowa instancja dokumentu może mieć następującą
-postać:
+Głównym elementem dokumentu jest element ConvML. Podelementy Meta oraz Types są
+opcjonalne. Element BeltConveyor musi wystąpić co najmniej raz aby dokument był
+poprawny. Przykładowa instancja dokumentu może mieć następującą postać:
 
 \begin{verbatim}
 <?xml version="1.0" encoding="utf-8"?>
@@ -84,10 +81,10 @@ postać:
 \subsection{ConvML}
 
 \begin{figure}[h]
-\centering
-\includegraphics[width=0.6\textwidth]{png/convml_xsd2}
-\caption{Definicja elementu ConvML}
-\label{fig:convml-xsd}
+  \centering
+  \includegraphics[width=0.6\textwidth]{png/convml_xsd2}
+  \caption{Definicja elementu ConvML}
+  \label{fig:convml-xsd}
 \end{figure}
 
 \paragraph{Definicje atrybutów:}
