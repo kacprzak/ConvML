@@ -167,4 +167,110 @@ taśmowego.
 \item[amountWorkingHours] Ilość godzin pracy przenośnika w ciągu roku [h].
 \end{description}
 
+
+\subsection{Taśma <Belt>}
+Taśma jest podstawowym elementem przenośnika. Taśma zamontowana na przenośniku
+taśmowym jest najczęściej listą odcinków taśmy połączonym złączami.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.6\textwidth]{png/tasma}
+  \caption{Taśma przenośnikowa w uproszczeniu}
+  \label{fig:belt-xsd}
+\end{figure}
+
+Element Belt jest jedynie elementem grupującym i nie ma swojej fizycznej
+reprezentacji w konstrukcji przenosnika taśmowego. Element ten definiuje
+strukturę, zgodnie z którą taśma przenosnikowa jest listą naprzemiennie
+występujących elementów BeltSegment oraz BeltSplice, gdzie połorzenie tych
+elementów w dokumencie odzwierciedla połorzenie odcinków i złącz w rzeczywistej
+taśmie zamontowanej na przenośniku. Pierwsze złącze na liście łączy ze sobą
+odcinek następujący bezpośrednio po nim oraz ostatni odcinek na liście, w ten
+sposób domykając pętlę.
+
+\begin{verbatim}
+<Belt>
+  <BeltSplice id="1" />
+  <BeltSegment id="2" />
+  <BeltSplice id="3" />
+  <BeltSegment id="4" />
+  <BeltSplice id="5" />
+  <BeltSegment id="6" />
+</Belt>
+\end{verbatim}
+
+W powyższym listingu odcinek taśmy 6 jest połączony złączem 5 z odcinkiem taśmy
+4 oraz złączem 1 z odcinkiem taśmy 2. W naprostszym przypadku może być jedno
+złącze i jeden odcinek.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.6\textwidth]{png/belt_xsd2}
+  \caption{Definicja elementu Belt}
+  \label{fig:belt-xsd}
+\end{figure}
+
+\paragraph{Definicje atrybutów:}
+\begin{description}
+\item[width] Szerokość taśmy - B [mm].
+\end{description}
+
+\subsubsection{Odcinek taśmy <BeltSegment>}
+Element BeltSegment odzwierciedla fizycznie zamontowany na przenośniku odcinek
+taśmy.  Atrybuty z grupy \emph{beltSegmentAttrGroup} mogą występować
+bezpośrednio w elemencie BeltSegment lub elemencie BeltSegmentType do ktorego
+można się odwoływać z elementu Belt segment za pomocą atrybutu
+\emph{type}. Cechą tej grupy atrybutów jest to, że mogą opisywać zarówno
+instancję jak i typ odcinka taśmy. Atrybuty length oraz cetificate mogą
+występować tylko w elemencie BeltSegment.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.6\textwidth]{png/belt_segment_xsd2}
+  \caption{Definicja elementu BeltSegment}
+  \label{fig:belt-segment-xsd}
+\end{figure}
+
+\paragraph{Definicje atrybutów:}
+\begin{description}
+\item[width] Szerokość odcinka taśmy [mm]
+\item[strength] Nominalna wytrzymałość taśmy [kN/m]
+\item[mass] Masa taśmy [kg/m]
+\item[thickness] Grubość taśmy [mm]
+\item[topCoverThickness] Grubość okładki górnej (nośnej) [mm]
+\item[bottomCoverThickness] Grubość okładki dolnej (bieżnej) [mm]
+\item[carcassThickness] Grubość rdzenia taśmy [mm]
+\item[carcassType] Typ rdzenia taśmy (tkaninowa, z linkami stalowymi)
+\item[carcassCode] Współczynnik rodzaju materiału rdzenia
+\item[elasticityModulus] Moduł sprężystości taśmy - E [kN/m]
+\item[pliesNumber] Liczba przekładek lub linek
+\item[cableDiameter] Średnica linki [mm]
+\item[coverDescription] Oznaczenie okładek
+\item[coversDensity] Gęstość mieszanki okładkowej [kg/mm*m$^2$]
+\item[length] Długość odcinka [m]
+\item[certificate] Numer atestu
+\end{description}
+
+\subsubsection{Złącze <BeltSplice>}
+Złącze w języku ConvML odnosi się do sąsiednich elementów na liście potomków
+elementu Belt. W poprawnym dokumentcie będą to zawsze elementy BeltSegment
+reprezentujące odcinki taśmy. Złącze w przeciwieństwie do odcinka nie posiada
+parametru długości i jest rozpatrywane jako miejsce (punkt) wykonania połączenia.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.6\textwidth]{png/belt_splice_xsd2}
+  \caption{Definicja elementu BeltSplice}
+  \label{fig:belt-splice-xsd}
+\end{figure}
+
+W przypadku złącza, standardowy atrybut \emph{productionDate} należy tłumaczyć
+jako datę wykonania złącza.
+
+\paragraph{Definicje atrybutów:}
+\begin{description}
+\item[spliceStrength] Wytrzymałość połączenia [\%]
+\item[spliceType] Rodzaj zlącza np: wulkanizowane, mechaniczne, klejone, inne.
+\end{description}
+
 \end{document}

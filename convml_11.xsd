@@ -352,7 +352,7 @@ Id: $Id$
       <xs:element ref="BeltSplice" />
       <xs:element ref="BeltSegment" />
     </xs:sequence>
-    <xs:attributeGroup ref="instanceAttrGroup" />
+    <!-- xs:attributeGroup ref="instanceAttrGroup" / -->
     <xs:attribute name="width" type="xs:nonNegativeInteger">
       <xs:annotation>
         <xs:documentation>Szerokość taśmy - B [mm]</xs:documentation>
@@ -406,11 +406,6 @@ Id: $Id$
   <xs:element name="BELT_SEGMENT" substitutionGroup="BeltSegment" type="beltSegmentType" />
   <!-- * -->
   <xs:attributeGroup name="beltSegmentAttrGroup">
-    <xs:attribute name="length" type="nonNegativeDecimalType">
-      <xs:annotation>
-        <xs:documentation>Długość odcinka [m]</xs:documentation>
-      </xs:annotation>
-    </xs:attribute>
     <xs:attribute name="width" type="xs:nonNegativeInteger">
       <xs:annotation>
         <xs:documentation>Szerokość odcinka taśmy [mm]</xs:documentation>
@@ -419,11 +414,6 @@ Id: $Id$
     <xs:attribute name="strength" type="nonNegativeDecimalType">
       <xs:annotation>
         <xs:documentation>Nominalna wytrzymałość taśmy [kN/m]</xs:documentation>
-      </xs:annotation>
-    </xs:attribute>
-    <xs:attribute name="certificate" type="xs:string">
-      <xs:annotation>
-        <xs:documentation>Numer atestu</xs:documentation>
       </xs:annotation>
     </xs:attribute>
     <xs:attribute name="mass" type="nonNegativeDecimalType">
@@ -494,6 +484,16 @@ Id: $Id$
     </xs:annotation>
     <xs:attributeGroup ref="instanceAttrGroup" />
     <xs:attributeGroup ref="beltSegmentAttrGroup" />
+    <xs:attribute name="length" type="nonNegativeDecimalType">
+      <xs:annotation>
+        <xs:documentation>Długość odcinka [m]</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="certificate" type="xs:string">
+      <xs:annotation>
+        <xs:documentation>Numer atestu</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
   </xs:complexType>
   <!-- **************************************************************************************
     *                                        BELT SPLICE                                    *
@@ -510,6 +510,11 @@ Id: $Id$
     <xs:attribute name="spliceStrength" type="nonNegativeDecimalType">
       <xs:annotation>
         <xs:documentation>Wytrzymałość połączenia [%]</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="spliceType" type="xs:string">
+      <xs:annotation>
+        <xs:documentation>Rodzaj zlącza np: wulkanizowane, mechaniczne, klejone, inne.</xs:documentation>
       </xs:annotation>
     </xs:attribute>
   </xs:attributeGroup>
