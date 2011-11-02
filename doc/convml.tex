@@ -180,10 +180,10 @@ taśmowym jest najczęściej listą odcinków taśmy połączonym złączami.
 \end{figure}
 
 Element Belt jest jedynie elementem grupującym i nie ma swojej fizycznej
-reprezentacji w konstrukcji przenosnika taśmowego. Element ten definiuje
-strukturę, zgodnie z którą taśma przenosnikowa jest listą naprzemiennie
-występujących elementów BeltSegment oraz BeltSplice, gdzie połorzenie tych
-elementów w dokumencie odzwierciedla połorzenie odcinków i złącz w rzeczywistej
+reprezentacji w konstrukcji przenośnika taśmowego. Element ten definiuje
+strukturę, zgodnie z którą taśma przenośnikowa jest listą naprzemiennie
+występujących elementów BeltSegment oraz BeltSplice, gdzie położenie tych
+elementów w dokumencie odzwierciedla położenie odcinków i złącz w rzeczywistej
 taśmie zamontowanej na przenośniku. Pierwsze złącze na liście łączy ze sobą
 odcinek następujący bezpośrednio po nim oraz ostatni odcinek na liście, w ten
 sposób domykając pętlę.
@@ -200,7 +200,7 @@ sposób domykając pętlę.
 \end{verbatim}
 
 W powyższym listingu odcinek taśmy 6 jest połączony złączem 5 z odcinkiem taśmy
-4 oraz złączem 1 z odcinkiem taśmy 2. W naprostszym przypadku może być jedno
+4 oraz złączem 1 z odcinkiem taśmy 2. W najprostszym przypadku może być jedno
 złącze i jeden odcinek.
 
 \begin{figure}[h]
@@ -218,7 +218,7 @@ złącze i jeden odcinek.
 \subsubsection{Odcinek taśmy <BeltSegment>}
 Element BeltSegment odzwierciedla fizycznie zamontowany na przenośniku odcinek
 taśmy.  Atrybuty z grupy \emph{beltSegmentAttrGroup} mogą występować
-bezpośrednio w elemencie BeltSegment lub elemencie BeltSegmentType do ktorego
+bezpośrednio w elemencie BeltSegment lub elemencie BeltSegmentType do którego
 można się odwoływać z elementu Belt segment za pomocą atrybutu
 \emph{type}. Cechą tej grupy atrybutów jest to, że mogą opisywać zarówno
 instancję jak i typ odcinka taśmy. Atrybuty length oraz cetificate mogą
@@ -253,9 +253,10 @@ występować tylko w elemencie BeltSegment.
 
 \subsubsection{Złącze <BeltSplice>}
 Złącze w języku ConvML odnosi się do sąsiednich elementów na liście potomków
-elementu Belt. W poprawnym dokumentcie będą to zawsze elementy BeltSegment
+elementu Belt. W poprawnym dokumencie będą to zawsze elementy BeltSegment
 reprezentujące odcinki taśmy. Złącze w przeciwieństwie do odcinka nie posiada
-parametru długości i jest rozpatrywane jako miejsce (punkt) wykonania połączenia.
+parametru długości i jest rozpatrywane jako miejsce (punkt) wykonania
+połączenia.
 
 \begin{figure}[h]
   \centering
@@ -270,7 +271,7 @@ jako datę wykonania złącza.
 \paragraph{Definicje atrybutów:}
 \begin{description}
 \item[spliceStrength] Wytrzymałość połączenia [\%]
-\item[spliceType] Rodzaj zlącza np: wulkanizowane, mechaniczne, klejone, inne.
+\item[spliceType] Rodzaj złącza np: wulkanizowane, mechaniczne, klejone, inne.
 \end{description}
 
 \end{document}
