@@ -23,8 +23,11 @@
 \maketitle
 
 \begin{abstract}
-Ten dokument zawiera opis funkcji i składni języka ConvML.  ConvML jest językiem
-do zapisu strukturalnego modelu przenośnika taśmowego w formacie XML [XML10].
+  Ten dokument zawiera opis funkcji i składni języka ConvML.  ConvML jest językiem
+  do zapisu strukturalnego modelu przenośnika taśmowego w formacie XML [XML10].
+
+  Wersję PDF tego dokumentu można odnaleźć pod adresem
+  \href{http://www.entertech.com.pl/convml/convml.pdf}{entertech.com.pl/convml/convml.pdf}.
 \end{abstract}
 
 \tableofcontents
@@ -38,15 +41,8 @@ techniczno-ruchowe i konfigurację przenośnika taśmowego.  Ze względu na
 uniwersalność zapisu i chęć popularyzacji modelu strukturalnego wprowadzono
 anglojęzyczne nazewnictwo poszczególnych podzespołów.
 
-\begin{figure}
-  \centering
-  \includegraphics[width=\textwidth]{png/przenosnik}
-  \caption{Podstawowe podzespoły przenośnika taśmowego}
-  \label{fig:przenosnik}
-\end{figure}
-
 Do opracowania systemu zapisu modelu strukturalnego przenośnika taśmowego
-wykorzystano język XML Schema [?89], ułatwiający definiowanie struktury i
+wykorzystano język XML Schema [XSD10], ułatwiający definiowanie struktury i
 kolejności podzespołów przenośnika taśmowego (Tabela 4 1) oraz umożliwiający w
 łatwy sposób jego adaptację na platformie informatycznej.  Istotną cechą modelu
 strukturalnego jest praktycznie nieograniczona możliwość jego rozbudowy, bez
@@ -96,21 +92,76 @@ poprawny.  Przykładowa instancja dokumentu może mieć następującą postać:
 
 \paragraph{Definicje atrybutów:}
 \begin{description}
-\item[version] zastosowana w dokumencie wersja języka ConvML.
+\item[version] Zastosowana w dokumencie wersja języka ConvML.
 \end{description}
 
 
 \subsection{Przenośnik taśmowy <BeltConveyor>}
+Górnicze przenośniki taśmowe definiuje się jako urządzenia służące do ciągłego
+transportu na taśmie materiałów sypkich, pozyskiwanych podczas procesów
+związanych z prowadzeniem robót górniczych [Kulinowski2011].  Do zespołów
+głownych przenośnika taśmowego należą: stacja czołowa, stacja zwrotna, stacja
+napinania taśmy, taśma, trasa, zestawy krążnikowe i krążniki [Antoniak2005].
+
+\begin{figure}
+  \centering
+  \includegraphics[width=\textwidth]{png/belt_conveyor_drw}
+  \caption{Podstawowe podzespoły przenośnika taśmowego}
+  \label{fig:przenosnik}
+\end{figure}
+
+W języku ConvML podstawowy podział przenośnika taśmowego wygląda następująco:
+
+\begin{itemize}
+\item Belt -- taśma,
+\item Tail -- stacja zwrotna,
+\item Route -- trasa,
+\item Head -- stacja czołowa.
+\end{itemize}
+
+Pozostałe zespoły główne przenośnika taśmowego znajdują się głębiej w strukturze
+opisywanej przez język ConvML. System podparcia taśmy należy do elemetów
+składowych trasy. Układy napędowy i napinający są powiązane z bębnami, które
+mogą występować jako elementy składowe stacji zwrotnej, stacji czołowej lub
+trasy.
 
 \begin{figure}[h]
   \centering
-  \includegraphics[width=0.6\textwidth]{png/przenosnik_xsd}
+  \includegraphics[width=0.6\textwidth]{png/belt_conveyor_xsd2}
   \caption{Definicja elementu BeltConveyor}
-  \label{fig:przenosnik-xsd}
+  \label{fig:belt-conveyor-xsd}
 \end{figure}
 
+\paragraph{Definicje atrybutów:}
+\begin{description}
+\item[beltSpeed] Prędkość taśmy przenośnika - v [m/s].
+\item[designCapacity] Wydajność nominalna przenośnika - Q [t/h].
+\item[localization] Wyrobisko.
+\item[mine] Kopalnia.
+\item[mineArea] Rejon.
+\item[convDivision] Oddział taśmowy.
+\item[mineDivision] Obsługiwane oddziały wydobywcze.
+\item[maxCapacity] Wydajność maksymalna.
+\end{description}
 
 \subsection{Warunki pracy <Conditions>}
+Element Conditions grupuje atrybuty związane z warunkami pracy przenośnikia
+taśmowego.
 
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.6\textwidth]{png/conditions_xsd2}
+  \caption{Definicja elementu Conditions}
+  \label{fig:conditions-xsd}
+\end{figure}
+
+\paragraph{Definicje atrybutów:}
+\begin{description}
+\item[ambientTemperature] Temperatura otoczenia przenośnika - T [$^\circ$C].
+\item[workConditions] Warunki pracy przenośnika: 1 - bardzo dobre, 2 - dobre, 3 - 	przeciętne, 4 - ciężkie.
+\item[beltWorkConditions] Warunki eksploatacji taśmy: 1 - bardzo dobre, 2 - dobre, 3 - przeciętne, 4 - ciężkie.
+\item[beltSideRunning] Zbieganie boczne taśmy: 1 - brak, 2 - małe, 3 - średnie, 4 - duże.
+\item[amountWorkingHours] Ilość godzin pracy przenośnika w ciągu roku [h].
+\end{description}
 
 \end{document}

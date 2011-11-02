@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
+<!--Created with Liquid XML Studio - FREE Community Edition 7.0.2.746 (http://www.liquid-technologies.com)-->
 <xs:schema xmlns="http://www.entertech.com.pl/bcml" targetNamespace="http://www.entertech.com.pl/bcml" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:annotation>
     <xs:documentation>
@@ -171,7 +172,7 @@ Id: $Id$
     <xs:annotation>
       <xs:documentation>Warunki pracy przenośnika</xs:documentation>
     </xs:annotation>
-    <xs:attributeGroup ref="instanceAttrGroup" />
+    <!-- xs:attributeGroup ref="instanceAttrGroup" / -->
     <xs:attribute name="ambientTemperature" type="xs:decimal">
       <xs:annotation>
         <xs:documentation>Temperatura otoczenia przenośnika - T [°C]</xs:documentation>
@@ -238,37 +239,37 @@ Id: $Id$
         <xs:documentation>Nazwa materiału</xs:documentation>
       </xs:annotation>
     </xs:attribute>
-    <xs:attribute name="density" type="positiveDecimalType">
+    <xs:attribute name="density" type="nonNegativeDecimalType">
       <xs:annotation>
         <xs:documentation>Gęstość nasypowa materiału transportowanego - γ [kg/m³]</xs:documentation>
       </xs:annotation>
     </xs:attribute>
-    <xs:attribute name="surchargeAngle" type="positiveDecimalType">
+    <xs:attribute name="surchargeAngle" type="nonNegativeDecimalType">
       <xs:annotation>
         <xs:documentation>Kąt usypu materiału na taśmie - ρ [°]</xs:documentation>
       </xs:annotation>
     </xs:attribute>
-    <xs:attribute name="reposeAngle" type="positiveDecimalType">
+    <xs:attribute name="reposeAngle" type="nonNegativeDecimalType">
       <xs:annotation>
         <xs:documentation>Kąt tarcia wewnętrznego [°]</xs:documentation>
       </xs:annotation>
     </xs:attribute>
-    <xs:attribute name="lumpSizeMaximum" type="positiveDecimalType">
+    <xs:attribute name="lumpSizeMaximum" type="nonNegativeDecimalType">
       <xs:annotation>
         <xs:documentation>Maksymalny wymiar brył [mm]</xs:documentation>
       </xs:annotation>
     </xs:attribute>
-    <xs:attribute name="lumpPercTopSize" type="positiveDecimalType">
+    <xs:attribute name="lumpPercTopSize" type="nonNegativeDecimalType">
       <xs:annotation>
         <xs:documentation>Procentowy udział brył [%]</xs:documentation>
       </xs:annotation>
     </xs:attribute>
-    <xs:attribute name="materialBeltFriction" type="positiveDecimalType">
+    <xs:attribute name="materialBeltFriction" type="nonNegativeDecimalType">
       <xs:annotation>
         <xs:documentation>Współczynni tarcia urobek-taśma</xs:documentation>
       </xs:annotation>
     </xs:attribute>
-    <xs:attribute name="temperature" type="positiveDecimalType">
+    <xs:attribute name="temperature" type="nonNegativeDecimalType">
       <xs:annotation>
         <xs:documentation>Temperatura materiału [°C]</xs:documentation>
       </xs:annotation>
@@ -294,7 +295,7 @@ Id: $Id$
       <xs:element ref="ConvElectricalEquipment" />
     </xs:sequence>
     <xs:attributeGroup ref="instanceAttrGroup" />
-    <xs:attribute name="beltSpeed" type="positiveDecimalType">
+    <xs:attribute name="beltSpeed" type="nonNegativeDecimalType">
       <xs:annotation>
         <xs:documentation>Prędkość taśmy przenośnika - v [m/s]</xs:documentation>
       </xs:annotation>
@@ -405,7 +406,7 @@ Id: $Id$
   <xs:element name="BELT_SEGMENT" substitutionGroup="BeltSegment" type="beltSegmentType" />
   <!-- * -->
   <xs:attributeGroup name="beltSegmentAttrGroup">
-    <xs:attribute name="length" type="positiveDecimalType">
+    <xs:attribute name="length" type="nonNegativeDecimalType">
       <xs:annotation>
         <xs:documentation>Długość odcinka [m]</xs:documentation>
       </xs:annotation>
@@ -415,7 +416,7 @@ Id: $Id$
         <xs:documentation>Szerokość odcinka taśmy [mm]</xs:documentation>
       </xs:annotation>
     </xs:attribute>
-    <xs:attribute name="strength" type="positiveDecimalType">
+    <xs:attribute name="strength" type="nonNegativeDecimalType">
       <xs:annotation>
         <xs:documentation>Nominalna wytrzymałość taśmy [kN/m]</xs:documentation>
       </xs:annotation>
@@ -425,27 +426,27 @@ Id: $Id$
         <xs:documentation>Numer atestu</xs:documentation>
       </xs:annotation>
     </xs:attribute>
-    <xs:attribute name="mass" type="positiveDecimalType">
+    <xs:attribute name="mass" type="nonNegativeDecimalType">
       <xs:annotation>
         <xs:documentation>Masa taśmy [kg/m]</xs:documentation>
       </xs:annotation>
     </xs:attribute>
-    <xs:attribute name="thickness" type="positiveDecimalType">
+    <xs:attribute name="thickness" type="nonNegativeDecimalType">
       <xs:annotation>
         <xs:documentation>Grubość taśmy [mm]</xs:documentation>
       </xs:annotation>
     </xs:attribute>
-    <xs:attribute name="topCoverThickness" type="positiveDecimalType">
+    <xs:attribute name="topCoverThickness" type="nonNegativeDecimalType">
       <xs:annotation>
         <xs:documentation>Grubość okładki górnej (nośnej) [mm]</xs:documentation>
       </xs:annotation>
     </xs:attribute>
-    <xs:attribute name="bottomCoverThickness" type="positiveDecimalType">
+    <xs:attribute name="bottomCoverThickness" type="nonNegativeDecimalType">
       <xs:annotation>
         <xs:documentation>Grubość okładki dolnej (bieżnej) [mm]</xs:documentation>
       </xs:annotation>
     </xs:attribute>
-    <xs:attribute name="carcassThickness" type="positiveDecimalType">
+    <xs:attribute name="carcassThickness" type="nonNegativeDecimalType">
       <xs:annotation>
         <xs:documentation>Grubość rdzenia taśmy [mm]</xs:documentation>
       </xs:annotation>
@@ -460,7 +461,7 @@ Id: $Id$
         <xs:documentation>Współczynnik rodzaju materiału rdzenia</xs:documentation>
       </xs:annotation>
     </xs:attribute>
-    <xs:attribute name="elasticityModulus" type="positiveDecimalType">
+    <xs:attribute name="elasticityModulus" type="nonNegativeDecimalType">
       <xs:annotation>
         <xs:documentation>Moduł sprężystości taśmy - E [kN/m]</xs:documentation>
       </xs:annotation>
@@ -470,7 +471,7 @@ Id: $Id$
         <xs:documentation>Liczba przekładek lub linek</xs:documentation>
       </xs:annotation>
     </xs:attribute>
-    <xs:attribute name="cableDiameter" type="positiveDecimalType">
+    <xs:attribute name="cableDiameter" type="nonNegativeDecimalType">
       <xs:annotation>
         <xs:documentation>Średnica linki [mm]</xs:documentation>
       </xs:annotation>
@@ -480,7 +481,7 @@ Id: $Id$
         <xs:documentation>Oznaczenie okładek</xs:documentation>
       </xs:annotation>
     </xs:attribute>
-    <xs:attribute name="coversDensity" type="positiveDecimalType">
+    <xs:attribute name="coversDensity" type="nonNegativeDecimalType">
       <xs:annotation>
         <xs:documentation>Gęstość mieszanki okładkowej [kg/mm*m²]</xs:documentation>
       </xs:annotation>
@@ -506,7 +507,7 @@ Id: $Id$
   <!-- * -->
   <xs:element name="BELT_SPLICING" substitutionGroup="BeltSplice" type="beltSpliceType" />
   <xs:attributeGroup name="beltSpliceAttrGroup">
-    <xs:attribute name="spliceStrength" type="positiveDecimalType">
+    <xs:attribute name="spliceStrength" type="nonNegativeDecimalType">
       <xs:annotation>
         <xs:documentation>Wytrzymałość połączenia [%]</xs:documentation>
       </xs:annotation>
@@ -575,22 +576,22 @@ Id: $Id$
         <xs:documentation>Typ krążnika: 1 - z pierścieniami, 2 - gładki</xs:documentation>
       </xs:annotation>
     </xs:attribute>
-    <xs:attribute name="diameter" type="positiveDecimalType">
+    <xs:attribute name="diameter" type="nonNegativeDecimalType">
       <xs:annotation>
         <xs:documentation>Średnica krążnika [mm]</xs:documentation>
       </xs:annotation>
     </xs:attribute>
-    <xs:attribute name="length" type="positiveDecimalType">
+    <xs:attribute name="length" type="nonNegativeDecimalType">
       <xs:annotation>
         <xs:documentation>Długość płaszcza krążnika [mm]</xs:documentation>
       </xs:annotation>
     </xs:attribute>
-    <xs:attribute name="troughingAngle" type="positiveDecimalType">
+    <xs:attribute name="troughingAngle" type="nonNegativeDecimalType">
       <xs:annotation>
         <xs:documentation>Kąt nachylenia krążników bocznych - β [°]</xs:documentation>
       </xs:annotation>
     </xs:attribute>
-    <xs:attribute name="rotatingPartsMass" type="positiveDecimalType">
+    <xs:attribute name="rotatingPartsMass" type="nonNegativeDecimalType">
       <xs:annotation>
         <xs:documentation>Masa części obrotowych krążnika [kg]</xs:documentation>
       </xs:annotation>
@@ -612,32 +613,32 @@ Id: $Id$
       <xs:element ref="Material" />
     </xs:sequence>
     <xs:attributeGroup ref="instanceAttrGroup" />
-    <xs:attribute name="horizontalSpeed" type="positiveDecimalType">
+    <xs:attribute name="horizontalSpeed" type="nonNegativeDecimalType">
       <xs:annotation>
         <xs:documentation>Składowa prędkości taśmy [m/s]</xs:documentation>
       </xs:annotation>
     </xs:attribute>
-    <xs:attribute name="skirtMaterialFriction" type="positiveDecimalType">
+    <xs:attribute name="skirtMaterialFriction" type="nonNegativeDecimalType">
       <xs:annotation>
         <xs:documentation>Współczynnik tarcia pomiędzy urobkiem a ograniczeniami bocznymi</xs:documentation>
       </xs:annotation>
     </xs:attribute>
-    <xs:attribute name="skirtLength" type="positiveDecimalType">
+    <xs:attribute name="skirtLength" type="nonNegativeDecimalType">
       <xs:annotation>
         <xs:documentation>Długość ograniczeń bocznych [m]</xs:documentation>
       </xs:annotation>
     </xs:attribute>
-    <xs:attribute name="skirtWidth" type="positiveDecimalType">
+    <xs:attribute name="skirtWidth" type="nonNegativeDecimalType">
       <xs:annotation>
         <xs:documentation>Szerokość ograniczeń bocznych [m]</xs:documentation>
       </xs:annotation>
     </xs:attribute>
-    <xs:attribute name="capacity" type="positiveDecimalType">
+    <xs:attribute name="capacity" type="nonNegativeDecimalType">
       <xs:annotation>
         <xs:documentation>Wydajność punktu załadowczego [t/h]</xs:documentation>
       </xs:annotation>
     </xs:attribute>
-    <xs:attribute name="fallHeight" type="positiveDecimalType">
+    <xs:attribute name="fallHeight" type="nonNegativeDecimalType">
       <xs:annotation>
         <xs:documentation>Wysokość spadku materiału na taśmę [mm]</xs:documentation>
       </xs:annotation>
@@ -662,12 +663,12 @@ Id: $Id$
       <xs:element minOccurs="0" ref="Unload" />
     </xs:sequence>
     <xs:attributeGroup ref="instanceAttrGroup" />
-    <xs:attribute name="diameter" type="positiveDecimalType">
+    <xs:attribute name="diameter" type="nonNegativeDecimalType">
       <xs:annotation>
         <xs:documentation>Średnica [m]</xs:documentation>
       </xs:annotation>
     </xs:attribute>
-    <xs:attribute name="pulleyBeltFriction" type="positiveDecimalType">
+    <xs:attribute name="pulleyBeltFriction" type="nonNegativeDecimalType">
       <xs:annotation>
         <xs:documentation>Współczynnik tarcia między taśmą a bębnem napędowym</xs:documentation>
       </xs:annotation>
@@ -697,12 +698,12 @@ Id: $Id$
           <xs:enumeration value="ccw" />
         </xs:restriction>
       </xs:simpleType>
-    </xs:attribute>        
+    </xs:attribute>
     <xs:attribute name="number" type="xs:nonNegativeInteger" />
     <xs:attributeGroup ref="pulleyIdlerGroup" />
   </xs:complexType>
   <!-- **************************************************************************************
-    *                                CONV ELECTRICAL EQUIPMENT                                *
+    *                                CONV ELECTRICAL EQUIPMENT                              *
     ************************************************************************************** -->
   <xs:element name="ConvElectricalEquipment" type="convElectricalEquipmentType" />
   <!-- * -->
@@ -888,23 +889,23 @@ Id: $Id$
       <xs:element minOccurs="0" ref="CoolingSystem" />
     </xs:sequence>
     <xs:attributeGroup ref="instanceAttrGroup" />
-    <xs:attribute name="power" type="positiveDecimalType">
+    <xs:attribute name="power" type="nonNegativeDecimalType">
       <xs:annotation>
         <xs:documentation>Moc silnika [kW]</xs:documentation>
       </xs:annotation>
     </xs:attribute>
-    <xs:attribute name="nominalRotationalSpeed" type="positiveDecimalType">
+    <xs:attribute name="nominalRotationalSpeed" type="nonNegativeDecimalType">
       <xs:annotation>
         <xs:documentation>Nominalna prędkość obrotowa [1/min]</xs:documentation>
       </xs:annotation>
     </xs:attribute>
-    <xs:attribute name="driveFactor" type="positiveDecimalType">
+    <xs:attribute name="driveFactor" type="nonNegativeDecimalType">
       <xs:annotation>
         <xs:documentation>Współczynnik przeciążalności napędu</xs:documentation>
       </xs:annotation>
     </xs:attribute>
-    <xs:attribute name="overloadFactor" type="positiveDecimalType" />
-    <xs:attribute name="inertiaMoment" type="positiveDecimalType">
+    <xs:attribute name="overloadFactor" type="nonNegativeDecimalType" />
+    <xs:attribute name="inertiaMoment" type="nonNegativeDecimalType">
       <xs:annotation>
         <xs:documentation>Moment bezwładności [kgm²]</xs:documentation>
       </xs:annotation>
@@ -958,7 +959,7 @@ Id: $Id$
       <xs:documentation>Sprzęgło hydrodynamiczne</xs:documentation>
     </xs:annotation>
     <xs:attributeGroup ref="instanceAttrGroup" />
-    <xs:attribute name="couplingSlip" type="positiveDecimalType">
+    <xs:attribute name="couplingSlip" type="nonNegativeDecimalType">
       <xs:annotation>
         <xs:documentation>Poślizg sprzęgła</xs:documentation>
       </xs:annotation>
@@ -979,7 +980,7 @@ Id: $Id$
       <xs:element minOccurs="0" ref="CoolingSystem" />
     </xs:sequence>
     <xs:attributeGroup ref="instanceAttrGroup" />
-    <xs:attribute name="gearRatio" type="positiveDecimalType">
+    <xs:attribute name="gearRatio" type="nonNegativeDecimalType">
       <xs:annotation>
         <xs:documentation>Przełożenie przekładni</xs:documentation>
       </xs:annotation>
@@ -997,10 +998,10 @@ Id: $Id$
       <xs:documentation>Łożysko</xs:documentation>
     </xs:annotation>
     <xs:attributeGroup ref="instanceAttrGroup" />
-    <xs:attribute name="static" type="positiveDecimalType" />
-    <xs:attribute name="dynamic" type="positiveDecimalType" />
-    <xs:attribute name="diameterOutside" type="positiveDecimalType" />
-    <xs:attribute name="diameterInside" type="positiveDecimalType" />
+    <xs:attribute name="static" type="nonNegativeDecimalType" />
+    <xs:attribute name="dynamic" type="nonNegativeDecimalType" />
+    <xs:attribute name="diameterOutside" type="nonNegativeDecimalType" />
+    <xs:attribute name="diameterInside" type="nonNegativeDecimalType" />
   </xs:complexType>
   <!-- **************************************************************************************
     *                                    STRECHING CAR                                      *
@@ -1165,14 +1166,14 @@ Id: $Id$
       <xs:element ref="ElectricalEquipment" />
     </xs:choice>
     <xs:attributeGroup ref="instanceAttrGroup" />
-    <xs:attribute name="driveFactor" type="positiveDecimalType" />
-    <xs:attribute name="startupFactor" type="positiveDecimalType" />
-    <xs:attribute name="brakeFactor" type="positiveDecimalType">
+    <xs:attribute name="driveFactor" type="nonNegativeDecimalType" />
+    <xs:attribute name="startupFactor" type="nonNegativeDecimalType" />
+    <xs:attribute name="brakeFactor" type="nonNegativeDecimalType">
       <xs:annotation>
         <xs:documentation>Stosunek momentu hamowania do nominalnego momentu napędu - Mh/Mn</xs:documentation>
       </xs:annotation>
     </xs:attribute>
-    <xs:attribute name="driveEfficiency" type="positiveDecimalType">
+    <xs:attribute name="driveEfficiency" type="nonNegativeDecimalType">
       <xs:annotation>
         <xs:documentation>Sprawność napędu - η</xs:documentation>
       </xs:annotation>
@@ -1231,7 +1232,7 @@ Id: $Id$
         <xs:documentation>Oliczba krążków</xs:documentation>
       </xs:annotation>
     </xs:attribute>
-    <xs:attribute name="mass" type="positiveDecimalType">
+    <xs:attribute name="mass" type="nonNegativeDecimalType">
       <xs:annotation>
         <xs:documentation>Masa obciążnika</xs:documentation>
       </xs:annotation>
@@ -1270,7 +1271,7 @@ Id: $Id$
     <xs:attributeGroup ref="lengthAngleGroup" />
   </xs:complexType>
   <!-- **************************************************** -->
-  <xs:simpleType name="positiveDecimalType">
+  <xs:simpleType name="nonNegativeDecimalType">
     <xs:annotation>
       <xs:documentation>Typ xs:decimal o wartościach nieujemnych</xs:documentation>
     </xs:annotation>
@@ -1334,7 +1335,7 @@ Id: $Id$
     <xs:annotation>
       <xs:documentation>Długość i kąt nachylenia odcinak lub segentu trasy</xs:documentation>
     </xs:annotation>
-    <xs:attribute name="length" type="positiveDecimalType">
+    <xs:attribute name="length" type="nonNegativeDecimalType">
       <xs:annotation>
         <xs:documentation>Długość elementu [m]</xs:documentation>
       </xs:annotation>
@@ -1357,12 +1358,12 @@ Id: $Id$
   </xs:attributeGroup>
   <!-- **************************************************** -->
   <xs:attributeGroup name="pulleyIdlerGroup">
-    <xs:attribute name="mass" type="positiveDecimalType">
+    <xs:attribute name="mass" type="nonNegativeDecimalType">
       <xs:annotation>
         <xs:documentation>Masa [kg]</xs:documentation>
       </xs:annotation>
     </xs:attribute>
-    <xs:attribute name="inertiaMoment" type="positiveDecimalType">
+    <xs:attribute name="inertiaMoment" type="nonNegativeDecimalType">
       <xs:annotation>
         <xs:documentation>Moment bezwładności - I [kgm²]</xs:documentation>
       </xs:annotation>

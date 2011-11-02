@@ -71,16 +71,16 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="2.8284271"
-     inkscape:cx="258.13431"
-     inkscape:cy="732.25759"
+     inkscape:zoom="0.5"
+     inkscape:cx="674.59203"
+     inkscape:cy="65.698321"
      inkscape:document-units="px"
-     inkscape:current-layer="layer1"
-     showgrid="true"
+     inkscape:current-layer="layer2"
+     showgrid="false"
      inkscape:window-width="1280"
-     inkscape:window-height="961"
-     inkscape:window-x="-4"
-     inkscape:window-y="-4"
+     inkscape:window-height="962"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
      inkscape:window-maximized="1"
      showguides="true"
      inkscape:guide-bbox="true"
@@ -146,7 +146,7 @@
        d="m -262.85743,753.57835 16.07695,59.99999 128.92305,0 -5,-40 -60,0 0,-19.99999 z"
        id="path4026-4"
        inkscape:connector-curvature="0"
-       inkscape:export-filename="C:\Users\kacprzak\Projekty\BCEditor-trunk\doc\CONVML\przenosnik.png"
+       inkscape:export-filename="C:\Users\kacprzak\Projekty\convml\doc\png\belt_conveyor_drw.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <path
@@ -155,13 +155,13 @@
        id="path5602"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccccccc"
-       inkscape:export-filename="C:\Users\kacprzak\Projekty\BCEditor-trunk\doc\CONVML\przenosnik.png"
+       inkscape:export-filename="C:\Users\kacprzak\Projekty\convml\doc\png\belt_conveyor_drw.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <g
        transform="translate(-220,0)"
        id="g5753"
-       inkscape:export-filename="C:\Users\kacprzak\Projekty\BCEditor-trunk\doc\CONVML\przenosnik.png"
+       inkscape:export-filename="C:\Users\kacprzak\Projekty\convml\doc\png\belt_conveyor_drw.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300">
       <g
@@ -213,7 +213,7 @@
     <g
        id="g5765"
        transform="translate(-185.25,0)"
-       inkscape:export-filename="C:\Users\kacprzak\Projekty\BCEditor-trunk\doc\CONVML\przenosnik.png"
+       inkscape:export-filename="C:\Users\kacprzak\Projekty\convml\doc\png\belt_conveyor_drw.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300">
       <g
@@ -265,7 +265,7 @@
     <g
        transform="translate(-149.75,0)"
        id="g5777"
-       inkscape:export-filename="C:\Users\kacprzak\Projekty\BCEditor-trunk\doc\CONVML\przenosnik.png"
+       inkscape:export-filename="C:\Users\kacprzak\Projekty\convml\doc\png\belt_conveyor_drw.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300">
       <g
@@ -317,7 +317,7 @@
     <g
        id="g6036"
        transform="translate(-167.75,0)"
-       inkscape:export-filename="C:\Users\kacprzak\Projekty\BCEditor-trunk\doc\CONVML\przenosnik.png"
+       inkscape:export-filename="C:\Users\kacprzak\Projekty\convml\doc\png\belt_conveyor_drw.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300">
       <g
@@ -369,7 +369,7 @@
     <g
        transform="translate(-202.4571,0)"
        id="g6048"
-       inkscape:export-filename="C:\Users\kacprzak\Projekty\BCEditor-trunk\doc\CONVML\przenosnik.png"
+       inkscape:export-filename="C:\Users\kacprzak\Projekty\convml\doc\png\belt_conveyor_drw.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300">
       <g
@@ -421,7 +421,7 @@
     <g
        id="g6060"
        transform="translate(-134.4571,0)"
-       inkscape:export-filename="C:\Users\kacprzak\Projekty\BCEditor-trunk\doc\CONVML\przenosnik.png"
+       inkscape:export-filename="C:\Users\kacprzak\Projekty\convml\doc\png\belt_conveyor_drw.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300">
       <g
@@ -473,7 +473,7 @@
     <g
        transform="matrix(1,0,0,0.88114038,-362,96.721145)"
        id="g6006"
-       inkscape:export-filename="C:\Users\kacprzak\Projekty\BCEditor-trunk\doc\CONVML\przenosnik.png"
+       inkscape:export-filename="C:\Users\kacprzak\Projekty\convml\doc\png\belt_conveyor_drw.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300">
       <g
@@ -525,7 +525,7 @@
     <g
        id="g5954"
        transform="translate(-326,0)"
-       inkscape:export-filename="C:\Users\kacprzak\Projekty\BCEditor-trunk\doc\CONVML\przenosnik.png"
+       inkscape:export-filename="C:\Users\kacprzak\Projekty\convml\doc\png\belt_conveyor_drw.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300">
       <g
@@ -577,7 +577,7 @@
     <g
        transform="translate(-291.25,0)"
        id="g5966"
-       inkscape:export-filename="C:\Users\kacprzak\Projekty\BCEditor-trunk\doc\CONVML\przenosnik.png"
+       inkscape:export-filename="C:\Users\kacprzak\Projekty\convml\doc\png\belt_conveyor_drw.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300">
       <g
@@ -629,7 +629,7 @@
     <g
        id="g5978"
        transform="translate(-255.75,0)"
-       inkscape:export-filename="C:\Users\kacprzak\Projekty\BCEditor-trunk\doc\CONVML\przenosnik.png"
+       inkscape:export-filename="C:\Users\kacprzak\Projekty\convml\doc\png\belt_conveyor_drw.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300">
       <g
@@ -684,13 +684,13 @@
        id="path5337"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccccccccccccc"
-       inkscape:export-filename="C:\Users\kacprzak\Projekty\BCEditor-trunk\doc\CONVML\przenosnik.png"
+       inkscape:export-filename="C:\Users\kacprzak\Projekty\convml\doc\png\belt_conveyor_drw.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <g
        transform="matrix(0.823223,0,0,0.823223,4.471515,839.78676)"
        id="g3266-0"
-       inkscape:export-filename="C:\Users\kacprzak\Projekty\BCEditor-trunk\doc\CONVML\przenosnik.png"
+       inkscape:export-filename="C:\Users\kacprzak\Projekty\convml\doc\png\belt_conveyor_drw.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300">
       <path
@@ -3741,7 +3741,7 @@
     <g
        transform="translate(512.92866,780.0872)"
        id="g3266-6-7-0"
-       inkscape:export-filename="C:\Users\kacprzak\Projekty\BCEditor-trunk\doc\CONVML\przenosnik.png"
+       inkscape:export-filename="C:\Users\kacprzak\Projekty\convml\doc\png\belt_conveyor_drw.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300">
       <path
@@ -3780,7 +3780,7 @@
        width="5"
        id="rect3203-0"
        style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-opacity:1"
-       inkscape:export-filename="C:\Users\kacprzak\Projekty\BCEditor-trunk\doc\CONVML\przenosnik.png"
+       inkscape:export-filename="C:\Users\kacprzak\Projekty\convml\doc\png\belt_conveyor_drw.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <rect
@@ -3790,7 +3790,7 @@
        width="15"
        id="rect3205-4"
        style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-opacity:1"
-       inkscape:export-filename="C:\Users\kacprzak\Projekty\BCEditor-trunk\doc\CONVML\przenosnik.png"
+       inkscape:export-filename="C:\Users\kacprzak\Projekty\convml\doc\png\belt_conveyor_drw.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <rect
@@ -3800,7 +3800,7 @@
        width="4.9999981"
        id="rect3219-8"
        style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-opacity:1"
-       inkscape:export-filename="C:\Users\kacprzak\Projekty\BCEditor-trunk\doc\CONVML\przenosnik.png"
+       inkscape:export-filename="C:\Users\kacprzak\Projekty\convml\doc\png\belt_conveyor_drw.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <rect
@@ -3810,7 +3810,7 @@
        width="15"
        id="rect3221-1"
        style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-opacity:1"
-       inkscape:export-filename="C:\Users\kacprzak\Projekty\BCEditor-trunk\doc\CONVML\przenosnik.png"
+       inkscape:export-filename="C:\Users\kacprzak\Projekty\convml\doc\png\belt_conveyor_drw.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <rect
@@ -3820,7 +3820,7 @@
        height="71.912842"
        x="669.67865"
        y="819.94934"
-       inkscape:export-filename="C:\Users\kacprzak\Projekty\BCEditor-trunk\doc\CONVML\przenosnik.png"
+       inkscape:export-filename="C:\Users\kacprzak\Projekty\convml\doc\png\belt_conveyor_drw.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <rect
@@ -3830,7 +3830,7 @@
        height="2"
        x="664.67865"
        y="890.44934"
-       inkscape:export-filename="C:\Users\kacprzak\Projekty\BCEditor-trunk\doc\CONVML\przenosnik.png"
+       inkscape:export-filename="C:\Users\kacprzak\Projekty\convml\doc\png\belt_conveyor_drw.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <rect
@@ -3840,7 +3840,7 @@
        width="5"
        id="rect3227-1"
        style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-opacity:1"
-       inkscape:export-filename="C:\Users\kacprzak\Projekty\BCEditor-trunk\doc\CONVML\przenosnik.png"
+       inkscape:export-filename="C:\Users\kacprzak\Projekty\convml\doc\png\belt_conveyor_drw.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <rect
@@ -3850,7 +3850,7 @@
        width="15"
        id="rect3229-5"
        style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-opacity:1"
-       inkscape:export-filename="C:\Users\kacprzak\Projekty\BCEditor-trunk\doc\CONVML\przenosnik.png"
+       inkscape:export-filename="C:\Users\kacprzak\Projekty\convml\doc\png\belt_conveyor_drw.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <rect
@@ -3860,7 +3860,7 @@
        height="65.412842"
        x="547.67865"
        y="826.94934"
-       inkscape:export-filename="C:\Users\kacprzak\Projekty\BCEditor-trunk\doc\CONVML\przenosnik.png"
+       inkscape:export-filename="C:\Users\kacprzak\Projekty\convml\doc\png\belt_conveyor_drw.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <rect
@@ -3870,7 +3870,7 @@
        height="2"
        x="542.67865"
        y="890.44934"
-       inkscape:export-filename="C:\Users\kacprzak\Projekty\BCEditor-trunk\doc\CONVML\przenosnik.png"
+       inkscape:export-filename="C:\Users\kacprzak\Projekty\convml\doc\png\belt_conveyor_drw.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <rect
@@ -3880,7 +3880,7 @@
        height="63.412842"
        x="330.17865"
        y="828.44934"
-       inkscape:export-filename="C:\Users\kacprzak\Projekty\BCEditor-trunk\doc\CONVML\przenosnik.png"
+       inkscape:export-filename="C:\Users\kacprzak\Projekty\convml\doc\png\belt_conveyor_drw.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <rect
@@ -3890,7 +3890,7 @@
        height="2"
        x="325.17865"
        y="890.44934"
-       inkscape:export-filename="C:\Users\kacprzak\Projekty\BCEditor-trunk\doc\CONVML\przenosnik.png"
+       inkscape:export-filename="C:\Users\kacprzak\Projekty\convml\doc\png\belt_conveyor_drw.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <rect
@@ -3900,7 +3900,7 @@
        width="5"
        id="rect4803"
        style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-opacity:1"
-       inkscape:export-filename="C:\Users\kacprzak\Projekty\BCEditor-trunk\doc\CONVML\przenosnik.png"
+       inkscape:export-filename="C:\Users\kacprzak\Projekty\convml\doc\png\belt_conveyor_drw.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <rect
@@ -3910,7 +3910,7 @@
        width="15"
        id="rect4805"
        style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-opacity:1"
-       inkscape:export-filename="C:\Users\kacprzak\Projekty\BCEditor-trunk\doc\CONVML\przenosnik.png"
+       inkscape:export-filename="C:\Users\kacprzak\Projekty\convml\doc\png\belt_conveyor_drw.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <g
@@ -4012,7 +4012,7 @@
     <g
        transform="matrix(1.2413793,0,0,1.2413793,131.71524,803.59333)"
        id="g3271-0-7"
-       inkscape:export-filename="C:\Users\kacprzak\Projekty\BCEditor-trunk\doc\CONVML\przenosnik.png"
+       inkscape:export-filename="C:\Users\kacprzak\Projekty\convml\doc\png\belt_conveyor_drw.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300">
       <path
@@ -4065,7 +4065,7 @@
        id="path5686-1-7"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccccccc"
-       inkscape:export-filename="C:\Users\kacprzak\Projekty\BCEditor-trunk\doc\CONVML\przenosnik.png"
+       inkscape:export-filename="C:\Users\kacprzak\Projekty\convml\doc\png\belt_conveyor_drw.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <path
@@ -4078,7 +4078,7 @@
        sodipodi:rx="4"
        sodipodi:ry="4"
        d="m 184,42.362183 c 0,2.209139 -1.79086,4 -4,4 -2.20914,0 -4,-1.790861 -4,-4 0,-2.209139 1.79086,-4 4,-4 2.20914,0 4,1.790861 4,4 z"
-       inkscape:export-filename="C:\Users\kacprzak\Projekty\BCEditor-trunk\doc\CONVML\przenosnik.png"
+       inkscape:export-filename="C:\Users\kacprzak\Projekty\convml\doc\png\belt_conveyor_drw.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <path
@@ -4091,13 +4091,13 @@
        sodipodi:rx="10"
        sodipodi:ry="10"
        d="m 190,42.362183 c 0,5.522847 -4.47715,10 -10,10 -5.52285,0 -10,-4.477153 -10,-10 0,-5.522848 4.47715,-10 10,-10 5.52285,0 10,4.477152 10,10 z"
-       inkscape:export-filename="C:\Users\kacprzak\Projekty\BCEditor-trunk\doc\CONVML\przenosnik.png"
+       inkscape:export-filename="C:\Users\kacprzak\Projekty\convml\doc\png\belt_conveyor_drw.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <g
        transform="matrix(-1.2413793,0,0,1.2413793,763.28476,813.59333)"
        id="g3271-0-7-6"
-       inkscape:export-filename="C:\Users\kacprzak\Projekty\BCEditor-trunk\doc\CONVML\przenosnik.png"
+       inkscape:export-filename="C:\Users\kacprzak\Projekty\convml\doc\png\belt_conveyor_drw.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300">
       <path
@@ -4150,7 +4150,7 @@
        id="path5686-1-7-7"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccccccc"
-       inkscape:export-filename="C:\Users\kacprzak\Projekty\BCEditor-trunk\doc\CONVML\przenosnik.png"
+       inkscape:export-filename="C:\Users\kacprzak\Projekty\convml\doc\png\belt_conveyor_drw.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <path
@@ -4163,7 +4163,7 @@
        sodipodi:rx="4"
        sodipodi:ry="4"
        d="m 184,42.362183 c 0,2.209139 -1.79086,4 -4,4 -2.20914,0 -4,-1.790861 -4,-4 0,-2.209139 1.79086,-4 4,-4 2.20914,0 4,1.790861 4,4 z"
-       inkscape:export-filename="C:\Users\kacprzak\Projekty\BCEditor-trunk\doc\CONVML\przenosnik.png"
+       inkscape:export-filename="C:\Users\kacprzak\Projekty\convml\doc\png\belt_conveyor_drw.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <path
@@ -4176,7 +4176,7 @@
        sodipodi:rx="10"
        sodipodi:ry="10"
        d="m 190,42.362183 c 0,5.522847 -4.47715,10 -10,10 -5.52285,0 -10,-4.477153 -10,-10 0,-5.522848 4.47715,-10 10,-10 5.52285,0 10,4.477152 10,10 z"
-       inkscape:export-filename="C:\Users\kacprzak\Projekty\BCEditor-trunk\doc\CONVML\przenosnik.png"
+       inkscape:export-filename="C:\Users\kacprzak\Projekty\convml\doc\png\belt_conveyor_drw.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <rect
@@ -4186,7 +4186,7 @@
        height="63.412842"
        x="110.17865"
        y="828.44934"
-       inkscape:export-filename="C:\Users\kacprzak\Projekty\BCEditor-trunk\doc\CONVML\przenosnik.png"
+       inkscape:export-filename="C:\Users\kacprzak\Projekty\convml\doc\png\belt_conveyor_drw.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <rect
@@ -4196,7 +4196,7 @@
        height="2"
        x="105.17865"
        y="890.44934"
-       inkscape:export-filename="C:\Users\kacprzak\Projekty\BCEditor-trunk\doc\CONVML\przenosnik.png"
+       inkscape:export-filename="C:\Users\kacprzak\Projekty\convml\doc\png\belt_conveyor_drw.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <rect
@@ -4206,7 +4206,7 @@
        width="5"
        id="rect5208"
        style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-opacity:1"
-       inkscape:export-filename="C:\Users\kacprzak\Projekty\BCEditor-trunk\doc\CONVML\przenosnik.png"
+       inkscape:export-filename="C:\Users\kacprzak\Projekty\convml\doc\png\belt_conveyor_drw.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <rect
@@ -4216,7 +4216,7 @@
        width="15"
        id="rect5210"
        style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-opacity:1"
-       inkscape:export-filename="C:\Users\kacprzak\Projekty\BCEditor-trunk\doc\CONVML\przenosnik.png"
+       inkscape:export-filename="C:\Users\kacprzak\Projekty\convml\doc\png\belt_conveyor_drw.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <rect
@@ -4226,7 +4226,7 @@
        height="10"
        x="130"
        y="870.19055"
-       inkscape:export-filename="C:\Users\kacprzak\Projekty\BCEditor-trunk\doc\CONVML\przenosnik.png"
+       inkscape:export-filename="C:\Users\kacprzak\Projekty\convml\doc\png\belt_conveyor_drw.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <path
@@ -4241,7 +4241,7 @@
        sodipodi:start="4.712389"
        sodipodi:end="7.8539816"
        transform="matrix(0,1,-1,0,319.86218,677.71835)"
-       inkscape:export-filename="C:\Users\kacprzak\Projekty\BCEditor-trunk\doc\CONVML\przenosnik.png"
+       inkscape:export-filename="C:\Users\kacprzak\Projekty\convml\doc\png\belt_conveyor_drw.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <path
@@ -4256,13 +4256,13 @@
        sodipodi:start="4.712389"
        sodipodi:end="7.8539816"
        transform="matrix(0,1,-1,0,344.86218,677.71835)"
-       inkscape:export-filename="C:\Users\kacprzak\Projekty\BCEditor-trunk\doc\CONVML\przenosnik.png"
+       inkscape:export-filename="C:\Users\kacprzak\Projekty\convml\doc\png\belt_conveyor_drw.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <g
        transform="translate(-195,607.82844)"
        id="g5276-5"
-       inkscape:export-filename="C:\Users\kacprzak\Projekty\BCEditor-trunk\doc\CONVML\przenosnik.png"
+       inkscape:export-filename="C:\Users\kacprzak\Projekty\convml\doc\png\belt_conveyor_drw.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300">
       <path
@@ -4300,13 +4300,13 @@
        d="m 130,875.19062 -55,0"
        id="path5308"
        inkscape:connector-curvature="0"
-       inkscape:export-filename="C:\Users\kacprzak\Projekty\BCEditor-trunk\doc\CONVML\przenosnik.png"
+       inkscape:export-filename="C:\Users\kacprzak\Projekty\convml\doc\png\belt_conveyor_drw.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <g
        transform="matrix(0.823223,0,0,0.823223,119.47151,827.48866)"
        id="g3266-0-6"
-       inkscape:export-filename="C:\Users\kacprzak\Projekty\BCEditor-trunk\doc\CONVML\przenosnik.png"
+       inkscape:export-filename="C:\Users\kacprzak\Projekty\convml\doc\png\belt_conveyor_drw.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300">
       <path
@@ -4340,7 +4340,7 @@
     </g>
     <g
        id="g5345"
-       inkscape:export-filename="C:\Users\kacprzak\Projekty\BCEditor-trunk\doc\CONVML\przenosnik.png"
+       inkscape:export-filename="C:\Users\kacprzak\Projekty\convml\doc\png\belt_conveyor_drw.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300">
       <g
@@ -4392,7 +4392,7 @@
     <g
        id="g5352"
        transform="translate(34.75,0)"
-       inkscape:export-filename="C:\Users\kacprzak\Projekty\BCEditor-trunk\doc\CONVML\przenosnik.png"
+       inkscape:export-filename="C:\Users\kacprzak\Projekty\convml\doc\png\belt_conveyor_drw.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300">
       <g
@@ -4444,7 +4444,7 @@
     <g
        transform="translate(70.25,0)"
        id="g5364"
-       inkscape:export-filename="C:\Users\kacprzak\Projekty\BCEditor-trunk\doc\CONVML\przenosnik.png"
+       inkscape:export-filename="C:\Users\kacprzak\Projekty\convml\doc\png\belt_conveyor_drw.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300">
       <g
@@ -4500,13 +4500,13 @@
        width="105"
        id="rect5206"
        style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-opacity:1"
-       inkscape:export-filename="C:\Users\kacprzak\Projekty\BCEditor-trunk\doc\CONVML\przenosnik.png"
+       inkscape:export-filename="C:\Users\kacprzak\Projekty\convml\doc\png\belt_conveyor_drw.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <g
        id="g5376"
        transform="translate(110,0)"
-       inkscape:export-filename="C:\Users\kacprzak\Projekty\BCEditor-trunk\doc\CONVML\przenosnik.png"
+       inkscape:export-filename="C:\Users\kacprzak\Projekty\convml\doc\png\belt_conveyor_drw.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300">
       <g
@@ -4558,7 +4558,7 @@
     <g
        transform="translate(144.75,0)"
        id="g5388"
-       inkscape:export-filename="C:\Users\kacprzak\Projekty\BCEditor-trunk\doc\CONVML\przenosnik.png"
+       inkscape:export-filename="C:\Users\kacprzak\Projekty\convml\doc\png\belt_conveyor_drw.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300">
       <g
@@ -4610,7 +4610,7 @@
     <g
        id="g5400"
        transform="translate(180.25,0)"
-       inkscape:export-filename="C:\Users\kacprzak\Projekty\BCEditor-trunk\doc\CONVML\przenosnik.png"
+       inkscape:export-filename="C:\Users\kacprzak\Projekty\convml\doc\png\belt_conveyor_drw.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300">
       <g
@@ -4662,7 +4662,7 @@
     <g
        transform="translate(220,0)"
        id="g5412"
-       inkscape:export-filename="C:\Users\kacprzak\Projekty\BCEditor-trunk\doc\CONVML\przenosnik.png"
+       inkscape:export-filename="C:\Users\kacprzak\Projekty\convml\doc\png\belt_conveyor_drw.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300">
       <g
@@ -4714,7 +4714,7 @@
     <g
        id="g5424"
        transform="translate(254.75,0)"
-       inkscape:export-filename="C:\Users\kacprzak\Projekty\BCEditor-trunk\doc\CONVML\przenosnik.png"
+       inkscape:export-filename="C:\Users\kacprzak\Projekty\convml\doc\png\belt_conveyor_drw.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300">
       <g
@@ -4766,7 +4766,7 @@
     <g
        transform="translate(290.25,0)"
        id="g5436"
-       inkscape:export-filename="C:\Users\kacprzak\Projekty\BCEditor-trunk\doc\CONVML\przenosnik.png"
+       inkscape:export-filename="C:\Users\kacprzak\Projekty\convml\doc\png\belt_conveyor_drw.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300">
       <g
@@ -4818,7 +4818,7 @@
     <g
        id="g5448"
        transform="translate(330,0)"
-       inkscape:export-filename="C:\Users\kacprzak\Projekty\BCEditor-trunk\doc\CONVML\przenosnik.png"
+       inkscape:export-filename="C:\Users\kacprzak\Projekty\convml\doc\png\belt_conveyor_drw.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300">
       <g
@@ -4870,7 +4870,7 @@
     <g
        transform="translate(364.75,0)"
        id="g5460"
-       inkscape:export-filename="C:\Users\kacprzak\Projekty\BCEditor-trunk\doc\CONVML\przenosnik.png"
+       inkscape:export-filename="C:\Users\kacprzak\Projekty\convml\doc\png\belt_conveyor_drw.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300">
       <g
@@ -4922,7 +4922,7 @@
     <g
        id="g5472"
        transform="translate(400.25,0)"
-       inkscape:export-filename="C:\Users\kacprzak\Projekty\BCEditor-trunk\doc\CONVML\przenosnik.png"
+       inkscape:export-filename="C:\Users\kacprzak\Projekty\convml\doc\png\belt_conveyor_drw.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300">
       <g
@@ -4974,7 +4974,7 @@
     <g
        transform="translate(440,0)"
        id="g5484"
-       inkscape:export-filename="C:\Users\kacprzak\Projekty\BCEditor-trunk\doc\CONVML\przenosnik.png"
+       inkscape:export-filename="C:\Users\kacprzak\Projekty\convml\doc\png\belt_conveyor_drw.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300">
       <g
@@ -5026,7 +5026,7 @@
     <g
        id="g5496"
        transform="translate(474.75,0)"
-       inkscape:export-filename="C:\Users\kacprzak\Projekty\BCEditor-trunk\doc\CONVML\przenosnik.png"
+       inkscape:export-filename="C:\Users\kacprzak\Projekty\convml\doc\png\belt_conveyor_drw.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300">
       <g
@@ -5078,7 +5078,7 @@
     <g
        transform="translate(510.25,0)"
        id="g5508"
-       inkscape:export-filename="C:\Users\kacprzak\Projekty\BCEditor-trunk\doc\CONVML\przenosnik.png"
+       inkscape:export-filename="C:\Users\kacprzak\Projekty\convml\doc\png\belt_conveyor_drw.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300">
       <g
@@ -5134,7 +5134,7 @@
        height="5"
        x="300.17865"
        y="823.44934"
-       inkscape:export-filename="C:\Users\kacprzak\Projekty\BCEditor-trunk\doc\CONVML\przenosnik.png"
+       inkscape:export-filename="C:\Users\kacprzak\Projekty\convml\doc\png\belt_conveyor_drw.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <rect
@@ -5144,7 +5144,7 @@
        width="105"
        id="rect4801"
        style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-opacity:1"
-       inkscape:export-filename="C:\Users\kacprzak\Projekty\BCEditor-trunk\doc\CONVML\przenosnik.png"
+       inkscape:export-filename="C:\Users\kacprzak\Projekty\convml\doc\png\belt_conveyor_drw.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <rect
@@ -5154,7 +5154,7 @@
        height="5"
        x="80.17865"
        y="823.44934"
-       inkscape:export-filename="C:\Users\kacprzak\Projekty\BCEditor-trunk\doc\CONVML\przenosnik.png"
+       inkscape:export-filename="C:\Users\kacprzak\Projekty\convml\doc\png\belt_conveyor_drw.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <rect
@@ -5164,13 +5164,13 @@
        width="105"
        id="rect3201-9"
        style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-opacity:1"
-       inkscape:export-filename="C:\Users\kacprzak\Projekty\BCEditor-trunk\doc\CONVML\przenosnik.png"
+       inkscape:export-filename="C:\Users\kacprzak\Projekty\convml\doc\png\belt_conveyor_drw.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <g
        transform="matrix(0.99845766,-0.05551847,0.05551847,0.99845766,504.38879,-0.68547067)"
        id="g5484-1"
-       inkscape:export-filename="C:\Users\kacprzak\Projekty\BCEditor-trunk\doc\CONVML\przenosnik.png"
+       inkscape:export-filename="C:\Users\kacprzak\Projekty\convml\doc\png\belt_conveyor_drw.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300">
       <g
@@ -5222,7 +5222,7 @@
     <g
        id="g5496-6"
        transform="matrix(0.99845766,-0.05551847,0.05551847,0.99845766,539.08519,-2.6147374)"
-       inkscape:export-filename="C:\Users\kacprzak\Projekty\BCEditor-trunk\doc\CONVML\przenosnik.png"
+       inkscape:export-filename="C:\Users\kacprzak\Projekty\convml\doc\png\belt_conveyor_drw.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300">
       <g
@@ -5274,7 +5274,7 @@
     <g
        transform="matrix(0.99845766,-0.05551847,0.05551847,0.99845766,574.53044,-4.5856426)"
        id="g5508-5"
-       inkscape:export-filename="C:\Users\kacprzak\Projekty\BCEditor-trunk\doc\CONVML\przenosnik.png"
+       inkscape:export-filename="C:\Users\kacprzak\Projekty\convml\doc\png\belt_conveyor_drw.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300">
       <g
@@ -5326,7 +5326,7 @@
     <g
        id="g5589"
        transform="matrix(0.99845766,-0.04491373,0.05551847,0.80773939,606.53044,149.98655)"
-       inkscape:export-filename="C:\Users\kacprzak\Projekty\BCEditor-trunk\doc\CONVML\przenosnik.png"
+       inkscape:export-filename="C:\Users\kacprzak\Projekty\convml\doc\png\belt_conveyor_drw.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300">
       <g
@@ -5383,13 +5383,13 @@
        width="195"
        id="rect3217-3"
        style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:5"
-       inkscape:export-filename="C:\Users\kacprzak\Projekty\BCEditor-trunk\doc\CONVML\przenosnik.png"
+       inkscape:export-filename="C:\Users\kacprzak\Projekty\convml\doc\png\belt_conveyor_drw.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <g
        id="g5641"
        style="fill:#ffffff;fill-opacity:1"
-       inkscape:export-filename="C:\Users\kacprzak\Projekty\BCEditor-trunk\doc\CONVML\przenosnik.png"
+       inkscape:export-filename="C:\Users\kacprzak\Projekty\convml\doc\png\belt_conveyor_drw.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300">
       <path
@@ -5436,7 +5436,7 @@
        height="63.412842"
        x="-109.82135"
        y="828.44934"
-       inkscape:export-filename="C:\Users\kacprzak\Projekty\BCEditor-trunk\doc\CONVML\przenosnik.png"
+       inkscape:export-filename="C:\Users\kacprzak\Projekty\convml\doc\png\belt_conveyor_drw.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <rect
@@ -5446,13 +5446,13 @@
        height="2"
        x="-114.82135"
        y="890.44934"
-       inkscape:export-filename="C:\Users\kacprzak\Projekty\BCEditor-trunk\doc\CONVML\przenosnik.png"
+       inkscape:export-filename="C:\Users\kacprzak\Projekty\convml\doc\png\belt_conveyor_drw.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <g
        id="g5701"
        transform="translate(-110,0)"
-       inkscape:export-filename="C:\Users\kacprzak\Projekty\BCEditor-trunk\doc\CONVML\przenosnik.png"
+       inkscape:export-filename="C:\Users\kacprzak\Projekty\convml\doc\png\belt_conveyor_drw.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300">
       <g
@@ -5504,7 +5504,7 @@
     <g
        transform="translate(-75.25,0)"
        id="g5713"
-       inkscape:export-filename="C:\Users\kacprzak\Projekty\BCEditor-trunk\doc\CONVML\przenosnik.png"
+       inkscape:export-filename="C:\Users\kacprzak\Projekty\convml\doc\png\belt_conveyor_drw.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300">
       <g
@@ -5556,7 +5556,7 @@
     <g
        id="g5725"
        transform="translate(-39.75,0)"
-       inkscape:export-filename="C:\Users\kacprzak\Projekty\BCEditor-trunk\doc\CONVML\przenosnik.png"
+       inkscape:export-filename="C:\Users\kacprzak\Projekty\convml\doc\png\belt_conveyor_drw.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300">
       <g
@@ -5612,14 +5612,14 @@
        height="5"
        x="-139.82135"
        y="823.44934"
-       inkscape:export-filename="C:\Users\kacprzak\Projekty\BCEditor-trunk\doc\CONVML\przenosnik.png"
+       inkscape:export-filename="C:\Users\kacprzak\Projekty\convml\doc\png\belt_conveyor_drw.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <g
        style="fill:#ffffff;fill-opacity:1"
        id="g5739"
        transform="translate(-110,0)"
-       inkscape:export-filename="C:\Users\kacprzak\Projekty\BCEditor-trunk\doc\CONVML\przenosnik.png"
+       inkscape:export-filename="C:\Users\kacprzak\Projekty\convml\doc\png\belt_conveyor_drw.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300">
       <path
@@ -5666,7 +5666,7 @@
        width="5"
        id="rect5749"
        style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-opacity:1"
-       inkscape:export-filename="C:\Users\kacprzak\Projekty\BCEditor-trunk\doc\CONVML\przenosnik.png"
+       inkscape:export-filename="C:\Users\kacprzak\Projekty\convml\doc\png\belt_conveyor_drw.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <rect
@@ -5676,7 +5676,7 @@
        width="15"
        id="rect5751"
        style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-opacity:1"
-       inkscape:export-filename="C:\Users\kacprzak\Projekty\BCEditor-trunk\doc\CONVML\przenosnik.png"
+       inkscape:export-filename="C:\Users\kacprzak\Projekty\convml\doc\png\belt_conveyor_drw.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <rect
@@ -5686,14 +5686,14 @@
        width="105"
        id="rect5789"
        style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-opacity:1"
-       inkscape:export-filename="C:\Users\kacprzak\Projekty\BCEditor-trunk\doc\CONVML\przenosnik.png"
+       inkscape:export-filename="C:\Users\kacprzak\Projekty\convml\doc\png\belt_conveyor_drw.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <g
        transform="translate(-220,0)"
        id="g5791"
        style="fill:#ffffff;fill-opacity:1"
-       inkscape:export-filename="C:\Users\kacprzak\Projekty\BCEditor-trunk\doc\CONVML\przenosnik.png"
+       inkscape:export-filename="C:\Users\kacprzak\Projekty\convml\doc\png\belt_conveyor_drw.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300">
       <path
@@ -5736,7 +5736,7 @@
     <g
        transform="translate(-608.20244,791.52129)"
        id="g3266-6-6"
-       inkscape:export-filename="C:\Users\kacprzak\Projekty\BCEditor-trunk\doc\CONVML\przenosnik.png"
+       inkscape:export-filename="C:\Users\kacprzak\Projekty\convml\doc\png\belt_conveyor_drw.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300">
       <path
@@ -5776,7 +5776,7 @@
        height="63"
        x="445.32465"
        y="828.38348"
-       inkscape:export-filename="C:\Users\kacprzak\Projekty\BCEditor-trunk\doc\CONVML\przenosnik.png"
+       inkscape:export-filename="C:\Users\kacprzak\Projekty\convml\doc\png\belt_conveyor_drw.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <rect
@@ -5787,7 +5787,7 @@
        height="2"
        x="440.32468"
        y="890.38348"
-       inkscape:export-filename="C:\Users\kacprzak\Projekty\BCEditor-trunk\doc\CONVML\przenosnik.png"
+       inkscape:export-filename="C:\Users\kacprzak\Projekty\convml\doc\png\belt_conveyor_drw.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <rect
@@ -5798,7 +5798,7 @@
        width="5"
        id="rect3239-0"
        style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-opacity:1"
-       inkscape:export-filename="C:\Users\kacprzak\Projekty\BCEditor-trunk\doc\CONVML\przenosnik.png"
+       inkscape:export-filename="C:\Users\kacprzak\Projekty\convml\doc\png\belt_conveyor_drw.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <rect
@@ -5809,7 +5809,7 @@
        width="15"
        id="rect3241-3"
        style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-opacity:1"
-       inkscape:export-filename="C:\Users\kacprzak\Projekty\BCEditor-trunk\doc\CONVML\przenosnik.png"
+       inkscape:export-filename="C:\Users\kacprzak\Projekty\convml\doc\png\belt_conveyor_drw.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <rect
@@ -5820,7 +5820,7 @@
        height="63"
        x="349.32471"
        y="828.38348"
-       inkscape:export-filename="C:\Users\kacprzak\Projekty\BCEditor-trunk\doc\CONVML\przenosnik.png"
+       inkscape:export-filename="C:\Users\kacprzak\Projekty\convml\doc\png\belt_conveyor_drw.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <rect
@@ -5831,7 +5831,7 @@
        height="2"
        x="344.32462"
        y="890.38348"
-       inkscape:export-filename="C:\Users\kacprzak\Projekty\BCEditor-trunk\doc\CONVML\przenosnik.png"
+       inkscape:export-filename="C:\Users\kacprzak\Projekty\convml\doc\png\belt_conveyor_drw.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <rect
@@ -5842,7 +5842,7 @@
        width="5"
        id="rect3247-5"
        style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-opacity:1"
-       inkscape:export-filename="C:\Users\kacprzak\Projekty\BCEditor-trunk\doc\CONVML\przenosnik.png"
+       inkscape:export-filename="C:\Users\kacprzak\Projekty\convml\doc\png\belt_conveyor_drw.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <rect
@@ -5853,7 +5853,7 @@
        width="15"
        id="rect3249-6"
        style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-opacity:1"
-       inkscape:export-filename="C:\Users\kacprzak\Projekty\BCEditor-trunk\doc\CONVML\przenosnik.png"
+       inkscape:export-filename="C:\Users\kacprzak\Projekty\convml\doc\png\belt_conveyor_drw.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <rect
@@ -5863,7 +5863,7 @@
        width="195"
        id="rect3251-4"
        style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:5"
-       inkscape:export-filename="C:\Users\kacprzak\Projekty\BCEditor-trunk\doc\CONVML\przenosnik.png"
+       inkscape:export-filename="C:\Users\kacprzak\Projekty\convml\doc\png\belt_conveyor_drw.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <g
@@ -5959,7 +5959,7 @@
        style="fill:#ffffff;fill-opacity:1"
        id="g4467"
        transform="translate(-288.56435,0)"
-       inkscape:export-filename="C:\Users\kacprzak\Projekty\BCEditor-trunk\doc\CONVML\przenosnik.png"
+       inkscape:export-filename="C:\Users\kacprzak\Projekty\convml\doc\png\belt_conveyor_drw.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300">
       <path
@@ -6003,7 +6003,7 @@
        transform="translate(-354.5858,0)"
        id="g4477"
        style="fill:#ffffff;fill-opacity:1"
-       inkscape:export-filename="C:\Users\kacprzak\Projekty\BCEditor-trunk\doc\CONVML\przenosnik.png"
+       inkscape:export-filename="C:\Users\kacprzak\Projekty\convml\doc\png\belt_conveyor_drw.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300">
       <path
@@ -6182,7 +6182,7 @@
        id="silnik-7-0"
        inkscape:label="#g5631"
        transform="translate(215.45586,680)"
-       inkscape:export-filename="C:\Users\kacprzak\Projekty\BCEditor-trunk\doc\CONVML\przenosnik.png"
+       inkscape:export-filename="C:\Users\kacprzak\Projekty\convml\doc\png\belt_conveyor_drw.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300">
       <g
@@ -6251,7 +6251,7 @@
     <g
        id="g4509-1"
        transform="translate(353.94194,555)"
-       inkscape:export-filename="C:\Users\kacprzak\Projekty\BCEditor-trunk\doc\CONVML\przenosnik.png"
+       inkscape:export-filename="C:\Users\kacprzak\Projekty\convml\doc\png\belt_conveyor_drw.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300">
       <rect
@@ -6286,7 +6286,7 @@
        id="silnik-7-0-9"
        inkscape:label="#g5631"
        transform="matrix(-1,0,0,1,679.5359,690)"
-       inkscape:export-filename="C:\Users\kacprzak\Projekty\BCEditor-trunk\doc\CONVML\przenosnik.png"
+       inkscape:export-filename="C:\Users\kacprzak\Projekty\convml\doc\png\belt_conveyor_drw.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300">
       <g
@@ -6355,7 +6355,7 @@
     <g
        id="g4509-1-6"
        transform="matrix(-1,0,0,1,541.04982,565)"
-       inkscape:export-filename="C:\Users\kacprzak\Projekty\BCEditor-trunk\doc\CONVML\przenosnik.png"
+       inkscape:export-filename="C:\Users\kacprzak\Projekty\convml\doc\png\belt_conveyor_drw.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300">
       <rect
@@ -6409,7 +6409,7 @@
          sodipodi:cy="179.86218"
          sodipodi:rx="4.0000005"
          sodipodi:ry="4.0000005"
-         d="m 202.5,175.86218 a 4.0000005,4.0000005 0 0 1 0,8 l 0,-4 z"
+         d="m 202.5,175.86218 c 2.20914,0 4,1.79086 4,4 0,2.20914 -1.79086,4 -4,4 l 0,-4 z"
          sodipodi:start="4.712389"
          sodipodi:end="7.8539816"
          transform="matrix(0,1,-1,0,-16.462497,-24.550659)"
@@ -6424,7 +6424,7 @@
          sodipodi:cy="179.86218"
          sodipodi:rx="4.0000005"
          sodipodi:ry="4.0000005"
-         d="m 202.5,175.86218 a 4.0000005,4.0000005 0 0 1 0,8 l 0,-4 z"
+         d="m 202.5,175.86218 c 2.20914,0 4,1.79086 4,4 0,2.20914 -1.79086,4 -4,4 l 0,-4 z"
          sodipodi:start="4.712389"
          sodipodi:end="7.8539816"
          transform="matrix(0,1,-1,0,8.5375031,-24.550659)"
@@ -6614,5 +6614,228 @@
        inkscape:export-filename="C:\Users\kacprzak\Projekty\BCEditor-trunk\doc\CONVML\uklad_hydrauliczny.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="struktura"
+     style="display:inline">
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:12, 12;stroke-dashoffset:0"
+       id="rect4476"
+       width="1220"
+       height="220"
+       x="-20"
+       y="676.08716"
+       inkscape:export-filename="C:\Users\kacprzak\Projekty\convml\doc\png\belt_conveyor_drw.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+    <rect
+       style="fill:none;stroke:#ff0000;stroke-width:2;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:12, 12;stroke-dashoffset:0"
+       id="rect4478"
+       width="125"
+       height="210"
+       x="-15"
+       y="681.08716"
+       inkscape:export-filename="C:\Users\kacprzak\Projekty\convml\doc\png\belt_conveyor_drw.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+    <rect
+       style="fill:none;stroke:#800080;stroke-width:2;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:12, 12;stroke-dashoffset:0"
+       id="rect4480"
+       width="165"
+       height="210"
+       x="1030"
+       y="681.08716"
+       inkscape:export-filename="C:\Users\kacprzak\Projekty\convml\doc\png\belt_conveyor_drw.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+    <rect
+       style="fill:none;stroke:#00ffff;stroke-width:2;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:12, 12;stroke-dashoffset:0"
+       id="rect4482"
+       width="155"
+       height="95"
+       x="1035"
+       y="736.08716"
+       inkscape:export-filename="C:\Users\kacprzak\Projekty\convml\doc\png\belt_conveyor_drw.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+    <rect
+       style="fill:none;stroke:#6c5353;stroke-width:2;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:12, 12;stroke-dashoffset:0"
+       id="rect4484"
+       width="910"
+       height="210"
+       x="115"
+       y="681.08716"
+       inkscape:export-filename="C:\Users\kacprzak\Projekty\convml\doc\png\belt_conveyor_drw.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+    <rect
+       style="fill:none;stroke:#008000;stroke-width:2;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:12, 12;stroke-dashoffset:0"
+       id="rect4486"
+       width="155"
+       height="130"
+       x="185"
+       y="686.08716"
+       ry="0"
+       inkscape:export-filename="C:\Users\kacprzak\Projekty\convml\doc\png\belt_conveyor_drw.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+    <rect
+       style="fill:none;stroke:#0000ff;stroke-width:2;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:12, 12;stroke-dashoffset:0"
+       id="rect4488"
+       width="140"
+       height="200"
+       x="345"
+       y="686.08716"
+       inkscape:export-filename="C:\Users\kacprzak\Projekty\convml\doc\png\belt_conveyor_drw.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+    <rect
+       style="fill:none;stroke:#ff6600;stroke-width:2;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:12, 12;stroke-dashoffset:0"
+       id="rect4490"
+       width="255"
+       height="140"
+       x="490"
+       y="746.08716"
+       inkscape:export-filename="C:\Users\kacprzak\Projekty\convml\doc\png\belt_conveyor_drw.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+    <rect
+       style="fill:none;stroke:#ff0000;stroke-width:2;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:12, 12;stroke-dashoffset:0"
+       id="rect4492"
+       width="270"
+       height="140"
+       x="750"
+       y="746.08716"
+       inkscape:export-filename="C:\Users\kacprzak\Projekty\convml\doc\png\belt_conveyor_drw.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+    <text
+       xml:space="preserve"
+       style="font-size:24px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="-1.078125"
+       y="705.80591"
+       id="text4494"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="C:\Users\kacprzak\Projekty\convml\doc\png\belt_conveyor_drw.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"><tspan
+         sodipodi:role="line"
+         id="tspan4496"
+         x="-1.078125"
+         y="705.80591">Zwrotnia</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:24px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Sans"
+       x="728.92188"
+       y="705.80591"
+       id="text4494-6"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="C:\Users\kacprzak\Projekty\convml\doc\png\belt_conveyor_drw.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"><tspan
+         sodipodi:role="line"
+         id="tspan4496-5"
+         x="728.92188"
+         y="705.80591">Trasa</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:24px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Sans"
+       x="189.60938"
+       y="705.40356"
+       id="text4494-6-5"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="C:\Users\kacprzak\Projekty\convml\doc\png\belt_conveyor_drw.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"><tspan
+         sodipodi:role="line"
+         id="tspan4496-5-4"
+         x="189.60938"
+         y="705.40356"
+         style="font-size:20px">Punkt</tspan><tspan
+         sodipodi:role="line"
+         x="189.60938"
+         y="730.40356"
+         id="tspan4540"
+         style="font-size:20px">załadowczy</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:24px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Sans"
+       x="350"
+       y="711.08716"
+       id="text4494-6-58"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="C:\Users\kacprzak\Projekty\convml\doc\png\belt_conveyor_drw.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"><tspan
+         sodipodi:role="line"
+         id="tspan4496-5-1"
+         x="350"
+         y="711.08716">System</tspan><tspan
+         sodipodi:role="line"
+         x="350"
+         y="741.08716"
+         id="tspan4551">podparcia</tspan><tspan
+         sodipodi:role="line"
+         x="350"
+         y="771.08716"
+         id="tspan4553">taśmy</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:24px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Sans"
+       x="1035"
+       y="706.08716"
+       id="text4494-6-1"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="C:\Users\kacprzak\Projekty\convml\doc\png\belt_conveyor_drw.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"><tspan
+         sodipodi:role="line"
+         id="tspan4496-5-11"
+         x="1035"
+         y="706.08716">Wysięgnik</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:24px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Sans"
+       x="1038.1133"
+       y="758.26685"
+       id="text4494-6-1-6"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="C:\Users\kacprzak\Projekty\convml\doc\png\belt_conveyor_drw.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"><tspan
+         sodipodi:role="line"
+         id="tspan4496-5-11-4"
+         x="1038.1133"
+         y="758.26685">Rozładunek</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:24px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Sans"
+       x="497.11328"
+       y="773.26685"
+       id="text4494-6-3"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="C:\Users\kacprzak\Projekty\convml\doc\png\belt_conveyor_drw.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"><tspan
+         sodipodi:role="line"
+         id="tspan4496-5-0"
+         x="497.11328"
+         y="773.26685">Układ napinający</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:24px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Sans"
+       x="757.11328"
+       y="773.26685"
+       id="text4494-6-3-9"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="C:\Users\kacprzak\Projekty\convml\doc\png\belt_conveyor_drw.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"><tspan
+         sodipodi:role="line"
+         id="tspan4496-5-0-7"
+         x="757.11328"
+         y="773.26685">Układ napędowy</tspan></text>
   </g>
 </svg>
