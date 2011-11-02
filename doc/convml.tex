@@ -100,7 +100,7 @@ poprawny.  Przykładowa instancja dokumentu może mieć następującą postać:
 Górnicze przenośniki taśmowe definiuje się jako urządzenia służące do ciągłego
 transportu na taśmie materiałów sypkich, pozyskiwanych podczas procesów
 związanych z prowadzeniem robót górniczych [Kulinowski2011].  Do zespołów
-głownych przenośnika taśmowego należą: stacja czołowa, stacja zwrotna, stacja
+głównych przenośnika taśmowego należą: stacja czołowa, stacja zwrotna, stacja
 napinania taśmy, taśma, trasa, zestawy krążnikowe i krążniki [Antoniak2005].
 
 \begin{figure}
@@ -120,8 +120,8 @@ W języku ConvML podstawowy podział przenośnika taśmowego wygląda następuj�
 \end{itemize}
 
 Pozostałe zespoły główne przenośnika taśmowego znajdują się głębiej w strukturze
-opisywanej przez język ConvML. System podparcia taśmy należy do elemetów
-składowych trasy. Układy napędowy i napinający są powiązane z bębnami, które
+opisywanej przez język ConvML.  System podparcia taśmy należy do elementów
+składowych trasy.  Układy napędowy i napinający są powiązane z bębnami, które
 mogą występować jako elementy składowe stacji zwrotnej, stacji czołowej lub
 trasy.
 
@@ -145,7 +145,7 @@ trasy.
 \end{description}
 
 \subsection{Warunki pracy <Conditions>}
-Element Conditions grupuje atrybuty związane z warunkami pracy przenośnikia
+Element Conditions grupuje atrybuty związane z warunkami pracy przenośnika
 taśmowego.
 
 \begin{figure}[h]
@@ -158,9 +158,12 @@ taśmowego.
 \paragraph{Definicje atrybutów:}
 \begin{description}
 \item[ambientTemperature] Temperatura otoczenia przenośnika - T [$^\circ$C].
-\item[workConditions] Warunki pracy przenośnika: 1 - bardzo dobre, 2 - dobre, 3 - 	przeciętne, 4 - ciężkie.
-\item[beltWorkConditions] Warunki eksploatacji taśmy: 1 - bardzo dobre, 2 - dobre, 3 - przeciętne, 4 - ciężkie.
-\item[beltSideRunning] Zbieganie boczne taśmy: 1 - brak, 2 - małe, 3 - średnie, 4 - duże.
+\item[workConditions] Warunki pracy przenośnika: 1 - bardzo dobre, 2 - dobre,
+  3 - przeciętne, 4 - ciężkie.
+\item[beltWorkConditions] Warunki eksploatacji taśmy: 1 - bardzo dobre,
+  2 - dobre, 3 - przeciętne, 4 - ciężkie.
+\item[beltSideRunning] Zbieganie boczne taśmy: 1 - brak, 2 - małe, 3 - średnie,
+  4 - duże.
 \item[amountWorkingHours] Ilość godzin pracy przenośnika w ciągu roku [h].
 \end{description}
 
