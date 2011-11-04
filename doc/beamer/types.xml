@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConvML version="1.2"
+        xmlns="http://www.entertech.com.pl/convml">
+    <Types>
+        <BeltSegmentType bottomCoverThickness="2"
+                         carcassType="tekstylny"
+                         coverDescription="trudnopalna"
+                         elasticityModulus="2000"
+                         manufacturer="Wolbrom"
+                         pliesNumber="3"
+                         topCoverThickness="4"
+                         width="1200"
+                         typeId="GTP-1200/t"/>
+    </Types>
+    <BeltConveyor>
+        <Conditions/>
+        <Belt>
+            <BeltSplice/>
+            <BeltSegment type="GTP-1200/t"
+                         length="100"
+                         productionDate="2005-04-11"
+                         certificate="1257"
+                         signature="1257"/>
+            <BeltSplice/>
+            <BeltSegment type="GTP-1200/t"
+                         length="100"
+                         productionDate="2005-07-15"
+                         certificate="1258"
+                         signature="1258"/>
+        </Belt>
+        ...
+        <Tail>
+            <Pulley/>
+            <Carry>
+                <Chute>
+                    <Material/>
+                </Chute>
+            </Carry>
+            <Return/>
+        </Tail>
+        <Route>
+            <RouteSection length="50">
+                <RouteSegment>
+                    <Carry/>
+                    <Return/>
+                </RouteSegment>
+            </RouteSection>
+            <RouteSection angle="5" length="100"/>
+            <RouteSection length="50"/>
+        </Route>
+        <Head>
+            <Pulley>
+                <DriveUnit>
+                    <Motor/>
+                    <Coupling/>
+                    <Gearbox/>
+                    <ElelctricalEquipment/>
+                </DriveUnit>
+            </Pulley>
+            <Carry/>
+            <Return/>
+        </Head>
+        <ConvElectricalEquipment>
+            <ControlSystem/>
+            <EmergencySystem/>
+            <SignalSystem/>
+            <FireSystem/>
+        </ConvElectricalEquipment>
+    </BeltConveyor>
+</ConvML>
+
