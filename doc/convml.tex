@@ -74,9 +74,9 @@ poprawny.  Przykładowa instancja dokumentu może mieć następującą postać:
 \begin{verbatim}
 <?xml version="1.0" encoding="utf-8"?>
 <ConvML version="1.2">
-  <Meta />
-  <Types />
-  <BeltConveyor />
+  <Meta/>
+  <Types/>
+  <BeltConveyor/>
 </ConvML>
 \end{verbatim}  
 
@@ -107,7 +107,7 @@ napinania taśmy, taśma, trasa, zestawy krążnikowe i krążniki [Antoniak2005
   \centering
   \includegraphics[width=\textwidth]{png/belt_conveyor_drw}
   \caption{Podstawowe podzespoły przenośnika taśmowego}
-  \label{fig:przenosnik}
+  \label{fig:beltConveyor-drw}
 \end{figure}
 
 W języku ConvML podstawowy podział przenośnika taśmowego wygląda następująco:
@@ -129,7 +129,7 @@ trasy.
   \centering
   \includegraphics[width=0.6\textwidth]{png/belt_conveyor_xsd2}
   \caption{Definicja elementu BeltConveyor}
-  \label{fig:belt-conveyor-xsd}
+  \label{fig:beltConveyor-xsd}
 \end{figure}
 
 \paragraph{Definicje atrybutów:}
@@ -144,7 +144,8 @@ trasy.
 \item[maxCapacity] Wydajność maksymalna.
 \end{description}
 
-\subsection{Warunki pracy <Conditions>}
+
+\subsection{Warunki pracy przenośnika <Conditions>}
 Element Conditions grupuje atrybuty związane z warunkami pracy przenośnika
 taśmowego.
 
@@ -176,7 +177,7 @@ taśmowym jest najczęściej listą odcinków taśmy połączonym złączami.
   \centering
   \includegraphics[width=0.6\textwidth]{png/tasma}
   \caption{Taśma przenośnikowa w uproszczeniu}
-  \label{fig:belt-xsd}
+  \label{fig:belt-drw}
 \end{figure}
 
 Element Belt jest jedynie elementem grupującym i nie ma swojej fizycznej
@@ -215,7 +216,8 @@ złącze i jeden odcinek.
 \item[width] Szerokość taśmy - B [mm].
 \end{description}
 
-\subsection{Odcinek taśmy <BeltSegment>}
+
+\subsubsection{Odcinek taśmy <BeltSegment>}
 Element BeltSegment odzwierciedla fizycznie zamontowany na przenośniku odcinek
 taśmy.  Atrybuty z grupy \emph{beltSegmentAttrGroup} mogą występować
 bezpośrednio w elemencie BeltSegment lub elemencie BeltSegmentType do którego
@@ -228,7 +230,7 @@ występować tylko w elemencie BeltSegment.
   \centering
   \includegraphics[width=0.6\textwidth]{png/belt_segment_xsd2}
   \caption{Definicja elementu BeltSegment}
-  \label{fig:belt-segment-xsd}
+  \label{fig:beltSegment-xsd}
 \end{figure}
 
 \paragraph{Definicje atrybutów:}
@@ -251,7 +253,8 @@ występować tylko w elemencie BeltSegment.
 \item[certificate] Numer atestu
 \end{description}
 
-\subsection{Złącze <BeltSplice>}
+
+\subsubsection{Złącze <BeltSplice>}
 Złącze w języku ConvML odnosi się do sąsiednich elementów na liście potomków
 elementu Belt. W poprawnym dokumencie będą to zawsze elementy BeltSegment
 reprezentujące odcinki taśmy. Złącze w przeciwieństwie do odcinka nie posiada
@@ -262,7 +265,7 @@ połączenia.
   \centering
   \includegraphics[width=0.6\textwidth]{png/belt_splice_xsd2}
   \caption{Definicja elementu BeltSplice}
-  \label{fig:belt-splice-xsd}
+  \label{fig:beltSplice-xsd}
 \end{figure}
 
 W przypadku złącza, standardowy atrybut \emph{productionDate} należy tłumaczyć
@@ -273,5 +276,220 @@ jako datę wykonania złącza.
 \item[spliceStrength] Wytrzymałość połączenia [\%]
 \item[spliceType] Rodzaj złącza np: wulkanizowane, mechaniczne, klejone, inne.
 \end{description}
+
+
+\subsection{Stacja zwrotna <Tail>}
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.6\textwidth]{png/liquid/Tail}
+  \caption{Definicja elementu Tail}
+  \label{fig:tail-xsd}
+\end{figure}
+
+
+\subsection{Stacja czołowa <Head>}
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.6\textwidth]{png/liquid/headTailType}
+  \caption{Definicja typu elementu Head}
+  \label{fig:headTailType-xsd}
+\end{figure}
+
+
+\subsection{Bęben <Pulley>}
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.6\textwidth]{png/liquid/Pulley}
+  \caption{Definicja elementu Pulley}
+  \label{fig:pulley-xsd}
+\end{figure}
+
+
+\subsection{Trasa <Route>}
+
+
+\subsubsection{Odcinek trasy <RouteSection>}
+
+
+\subsubsection{Segment trasy <RouteSegment>}
+
+
+\subsubsection{Górna trasa <Carry>}
+
+
+\subsubsection{Dolna trasa <Return>}
+
+
+\subsection{Zespół napędowy <DriveUnit>}
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.6\textwidth]{png/liquid/DriveUnit}
+  \caption{Definicja elementu DriveUnit}
+  \label{fig:driveUnit-xsd}
+\end{figure}
+
+
+\subsubsection{Silnik <Motor>}
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.6\textwidth]{png/liquid/Motor}
+  \caption{Definicja elementu Motor}
+  \label{fig:motor-xsd}
+\end{figure}
+
+
+\subsubsection{Sprzęgło podatne <Coupling>}
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.6\textwidth]{png/liquid/Coupling}
+  \caption{Definicja elementu Coupling}
+  \label{fig:coupling-xsd}
+\end{figure}
+
+
+\subsubsection{Sprzęgło hydrodynamiczne <FluidCoupling>}
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.6\textwidth]{png/liquid/FluidCoupling}
+  \caption{Definicja elementu FluidCoupling}
+  \label{fig:fluidCoupling-xsd}
+\end{figure}
+
+
+\subsubsection{Układ hamulcowy <Break>}
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.6\textwidth]{png/liquid/FluidCoupling}
+  \caption{Definicja elementu Break}
+  \label{fig:break-xsd}
+\end{figure}
+
+
+\subsubsection{Przekładnia <Gearbox>}
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.6\textwidth]{png/liquid/Gearbox}
+  \caption{Definicja elementu Gearbox}
+  \label{fig:gearbox-xsd}
+\end{figure}
+
+
+\subsection{Zespół napinający <TakeUpSystem>}
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.6\textwidth]{png/liquid/TakeUpSystem}
+  \caption{Definicja elementu TakeUpSystem}
+  \label{fig:takeUpSystem-xsd}
+\end{figure}
+
+
+\subsubsection{Wózek napinający <StrechingCar>}
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.6\textwidth]{png/liquid/StrechingCar}
+  \caption{Definicja elementu StrechingCar}
+  \label{fig:strechingCar-xsd}
+\end{figure}
+
+
+\subsubsection{Układ zlinowania <RopeSystem>}
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.6\textwidth]{png/liquid/RopeSystem}
+  \caption{Definicja elementu RopeSystem}
+  \label{fig:ropeSystem-xsd}
+\end{figure}
+
+
+\subsubsection{Wciagarka <Winch>}
+
+
+\subsubsection{Układ grawitacyjny <GravitySystem>}
+
+
+\subsubsection{Układ hydrauliczny <HydraulicSystem>}
+
+
+\subsubsection{Układ pneumatyczny <PneumaticSystem>}
+
+
+\subsection{Rozładunek <Unload>}
+
+
+\subsection{Elementy trasy}
+
+
+\subsection{Wyposażenie elektryczne przenosnika <ConvElectricalEquipment>}
+
+
+\subsubsection{Układ sterowania przenośnikiem <ControlSystem>}
+
+
+\subsubsection{System wyłączenia awaryjnego <EmergencySystem>}
+
+
+\subsubsection{System łączności i sygnalizacji <SignalSystem>}
+
+
+\subsubsection{Instalacja przeciwpożarowa <FireSystem>}
+
+
+\subsection{Pozostałe}
+tutaj opisać: Urządzenie dodatkowe, Wyposażenie elektryczne urządzenia, Układ chłodzenia
+
+
+\section{Typy <Types>}
+
+Do formatu ConvML w wersji 1.2 wprowadzono pojęcie typu w celu uniknięca niepotrzebnych
+powtórzeń.  Typ w sensie rozumianym przez ConvML jest zbiorem wartości atrubutów, które
+mogą być współdzielone przez wiele instancji tego samego elementu.
+Typy definiuje się wewnątrz elementu Types, a ich nazwa tworzona jest poprzez dodanie
+do nazwy elementu sufiksu Type. Każdy Typ musi posiadać unikalny atrybut typeId.
+
+Instancja elementu BeltSegment dziedziczy wartości atrybutów zdefinowanych w elemencie
+BeltSegmentType jeśli wartość atrybutu type zgadza się z wartościa atrybutu typeId.
+
+UWAGA! Czy powinno być dopuszczalne przedefiniowywanie atrybutów?
+
+\begin{verbatim}
+<Types>
+  <BeltSegmentType typeId="GTP-1200/t"
+                   bottomCoverThickness="2"
+                   carcassType="tekstylny"
+                   coverDescription="trudnopalna"
+                   elasticityModulus="2000"
+                   manufacturer="Wolbrom"
+                   pliesNumber="3"
+                   topCoverThickness="4"
+                   width="1200"/>
+</Types>
+\end{verbatim}
+
+\begin{verbatim}
+<Belt>
+  <BeltSplice/>
+  <BeltSegment type="GTP-1200/t"
+               length="100"
+               productionDate="2005-04-11"
+               certificate="1257"/>
+  <BeltSplice/>
+  <BeltSegment type="GTP-1200/t"
+               length="100"
+               productionDate="2005-07-15"
+               certificate="1258"/>
+</Belt>
+\end{verbatim}
 
 \end{document}
