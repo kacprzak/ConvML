@@ -90,7 +90,7 @@ poprawny.  Przykładowa instancja dokumentu może mieć następującą postać:
   \label{fig:convml-xsd}
 \end{figure}
 
-\paragraph{Definicje atrybutów:}
+\paragraph{Definicje atrybutów}
 \begin{description}
 \item[version] Zastosowana w dokumencie wersja języka ConvML.
 \end{description}
@@ -132,7 +132,7 @@ trasy.
   \label{fig:beltConveyor-xsd}
 \end{figure}
 
-\paragraph{Definicje atrybutów:}
+\paragraph{Definicje atrybutów}
 \begin{description}
 \item[beltSpeed] Prędkość taśmy przenośnika - v [m/s].
 \item[designCapacity] Wydajność nominalna przenośnika - Q [t/h].
@@ -156,7 +156,7 @@ taśmowego.
   \label{fig:conditions-xsd}
 \end{figure}
 
-\paragraph{Definicje atrybutów:}
+\paragraph{Definicje atrybutów}
 \begin{description}
 \item[ambientTemperature] Temperatura otoczenia przenośnika - T [$^\circ$C].
 \item[workConditions] Warunki pracy przenośnika: 1 - bardzo dobre, 2 - dobre,
@@ -211,7 +211,7 @@ złącze i jeden odcinek.
   \label{fig:belt-xsd}
 \end{figure}
 
-\paragraph{Definicje atrybutów:}
+\paragraph{Definicje atrybutów}
 \begin{description}
 \item[width] Szerokość taśmy - B [mm].
 \end{description}
@@ -221,10 +221,10 @@ złącze i jeden odcinek.
 Element BeltSegment odzwierciedla fizycznie zamontowany na przenośniku odcinek
 taśmy.  Atrybuty z grupy \emph{beltSegmentAttrGroup} mogą występować
 bezpośrednio w elemencie BeltSegment lub elemencie BeltSegmentType do którego
-można się odwoływać z elementu Belt segment za pomocą atrybutu
-\emph{type}. Cechą tej grupy atrybutów jest to, że mogą opisywać zarówno
-instancję jak i typ odcinka taśmy. Atrybuty length oraz cetificate mogą
-występować tylko w elemencie BeltSegment.
+można się odwoływać z elementu Belt segment za pomocą atrybutu \emph{type}.
+Cechą tej grupy atrybutów jest to, że mogą opisywać zarówno instancję jak i typ
+odcinka taśmy. Atrybuty length oraz cetificate mogą występować tylko w elemencie
+BeltSegment.
 
 \begin{figure}[h]
   \centering
@@ -233,7 +233,7 @@ występować tylko w elemencie BeltSegment.
   \label{fig:beltSegment-xsd}
 \end{figure}
 
-\paragraph{Definicje atrybutów:}
+\paragraph{Definicje atrybutów}
 \begin{description}
 \item[width] Szerokość odcinka taśmy [mm]
 \item[strength] Nominalna wytrzymałość taśmy [kN/m]
@@ -256,8 +256,8 @@ występować tylko w elemencie BeltSegment.
 
 \subsubsection{Złącze <BeltSplice>}
 Złącze w języku ConvML odnosi się do sąsiednich elementów na liście potomków
-elementu Belt. W poprawnym dokumencie będą to zawsze elementy BeltSegment
-reprezentujące odcinki taśmy. Złącze w przeciwieństwie do odcinka nie posiada
+elementu Belt.  W poprawnym dokumencie będą to zawsze elementy BeltSegment
+reprezentujące odcinki taśmy.  Złącze w przeciwieństwie do odcinka nie posiada
 parametru długości i jest rozpatrywane jako miejsce (punkt) wykonania
 połączenia.
 
@@ -271,7 +271,7 @@ połączenia.
 W przypadku złącza, standardowy atrybut \emph{productionDate} należy tłumaczyć
 jako datę wykonania złącza.
 
-\paragraph{Definicje atrybutów:}
+\paragraph{Definicje atrybutów}
 \begin{description}
 \item[spliceStrength] Wytrzymałość połączenia [\%]
 \item[spliceType] Rodzaj złącza np: wulkanizowane, mechaniczne, klejone, inne.
@@ -279,11 +279,12 @@ jako datę wykonania złącza.
 
 
 \subsection{Stacja zwrotna <Tail>}
-Stacja zwrotna jest elementem konstrukcyjnym przenośnika taśmowego w którym taśma
-zmienia kierunek ruchu z trasy dolnej (powrotnej) na trasę górną (nosną). Zmiana
-kierunku odbywa się na bębnie zwrotnym, który jest pierwszym podelementem elementu
-Tail w strukturze. Elementy Carry oraz Return odpowiadają trasie niśnej oraz trasie
-powrotnej i są opisane w rozdziale dotyczącym segmentów trasy.
+Stacja zwrotna jest elementem konstrukcyjnym przenośnika taśmowego w którym
+taśma zmienia kierunek ruchu z trasy dolnej (powrotnej) na trasę górną (nośną).
+Zmiana kierunku odbywa się na bębnie zwrotnym, który jest pierwszym podelementem
+elementu Tail w strukturze.  Elementy Carry oraz Return odpowiadają trasie
+nośnej oraz trasie powrotnej i są opisane w rozdziale dotyczącym segmentów
+trasy.
 
 \begin{figure}[h]
   \centering
@@ -294,10 +295,10 @@ powrotnej i są opisane w rozdziale dotyczącym segmentów trasy.
 
 
 \subsection{Stacja czołowa <Head>}
-Stacja czołowa pomimo innej nazwy elementu w stosuku do stacji zwrotnej posiada dokładnie
-taką samą definicję podemenetów. Zmienia sie jedynie interpretacja elementu Pulley, który
-w tym przypdaku odpowiada bebnowi czołowemu i obywa się na nim zmiana kierunku taśmy z
-trasy nośnej na trasę powrotną.
+Stacja czołowa pomimo innej nazwy elementu w stosunku do stacji zwrotnej posiada
+dokładnie taką samą definicję podelementów.  Zmienia się jedynie interpretacja
+elementu Pulley, który w tym przypadku odpowiada bębnowi czołowemu i obywa się
+na nim zmiana kierunku taśmy z trasy nośnej na trasę powrotną.
 
 \begin{figure}[h]
   \centering
@@ -308,20 +309,21 @@ trasy nośnej na trasę powrotną.
 
 
 \subsection{Bęben <Pulley>}
-Element Pulley reprezentuje bęben w strukturze przenośnika. Poza bębenami zwrotnym oraz
-czołowym, które posiadają określone miejsca w strukturze, można umieścić dodatkowe bębny
-w strukturze przenośnika jako podelementy elementów Carry (górna trasa) oraz Return (dolna
-trasa).
+Element Pulley reprezentuje bęben w strukturze przenośnika.  Poza bębnami
+zwrotnym oraz czołowym, które posiadają określone miejsca w strukturze, można
+umieścić dodatkowe bębny w strukturze przenośnika jako podelementy elementów
+Carry (górna trasa) oraz Return (dolna trasa).
 
-Ze względu na funkcję rozróżnia się w przenosnikach bębny napędowe; napinające,
-zapewniające niezbędne napięcie taśmy; odchylające lub odginające, zwększające kąt
-opasania taśmy.
+Ze względu na funkcję rozróżnia się w przenośnikach bębny napędowe; napinające,
+zapewniające niezbędne napięcie taśmy; odchylające lub odginające, zwiększające
+kąt opasania taśmy.
 
 W języku ConvML bębny wszystkich rodzajów oznacza się tym samym elementem
-Pulley. O ich funkcji decydują elementy zawarte wewnątrz elementu Pulley. Przy braku
-tych elementów bęben pełni funkcję odchylającą. Przy obecności jednego lub dwóch
-zestawów napędowych (DriveUnit) staje się bębnem napędowym. Analogicznie obecność
-zestawu napinającego (TakeUpSystem) informuje o funkcji napinającej bębna, 
+Pulley.  O ich funkcji decydują elementy zawarte wewnątrz elementu Pulley. Przy
+braku tych elementów bęben pełni funkcję odchylającą.  Przy obecności jednego
+lub dwóch zestawów napędowych (DriveUnit) staje się bębnem napędowym.
+Analogicznie obecność zestawu napinającego (TakeUpSystem) informuje o funkcji
+napinającej bębna,
 
 \begin{figure}[h]
   \centering
@@ -335,16 +337,17 @@ zestawu napinającego (TakeUpSystem) informuje o funkcji napinającej bębna,
 
 
 \subsubsection{Odcinek trasy <RouteSection>}
-Odcinek trasy jest elementem logicznego podziału trasy przenośnika na elementy o róznej
-długości oraz nachyleniu. Podział na odcinki umożliwia zapis podstawowych parametrów
-geometrycznych przenośnika.
+Odcinek trasy jest elementem logicznego podziału trasy przenośnika na elementy o
+różnej długości oraz nachyleniu. Podział na odcinki umożliwia zapis podstawowych
+parametrów geometrycznych przenośnika.
 
-Do najważniejszych atrybutów elementu RouteSection należą length oraz angle. 
+Do najważniejszych atrybutów elementu RouteSection należą length oraz angle.
 
 
 \subsubsection{Segment trasy <RouteSegment>}
-Segement trasy jest fizycznym elementem konstrukcyjnym który umożliwa montaż podzespołów
-współpracyjących z taśmą poruszającą się na trasie powrotnej lub nośnej. 
+Segment trasy jest fizycznym elementem konstrukcyjnym który umożliwia montaż
+podzespołów współpracujących z taśmą poruszającą się na trasie powrotnej lub
+nośnej.
 
 \subsubsection{Górna trasa <Carry>}
 
@@ -442,7 +445,7 @@ współpracyjących z taśmą poruszającą się na trasie powrotnej lub nośnej
 \end{figure}
 
 
-\subsubsection{Wciagarka <Winch>}
+\subsubsection{Wciągarka <Winch>}
 
 
 \subsubsection{Układ grawitacyjny <GravitySystem>}
@@ -476,21 +479,24 @@ współpracyjących z taśmą poruszającą się na trasie powrotnej lub nośnej
 
 
 \subsection{Pozostałe}
-tutaj opisać: Urządzenie dodatkowe, Wyposażenie elektryczne urządzenia, Układ chłodzenia
+tutaj opisać: Urządzenie dodatkowe, Wyposażenie elektryczne urządzenia, Układ
+chłodzenia
 
 
 \section{Typy <Types>}
 
-Do formatu ConvML w wersji 1.2 wprowadzono pojęcie typu w celu uniknięca niepotrzebnych
-powtórzeń.  Typ w sensie rozumianym przez ConvML jest zbiorem wartości atrubutów, które
-mogą być współdzielone przez wiele instancji tego samego elementu.
-Typy definiuje się wewnątrz elementu Types, a ich nazwa tworzona jest poprzez dodanie
-do nazwy elementu sufiksu Type. Każdy Typ musi posiadać unikalny atrybut typeId.
+Do formatu ConvML w wersji 1.2 wprowadzono pojęcie typu w celu uniknięcia
+niepotrzebnych powtórzeń.  Typ w sensie rozumianym przez ConvML jest zbiorem
+wartości atrybutów, które mogą być współdzielone przez wiele instancji tego
+samego elementu.  Typy definiuje się wewnątrz elementu Types, a ich nazwa
+tworzona jest poprzez dodanie do nazwy elementu sufiksu Type. Każdy Typ musi
+posiadać unikalny atrybut typeId.
 
-Instancja elementu BeltSegment dziedziczy wartości atrybutów zdefinowanych w elemencie
-BeltSegmentType jeśli wartość atrybutu type zgadza się z wartościa atrybutu typeId.
+Instancja elementu BeltSegment dziedziczy wartości atrybutów zdefiniowanych w
+elemencie BeltSegmentType jeśli wartość atrybutu type zgadza się z wartością
+atrybutu typeId.
 
-UWAGA! Czy powinno być dopuszczalne przedefiniowywanie atrybutów?
+UWAGA! Czy powinno być dopuszczalne przedefiniowanie atrybutów?
 
 \begin{verbatim}
 <Types>

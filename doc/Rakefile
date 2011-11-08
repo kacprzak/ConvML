@@ -5,7 +5,7 @@ file "convml.pdf" => ["convml.tex"] do
 end
 
 task :html do
-     sh "plastex convml.tex"
+     sh "plastex --toc-non-files convml.tex"
      sh <<CMD
 for f in convml/images/*.png
 do
