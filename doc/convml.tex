@@ -279,6 +279,11 @@ jako datę wykonania złącza.
 
 
 \subsection{Stacja zwrotna <Tail>}
+Stacja zwrotna jest elementem konstrukcyjnym przenośnika taśmowego w którym taśma
+zmienia kierunek ruchu z trasy dolnej (powrotnej) na trasę górną (nosną). Zmiana
+kierunku odbywa się na bębnie zwrotnym, który jest pierwszym podelementem elementu
+Tail w strukturze. Elementy Carry oraz Return odpowiadają trasie niśnej oraz trasie
+powrotnej i są opisane w rozdziale dotyczącym segmentów trasy.
 
 \begin{figure}[h]
   \centering
@@ -289,6 +294,10 @@ jako datę wykonania złącza.
 
 
 \subsection{Stacja czołowa <Head>}
+Stacja czołowa pomimo innej nazwy elementu w stosuku do stacji zwrotnej posiada dokładnie
+taką samą definicję podemenetów. Zmienia sie jedynie interpretacja elementu Pulley, który
+w tym przypdaku odpowiada bebnowi czołowemu i obywa się na nim zmiana kierunku taśmy z
+trasy nośnej na trasę powrotną.
 
 \begin{figure}[h]
   \centering
@@ -299,6 +308,20 @@ jako datę wykonania złącza.
 
 
 \subsection{Bęben <Pulley>}
+Element Pulley reprezentuje bęben w strukturze przenośnika. Poza bębenami zwrotnym oraz
+czołowym, które posiadają określone miejsca w strukturze, można umieścić dodatkowe bębny
+w strukturze przenośnika jako podelementy elementów Carry (górna trasa) oraz Return (dolna
+trasa).
+
+Ze względu na funkcję rozróżnia się w przenosnikach bębny napędowe; napinające,
+zapewniające niezbędne napięcie taśmy; odchylające lub odginające, zwększające kąt
+opasania taśmy.
+
+W języku ConvML bębny wszystkich rodzajów oznacza się tym samym elementem
+Pulley. O ich funkcji decydują elementy zawarte wewnątrz elementu Pulley. Przy braku
+tych elementów bęben pełni funkcję odchylającą. Przy obecności jednego lub dwóch
+zestawów napędowych (DriveUnit) staje się bębnem napędowym. Analogicznie obecność
+zestawu napinającego (TakeUpSystem) informuje o funkcji napinającej bębna, 
 
 \begin{figure}[h]
   \centering
@@ -312,10 +335,16 @@ jako datę wykonania złącza.
 
 
 \subsubsection{Odcinek trasy <RouteSection>}
+Odcinek trasy jest elementem logicznego podziału trasy przenośnika na elementy o róznej
+długości oraz nachyleniu. Podział na odcinki umożliwia zapis podstawowych parametrów
+geometrycznych przenośnika.
+
+Do najważniejszych atrybutów elementu RouteSection należą length oraz angle. 
 
 
 \subsubsection{Segment trasy <RouteSegment>}
-
+Segement trasy jest fizycznym elementem konstrukcyjnym który umożliwa montaż podzespołów
+współpracyjących z taśmą poruszającą się na trasie powrotnej lub nośnej. 
 
 \subsubsection{Górna trasa <Carry>}
 
