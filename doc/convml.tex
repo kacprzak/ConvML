@@ -484,7 +484,6 @@ chłodzenia
 
 
 \section{Typy <Types>}
-
 Do formatu ConvML w wersji 1.2 wprowadzono pojęcie typu w celu uniknięcia
 niepotrzebnych powtórzeń.  Typ w sensie rozumianym przez ConvML jest zbiorem
 wartości atrybutów, które mogą być współdzielone przez wiele instancji tego
@@ -492,11 +491,13 @@ samego elementu.  Typy definiuje się wewnątrz elementu Types, a ich nazwa
 tworzona jest poprzez dodanie do nazwy elementu sufiksu Type. Każdy Typ musi
 posiadać unikalny atrybut typeId.
 
-Instancja elementu BeltSegment dziedziczy wartości atrybutów zdefiniowanych w
-elemencie BeltSegmentType jeśli wartość atrybutu type zgadza się z wartością
-atrybutu typeId.
 
-UWAGA! Czy powinno być dopuszczalne przedefiniowanie atrybutów?
+\subsection{Typy płaskie}
+W najprostszym przypadku instancja elementu BeltSegment dziedziczy wartości
+atrybutów zdefiniowanych w
+elemencie BeltSegmentType jeśli wartość atrybutu type zgadza się z wartością
+atrybutu typeId.  Nie jest dopuszczalne przedefinowywanie atrybutów zdefinowanych
+w typie
 
 \begin{verbatim}
 <Types>
@@ -525,6 +526,39 @@ UWAGA! Czy powinno być dopuszczalne przedefiniowanie atrybutów?
                productionDate="2005-07-15"
                certificate="1258"/>
 </Belt>
+\end{verbatim}
+
+
+\subsection{Typy złożone}
+Typy mogą posiadać zdefiniowane podelementy.  W takim przypadku w elemencie
+odwołującym się do typu nie może już być podelementów. 
+
+\begin{verbatim}
+<IdlerType typeId="133" />
+<IdlerSetType typeId="A">
+  <Idler type="133"/>
+  <Idler type="133"/>
+  <Idler type="133"/>
+</IdlerSetType>
+\end{verbatim}
+
+\begin{verbatim}
+<IdlerSet type="A"/>
+\end{verbatim}
+
+Jeśli element może mieć podelementy, a typ do którego się odwołuje nie posiada
+podelementów, to taki element może posiadać podelementy.
+
+\begin{verbatim}
+<IdlerSetType typeId="B"/>
+\end{verbatim}
+
+\begin{verbatim}
+<IdlerSet type="B">
+  <Idler type="133"/>
+  <Idler type="133"/>
+  <Idler type="133"/>
+<IdlerSet/>
 \end{verbatim}
 
 \end{document}
