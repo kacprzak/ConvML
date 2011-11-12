@@ -323,7 +323,7 @@ Pulley.  O ich funkcji decydują elementy zawarte wewnątrz elementu Pulley. Prz
 braku tych elementów bęben pełni funkcję odchylającą.  Przy obecności jednego
 lub dwóch zestawów napędowych (DriveUnit) staje się bębnem napędowym.
 Analogicznie obecność zestawu napinającego (TakeUpSystem) informuje o funkcji
-napinającej bębna,
+napinającej bębna.
 
 \begin{figure}[h]
   \centering
@@ -332,8 +332,38 @@ napinającej bębna,
   \label{fig:pulley-xsd}
 \end{figure}
 
+\paragraph{Definicje atrybutów}
+\begin{description}
+\item[diameter] Średnica [m]
+\item[pulleyBeltFriction] Współczynnik tarcia między taśmą a bębnem napędowym
+\item[wrapAngle] Kąt opasania taśmą - $\alpha$ [$^\circ$]
+\item[x] Położenie osi bębna względem elementu nadrzędnego [m]
+\item[y] Położenie osi bębna względem elementu nadrzędnego [m]
+\item[rotation] Rotacja bębna: cw - zgodnie z ruchem wskazówek zegara;
+	ccw - przeciwnie względem ruchu wskazówek zegara.
+\item[mass] Masa [kg]
+\item[inertiaMoment] Moment bezwładności - I [kgm$^2$]
+\end{description}
 
 \subsection{Trasa <Route>}
+Trasa jest elementem grupującym odcinki trasy. Aby obliczyć całkowitą długość
+przenośnika, wysokość podnoszenia oraz pozostałe parametry geometryczna należy
+wziąść pod uwagę wszystkie odcinki trasy oraz stację czołową i zwrotną. 
+Element Route nie posiada atrybutów.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=\textwidth]{png/belt_conveyor2_drw}
+  \caption{Odcinki trasy przenośnika taśmowego}
+  \label{fig:beltConveyor2-drw}
+\end{figure}
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.6\textwidth]{png/liquid/Route}
+  \caption{Definicja elementu Route}
+  \label{fig:route-xsd}
+\end{figure}
 
 
 \subsubsection{Odcinek trasy <RouteSection>}
@@ -341,7 +371,20 @@ Odcinek trasy jest elementem logicznego podziału trasy przenośnika na elementy
 różnej długości oraz nachyleniu. Podział na odcinki umożliwia zapis podstawowych
 parametrów geometrycznych przenośnika.
 
-Do najważniejszych atrybutów elementu RouteSection należą length oraz angle.
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.6\textwidth]{png/liquid/RouteSection}
+  \caption{Definicja elementu RouteSection}
+  \label{fig:routeSection-xsd}
+\end{figure}
+
+\paragraph{Definicje atrybutów}
+\begin{description}
+\item[length] Długość elementu [m]
+\item[angle] Kąt nachylenia elementu [$^\circ$]
+\item[verticalRadius] Promień łuku wertykalnego [m]
+\item[horizontalRadius] Promień łuku horyzontalnego [m]
+\end{description}
 
 
 \subsubsection{Segment trasy <RouteSegment>}
@@ -349,13 +392,54 @@ Segment trasy jest fizycznym elementem konstrukcyjnym który umożliwia montaż
 podzespołów współpracujących z taśmą poruszającą się na trasie powrotnej lub
 nośnej.
 
-\subsubsection{Górna trasa <Carry>}
+Do określenia czy elementy zamontowane na segmencie są częścią trasy nośnej, czy
+trasy powrotnej, służą elementy Carry oraz Return.
 
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.6\textwidth]{png/liquid/RouteSegment}
+  \caption{Definicja elementu RouteSegment}
+  \label{fig:routeSegment-xsd}
+\end{figure}
+
+\paragraph{Definicje atrybutów}
+\begin{description}
+\item[length] Długość elementu [m]
+\end{description}
+
+
+\subsubsection{Górna trasa <Carry>}
+Element Carry grupuje obiekty współpracujące z taśmą poruszającą się po trasie
+nośnej.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.6\textwidth]{png/liquid/carryReturnType}
+  \caption{Definicja typu elementu Carry}
+  \label{fig:carryReturnType-xsd}
+\end{figure}
 
 \subsubsection{Dolna trasa <Return>}
+Element Return grupuje obiekty współpracujące z taśmą poruszającą się po trasie
+powrotnej. Element ten modyfikuje układ współrzędnych dla swoich podelementów.
+Oś x jest zwrócona w przeciwnym kierunku względem elementu nadrzędnego i
+jej zwrot jest zdodny z kierunkiem biegu taśmy. Środek układu współrzędnych
+jest przesuniętu. Zakładając że $(x_0, y_0)$ to środek układu współrzędnych elementu
+nadrzędnego (RouteSegment, Head, Tail) to nowy środek układu znajduje się w
+punkcie $(x_0 + {length}, y_0)$, gdzie ${length}$ jest atrubytem długości
+elementu nadrzędnego.
 
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.4\textwidth]{png/carryReturn_drw}
+  \caption{Układy współrzędnych elementów Carry (czerwony) oraz
+elementu Return (niebieski)}
+  \label{fig:carryReturn-drw}
+\end{figure}
 
 \subsection{Zespół napędowy <DriveUnit>}
+Element grupujący urządzenia wchodzące w skład zespołu napędowego. Może występować
+jedynie jako podelement elementu Pulley (Bębna).
 
 \begin{figure}[h]
   \centering
@@ -364,6 +448,15 @@ nośnej.
   \label{fig:driveUnit-xsd}
 \end{figure}
 
+\paragraph{Definicje atrybutów}
+\begin{description}
+\item[dynamicSurplusFactor] Współczynnik nadwyżki dynamicznej $K_D = M_R/M_U$,
+	gdzie $M_R$ - moment rozruchowy, $M_U$ - moment ustalony 
+\item[brakeFactor] Stosunek momentu hamowania do nominalnego momentu napędu $K_H = M_H/M_N$,
+	gdzie $M_H$ - moment hamowania, $M_N$ - moment nominalny
+\item[driveEfficiency] Sprawność napędu - $\eta$
+\item[startupControlSystem] Urządzenie rozruchowe
+\end{description}
 
 \subsubsection{Silnik <Motor>}
 
@@ -374,6 +467,18 @@ nośnej.
   \label{fig:motor-xsd}
 \end{figure}
 
+\paragraph{Definicje atrybutów}
+\begin{description}
+\item[power] Moc silnika [kW]
+\item[nominalRotationalSpeed] Nominalna prędkość obrotowa [1/min]
+\item[startupFactor] Współczynnik rozruchowy $K_R = M_R/M_N$,
+	gdzie $M_R$ - moment rozruchowy, $M_N$ - moment nominalny
+\item[overladFactor] Współczynnik przeciążalności napędu $K_O = M_{Max}/M_N$,
+	gdzie $M_{Max}$ - moment maksymalny, $M_N$ - moment nominalny
+\item[inertiaMoment] Moment bezwładności [kgm$^2$]
+\item[voltage] Napięcie zasilania
+\item[currentRated] Prąd znamionowy silnika
+\end{description}
 
 \subsubsection{Sprzęgło podatne <Coupling>}
 
@@ -394,6 +499,11 @@ nośnej.
   \label{fig:fluidCoupling-xsd}
 \end{figure}
 
+\paragraph{Definicje atrybutów}
+\begin{description}
+\item[slip] Poślizg sprzęgła
+\end{description}
+
 
 \subsubsection{Układ hamulcowy <Break>}
 
@@ -413,6 +523,11 @@ nośnej.
   \caption{Definicja elementu Gearbox}
   \label{fig:gearbox-xsd}
 \end{figure}
+
+\paragraph{Definicje atrybutów}
+\begin{description}
+\item[gearRatio] Przełożenie przekładni
+\end{description}
 
 
 \subsection{Zespół napinający <TakeUpSystem>}
@@ -463,6 +578,18 @@ nośnej.
 \subsection{Elementy trasy}
 
 
+\subsubsection{Zestaw krążnikowy <IdlesSet>}
+
+
+\subsubsection{Zestaw specjalny <IdlesSetSpecial>}
+
+
+\subsubsection{Płyta ślizgowa <SlipPlate>}
+
+
+\subsubsection{Napęd typu taśma-taśma <TTDrive>}
+
+
 \subsection{Wyposażenie elektryczne przenosnika <ConvElectricalEquipment>}
 
 
@@ -482,6 +609,11 @@ nośnej.
 tutaj opisać: Urządzenie dodatkowe, Wyposażenie elektryczne urządzenia, Układ
 chłodzenia
 
+\subsubsection{Układ chłodzenia <CoolingSystem>}
+
+\subsubsection{Wyposażenie elektryczne urządzenia <ElectricalEquipment>}
+
+\subsubsection{Urządzenie dodatkowe <AdditionalEquipment>}
 
 \section{Typy <Types>}
 Do formatu ConvML w wersji 1.2 wprowadzono pojęcie typu w celu uniknięcia

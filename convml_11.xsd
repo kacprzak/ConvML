@@ -234,7 +234,7 @@ Id: $Id$
     <xs:annotation>
       <xs:documentation>Materiał transportowany</xs:documentation>
     </xs:annotation>
-    <xs:attribute name="name" type="xs:token">
+    <xs:attribute name="name" type="xs:string">
       <xs:annotation>
         <xs:documentation>Nazwa materiału</xs:documentation>
       </xs:annotation>
@@ -348,7 +348,6 @@ Id: $Id$
       <xs:documentation>Taśma</xs:documentation>
     </xs:annotation>
     <xs:sequence minOccurs="0" maxOccurs="unbounded">
-      <!-- odwrócenie kolejności na życzenie klienta z ZG Rudna -->
       <xs:element ref="BeltSplice" />
       <xs:element ref="BeltSegment" />
     </xs:sequence>
@@ -370,10 +369,9 @@ Id: $Id$
     <xs:annotation>
       <xs:documentation>Trasa przenośnika</xs:documentation>
     </xs:annotation>
-    <xs:choice minOccurs="0" maxOccurs="unbounded">
-      <xs:element ref="RouteSection" />
-    </xs:choice>
-    <xs:attributeGroup ref="instanceAttrGroup" />
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" ref="RouteSection" />
+    </xs:sequence>
   </xs:complexType>
   <!-- **************************************************************************************
     *                                        HEAD                                           *
@@ -685,12 +683,12 @@ Id: $Id$
     </xs:attribute>
     <xs:attribute name="x" type="xs:decimal">
       <xs:annotation>
-        <xs:documentation>Położenie osi bębna względem elementu nadrzędnego</xs:documentation>
+        <xs:documentation>Położenie osi bębna względem elementu nadrzędnego [m]</xs:documentation>
       </xs:annotation>
     </xs:attribute>
     <xs:attribute name="y" type="xs:decimal">
       <xs:annotation>
-        <xs:documentation>Położenie osi bębna względem elementu nadrzędnego</xs:documentation>
+        <xs:documentation>Położenie osi bębna względem elementu nadrzędnego [m]</xs:documentation>
       </xs:annotation>
     </xs:attribute>
     <xs:attribute name="rotation">
@@ -836,7 +834,7 @@ Id: $Id$
     <xs:choice minOccurs="0" maxOccurs="unbounded">
       <xs:element ref="RouteSegment" />
     </xs:choice>
-    <xs:attributeGroup ref="instanceAttrGroup" />
+    <!--xs:attributeGroup ref="instanceAttrGroup" /-->
     <xs:attributeGroup ref="lengthAngleGroup" />
     <xs:attribute name="verticalRadius" type="xs:decimal">
       <xs:annotation>
@@ -848,7 +846,7 @@ Id: $Id$
         <xs:documentation>Promień łuku horyzontalnego [m]</xs:documentation>
       </xs:annotation>
     </xs:attribute>
-    <xs:attribute name="number" type="xs:nonNegativeInteger" />
+    <!--xs:attribute name="number" type="xs:nonNegativeInteger" /-->
   </xs:complexType>
   <!-- **************************************************************************************
     *                                    IDLER SET SPECIAL                                  *
@@ -904,12 +902,18 @@ Id: $Id$
         <xs:documentation>Nominalna prędkość obrotowa [1/min]</xs:documentation>
       </xs:annotation>
     </xs:attribute>
-    <xs:attribute name="driveFactor" type="nonNegativeDecimalType">
+    <xs:attribute name="startupFactor" type="nonNegativeDecimalType">
       <xs:annotation>
-        <xs:documentation>Współczynnik przeciążalności napędu</xs:documentation>
+        <xs:documentation>Współczynnik rozruchowy K_R = M_R/M_N,
+	gdzie M_R - moment rozruchowy, M_N - moment nominalny</xs:documentation>
       </xs:annotation>
-    </xs:attribute>
-    <xs:attribute name="overloadFactor" type="nonNegativeDecimalType" />
+		</xs:attribute>    
+    <xs:attribute name="overloadFactor" type="nonNegativeDecimalType">
+      <xs:annotation>
+        <xs:documentation>Współczynnik przeciążalności napędu K_O = M_{Max}/M_N,
+	gdzie M_{Max} - moment maksymalny, M_N - moment nominalny</xs:documentation>
+      </xs:annotation>
+		</xs:attribute>
     <xs:attribute name="inertiaMoment" type="nonNegativeDecimalType">
       <xs:annotation>
         <xs:documentation>Moment bezwładności [kgm²]</xs:documentation>
@@ -964,7 +968,7 @@ Id: $Id$
       <xs:documentation>Sprzęgło hydrodynamiczne</xs:documentation>
     </xs:annotation>
     <xs:attributeGroup ref="instanceAttrGroup" />
-    <xs:attribute name="couplingSlip" type="nonNegativeDecimalType">
+    <xs:attribute name="slip" type="nonNegativeDecimalType">
       <xs:annotation>
         <xs:documentation>Poślizg sprzęgła</xs:documentation>
       </xs:annotation>
@@ -1171,11 +1175,16 @@ Id: $Id$
       <xs:element ref="ElectricalEquipment" />
     </xs:choice>
     <xs:attributeGroup ref="instanceAttrGroup" />
-    <xs:attribute name="driveFactor" type="nonNegativeDecimalType" />
-    <xs:attribute name="startupFactor" type="nonNegativeDecimalType" />
+    <xs:attribute name="dynamicSurplusFactor" type="nonNegativeDecimalType">
+      <xs:annotation>
+        <xs:documentation>Współczynnik nadwyżki dynamicznej K_D = M_R/M_U,
+	gdzie M_R - moment rozruchowy, M_U - moment ustalony</xs:documentation>
+      </xs:annotation>    
+    </xs:attribute>
     <xs:attribute name="brakeFactor" type="nonNegativeDecimalType">
       <xs:annotation>
-        <xs:documentation>Stosunek momentu hamowania do nominalnego momentu napędu - Mh/Mn</xs:documentation>
+        <xs:documentation>Stosunek momentu hamowania do nominalnego momentu napędu K_H = M_H/M_N,
+	gdzie M_H - moment hamowania, M_N - moment nominalny</xs:documentation>
       </xs:annotation>
     </xs:attribute>
     <xs:attribute name="driveEfficiency" type="nonNegativeDecimalType">
@@ -1183,7 +1192,7 @@ Id: $Id$
         <xs:documentation>Sprawność napędu - η</xs:documentation>
       </xs:annotation>
     </xs:attribute>
-    <xs:attribute name="startup" type="xs:token">
+    <xs:attribute name="startupControlSystem" type="xs:token">
       <xs:annotation>
         <xs:documentation>Urządzenie rozruchowe</xs:documentation>
       </xs:annotation>
@@ -1205,8 +1214,13 @@ Id: $Id$
       <xs:element ref="Return" />
     </xs:sequence>
     <xs:attributeGroup ref="instanceAttrGroup" />
-    <xs:attributeGroup ref="lengthAngleGroup" />
-    <xs:attribute name="number" type="xs:nonNegativeInteger" />
+    <!--xs:attributeGroup ref="lengthAngleGroup" /-->
+    <xs:attribute name="length" type="nonNegativeDecimalType">
+      <xs:annotation>
+        <xs:documentation>Długość elementu [m]</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <!--xs:attribute name="number" type="xs:nonNegativeInteger" /-->
   </xs:complexType>
   <!-- **************************************************************************************
     *                                        UNLOAD                                         *
@@ -1260,7 +1274,7 @@ Id: $Id$
       <xs:element minOccurs="0" ref="AdditionalEquipment" />
       <xs:element minOccurs="0" ref="Unload" />
     </xs:choice>
-    <xs:attributeGroup ref="instanceAttrGroup" />
+    <!--xs:attributeGroup ref="instanceAttrGroup" /-->
   </xs:complexType>
   <!-- **************************************************** -->
   <xs:complexType name="headTailType">
