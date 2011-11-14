@@ -19,6 +19,7 @@ task :deploy => [:html, "convml.pdf"] do
   source = "convml"
 
   sh "cp convml.pdf convml/"
+  sh "cp ../convml_11.xsd convml/"
   sh <<CMD
 scp -r #{source} #{target}
 CMD

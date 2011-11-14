@@ -28,6 +28,9 @@
 
   Wersję PDF tego dokumentu można odnaleźć pod adresem
   \href{http://www.entertech.com.pl/convml/convml.pdf}{entertech.com.pl/convml/convml.pdf}.
+
+  Schema opisywanego języka znajduje się pod adresem
+  \href{http://www.entertech.com.pl/convml/convml_11.xsd}{entertech.com.pl/convml/convml_11.xsd}.
 \end{abstract}
 
 \tableofcontents
@@ -348,7 +351,7 @@ napinającej bębna.
 \subsection{Trasa <Route>}
 Trasa jest elementem grupującym odcinki trasy. Aby obliczyć całkowitą długość
 przenośnika, wysokość podnoszenia oraz pozostałe parametry geometryczna należy
-wziąść pod uwagę wszystkie odcinki trasy oraz stację czołową i zwrotną. 
+wziąć pod uwagę wszystkie odcinki trasy oraz stację czołową i zwrotną. 
 Element Route nie posiada atrybutów.
 
 \begin{figure}
@@ -423,10 +426,10 @@ nośnej.
 Element Return grupuje obiekty współpracujące z taśmą poruszającą się po trasie
 powrotnej. Element ten modyfikuje układ współrzędnych dla swoich podelementów.
 Oś x jest zwrócona w przeciwnym kierunku względem elementu nadrzędnego i
-jej zwrot jest zdodny z kierunkiem biegu taśmy. Środek układu współrzędnych
-jest przesuniętu. Zakładając że $(x_0, y_0)$ to środek układu współrzędnych elementu
+jej zwrot jest zgodny z kierunkiem biegu taśmy. Środek układu współrzędnych
+jest przesunięty. Zakładając że $(x_0, y_0)$ to środek układu współrzędnych elementu
 nadrzędnego (RouteSegment, Head, Tail) to nowy środek układu znajduje się w
-punkcie $(x_0 + {length}, y_0)$, gdzie ${length}$ jest atrubytem długości
+punkcie $(x_0 + {length}, y_0)$, gdzie ${length}$ jest atrybutem długości
 elementu nadrzędnego.
 
 \begin{figure}[h]
@@ -628,7 +631,7 @@ Element opisujący właściwości materiału podawanego na kosz zasypowy.
 \item[reposeAngle] Kąt tarcia wewnętrznego [$^\circ$]
 \item[lumpSizeMaximum] Maksymalny wymiar brył [mm]
 \item[lumpPercTopSize] Procentowy udział brył [\%]
-\item[materialBeltFriction] Współczynni tarcia urobek-taśma
+\item[materialBeltFriction] Współczynnik tarcia urobek-taśma
 \item[temperature] Temperatura materiału [$^\circ$C]
 \end{description}
 
@@ -639,9 +642,9 @@ Element opisujący właściwości materiału podawanego na kosz zasypowy.
 \subsection{Elementy trasy}
 
 
-\subsubsection{Pojedyńczy krążnik <Idler>}
+\subsubsection{Pojedynczy krążnik <Idler>}
 Podstawowym zadaniem krążników jest właściwe ukształtowanie, podtrzymywanie i ochrona taśmy,
-a także zmniejszenie oporów ruchu przenosnika oraz właściwe podtrzymywanie transportowanego
+a także zmniejszenie oporów ruchu przenośnika oraz właściwe podtrzymywanie transportowanego
 nosiwa. Opory tarcia krążnika wpływają na siły napięcia taśmy i na zapotrzebowanie mocy napędu
 [Antoniak2005]. W języku ConvML pojedynczemu krążnikowi odpowiada element Idler. Krążniki
 pracują w zestawach (IdlerSet).
@@ -708,7 +711,7 @@ ten jest usytuowany na trasie przenośnika głównego wewnątrz jego obrysu.
   \label{fig:ttDrive-xsd}
 \end{figure}
 
-\subsection{Wyposażenie elektryczne przenosnika <ConvElectricalEquipment>}
+\subsection{Wyposażenie elektryczne przenośnika <ConvElectricalEquipment>}
 Wyposażenie elektryczne współpracujące z przenośnikiem taśmowym jako całością.
 
 
@@ -747,7 +750,7 @@ posiadać unikalny atrybut typeId.
 W najprostszym przypadku instancja elementu BeltSegment dziedziczy wartości
 atrybutów zdefiniowanych w
 elemencie BeltSegmentType jeśli wartość atrybutu type zgadza się z wartością
-atrybutu typeId.  Nie jest dopuszczalne przedefinowywanie atrybutów zdefinowanych
+atrybutu typeId.  Nie jest dopuszczalne przedefiniowanie atrybutów zdefiniowanych
 w typie
 
 \begin{verbatim}
@@ -813,8 +816,8 @@ podelementów, to taki element może posiadać podelementy.
 \end{verbatim}
 
 \section{Metadane dokumentu <Meta>}
-Element Meta umożliwa zapisanie dodatkowych informacji o dokumencie. Jest jedynym elementem
-w którego strukturze wystepują węzły tekstowe.
+Element Meta umożliwia zapisanie dodatkowych informacji o dokumencie. Jest jedynym elementem
+w którego strukturze występują węzły tekstowe.
 
 \paragraph{Definicje podelementów}
 \begin{description}
@@ -858,12 +861,12 @@ przenośnika. Są to podelementy elementu Types.
 \item[typeId] Identyfikator typu. Musi być unikalny.
 \item[typeName] Nazwa handlowa
 \item[typeDescription] Opis typu. Ten opis nie zostanie nadpisany przez atrybut description
-	w instacji odwołującej sie do typu.
+	w instancji odwołującej się do typu.
 \item[manufacturer] Producent elementów należących do opisywanego typu. 
 \end{description}
 
 \subsection{lengthAngleGroup}
-Atrybuty elementów mających długość i kąt nachylenia. Wspólne dla stcji zwrotnej, stacji czołowej
+Atrybuty elementów mających długość i kąt nachylenia. Wspólne dla stacji zwrotnej, stacji czołowej
 oraz odcinków trasy. 
 
 \begin{description}
@@ -887,7 +890,7 @@ Atrybuty wspólne bębnów i krążników.
 \end{description}
 
 \subsection{coordinatesAttrGroup}
-Atrybuty wspólne dla urządzeń których połorzenie jest opisane współrzędnymi.
+Atrybuty wspólne dla urządzeń których położenie jest opisane współrzędnymi.
 
 \begin{description}
 \item[x] Położenie punktu $x_0$ względem elementu nadrzędnego [m]
