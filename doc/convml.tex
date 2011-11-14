@@ -549,6 +549,11 @@ jedynie jako podelement elementu Pulley (Bębna).
   \label{fig:strechingCar-xsd}
 \end{figure}
 
+\paragraph{Definicje atrybutów}
+\begin{description}
+\item[numberOfDiscs] Liczba krążków
+\end{description}
+
 
 \subsubsection{Układ zlinowania <RopeSystem>}
 
@@ -560,8 +565,20 @@ jedynie jako podelement elementu Pulley (Bębna).
 \end{figure}
 
 
+\subsection{Obciążnik <Counterweight>}
+
+\paragraph{Definicje atrybutów}
+\begin{description}
+\item[numberOfDiscs] Liczba krążków
+\item[mass] Masa obciążnika
+\end{description}
+
 \subsubsection{Wciągarka <Winch>}
 
+\paragraph{Definicje atrybutów}
+\begin{description}
+\item[takeUpTension] Siła naciągu % JEDNOSTKA
+\end{description}
 
 \subsubsection{Układ grawitacyjny <GravitySystem>}
 
@@ -711,6 +728,8 @@ Wyposażenie elektryczne współpracujące z przenośnikiem taśmowym jako cało
 
 \subsubsection{Układ chłodzenia <CoolingSystem>}
 
+\subsection{Urządzenie czyszczące <CleaningDevice>}
+
 \subsubsection{Wyposażenie elektryczne urządzenia <ElectricalEquipment>}
 
 \subsubsection{Urządzenie dodatkowe <AdditionalEquipment>}
@@ -810,5 +829,97 @@ w którego strukturze wystepują węzły tekstowe.
 	Atrybut link wskazuje plik z tłumaczeniami.
 \item[UnitSystem] System jednostek. Atrybut link wskazuje plik z definicjami jednostek. 
 \end{description}
+
+\section{Grupy atrybutów}
+Atrybuty wspólne dla różnych elementów zdefiniowano w grupach do których można się
+odwoływać w dokumencie XML Schema opisującym ConvML'a.
+
+\subsection{commonAttrGroup}
+Atrybuty mogące wystąpić w każdym elemencie dokumentu ConvML.
+
+\begin{description}
+\item[id] Numer identyfikacyjny elementu. Musi być unikalny w skali dokumentu.
+\item[description] Dowolny opis elementu
+\end{description}
+
+\subsection{instanceAttrGroup}
+Atrybutu mogące wystąpić w elementach, które mogą być typizowane.
+
+\begin{description}
+\item[type] Identyfikator typu do którego element się odwołuje
+\item[productionDate] Data produkcji 
+\end{description}
+
+\subsection{typeAttrGroup}
+Atrybuty występujące w elementach opisujących Typ obiektu wchodzącego w skład
+przenośnika. Są to podelementy elementu Types.
+
+\begin{description}
+\item[typeId] Identyfikator typu. Musi być unikalny.
+\item[typeName] Nazwa handlowa
+\item[typeDescription] Opis typu. Ten opis nie zostanie nadpisany przez atrybut description
+	w instacji odwołującej sie do typu.
+\item[manufacturer] Producent elementów należących do opisywanego typu. 
+\end{description}
+
+\subsection{lengthAngleGroup}
+Atrybuty elementów mających długość i kąt nachylenia. Wspólne dla stcji zwrotnej, stacji czołowej
+oraz odcinków trasy. 
+
+\begin{description}
+\item[length] Długość elementu [m]
+\item[angle] Kąt nachylenia elementu w przedziale <-90, 90> [$^\circ$] 
+\end{description}
+
+\subsection{takeUpTensionGroup}
+Atrybuty wspólne dla mechanizmów napinających.
+
+\begin{description}
+\item[takUpTension] Siła napinająca [kN]
+\end{description}
+
+\subsection{pulleyIdlerGroup}
+Atrybuty wspólne bębnów i krążników.
+
+\begin{description}
+\item[mass] Masa [kg]
+\item[inertiaMoment] Moment bezwładności - I [$kg*m^2$]
+\end{description}
+
+\subsection{coordinatesAttrGroup}
+Atrybuty wspólne dla urządzeń których połorzenie jest opisane współrzędnymi.
+
+\begin{description}
+\item[x] Położenie punktu $x_0$ względem elementu nadrzędnego [m]
+\item[y] Położenie punktu $y_0$ względem elementu nadrzędnego [m]
+\end{description}
+
+\section{Rozszerzenia XSD}
+Typy danych nie występujące w XML Schema.
+
+\subsection{nonNegativeDecimalType}
+Typy xs:decimal o wartościach nieujemnych.
+
+\begin{verbatim}
+<xs:simpleType name="nonNegativeDecimalType">
+  <xs:restriction base="xs:decimal">
+    <xs:minInclusive value="0" />
+  </xs:restriction>
+</xs:simpleType>
+\end{verbatim}
+
+\subsection{oneToFourEnumType}
+Wyliczenie o bazie znakowej.
+
+\begin{verbatim}
+<xs:simpleType name="oneToFourEnumType">
+  <xs:restriction base="xs:token">
+    <xs:enumeration value="1" />
+    <xs:enumeration value="2" />
+    <xs:enumeration value="3" />
+    <xs:enumeration value="4" />
+  </xs:restriction>
+</xs:simpleType>
+\end{verbatim}
 
 \end{document}
