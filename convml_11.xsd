@@ -579,30 +579,16 @@
        ************************************************************************************** -->
   <xs:element name="StrechingCar" type="strechingCarType" />
   <!-- * -->
-  <xs:element name="STRECHING_CAR" substitutionGroup="StrechingCar" type="strechingCarType" />
-  <!-- * -->
   <xs:complexType name="strechingCarType">
-    <xs:annotation>
-      <xs:documentation>Wózek napinający</xs:documentation>
-    </xs:annotation>
     <xs:attributeGroup ref="instanceAttrGroup" />
-    <xs:attribute name="discsNumber" type="xs:nonNegativeInteger">
-      <xs:annotation>
-        <xs:documentation>Oliczba krążków</xs:documentation>
-      </xs:annotation>
-    </xs:attribute>
+    <xs:attribute name="numberOfDiscs" type="xs:nonNegativeInteger" />
   </xs:complexType>
   <!-- **************************************************************************************
        *                                        ROPE SYSTEM                                    *
        ************************************************************************************** -->
   <xs:element name="RopeSystem" type="ropeSystemType" />
   <!-- * -->
-  <xs:element name="ROPE_SYSTEM" substitutionGroup="RopeSystem" type="ropeSystemType" />
-  <!-- * -->
   <xs:complexType name="ropeSystemType">
-    <xs:annotation>
-      <xs:documentation>Układ zlinowania</xs:documentation>
-    </xs:annotation>
     <xs:attributeGroup ref="instanceAttrGroup" />
   </xs:complexType>
   <!-- **************************************************************************************
@@ -610,12 +596,7 @@
        ************************************************************************************** -->
   <xs:element name="Winch" type="winchType" />
   <!-- * -->
-  <xs:element name="WINCH" substitutionGroup="Winch" type="winchType" />
-  <!-- * -->
   <xs:complexType name="winchType">
-    <xs:annotation>
-      <xs:documentation>Wciągarka</xs:documentation>
-    </xs:annotation>
     <xs:attributeGroup ref="instanceAttrGroup" />
     <xs:attributeGroup ref="takeUpTensionGroup" />
   </xs:complexType>
@@ -624,12 +605,7 @@
        ************************************************************************************** -->
   <xs:element name="GravitySystem" type="gravitySystemType" />
   <!-- * -->
-  <xs:element name="GRAVITY_SYSTEM" substitutionGroup="GravitySystem" type="gravitySystemType" />
-  <!-- * -->
   <xs:complexType name="gravitySystemType">
-    <xs:annotation>
-      <xs:documentation>Układ grawitacyjny</xs:documentation>
-    </xs:annotation>
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="2" ref="Counterweight" />
     </xs:sequence>
@@ -641,12 +617,7 @@
        ************************************************************************************** -->
   <xs:element name="HydraulicSystem" type="hydraulicSystemType" />
   <!-- * -->
-  <xs:element name="HYDRAULIC_SYSTEM" substitutionGroup="HydraulicSystem" type="hydraulicSystemType" />
-  <!-- * -->
   <xs:complexType name="hydraulicSystemType">
-    <xs:annotation>
-      <xs:documentation>Układ hydrauliczny</xs:documentation>
-    </xs:annotation>
     <xs:attributeGroup ref="instanceAttrGroup" />
     <xs:attributeGroup ref="takeUpTensionGroup" />
   </xs:complexType>
@@ -655,12 +626,7 @@
        ************************************************************************************** -->
   <xs:element name="PneumaticSystem" type="pneumaticSystemType" />
   <!-- * -->
-  <xs:element name="PNEUMATIC_SYSTEM" substitutionGroup="PneumaticSystem" type="pneumaticSystemType" />
-  <!-- * -->
   <xs:complexType name="pneumaticSystemType">
-    <xs:annotation>
-      <xs:documentation>Układ pneumatyczny</xs:documentation>
-    </xs:annotation>
     <xs:attributeGroup ref="instanceAttrGroup" />
     <xs:attributeGroup ref="takeUpTensionGroup" />
   </xs:complexType>
@@ -669,12 +635,7 @@
        ************************************************************************************** -->
   <xs:element name="ControlSystem" type="controlSystemType" />
   <!-- * -->
-  <xs:element name="CONTROL_SYSTEM" substitutionGroup="ControlSystem" type="controlSystemType" />
-  <!-- * -->
   <xs:complexType name="controlSystemType">
-    <xs:annotation>
-      <xs:documentation>Układ sterowania przenośnikiem</xs:documentation>
-    </xs:annotation>
     <xs:attributeGroup ref="instanceAttrGroup" />
   </xs:complexType>
   <!-- **************************************************************************************
@@ -682,12 +643,7 @@
        ************************************************************************************** -->
   <xs:element name="EmergencySystem" type="emergencySystemType" />
   <!-- * -->
-  <xs:element name="EMERGENCY_SYSTEM" substitutionGroup="EmergencySystem" type="emergencySystemType" />
-  <!-- * -->
   <xs:complexType name="emergencySystemType">
-    <xs:annotation>
-      <xs:documentation>System wyłączenia awaryjnego przenośnika</xs:documentation>
-    </xs:annotation>
     <xs:attributeGroup ref="instanceAttrGroup" />
   </xs:complexType>
   <!-- **************************************************************************************
@@ -695,12 +651,7 @@
        ************************************************************************************** -->
   <xs:element name="SignalSystem" type="signalSystemType" />
   <!-- * -->
-  <xs:element name="SIGNAL_SYSTEM" substitutionGroup="SignalSystem" type="signalSystemType" />
-  <!-- * -->
   <xs:complexType name="signalSystemType">
-    <xs:annotation>
-      <xs:documentation>System łączności i sygnalizacji</xs:documentation>
-    </xs:annotation>
     <xs:attributeGroup ref="instanceAttrGroup" />
   </xs:complexType>
   <!-- **************************************************************************************
@@ -708,12 +659,7 @@
        ************************************************************************************** -->
   <xs:element name="FireSystem" type="fireSystemType" />
   <!-- * -->
-  <xs:element name="FIRE_SYSTEM" substitutionGroup="FireSystem" type="fireSystemType" />
-  <!-- * -->
   <xs:complexType name="fireSystemType">
-    <xs:annotation>
-      <xs:documentation>Instalacja przeciwpożarowa</xs:documentation>
-    </xs:annotation>
     <xs:attributeGroup ref="instanceAttrGroup" />
   </xs:complexType>
   <!-- **************************************************************************************
@@ -721,12 +667,7 @@
        ************************************************************************************** -->
   <xs:element name="DriveUnit" type="driveUnitType" />
   <!-- * -->
-  <xs:element name="DRIVE_UNIT" substitutionGroup="DriveUnit" type="driveUnitType" />
-  <!-- * -->
   <xs:complexType name="driveUnitType">
-    <xs:annotation>
-      <xs:documentation>Zespół napędowy</xs:documentation>
-    </xs:annotation>
     <xs:choice maxOccurs="unbounded">
       <xs:element ref="Motor" />
       <xs:element maxOccurs="2" ref="Coupling" />
@@ -737,51 +678,24 @@
       <xs:element ref="ElectricalEquipment" />
     </xs:choice>
     <xs:attributeGroup ref="instanceAttrGroup" />
-    <xs:attribute name="dynamicSurplusFactor" type="nonNegativeDecimalType">
-      <xs:annotation>
-        <xs:documentation>Współczynnik nadwyżki dynamicznej K_D = M_R/M_U,
-	gdzie M_R - moment rozruchowy, M_U - moment ustalony</xs:documentation>
-      </xs:annotation>
-    </xs:attribute>
-    <xs:attribute name="brakeFactor" type="nonNegativeDecimalType">
-      <xs:annotation>
-        <xs:documentation>Stosunek momentu hamowania do nominalnego momentu napędu K_H = M_H/M_N,
-	gdzie M_H - moment hamowania, M_N - moment nominalny</xs:documentation>
-      </xs:annotation>
-    </xs:attribute>
-    <xs:attribute name="driveEfficiency" type="nonNegativeDecimalType">
-      <xs:annotation>
-        <xs:documentation>Sprawność napędu - η</xs:documentation>
-      </xs:annotation>
-    </xs:attribute>
-    <xs:attribute name="startupControlSystem" type="xs:token">
-      <xs:annotation>
-        <xs:documentation>Urządzenie rozruchowe</xs:documentation>
-      </xs:annotation>
-    </xs:attribute>
+    <xs:attribute name="dynamicSurplusFactor" type="nonNegativeDecimalType" />
+    <xs:attribute name="brakeFactor" type="nonNegativeDecimalType" />
+    <xs:attribute name="driveEfficiency" type="nonNegativeDecimalType" />
+    <xs:attribute name="startupControlSystem" type="xs:token" />
   </xs:complexType>
   <!-- **************************************************************************************
        *                                    ROUTE SEGMENT                                        *
        ************************************************************************************** -->
   <xs:element name="RouteSegment" type="routeSegmentType" />
   <!-- * -->
-  <xs:element name="ROUTE_SEGMENT" substitutionGroup="RouteSegment" type="routeSegmentType" />
-  <!-- * -->
   <xs:complexType name="routeSegmentType">
-    <xs:annotation>
-      <xs:documentation>Segment trasy</xs:documentation>
-    </xs:annotation>
     <xs:sequence minOccurs="0">
       <xs:element ref="Carry" />
       <xs:element ref="Return" />
     </xs:sequence>
     <xs:attributeGroup ref="instanceAttrGroup" />
     <!--xs:attributeGroup ref="lengthAngleGroup" /-->
-    <xs:attribute name="length" type="nonNegativeDecimalType">
-      <xs:annotation>
-        <xs:documentation>Długość elementu [m]</xs:documentation>
-      </xs:annotation>
-    </xs:attribute>
+    <xs:attribute name="length" type="nonNegativeDecimalType" />
     <!--xs:attribute name="number" type="xs:nonNegativeInteger" /-->
   </xs:complexType>
   <!-- **************************************************************************************
@@ -789,12 +703,7 @@
        ************************************************************************************** -->
   <xs:element name="Unload" type="unloadType" />
   <!-- * -->
-  <xs:element name="UNLOAD" substitutionGroup="Unload" type="unloadType" />
-  <!-- * -->
   <xs:complexType name="unloadType">
-    <xs:annotation>
-      <xs:documentation>Rozładunek</xs:documentation>
-    </xs:annotation>
     <xs:attributeGroup ref="instanceAttrGroup" />
   </xs:complexType>
   <!-- **************************************************************************************
@@ -802,29 +711,13 @@
        ************************************************************************************** -->
   <xs:element name="Counterweight" type="counterweightType" />
   <!-- * -->
-  <xs:element name="COUNTERWEIGHT" substitutionGroup="Counterweight" type="counterweightType" />
-  <!-- * -->
   <xs:complexType name="counterweightType">
-    <xs:annotation>
-      <xs:documentation>Obciążnik</xs:documentation>
-    </xs:annotation>
-    <xs:attribute name="discsNumber" type="xs:nonNegativeInteger">
-      <xs:annotation>
-        <xs:documentation>Oliczba krążków</xs:documentation>
-      </xs:annotation>
-    </xs:attribute>
-    <xs:attribute name="mass" type="nonNegativeDecimalType">
-      <xs:annotation>
-        <xs:documentation>Masa obciążnika</xs:documentation>
-      </xs:annotation>
-    </xs:attribute>
+    <xs:attribute name="numberOfDiscs" type="xs:nonNegativeInteger" />
+    <xs:attribute name="mass" type="nonNegativeDecimalType" />
     <xs:attributeGroup ref="instanceAttrGroup" />
   </xs:complexType>
   <!-- ********************************************** -->
   <xs:complexType name="carryReturnType">
-    <xs:annotation>
-      <xs:documentation>Typ zawartości dla elementów CARRY i RETURN</xs:documentation>
-    </xs:annotation>
     <xs:choice maxOccurs="unbounded">
       <xs:element minOccurs="0" ref="Pulley" />
       <xs:element minOccurs="0" ref="TTDrive" />
@@ -840,9 +733,6 @@
   </xs:complexType>
   <!-- **************************************************** -->
   <xs:complexType name="headTailType">
-    <xs:annotation>
-      <xs:documentation>Typ zawartości dla elementów HEAD i TAIL</xs:documentation>
-    </xs:annotation>
     <xs:all>
       <xs:element ref="Pulley" />
       <xs:element ref="Carry" />
@@ -853,11 +743,17 @@
   </xs:complexType>
   <!-- **************************************************** -->
   <xs:simpleType name="nonNegativeDecimalType">
-    <xs:annotation>
-      <xs:documentation>Typ xs:decimal o wartościach nieujemnych</xs:documentation>
-    </xs:annotation>
     <xs:restriction base="xs:decimal">
       <xs:minInclusive value="0" />
+    </xs:restriction>
+  </xs:simpleType>
+  <!-- **************************************************** -->
+  <xs:simpleType name="oneToFourEnumType">
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="1" />
+      <xs:enumeration value="2" />
+      <xs:enumeration value="3" />
+      <xs:enumeration value="4" />
     </xs:restriction>
   </xs:simpleType>
   <!-- ATTRIBUTE GROUPS *********************************** -->
@@ -868,63 +764,26 @@
       <xs:attribute name="id" type="xs:long" />
       </xs:attributeGroup-->
   <!-- **************************************************** -->
-  <xs:attributeGroup name="instanceAttrGroup">
-    <xs:annotation>
-      <xs:documentation>Atrybuty występujące we wszystkich elementach</xs:documentation>
-    </xs:annotation>
-    <xs:attribute name="id" type="xs:ID">
-      <xs:annotation>
-        <xs:documentation>Numer identyfikacyjny</xs:documentation>
-      </xs:annotation>
-    </xs:attribute>
-    <xs:attribute name="description" type="xs:string">
-      <xs:annotation>
-        <xs:documentation>Dowolny opis elementu</xs:documentation>
-      </xs:annotation>
-    </xs:attribute>
-    <xs:attribute name="productionDate" type="xs:date">
-      <xs:annotation>
-        <xs:documentation>Data produkcji</xs:documentation>
-      </xs:annotation>
-    </xs:attribute>
-    <xs:attribute name="type" type="xs:token">
-      <xs:annotation>
-        <xs:documentation>Wskazuje typ elementu zdefiniowany w ConvML/Types/</xs:documentation>
-      </xs:annotation>
-    </xs:attribute>
+  <xs:attributeGroup name="commonAttrGroup">
+    <xs:attribute name="id" type="xs:ID" />
+    <xs:attribute name="description" type="xs:string" />
   </xs:attributeGroup>
+  <!-- **************************************************** -->
+  <xs:attributeGroup name="instanceAttrGroup">
+    <xs:attribute name="type" type="xs:token" />
+     <xs:attribute name="productionDate" type="xs:date" />
+  </xs:attributeGroup>
+  <!-- **************************************************** -->
   <xs:attributeGroup name="typeAttrGroup">
-    <xs:attribute name="manufacturer" type="xs:token">
-      <xs:annotation>
-        <xs:documentation>Producent elementu</xs:documentation>
-      </xs:annotation>
-    </xs:attribute>
-    <xs:attribute name="typeId" type="xs:token" use="required">
-      <xs:annotation>
-        <xs:documentation>Kod identyfikacyjny typu</xs:documentation>
-      </xs:annotation>
-    </xs:attribute>
-    <xs:attribute name="typeName" type="xs:token">
-      <xs:annotation>
-        <xs:documentation>Nazwa handlowa</xs:documentation>
-      </xs:annotation>
-    </xs:attribute>
+    <xs:attribute name="typeId" type="xs:token" use="required" />
+    <xs:attribute name="typeName" type="xs:token" />
     <xs:attribute name="typeDescription" type="xs:string" />
+    <xs:attribute name="manufacturer" type="xs:token" />
   </xs:attributeGroup>
   <!-- **************************************************** -->
   <xs:attributeGroup name="lengthAngleGroup">
-    <xs:annotation>
-      <xs:documentation>Długość i kąt nachylenia odcinak lub segentu trasy</xs:documentation>
-    </xs:annotation>
-    <xs:attribute name="length" type="nonNegativeDecimalType">
-      <xs:annotation>
-        <xs:documentation>Długość elementu [m]</xs:documentation>
-      </xs:annotation>
-    </xs:attribute>
+    <xs:attribute name="length" type="nonNegativeDecimalType" />
     <xs:attribute name="angle">
-      <xs:annotation>
-        <xs:documentation>Kąt nachylenia elementu [°]</xs:documentation>
-      </xs:annotation>
       <xs:simpleType>
         <xs:restriction base="xs:decimal">
           <xs:minInclusive value="-90" />
@@ -939,15 +798,12 @@
   </xs:attributeGroup>
   <!-- **************************************************** -->
   <xs:attributeGroup name="pulleyIdlerGroup">
-    <xs:attribute name="mass" type="nonNegativeDecimalType">
-      <xs:annotation>
-        <xs:documentation>Masa [kg]</xs:documentation>
-      </xs:annotation>
-    </xs:attribute>
-    <xs:attribute name="inertiaMoment" type="nonNegativeDecimalType">
-      <xs:annotation>
-        <xs:documentation>Moment bezwładności - I [kgm²]</xs:documentation>
-      </xs:annotation>
-    </xs:attribute>
+    <xs:attribute name="mass" type="nonNegativeDecimalType" />
+    <xs:attribute name="inertiaMoment" type="nonNegativeDecimalType" />
+  </xs:attributeGroup>
+  <!-- **************************************************** -->
+  <xs:attributeGroup name="coordinatesAttrGroup">
+    <xs:attribute name="x" type="xs:decimal" />
+    <xs:attribute name="y" type="xs:decimal" />
   </xs:attributeGroup>
 </xs:schema>
