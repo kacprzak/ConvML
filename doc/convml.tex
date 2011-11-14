@@ -9,6 +9,7 @@
 \usepackage[pdftex,bookmarks,colorlinks]{hyperref} % Linki w dokumencie PDF
 \usepackage{indentfirst}                        % Wcięcia akapitów
 \usepackage{graphicx}                           % Grafika w png, jpeg, gif
+\usepackage{float}                              % Ulepszone rozmieszczanie
 %\pagestyle{headings}
 %\graphicspath{{png}}                            % Szuka grafik w katalogu png
 \frenchspacing                                  % Odstępy międzyzdaniowe
@@ -30,7 +31,7 @@
   \href{http://www.entertech.com.pl/convml/convml.pdf}{entertech.com.pl/convml/convml.pdf}.
 
   Schema opisywanego języka znajduje się pod adresem
-  \href{http://www.entertech.com.pl/convml/convml_11.xsd}{entertech.com.pl/convml/convml_11.xsd}.
+  \href{http://www.entertech.com.pl/convml/convml\_11.xsd}{entertech.com.pl/convml/convml\_11.xsd}.
 \end{abstract}
 
 \tableofcontents
@@ -86,7 +87,7 @@ poprawny.  Przykładowa instancja dokumentu może mieć następującą postać:
 
 \subsection{Element główny <ConvML>}
 
-\begin{figure}[h]
+\begin{figure}[H]
   \centering
   \includegraphics[width=0.6\textwidth]{png/convml_xsd2}
   \caption{Definicja elementu ConvML}
@@ -128,7 +129,7 @@ składowych trasy.  Układy napędowy i napinający są powiązane z bębnami, k
 mogą występować jako elementy składowe stacji zwrotnej, stacji czołowej lub
 trasy.
 
-\begin{figure}[h]
+\begin{figure}[H]
   \centering
   \includegraphics[width=0.6\textwidth]{png/belt_conveyor_xsd2}
   \caption{Definicja elementu BeltConveyor}
@@ -152,7 +153,7 @@ trasy.
 Element Conditions grupuje atrybuty związane z warunkami pracy przenośnika
 taśmowego.
 
-\begin{figure}[h]
+\begin{figure}[H]
   \centering
   \includegraphics[width=0.6\textwidth]{png/conditions_xsd2}
   \caption{Definicja elementu Conditions}
@@ -161,14 +162,14 @@ taśmowego.
 
 \paragraph{Definicje atrybutów}
 \begin{description}
-\item[ambientTemperature] Temperatura otoczenia przenośnika - T [$^\circ$C].
+\item[ambientTemperature] Temperatura otoczenia przenośnika - T [$^\circ$C]
 \item[workConditions] Warunki pracy przenośnika: 1 - bardzo dobre, 2 - dobre,
-  3 - przeciętne, 4 - ciężkie.
+  3 - przeciętne, 4 - ciężkie
 \item[beltWorkConditions] Warunki eksploatacji taśmy: 1 - bardzo dobre,
-  2 - dobre, 3 - przeciętne, 4 - ciężkie.
+  2 - dobre, 3 - przeciętne, 4 - ciężkie
 \item[beltSideRunning] Zbieganie boczne taśmy: 1 - brak, 2 - małe, 3 - średnie,
-  4 - duże.
-\item[workingHoursPerYear] Ilość godzin pracy przenośnika w ciągu roku [h].
+  4 - duże
+\item[workingHoursPerYear] Ilość godzin pracy przenośnika w ciągu roku
 \end{description}
 
 
@@ -176,7 +177,7 @@ taśmowego.
 Taśma jest podstawowym elementem przenośnika. Taśma zamontowana na przenośniku
 taśmowym jest najczęściej listą odcinków taśmy połączonym złączami.
 
-\begin{figure}[h]
+\begin{figure}[H]
   \centering
   \includegraphics[width=0.6\textwidth]{png/tasma}
   \caption{Taśma przenośnikowa w uproszczeniu}
@@ -207,7 +208,7 @@ W powyższym listingu odcinek taśmy 6 jest połączony złączem 5 z odcinkiem 
 4 oraz złączem 1 z odcinkiem taśmy 2. W najprostszym przypadku może być jedno
 złącze i jeden odcinek.
 
-\begin{figure}[h]
+\begin{figure}[H]
   \centering
   \includegraphics[width=0.6\textwidth]{png/belt_xsd2}
   \caption{Definicja elementu Belt}
@@ -229,7 +230,7 @@ Cechą tej grupy atrybutów jest to, że mogą opisywać zarówno instancję jak
 odcinka taśmy. Atrybuty length oraz cetificate mogą występować tylko w elemencie
 BeltSegment.
 
-\begin{figure}[h]
+\begin{figure}[H]
   \centering
   \includegraphics[width=0.6\textwidth]{png/belt_segment_xsd2}
   \caption{Definicja elementu BeltSegment}
@@ -264,7 +265,7 @@ reprezentujące odcinki taśmy.  Złącze w przeciwieństwie do odcinka nie posi
 parametru długości i jest rozpatrywane jako miejsce (punkt) wykonania
 połączenia.
 
-\begin{figure}[h]
+\begin{figure}[H]
   \centering
   \includegraphics[width=0.6\textwidth]{png/belt_splice_xsd2}
   \caption{Definicja elementu BeltSplice}
@@ -289,7 +290,7 @@ elementu Tail w strukturze.  Elementy Carry oraz Return odpowiadają trasie
 nośnej oraz trasie powrotnej i są opisane w rozdziale dotyczącym segmentów
 trasy.
 
-\begin{figure}[h]
+\begin{figure}[H]
   \centering
   \includegraphics[width=0.6\textwidth]{png/liquid/Tail}
   \caption{Definicja elementu Tail}
@@ -303,7 +304,7 @@ dokładnie taką samą definicję podelementów.  Zmienia się jedynie interpret
 elementu Pulley, który w tym przypadku odpowiada bębnowi czołowemu i obywa się
 na nim zmiana kierunku taśmy z trasy nośnej na trasę powrotną.
 
-\begin{figure}[h]
+\begin{figure}[H]
   \centering
   \includegraphics[width=0.6\textwidth]{png/liquid/headTailType}
   \caption{Definicja typu elementu Head}
@@ -328,7 +329,7 @@ lub dwóch zestawów napędowych (DriveUnit) staje się bębnem napędowym.
 Analogicznie obecność zestawu napinającego (TakeUpSystem) informuje o funkcji
 napinającej bębna.
 
-\begin{figure}[h]
+\begin{figure}[H]
   \centering
   \includegraphics[width=0.6\textwidth]{png/liquid/Pulley}
   \caption{Definicja elementu Pulley}
@@ -361,7 +362,7 @@ Element Route nie posiada atrybutów.
   \label{fig:beltConveyor2-drw}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[H]
   \centering
   \includegraphics[width=0.6\textwidth]{png/liquid/Route}
   \caption{Definicja elementu Route}
@@ -374,7 +375,7 @@ Odcinek trasy jest elementem logicznego podziału trasy przenośnika na elementy
 różnej długości oraz nachyleniu. Podział na odcinki umożliwia zapis podstawowych
 parametrów geometrycznych przenośnika.
 
-\begin{figure}[h]
+\begin{figure}[H]
   \centering
   \includegraphics[width=0.6\textwidth]{png/liquid/RouteSection}
   \caption{Definicja elementu RouteSection}
@@ -398,7 +399,7 @@ nośnej.
 Do określenia czy elementy zamontowane na segmencie są częścią trasy nośnej, czy
 trasy powrotnej, służą elementy Carry oraz Return.
 
-\begin{figure}[h]
+\begin{figure}[H]
   \centering
   \includegraphics[width=0.6\textwidth]{png/liquid/RouteSegment}
   \caption{Definicja elementu RouteSegment}
@@ -415,7 +416,7 @@ trasy powrotnej, służą elementy Carry oraz Return.
 Element Carry grupuje obiekty współpracujące z taśmą poruszającą się po trasie
 nośnej.
 
-\begin{figure}[h]
+\begin{figure}[H]
   \centering
   \includegraphics[width=0.6\textwidth]{png/liquid/carryReturnType}
   \caption{Definicja typu elementu Carry}
@@ -424,15 +425,15 @@ nośnej.
 
 \subsubsection{Dolna trasa <Return>}
 Element Return grupuje obiekty współpracujące z taśmą poruszającą się po trasie
-powrotnej. Element ten modyfikuje układ współrzędnych dla swoich podelementów.
-Oś x jest zwrócona w przeciwnym kierunku względem elementu nadrzędnego i
-jej zwrot jest zgodny z kierunkiem biegu taśmy. Środek układu współrzędnych
-jest przesunięty. Zakładając że $(x_0, y_0)$ to środek układu współrzędnych elementu
+powrotnej.  Element ten modyfikuje układ współrzędnych dla swoich podelementów.
+Oś x jest zwrócona w przeciwnym kierunku względem elementu nadrzędnego i jej
+zwrot jest zgodny z kierunkiem biegu taśmy.  Środek układu współrzędnych jest
+przesunięty.  Zakładając że $(x_0, y_0)$ to środek układu współrzędnych elementu
 nadrzędnego (RouteSegment, Head, Tail) to nowy środek układu znajduje się w
 punkcie $(x_0 + {length}, y_0)$, gdzie ${length}$ jest atrybutem długości
 elementu nadrzędnego.
 
-\begin{figure}[h]
+\begin{figure}[H]
   \centering
   \includegraphics[width=0.4\textwidth]{png/carryReturn_drw}
   \caption{Układy współrzędnych elementów Carry (czerwony) oraz
@@ -441,10 +442,10 @@ elementu Return (niebieski)}
 \end{figure}
 
 \subsection{Zespół napędowy <DriveUnit>}
-Element grupujący urządzenia wchodzące w skład zespołu napędowego. Może występować
-jedynie jako podelement elementu Pulley (Bębna).
+Element grupujący urządzenia wchodzące w skład zespołu napędowego. Może
+występować jedynie jako podelement elementu Pulley (Bębna).
 
-\begin{figure}[h]
+\begin{figure}[H]
   \centering
   \includegraphics[width=0.6\textwidth]{png/liquid/DriveUnit}
   \caption{Definicja elementu DriveUnit}
@@ -454,16 +455,16 @@ jedynie jako podelement elementu Pulley (Bębna).
 \paragraph{Definicje atrybutów}
 \begin{description}
 \item[dynamicSurplusFactor] Współczynnik nadwyżki dynamicznej $K_D = M_R/M_U$,
-	gdzie $M_R$ - moment rozruchowy, $M_U$ - moment ustalony 
-\item[brakeFactor] Stosunek momentu hamowania do nominalnego momentu napędu $K_H = M_H/M_N$,
-	gdzie $M_H$ - moment hamowania, $M_N$ - moment nominalny
+  gdzie $M_R$ - moment rozruchowy, $M_U$ - moment ustalony
+\item[brakeFactor] Stosunek momentu hamowania do nominalnego momentu napędu $K_H
+  = M_H/M_N$, gdzie $M_H$ - moment hamowania, $M_N$ - moment nominalny
 \item[driveEfficiency] Sprawność napędu - $\eta$
 \item[startupControlSystem] Urządzenie rozruchowe
 \end{description}
 
 \subsubsection{Silnik <Motor>}
 
-\begin{figure}[h]
+\begin{figure}[H]
   \centering
   \includegraphics[width=0.6\textwidth]{png/liquid/Motor}
   \caption{Definicja elementu Motor}
@@ -485,7 +486,7 @@ jedynie jako podelement elementu Pulley (Bębna).
 
 \subsubsection{Sprzęgło podatne <Coupling>}
 
-\begin{figure}[h]
+\begin{figure}[H]
   \centering
   \includegraphics[width=0.6\textwidth]{png/liquid/Coupling}
   \caption{Definicja elementu Coupling}
@@ -495,7 +496,7 @@ jedynie jako podelement elementu Pulley (Bębna).
 
 \subsubsection{Sprzęgło hydrodynamiczne <FluidCoupling>}
 
-\begin{figure}[h]
+\begin{figure}[H]
   \centering
   \includegraphics[width=0.6\textwidth]{png/liquid/FluidCoupling}
   \caption{Definicja elementu FluidCoupling}
@@ -510,7 +511,7 @@ jedynie jako podelement elementu Pulley (Bębna).
 
 \subsubsection{Układ hamulcowy <Break>}
 
-\begin{figure}[h]
+\begin{figure}[H]
   \centering
   \includegraphics[width=0.6\textwidth]{png/liquid/FluidCoupling}
   \caption{Definicja elementu Break}
@@ -520,7 +521,7 @@ jedynie jako podelement elementu Pulley (Bębna).
 
 \subsubsection{Przekładnia <Gearbox>}
 
-\begin{figure}[h]
+\begin{figure}[H]
   \centering
   \includegraphics[width=0.6\textwidth]{png/liquid/Gearbox}
   \caption{Definicja elementu Gearbox}
@@ -535,7 +536,7 @@ jedynie jako podelement elementu Pulley (Bębna).
 
 \subsection{Zespół napinający <TakeUpSystem>}
 
-\begin{figure}[h]
+\begin{figure}[H]
   \centering
   \includegraphics[width=0.6\textwidth]{png/liquid/TakeUpSystem}
   \caption{Definicja elementu TakeUpSystem}
@@ -545,7 +546,7 @@ jedynie jako podelement elementu Pulley (Bębna).
 
 \subsubsection{Wózek napinający <StrechingCar>}
 
-\begin{figure}[h]
+\begin{figure}[H]
   \centering
   \includegraphics[width=0.6\textwidth]{png/liquid/StrechingCar}
   \caption{Definicja elementu StrechingCar}
@@ -560,7 +561,7 @@ jedynie jako podelement elementu Pulley (Bębna).
 
 \subsubsection{Układ zlinowania <RopeSystem>}
 
-\begin{figure}[h]
+\begin{figure}[H]
   \centering
   \includegraphics[width=0.6\textwidth]{png/liquid/RopeSystem}
   \caption{Definicja elementu RopeSystem}
@@ -593,9 +594,10 @@ jedynie jako podelement elementu Pulley (Bębna).
 
 
 \subsection{Kosz zasypowy <Chute>}
-Kosz zasypowy jako element trasy wyznacza miejsce załadunku materiału na przenośnik taśmowy.
+Kosz zasypowy jako element trasy wyznacza miejsce załadunku materiału na
+przenośnik taśmowy.
 
-\begin{figure}[h]
+\begin{figure}[H]
   \centering
   \includegraphics[width=0.6\textwidth]{png/liquid/Chute}
   \caption{Definicja elementu Chute}
@@ -605,7 +607,8 @@ Kosz zasypowy jako element trasy wyznacza miejsce załadunku materiału na przen
 \paragraph{Definicje atrybutów}
 \begin{description}
 \item[horizontalSpeed] Składowa prędkości taśmy [m/s]
-\item[skirtMaterialFriction] Współczynnik tarcia pomiędzy urobkiem a ograniczeniami bocznymi
+\item[skirtMaterialFriction] Współczynnik tarcia pomiędzy urobkiem a
+  ograniczeniami bocznymi
 \item[capacity] Wydajność punktu załadowczego [t/h]
 \item[fallHeight] Wysokość spadku materiału na taśmę [mm]
 \item[skirtLength] Długość ograniczeń bocznych [m]
@@ -616,7 +619,7 @@ Kosz zasypowy jako element trasy wyznacza miejsce załadunku materiału na przen
 \subsubsection{Materiał <Material>}
 Element opisujący właściwości materiału podawanego na kosz zasypowy.
 
-\begin{figure}[h]
+\begin{figure}[H]
   \centering
   \includegraphics[width=0.6\textwidth]{png/liquid/Material}
   \caption{Definicja elementu Material}
@@ -643,13 +646,14 @@ Element opisujący właściwości materiału podawanego na kosz zasypowy.
 
 
 \subsubsection{Pojedynczy krążnik <Idler>}
-Podstawowym zadaniem krążników jest właściwe ukształtowanie, podtrzymywanie i ochrona taśmy,
-a także zmniejszenie oporów ruchu przenośnika oraz właściwe podtrzymywanie transportowanego
-nosiwa. Opory tarcia krążnika wpływają na siły napięcia taśmy i na zapotrzebowanie mocy napędu
-[Antoniak2005]. W języku ConvML pojedynczemu krążnikowi odpowiada element Idler. Krążniki
-pracują w zestawach (IdlerSet).
+Podstawowym zadaniem krążników jest właściwe ukształtowanie, podtrzymywanie i
+ochrona taśmy, a także zmniejszenie oporów ruchu przenośnika oraz właściwe
+podtrzymywanie transportowanego nosiwa.  Opory tarcia krążnika wpływają na siły
+napięcia taśmy i na zapotrzebowanie mocy napędu [Antoniak2005].  W języku ConvML
+pojedynczemu krążnikowi odpowiada element Idler. Krążniki pracują w zestawach
+(IdlerSet).
 
-\begin{figure}[h]
+\begin{figure}[H]
   \centering
   \includegraphics[width=0.6\textwidth]{png/liquid/Idler}
   \caption{Definicja elementu Idler}
@@ -669,11 +673,11 @@ pracują w zestawach (IdlerSet).
 
 
 \subsubsection{Zestaw krążnikowy <IdlesSet>}
-Krążniki montuje się na trasie przenośnika (górnej lub dolnej) w postaci zestawów. W przypadku
-braku współrzędnej X, zestawy są rozmieszczane w równej odległości na długości segmentu trasy
-(RouteSegment).
+Krążniki montuje się na trasie przenośnika (górnej lub dolnej) w postaci
+zestawów. W przypadku braku współrzędnej X, zestawy są rozmieszczane w równej
+odległości na długości segmentu trasy (RouteSegment).
 
-\begin{figure}[h]
+\begin{figure}[H]
   \centering
   \includegraphics[width=0.6\textwidth]{png/liquid/IdlerSet}
   \caption{Definicja elementu IdlerSet}
@@ -694,17 +698,18 @@ braku współrzędnej X, zestawy są rozmieszczane w równej odległości na dł
 
 
 \subsubsection{Napęd typu taśma-taśma <TTDrive>}
-Napęd pośredni taśma-taśma jest wyposażony w bęben napędowy, napinający oraz trasę. Napęd
-ten jest usytuowany na trasie przenośnika głównego wewnątrz jego obrysu.
+Napęd pośredni taśma-taśma jest wyposażony w bęben napędowy, napinający oraz
+trasę. Napęd ten jest usytuowany na trasie przenośnika głównego wewnątrz jego
+obrysu.
 
-\begin{figure}[h]
+\begin{figure}[H]
   \centering
   \includegraphics[width=0.4\textwidth]{png/naped_tt}
   \caption{Napęd typu taśma-taśma}
   \label{fig:ttDrive-drw}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[H]
   \centering
   \includegraphics[width=0.6\textwidth]{png/liquid/TTDrive}
   \caption{Definicja elementu TTDrive}
@@ -748,10 +753,9 @@ posiadać unikalny atrybut typeId.
 
 \subsection{Typy płaskie}
 W najprostszym przypadku instancja elementu BeltSegment dziedziczy wartości
-atrybutów zdefiniowanych w
-elemencie BeltSegmentType jeśli wartość atrybutu type zgadza się z wartością
-atrybutu typeId.  Nie jest dopuszczalne przedefiniowanie atrybutów zdefiniowanych
-w typie
+atrybutów zdefiniowanych w elemencie BeltSegmentType jeśli wartość atrybutu type
+zgadza się z wartością atrybutu typeId.  Nie jest dopuszczalne przedefiniowanie
+atrybutów zdefiniowanych w typie.
 
 \begin{verbatim}
 <Types>
@@ -785,7 +789,7 @@ w typie
 
 \subsection{Typy złożone}
 Typy mogą posiadać zdefiniowane podelementy.  W takim przypadku w elemencie
-odwołującym się do typu nie może już być podelementów. 
+odwołującym się do typu nie może już być podelementów.
 
 \begin{verbatim}
 <IdlerType typeId="133" />
@@ -816,8 +820,8 @@ podelementów, to taki element może posiadać podelementy.
 \end{verbatim}
 
 \section{Metadane dokumentu <Meta>}
-Element Meta umożliwia zapisanie dodatkowych informacji o dokumencie. Jest jedynym elementem
-w którego strukturze występują węzły tekstowe.
+Element Meta umożliwia zapisanie dodatkowych informacji o dokumencie. Jest
+jedynym elementem w którego strukturze występują węzły tekstowe.
 
 \paragraph{Definicje podelementów}
 \begin{description}
@@ -834,8 +838,8 @@ w którego strukturze występują węzły tekstowe.
 \end{description}
 
 \section{Grupy atrybutów}
-Atrybuty wspólne dla różnych elementów zdefiniowano w grupach do których można się
-odwoływać w dokumencie XML Schema opisującym ConvML'a.
+Atrybuty wspólne dla różnych elementów zdefiniowano w grupach do których można
+się odwoływać w dokumencie XML Schema opisującym ConvML'a.
 
 \subsection{commonAttrGroup}
 Atrybuty mogące wystąpić w każdym elemencie dokumentu ConvML.
@@ -860,14 +864,14 @@ przenośnika. Są to podelementy elementu Types.
 \begin{description}
 \item[typeId] Identyfikator typu. Musi być unikalny.
 \item[typeName] Nazwa handlowa
-\item[typeDescription] Opis typu. Ten opis nie zostanie nadpisany przez atrybut description
-	w instancji odwołującej się do typu.
+\item[typeDescription] Opis typu. Ten opis nie zostanie nadpisany przez atrybut
+  description w instancji odwołującej się do typu.
 \item[manufacturer] Producent elementów należących do opisywanego typu. 
 \end{description}
 
 \subsection{lengthAngleGroup}
-Atrybuty elementów mających długość i kąt nachylenia. Wspólne dla stacji zwrotnej, stacji czołowej
-oraz odcinków trasy. 
+Atrybuty elementów mających długość i kąt nachylenia. Wspólne dla stacji
+zwrotnej, stacji czołowej oraz odcinków trasy.
 
 \begin{description}
 \item[length] Długość elementu [m]
@@ -925,4 +929,59 @@ Wyliczenie o bazie znakowej.
 </xs:simpleType>
 \end{verbatim}
 
+
+\section{Szablony}
+Podstawowe dokumenty ConvML.
+
+\subsection{BeltConvEditor 2.0}
+Poniższy dokument jest wykorzystywany jako baza do nowego projektu
+przenośnika taśmowego w programie BeltConvEditor.
+
+\begin{verbatim}
+<?xml version="1.0" encoding="utf-8"?>
+<ConvML version="1.2">
+  <BeltConveyor>
+    <Conditions/>
+    <Belt>
+      <BeltSplice/>
+      <BeltSegment/>
+    </Belt>
+    <Tail length="50" angle="5">
+      <Pulley y="2" diameter="1"/>
+      <Carry>
+        <Chute>
+          <Material/>
+        </Chute>
+      </Carry>
+      <Return/>
+    </Tail>
+    <Route>
+      <RouteSection length="50">
+        <RouteSegment>
+          <Carry/>
+          <Return/>
+        </RouteSegment>
+      </RouteSection>
+    </Route>
+    <Head length="50" angle="5">
+      <Pulley y="2" diameter="1">
+        <DriveUnit>
+          <Motor/>
+          <Coupling/>
+          <Gearbox/>
+          <ElectricalEquipment/>
+        </DriveUnit>
+      </Pulley>
+      <Carry/>
+      <Return/>
+    </Head>
+    <ConvElectricalEquipment>
+      <ControlSystem/>
+      <EmergencySystem/>
+      <SignalSystem/>
+      <FireSystem/>
+    </ConvElectricalEquipment>
+  </BeltConveyor>
+</ConvML>
+\end{verbatim}
 \end{document}
