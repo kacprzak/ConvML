@@ -226,14 +226,17 @@ Id: $Id$
   <!-- **************************************************************************************
     *                                        MATERIAL                                       *
     ************************************************************************************** -->
-  <xs:element name="Material" type="materialType" />
+  <xs:element name="Material">
+    <xs:complexType>
+      <xs:complexContent mixed="false">
+        <xs:extension base="materialType" />
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
   <!-- * -->
   <xs:element name="MATERIAL" substitutionGroup="Material" type="materialType" />
   <!-- * -->
-  <xs:complexType name="materialType">
-    <xs:annotation>
-      <xs:documentation>Materiał transportowany</xs:documentation>
-    </xs:annotation>
+  <xs:attributeGroup name="materialAttrGroup">
     <xs:attribute name="name" type="xs:string">
       <xs:annotation>
         <xs:documentation>Nazwa materiału</xs:documentation>
@@ -264,6 +267,13 @@ Id: $Id$
         <xs:documentation>Procentowy udział brył [%]</xs:documentation>
       </xs:annotation>
     </xs:attribute>
+  </xs:attributeGroup>
+  <!-- * -->
+  <xs:complexType name="materialType">
+    <xs:annotation>
+      <xs:documentation>Materiał transportowany</xs:documentation>
+    </xs:annotation>
+    <xs:attribute name="type" type="xs:token" />
     <xs:attribute name="materialBeltFriction" type="nonNegativeDecimalType">
       <xs:annotation>
         <xs:documentation>Współczynni tarcia urobek-taśma</xs:documentation>
@@ -274,6 +284,7 @@ Id: $Id$
         <xs:documentation>Temperatura materiału [°C]</xs:documentation>
       </xs:annotation>
     </xs:attribute>
+    <xs:attributeGroup ref="materialAttrGroup" />
   </xs:complexType>
   <!-- **************************************************************************************
     *                                        BELT CONVEYOR                                  *
@@ -598,11 +609,6 @@ Id: $Id$
         <xs:documentation>Długość płaszcza krążnika [mm]</xs:documentation>
       </xs:annotation>
     </xs:attribute>
-    <xs:attribute name="troughingAngle" type="nonNegativeDecimalType">
-      <xs:annotation>
-        <xs:documentation>Kąt nachylenia krążników bocznych - β [°]</xs:documentation>
-      </xs:annotation>
-    </xs:attribute>
     <xs:attribute name="rotatingPartsMass" type="nonNegativeDecimalType">
       <xs:annotation>
         <xs:documentation>Masa części obrotowych krążnika [kg]</xs:documentation>
@@ -620,13 +626,37 @@ Id: $Id$
     </xs:sequence>
     <xs:attributeGroup ref="instanceAttrGroup" />
     <xs:attributeGroup ref="idlerAttrGroup" />
+    <xs:attribute name="troughingAngle" type="nonNegativeDecimalType">
+      <xs:annotation>
+        <xs:documentation>Kąt nachylenia krążników bocznych - β [°]</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
   </xs:complexType>
   <!-- **************************************************************************************
     *                                        CHUTE                                          *
     ************************************************************************************** -->
-  <xs:element name="Chute" type="chuteType" />
+  <xs:element name="Chute">
+    <xs:complexType>
+      <xs:complexContent mixed="false">
+        <xs:extension base="chuteType" />
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
   <!-- * -->
   <xs:element name="CHUTE" substitutionGroup="Chute" type="chuteType" />
+  <!-- * -->
+  <xs:attributeGroup name="chuteAttrGroup">
+    <xs:attribute name="skirtLength" type="nonNegativeDecimalType">
+      <xs:annotation>
+        <xs:documentation>Długość ograniczeń bocznych [m]</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="skirtWidth" type="nonNegativeDecimalType">
+      <xs:annotation>
+        <xs:documentation>Szerokość ograniczeń bocznych [m]</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
   <!-- * -->
   <xs:complexType name="chuteType">
     <xs:annotation>
@@ -646,16 +676,6 @@ Id: $Id$
         <xs:documentation>Współczynnik tarcia pomiędzy urobkiem a ograniczeniami bocznymi</xs:documentation>
       </xs:annotation>
     </xs:attribute>
-    <xs:attribute name="skirtLength" type="nonNegativeDecimalType">
-      <xs:annotation>
-        <xs:documentation>Długość ograniczeń bocznych [m]</xs:documentation>
-      </xs:annotation>
-    </xs:attribute>
-    <xs:attribute name="skirtWidth" type="nonNegativeDecimalType">
-      <xs:annotation>
-        <xs:documentation>Szerokość ograniczeń bocznych [m]</xs:documentation>
-      </xs:annotation>
-    </xs:attribute>
     <xs:attribute name="capacity" type="nonNegativeDecimalType">
       <xs:annotation>
         <xs:documentation>Wydajność punktu załadowczego [t/h]</xs:documentation>
@@ -666,6 +686,7 @@ Id: $Id$
         <xs:documentation>Wysokość spadku materiału na taśmę [mm]</xs:documentation>
       </xs:annotation>
     </xs:attribute>
+    <xs:attributeGroup ref="chuteAttrGroup" />
   </xs:complexType>
   <!-- **************************************************************************************
     *                                        PULLEY                                         *

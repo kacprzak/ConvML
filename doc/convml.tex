@@ -572,6 +572,50 @@ jedynie jako podelement elementu Pulley (Bębna).
 \subsubsection{Układ pneumatyczny <PneumaticSystem>}
 
 
+\subsection{Kosz zasypowy <Chute>}
+Kosz zasypowy jako element trasy wyznacza miejsce załadunku materiału na przenośnik taśmowy.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.6\textwidth]{png/liquid/Chute}
+  \caption{Definicja elementu Chute}
+  \label{fig:chute-xsd}
+\end{figure}
+
+\paragraph{Definicje atrybutów}
+\begin{description}
+\item[horizontalSpeed] Składowa prędkości taśmy [m/s]
+\item[skirtMaterialFriction] Współczynnik tarcia pomiędzy urobkiem a ograniczeniami bocznymi
+\item[capacity] Wydajność punktu załadowczego [t/h]
+\item[fallHeight] Wysokość spadku materiału na taśmę [mm]
+\item[skirtLength] Długość ograniczeń bocznych [m]
+\item[skirtWidth] Szerokość ograniczeń bocznych [m]
+\end{description}
+
+
+\subsubsection{Materiał <Material>}
+Element opisujący właściwości materiału podawanego na kosz zasypowy.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.6\textwidth]{png/liquid/Material}
+  \caption{Definicja elementu Material}
+  \label{fig:material-xsd}
+\end{figure}
+
+\paragraph{Definicje atrybutów}
+\begin{description}
+\item[name] Nazwa materiału
+\item[density] Gęstość nasypowa materiału transportowanego - $\gamma$ [$kg/m^3$]
+\item[surchargeAngle] Kąt usypu materiału na taśmie - $\rho$ [$^\circ$]
+\item[reposeAngle] Kąt tarcia wewnętrznego [$^\circ$]
+\item[lumpSizeMaximum] Maksymalny wymiar brył [mm]
+\item[lumpPercTopSize] Procentowy udział brył [\%]
+\item[materialBeltFriction] Współczynni tarcia urobek-taśma
+\item[temperature] Temperatura materiału [$^\circ$C]
+\end{description}
+
+
 \subsection{Rozładunek <Unload>}
 
 
@@ -597,7 +641,7 @@ pracują w zestawach (IdlerSet).
 \item[diameter] Średnica krążnika [mm]
 \item[idlerType] Typ krążnika: 1 - z pierścieniami, 2 - gładki
 \item[length] Długość płaszcza krążnika [mm]
-\item[troughingAngle] Kąt nachylenia krążników bocznych - $\beta$ [$^\circ$] % Powinno być cechą zestawu
+\item[troughingAngle] Kąt nachylenia krążników bocznych - $\beta$ [$^\circ$]
 \item[rotatingPartsMass] Masa części obrotowych krążnika [kg]
 \item[mass] Masa [kg]
 \item[inertiaMoment] Moment bezwładności - I [$kg*m^2$]
@@ -647,8 +691,6 @@ braku współrzędnej X, zestawy są rozmieszczane w równej odległości na dł
 
 
 \subsection{Pozostałe}
-tutaj opisać: Urządzenie dodatkowe, Wyposażenie elektryczne urządzenia, Układ
-chłodzenia
 
 \subsubsection{Układ chłodzenia <CoolingSystem>}
 
