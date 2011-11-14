@@ -578,7 +578,48 @@ jedynie jako podelement elementu Pulley (Bębna).
 \subsection{Elementy trasy}
 
 
+\subsubsection{Pojedyńczy krążnik <Idler>}
+Podstawowym zadaniem krążników jest właściwe ukształtowanie, podtrzymywanie i ochrona taśmy,
+a także zmniejszenie oporów ruchu przenosnika oraz właściwe podtrzymywanie transportowanego
+nosiwa. Opory tarcia krążnika wpływają na siły napięcia taśmy i na zapotrzebowanie mocy napędu
+[Antoniak2005]. W języku ConvML pojedynczemu krążnikowi odpowiada element Idler. Krążniki
+pracują w zestawach (IdlerSet).
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.6\textwidth]{png/liquid/Idler}
+  \caption{Definicja elementu Idler}
+  \label{fig:idler-xsd}
+\end{figure}
+
+\paragraph{Definicje atrybutów}
+\begin{description}
+\item[diameter] Średnica krążnika [mm]
+\item[idlerType] Typ krążnika: 1 - z pierścieniami, 2 - gładki
+\item[length] Długość płaszcza krążnika [mm]
+\item[troughingAngle] Kąt nachylenia krążników bocznych - $\beta$ [$^\circ$] % Powinno być cechą zestawu
+\item[rotatingPartsMass] Masa części obrotowych krążnika [kg]
+\item[mass] Masa [kg]
+\item[inertiaMoment] Moment bezwładności - I [$kg*m^2$]
+\end{description}
+
+
 \subsubsection{Zestaw krążnikowy <IdlesSet>}
+Krążniki montuje się na trasie przenośnika (górnej lub dolnej) w postaci zestawów. W przypadku
+braku współrzędnej X, zestawy są rozmieszczane w równej odległości na długości segmentu trasy
+(RouteSegment).
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.6\textwidth]{png/liquid/IdlerSet}
+  \caption{Definicja elementu IdlerSet}
+  \label{fig:idlerSet-xsd}
+\end{figure}
+
+\begin{description}
+\item[x] Położenie osi krążnika środkowego względem elementu nadrzędnego [m]
+\item[y] Położenie osi krążnika środkowego względem elementu nadrzędnego [m]
+\end{description}
 
 
 \subsubsection{Zestaw specjalny <IdlesSetSpecial>}

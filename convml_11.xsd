@@ -553,35 +553,44 @@ Id: $Id$
     <xs:annotation>
       <xs:documentation>Zestaw krążnikowy</xs:documentation>
     </xs:annotation>
-    <xs:choice maxOccurs="5">
-      <xs:element ref="Idler" />
-    </xs:choice>
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="5" ref="Idler" />
+    </xs:sequence>
+    <xs:attribute name="x" type="xs:decimal">
+      <xs:annotation>
+        <xs:documentation>Położenie osi krążnika środkowego względem elementu nadrzędnego [m]</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="y" type="xs:decimal">
+      <xs:annotation>
+        <xs:documentation>Położenie osi krążnika środkowego elementu nadrzędnego [m]</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
     <xs:attributeGroup ref="instanceAttrGroup" />
     <!--xs:attribute name="type" /-->
   </xs:complexType>
   <!-- **************************************************************************************
     *                                        IDLER                                          *
     ************************************************************************************** -->
-  <xs:element name="Idler" type="idlerType" />
+  <xs:element name="Idler">
+    <xs:complexType>
+      <xs:complexContent mixed="false">
+        <xs:extension base="idlerType" />
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
   <!-- * -->
   <xs:element name="IDLER" substitutionGroup="Idler" type="idlerType" />
   <!-- * -->
-  <xs:complexType name="idlerType">
-    <xs:annotation>
-      <xs:documentation>Pojedynczy krążnik</xs:documentation>
-    </xs:annotation>
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="2" ref="Bearing" />
-    </xs:sequence>
-    <xs:attributeGroup ref="instanceAttrGroup" />
-    <xs:attribute name="idlerType" type="xs:token">
-      <xs:annotation>
-        <xs:documentation>Typ krążnika: 1 - z pierścieniami, 2 - gładki</xs:documentation>
-      </xs:annotation>
-    </xs:attribute>
+  <xs:attributeGroup name="idlerAttrGroup">
     <xs:attribute name="diameter" type="nonNegativeDecimalType">
       <xs:annotation>
         <xs:documentation>Średnica krążnika [mm]</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="idlerType" type="xs:token">
+      <xs:annotation>
+        <xs:documentation>Typ krążnika: 1 - z pierścieniami, 2 - gładki</xs:documentation>
       </xs:annotation>
     </xs:attribute>
     <xs:attribute name="length" type="nonNegativeDecimalType">
@@ -600,6 +609,17 @@ Id: $Id$
       </xs:annotation>
     </xs:attribute>
     <xs:attributeGroup ref="pulleyIdlerGroup" />
+  </xs:attributeGroup>
+  <!-- * -->
+  <xs:complexType name="idlerType">
+    <xs:annotation>
+      <xs:documentation>Pojedynczy krążnik</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="2" ref="Bearing" />
+    </xs:sequence>
+    <xs:attributeGroup ref="instanceAttrGroup" />
+    <xs:attributeGroup ref="idlerAttrGroup" />
   </xs:complexType>
   <!-- **************************************************************************************
     *                                        CHUTE                                          *
@@ -907,13 +927,13 @@ Id: $Id$
         <xs:documentation>Współczynnik rozruchowy K_R = M_R/M_N,
 	gdzie M_R - moment rozruchowy, M_N - moment nominalny</xs:documentation>
       </xs:annotation>
-		</xs:attribute>    
+    </xs:attribute>
     <xs:attribute name="overloadFactor" type="nonNegativeDecimalType">
       <xs:annotation>
         <xs:documentation>Współczynnik przeciążalności napędu K_O = M_{Max}/M_N,
 	gdzie M_{Max} - moment maksymalny, M_N - moment nominalny</xs:documentation>
       </xs:annotation>
-		</xs:attribute>
+    </xs:attribute>
     <xs:attribute name="inertiaMoment" type="nonNegativeDecimalType">
       <xs:annotation>
         <xs:documentation>Moment bezwładności [kgm²]</xs:documentation>
@@ -1179,7 +1199,7 @@ Id: $Id$
       <xs:annotation>
         <xs:documentation>Współczynnik nadwyżki dynamicznej K_D = M_R/M_U,
 	gdzie M_R - moment rozruchowy, M_U - moment ustalony</xs:documentation>
-      </xs:annotation>    
+      </xs:annotation>
     </xs:attribute>
     <xs:attribute name="brakeFactor" type="nonNegativeDecimalType">
       <xs:annotation>
