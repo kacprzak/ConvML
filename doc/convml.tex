@@ -134,14 +134,14 @@ trasy.
 
 \paragraph{Definicje atrybutów}
 \begin{description}
-\item[beltSpeed] Prędkość taśmy przenośnika - v [m/s].
-\item[designCapacity] Wydajność nominalna przenośnika - Q [t/h].
-\item[localization] Wyrobisko.
-\item[mine] Kopalnia.
-\item[mineArea] Rejon.
-\item[convDivision] Oddział taśmowy.
-\item[mineDivision] Obsługiwane oddziały wydobywcze.
-\item[maxCapacity] Wydajność maksymalna.
+\item[beltSpeed] Prędkość taśmy przenośnika - v [m/s]
+\item[designCapacity] Wydajność nominalna przenośnika - Q [t/h]
+\item[localization] Wyrobisko
+\item[mine] Kopalnia
+\item[mineArea] Rejon
+\item[convDivision] Oddział taśmowy
+\item[mineDivision] Obsługiwane oddziały wydobywcze
+\item[maxCapacity] Wydajność maksymalna
 \end{description}
 
 
@@ -213,7 +213,7 @@ złącze i jeden odcinek.
 
 \paragraph{Definicje atrybutów}
 \begin{description}
-\item[width] Szerokość taśmy - B [mm].
+\item[width] Szerokość taśmy - B [mm]
 \end{description}
 
 
@@ -660,6 +660,7 @@ braku współrzędnej X, zestawy są rozmieszczane w równej odległości na dł
   \label{fig:idlerSet-xsd}
 \end{figure}
 
+\paragraph{Definicje atrybutów}
 \begin{description}
 \item[x] Położenie osi krążnika środkowego względem elementu nadrzędnego [m]
 \item[y] Położenie osi krążnika środkowego względem elementu nadrzędnego [m]
@@ -673,9 +674,25 @@ braku współrzędnej X, zestawy są rozmieszczane w równej odległości na dł
 
 
 \subsubsection{Napęd typu taśma-taśma <TTDrive>}
+Napęd pośredni taśma-taśma jest wyposażony w bęben napędowy, napinający oraz trasę. Napęd
+ten jest usytuowany na trasie przenośnika głównego wewnątrz jego obrysu.
 
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.4\textwidth]{png/naped_tt}
+  \caption{Napęd typu taśma-taśma}
+  \label{fig:ttDrive-drw}
+\end{figure}
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.6\textwidth]{png/liquid/TTDrive}
+  \caption{Definicja elementu TTDrive}
+  \label{fig:ttDrive-xsd}
+\end{figure}
 
 \subsection{Wyposażenie elektryczne przenosnika <ConvElectricalEquipment>}
+Wyposażenie elektryczne współpracujące z przenośnikiem taśmowym jako całością.
 
 
 \subsubsection{Układ sterowania przenośnikiem <ControlSystem>}
@@ -775,5 +792,23 @@ podelementów, to taki element może posiadać podelementy.
   <Idler type="133"/>
 <IdlerSet/>
 \end{verbatim}
+
+\section{Metadane dokumentu <Meta>}
+Element Meta umożliwa zapisanie dodatkowych informacji o dokumencie. Jest jedynym elementem
+w którego strukturze wystepują węzły tekstowe.
+
+\paragraph{Definicje podelementów}
+\begin{description}
+\item[Generator] Programktóry utworzył dokument
+\item[Title] Opcjonalny tytuł dokumentu
+\item[Description] Opcjonalny opis dokumentu
+\item[Creator] Użytkownik który utworzył dokument
+\item[CreationDate] Data utworzenia dokumentu
+\item[ModifiedBy] Użytkownik który ostatnio modyfikował dokument
+\item[ModifiedDate] Data ostatniej modyfikacji
+\item[Language] Kod języka w którym utworzono dokument.
+	Atrybut link wskazuje plik z tłumaczeniami.
+\item[UnitSystem] System jednostek. Atrybut link wskazuje plik z definicjami jednostek. 
+\end{description}
 
 \end{document}
