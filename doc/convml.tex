@@ -96,7 +96,7 @@ mieć następującą postać:
   \label{fig:convml-xsd}
 \end{figure}
 
-\noindent\textbf{Definicje atrybutów:}
+\noindent\textbf{Atrybuty:}
 \begin{description}
 \item[version] Zastosowana w dokumencie wersja języka ConvML.
 \end{description}
@@ -139,7 +139,7 @@ trasy.
   \label{fig:beltConveyor-xsd}
 \end{figure}
 
-\noindent\textbf{Definicje atrybutów:}
+\noindent\textbf{Atrybuty:}
 \begin{description}
 \item[beltSpeed] Prędkość taśmy przenośnika - v [m/s]
 \item[designCapacity] Wydajność nominalna przenośnika - Q [t/h]
@@ -163,7 +163,7 @@ taśmowego.
   \label{fig:conditions-xsd}
 \end{figure}
 
-\noindent\textbf{Definicje atrybutów:}
+\noindent\textbf{Atrybuty:}
 \begin{description}
 \item[ambientTemperature] Temperatura otoczenia przenośnika - T [$^\circ$C]
 \item[workConditions] Warunki pracy przenośnika: 1 - bardzo dobre, 2 - dobre,
@@ -218,7 +218,7 @@ złącze i jeden odcinek.
   \label{fig:belt-xsd}
 \end{figure}
 
-\noindent\textbf{Definicje atrybutów:}
+\noindent\textbf{Atrybuty:}
 \begin{description}
 \item[width] Szerokość taśmy - B [mm]
 \end{description}
@@ -240,7 +240,7 @@ mogą występować tylko w elemencie {\tt BeltSegment}.
   \label{fig:beltSegment-xsd}
 \end{figure}
 
-\noindent\textbf{Definicje atrybutów:}
+\noindent\textbf{Atrybuty:}
 \begin{description}
 \item[width] Szerokość odcinka taśmy [mm]
 \item[strength] Nominalna wytrzymałość taśmy [kN/m]
@@ -278,7 +278,7 @@ wykonania połączenia.
 W przypadku złącza, standardowy atrybut {\tt productionDate} należy tłumaczyć
 jako datę wykonania złącza.
 
-\noindent\textbf{Definicje atrybutów:}
+\noindent\textbf{Atrybuty:}
 \begin{description}
 \item[spliceStrength] Wytrzymałość połączenia [\%]
 \item[spliceType] Rodzaj złącza np: wulkanizowane, mechaniczne, klejone, inne.
@@ -339,7 +339,7 @@ bębnem napędowym.  Analogicznie obecność zestawu napinającego ({\tt
   \label{fig:pulley-xsd}
 \end{figure}
 
-\noindent\textbf{Definicje atrybutów:}
+\noindent\textbf{Atrybuty:}
 \begin{description}
 \item[diameter] Średnica [m]
 \item[pulleyBeltFriction] Współczynnik tarcia między taśmą a bębnem napędowym
@@ -385,7 +385,7 @@ parametrów geometrycznych przenośnika.
   \label{fig:routeSection-xsd}
 \end{figure}
 
-\noindent\textbf{Definicje atrybutów:}
+\noindent\textbf{Atrybuty:}
 \begin{description}
 \item[length] Długość elementu [m]
 \item[angle] Kąt nachylenia elementu [$^\circ$]
@@ -409,7 +409,7 @@ trasy powrotnej, służą elementy {\tt Carry} oraz {\tt Return}.
   \label{fig:routeSegment-xsd}
 \end{figure}
 
-\noindent\textbf{Definicje atrybutów:}
+\noindent\textbf{Atrybuty:}
 \begin{description}
 \item[length] Długość elementu [m]
 \end{description}
@@ -455,7 +455,7 @@ występować jedynie jako podelement elementu {\tt Pulley} (Bębna).
   \label{fig:driveUnit-xsd}
 \end{figure}
 
-\noindent\textbf{Definicje atrybutów:}
+\noindent\textbf{Atrybuty:}
 \begin{description}
 \item[dynamicSurplusFactor] Współczynnik nadwyżki dynamicznej $K_D = M_R/M_U$,
   gdzie $M_R$ - moment rozruchowy, $M_U$ - moment ustalony
@@ -474,7 +474,7 @@ występować jedynie jako podelement elementu {\tt Pulley} (Bębna).
   \label{fig:motor-xsd}
 \end{figure}
 
-\noindent\textbf{Definicje atrybutów:}
+\noindent\textbf{Atrybuty:}
 \begin{description}
 \item[power] Moc silnika [kW]
 \item[nominalRotationalSpeed] Nominalna prędkość obrotowa [1/min]
@@ -506,7 +506,7 @@ występować jedynie jako podelement elementu {\tt Pulley} (Bębna).
   \label{fig:fluidCoupling-xsd}
 \end{figure}
 
-\noindent\textbf{Definicje atrybutów:}
+\noindent\textbf{Atrybuty:}
 \begin{description}
 \item[slip] Poślizg sprzęgła
 \end{description}
@@ -531,7 +531,7 @@ występować jedynie jako podelement elementu {\tt Pulley} (Bębna).
   \label{fig:gearbox-xsd}
 \end{figure}
 
-\noindent\textbf{Definicje atrybutów:}
+\noindent\textbf{Atrybuty:}
 \begin{description}
 \item[gearRatio] Przełożenie przekładni
 \end{description}
@@ -556,7 +556,7 @@ występować jedynie jako podelement elementu {\tt Pulley} (Bębna).
   \label{fig:strechingCar-xsd}
 \end{figure}
 
-\noindent\textbf{Definicje atrybutów:}
+\noindent\textbf{Atrybuty:}
 \begin{description}
 \item[numberOfDiscs] Liczba krążków
 \end{description}
@@ -574,7 +574,7 @@ występować jedynie jako podelement elementu {\tt Pulley} (Bębna).
 
 \subsubsection{Obciążnik <Counterweight>}
 
-\noindent\textbf{Definicje atrybutów:}
+\noindent\textbf{Atrybuty:}
 \begin{description}
 \item[numberOfDiscs] Liczba krążków
 \item[mass] Masa obciążnika
@@ -583,7 +583,7 @@ występować jedynie jako podelement elementu {\tt Pulley} (Bębna).
 
 \subsubsection{Wciągarka <Winch>}
 
-\noindent\textbf{Definicje atrybutów:}
+\noindent\textbf{Atrybuty:}
 \begin{description}
 \item[takeUpTension] Siła naciągu [kN]
 \end{description}
@@ -609,7 +609,7 @@ przenośnik taśmowy.
   \label{fig:chute-xsd}
 \end{figure}
 
-\noindent\textbf{Definicje atrybutów:}
+\noindent\textbf{Atrybuty:}
 \begin{description}
 \item[horizontalSpeed] Składowa prędkości taśmy [m/s]
 \item[skirtMaterialFriction] Współczynnik tarcia pomiędzy urobkiem a
@@ -631,7 +631,7 @@ Element opisujący właściwości materiału podawanego na kosz zasypowy.
   \label{fig:material-xsd}
 \end{figure}
 
-\noindent\textbf{Definicje atrybutów:}
+\noindent\textbf{Atrybuty:}
 \begin{description}
 \item[name] Nazwa materiału
 \item[density] Gęstość nasypowa materiału transportowanego - $\gamma$ [$kg/m^3$]
@@ -665,7 +665,7 @@ zestawach ({\tt IdlerSet}).
   \label{fig:idler-xsd}
 \end{figure}
 
-\noindent\textbf{Definicje atrybutów:}
+\noindent\textbf{Atrybuty:}
 \begin{description}
 \item[diameter] Średnica krążnika [mm]
 \item[idlerType] Typ krążnika: 1 - z pierścieniami, 2 - gładki
@@ -689,7 +689,7 @@ odległości na długości segmentu trasy ({\tt RouteSegment}).
   \label{fig:idlerSet-xsd}
 \end{figure}
 
-\noindent\textbf{Definicje atrybutów:}
+\noindent\textbf{Atrybuty:}
 \begin{description}
 \item[x] Położenie osi krążnika środkowego względem elementu nadrzędnego [m]
 \item[y] Położenie osi krążnika środkowego względem elementu nadrzędnego [m]
