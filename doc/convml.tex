@@ -102,7 +102,7 @@ mieć następującą postać:
 \end{description}
 
 
-\subsection{Przenośnik taśmowy <BeltConveyor>}
+\subsection{Przenośnik taśmowy <BeltConveyor>}\label{sec:BeltConveyor}
 Górnicze przenośniki taśmowe definiuje się jako urządzenia służące do ciągłego
 transportu na taśmie materiałów sypkich, pozyskiwanych podczas procesów
 związanych z prowadzeniem robót górniczych [Kulinowski2011].  Do zespołów
@@ -139,6 +139,8 @@ trasy.
   \label{fig:beltConveyor-xsd}
 \end{figure}
 
+\noindent\textbf{Rodzice:} \texttt{ConvML}
+
 \noindent\textbf{Atrybuty:}
 \begin{description}
 \item[beltSpeed] Prędkość taśmy przenośnika - v [m/s]
@@ -163,6 +165,8 @@ taśmowego.
   \label{fig:conditions-xsd}
 \end{figure}
 
+\noindent\textbf{Rodzice:} \texttt{\hyperref[sec:BeltConveyor]{BeltConveyor}}
+
 \noindent\textbf{Atrybuty:}
 \begin{description}
 \item[ambientTemperature] Temperatura otoczenia przenośnika - T [$^\circ$C]
@@ -176,7 +180,7 @@ taśmowego.
 \end{description}
 
 
-\subsection{Taśma <Belt>}
+\subsection{Taśma <Belt>}\label{sec:Belt}
 Taśma jest podstawowym elementem przenośnika. Taśma zamontowana na przenośniku
 taśmowym jest najczęściej listą odcinków taśmy połączonym złączami.
 
@@ -218,6 +222,8 @@ złącze i jeden odcinek.
   \label{fig:belt-xsd}
 \end{figure}
 
+\noindent\textbf{Rodzice:} \texttt{\hyperref[sec:BeltConveyor]{BeltConveyor}}
+
 \noindent\textbf{Atrybuty:}
 \begin{description}
 \item[width] Szerokość taśmy - B [mm]
@@ -239,6 +245,8 @@ mogą występować tylko w elemencie {\tt BeltSegment}.
   \caption{Definicja elementu BeltSegment}
   \label{fig:beltSegment-xsd}
 \end{figure}
+
+\noindent\textbf{Rodzice:} \texttt{\hyperref[sec:Belt]{Belt}}
 
 \noindent\textbf{Atrybuty:}
 \begin{description}
@@ -278,6 +286,8 @@ wykonania połączenia.
 W przypadku złącza, standardowy atrybut {\tt productionDate} należy tłumaczyć
 jako datę wykonania złącza.
 
+\noindent\textbf{Rodzice:} \texttt{\hyperref[sec:Belt]{Belt}}
+
 \noindent\textbf{Atrybuty:}
 \begin{description}
 \item[spliceStrength] Wytrzymałość połączenia [\%]
@@ -300,6 +310,8 @@ dotyczącym segmentów trasy.
   \label{fig:tail-xsd}
 \end{figure}
 
+\noindent\textbf{Rodzice:} \texttt{\hyperref[sec:BeltConveyor]{BeltConveyor}}
+
 
 \subsection{Stacja czołowa <Head>}
 Stacja czołowa pomimo innej nazwy elementu w stosunku do stacji zwrotnej posiada
@@ -313,6 +325,8 @@ się na nim zmiana kierunku taśmy z trasy nośnej na trasę powrotną.
   \caption{Definicja typu elementu Head}
   \label{fig:headTailType-xsd}
 \end{figure}
+
+\noindent\textbf{Rodzice:} \texttt{\hyperref[sec:BeltConveyor]{BeltConveyor}}
 
 
 \subsection{Bęben <Pulley>}
@@ -339,6 +353,8 @@ bębnem napędowym.  Analogicznie obecność zestawu napinającego ({\tt
   \label{fig:pulley-xsd}
 \end{figure}
 
+\noindent\textbf{Rodzice:} \texttt{Carry, Return, TTDrive}
+
 \noindent\textbf{Atrybuty:}
 \begin{description}
 \item[diameter] Średnica [m]
@@ -352,7 +368,8 @@ bębnem napędowym.  Analogicznie obecność zestawu napinającego ({\tt
 \item[inertiaMoment] Moment bezwładności - I [kgm$^2$]
 \end{description}
 
-\subsection{Trasa <Route>}
+
+\subsection{Trasa <Route>}\label{sec:Route}
 Trasa jest elementem grupującym odcinki trasy. Aby obliczyć całkowitą długość
 przenośnika, wysokość podnoszenia oraz pozostałe parametry geometryczna należy
 wziąć pod uwagę wszystkie odcinki trasy oraz stację czołową i zwrotną.  Element
@@ -372,6 +389,8 @@ wziąć pod uwagę wszystkie odcinki trasy oraz stację czołową i zwrotną.  E
   \label{fig:route-xsd}
 \end{figure}
 
+\noindent\textbf{Rodzice:} \texttt{\hyperref[sec:BeltConveyor]{BeltConveyor}}
+
 
 \subsubsection{Odcinek trasy <RouteSection>}
 Odcinek trasy jest elementem logicznego podziału trasy przenośnika na elementy o
@@ -384,6 +403,8 @@ parametrów geometrycznych przenośnika.
   \caption{Definicja elementu RouteSection}
   \label{fig:routeSection-xsd}
 \end{figure}
+
+\noindent\textbf{Rodzice:} \texttt{\hyperref[sec:Route]{Route}}
 
 \noindent\textbf{Atrybuty:}
 \begin{description}
@@ -409,6 +430,8 @@ trasy powrotnej, służą elementy {\tt Carry} oraz {\tt Return}.
   \label{fig:routeSegment-xsd}
 \end{figure}
 
+\noindent\textbf{Rodzice:} \texttt{RouteSection}
+
 \noindent\textbf{Atrybuty:}
 \begin{description}
 \item[length] Długość elementu [m]
@@ -425,6 +448,9 @@ nośnej.
   \caption{Definicja typu elementu Carry}
   \label{fig:carryReturnType-xsd}
 \end{figure}
+
+\noindent\textbf{Rodzice:} \texttt{RouteSegment, Head, Tail}
+
 
 \subsubsection{Dolna trasa <Return>}
 Element {\tt Return} grupuje obiekty współpracujące z taśmą poruszającą się po
@@ -444,6 +470,8 @@ elementu Return (niebieski)}
   \label{fig:carryReturn-drw}
 \end{figure}
 
+\noindent\textbf{Rodzice:} \texttt{RouteSegment, Head, Tail}
+
 \subsection{Zespół napędowy <DriveUnit>}
 Element grupujący urządzenia wchodzące w skład zespołu napędowego. Może
 występować jedynie jako podelement elementu {\tt Pulley} (Bębna).
@@ -454,6 +482,8 @@ występować jedynie jako podelement elementu {\tt Pulley} (Bębna).
   \caption{Definicja elementu DriveUnit}
   \label{fig:driveUnit-xsd}
 \end{figure}
+
+\noindent\textbf{Rodzice:} \texttt{Pulley}
 
 \noindent\textbf{Atrybuty:}
 \begin{description}
@@ -473,6 +503,8 @@ występować jedynie jako podelement elementu {\tt Pulley} (Bębna).
   \caption{Definicja elementu Motor}
   \label{fig:motor-xsd}
 \end{figure}
+
+\noindent\textbf{Rodzice:} \texttt{DriveUnit}
 
 \noindent\textbf{Atrybuty:}
 \begin{description}
@@ -496,6 +528,7 @@ występować jedynie jako podelement elementu {\tt Pulley} (Bębna).
   \label{fig:coupling-xsd}
 \end{figure}
 
+\noindent\textbf{Rodzice:} \texttt{DriveUnit}
 
 \subsubsection{Sprzęgło hydrodynamiczne <FluidCoupling>}
 
@@ -505,6 +538,8 @@ występować jedynie jako podelement elementu {\tt Pulley} (Bębna).
   \caption{Definicja elementu FluidCoupling}
   \label{fig:fluidCoupling-xsd}
 \end{figure}
+
+\noindent\textbf{Rodzice:} \texttt{DriveUnit}
 
 \noindent\textbf{Atrybuty:}
 \begin{description}
@@ -521,6 +556,7 @@ występować jedynie jako podelement elementu {\tt Pulley} (Bębna).
   \label{fig:break-xsd}
 \end{figure}
 
+\noindent\textbf{Rodzice:} \texttt{DriveUnit}
 
 \subsubsection{Przekładnia <Gearbox>}
 
@@ -530,6 +566,8 @@ występować jedynie jako podelement elementu {\tt Pulley} (Bębna).
   \caption{Definicja elementu Gearbox}
   \label{fig:gearbox-xsd}
 \end{figure}
+
+\noindent\textbf{Rodzice:} \texttt{DriveUnit}
 
 \noindent\textbf{Atrybuty:}
 \begin{description}
@@ -546,6 +584,7 @@ występować jedynie jako podelement elementu {\tt Pulley} (Bębna).
   \label{fig:takeUpSystem-xsd}
 \end{figure}
 
+\noindent\textbf{Rodzice:} \texttt{Pulley}
 
 \subsubsection{Wózek napinający <StrechingCar>}
 
@@ -555,6 +594,8 @@ występować jedynie jako podelement elementu {\tt Pulley} (Bębna).
   \caption{Definicja elementu StrechingCar}
   \label{fig:strechingCar-xsd}
 \end{figure}
+
+\noindent\textbf{Rodzice:} \texttt{TakeUpSystem}
 
 \noindent\textbf{Atrybuty:}
 \begin{description}
@@ -571,8 +612,12 @@ występować jedynie jako podelement elementu {\tt Pulley} (Bębna).
   \label{fig:ropeSystem-xsd}
 \end{figure}
 
+\noindent\textbf{Rodzice:} \texttt{TakeUpSystem}
+
 
 \subsubsection{Obciążnik <Counterweight>}
+
+\noindent\textbf{Rodzice:} \texttt{GravitySystem}
 
 \noindent\textbf{Atrybuty:}
 \begin{description}
@@ -583,6 +628,8 @@ występować jedynie jako podelement elementu {\tt Pulley} (Bębna).
 
 \subsubsection{Wciągarka <Winch>}
 
+\noindent\textbf{Rodzice:} \texttt{TakeUpSystem}
+
 \noindent\textbf{Atrybuty:}
 \begin{description}
 \item[takeUpTension] Siła naciągu [kN]
@@ -591,12 +638,17 @@ występować jedynie jako podelement elementu {\tt Pulley} (Bębna).
 
 \subsubsection{Układ grawitacyjny <GravitySystem>}
 
+\noindent\textbf{Rodzice:} \texttt{TakeUpSystem}
+
 
 \subsubsection{Układ hydrauliczny <HydraulicSystem>}
+
+\noindent\textbf{Rodzice:} \texttt{TakeUpSystem}
 
 
 \subsubsection{Układ pneumatyczny <PneumaticSystem>}
 
+\noindent\textbf{Rodzice:} \texttt{TakeUpSystem}
 
 \subsection{Kosz zasypowy <Chute>}
 Kosz zasypowy jako element trasy wyznacza miejsce załadunku materiału na
@@ -608,6 +660,8 @@ przenośnik taśmowy.
   \caption{Definicja elementu Chute}
   \label{fig:chute-xsd}
 \end{figure}
+
+\noindent\textbf{Rodzice:} \texttt{Carry, Return}
 
 \noindent\textbf{Atrybuty:}
 \begin{description}
@@ -631,6 +685,8 @@ Element opisujący właściwości materiału podawanego na kosz zasypowy.
   \label{fig:material-xsd}
 \end{figure}
 
+\noindent\textbf{Rodzice:} \texttt{Chute}
+
 \noindent\textbf{Atrybuty:}
 \begin{description}
 \item[name] Nazwa materiału
@@ -645,10 +701,14 @@ Element opisujący właściwości materiału podawanego na kosz zasypowy.
 
 
 \subsection{Rozładunek <Unload>}
+Wyznacze miejsce rozładunku przenośnika. Jeśli występuje pod elementem {\tt Pulley}
+oznacza rozładuek przez bęben.  Element {\tt Unload} może również występować w
+dowolnym miejscu trasy co jest utożsamiane z urządzeniem typu pług rozładowczy.
+
+\noindent\textbf{Rodzice:} \texttt{Pulley, Carry, Return}
 
 
 \subsection{Elementy trasy}
-
 
 \subsubsection{Pojedynczy krążnik <Idler>}
 Podstawowym zadaniem krążników jest właściwe ukształtowanie, podtrzymywanie i
@@ -664,6 +724,8 @@ zestawach ({\tt IdlerSet}).
   \caption{Definicja elementu Idler}
   \label{fig:idler-xsd}
 \end{figure}
+
+\noindent\textbf{Rodzice:} \texttt{IdlerSet, IdlerSetSpecial}
 
 \noindent\textbf{Atrybuty:}
 \begin{description}
@@ -689,6 +751,8 @@ odległości na długości segmentu trasy ({\tt RouteSegment}).
   \label{fig:idlerSet-xsd}
 \end{figure}
 
+\noindent\textbf{Rodzice:} \texttt{Carry, Return}
+
 \noindent\textbf{Atrybuty:}
 \begin{description}
 \item[x] Położenie osi krążnika środkowego względem elementu nadrzędnego [m]
@@ -697,10 +761,10 @@ odległości na długości segmentu trasy ({\tt RouteSegment}).
 
 
 \subsubsection{Zestaw specjalny <IdlesSetSpecial>}
-
+\noindent\textbf{Rodzice:} \texttt{Carry, Return}
 
 \subsubsection{Płyta ślizgowa <SlipPlate>}
-
+\noindent\textbf{Rodzice:} \texttt{Carry, Return}
 
 \subsubsection{Napęd typu taśma-taśma <TTDrive>}
 Napęd pośredni taśma-taśma jest wyposażony w bęben napędowy, napinający oraz
@@ -721,31 +785,42 @@ obrysu.
   \label{fig:ttDrive-xsd}
 \end{figure}
 
+\noindent\textbf{Rodzice:} \texttt{Carry, Return}
+
+
 \subsection{Wyposażenie elektryczne przenośnika <ConvElectricalEquipment>}
 Wyposażenie elektryczne współpracujące z przenośnikiem taśmowym jako całością.
 
+\noindent\textbf{Rodzice:} \texttt{\hyperref[sec:BeltConveyor]{BeltConveyor}}
+
 
 \subsubsection{Układ sterowania przenośnikiem <ControlSystem>}
-
+\noindent\textbf{Rodzice:} \texttt{ConvElectricalEquipment}
 
 \subsubsection{System wyłączenia awaryjnego <EmergencySystem>}
-
+\noindent\textbf{Rodzice:} \texttt{ConvElectricalEquipment}
 
 \subsubsection{System łączności i sygnalizacji <SignalSystem>}
-
+\noindent\textbf{Rodzice:} \texttt{ConvElectricalEquipment}
 
 \subsubsection{Instalacja przeciwpożarowa <FireSystem>}
-
+\noindent\textbf{Rodzice:} \texttt{ConvElectricalEquipment}
 
 \subsection{Pozostałe}
 
 \subsubsection{Układ chłodzenia <CoolingSystem>}
+\noindent\textbf{Rodzice:} \texttt{Motor, Gearbox}
 
 \subsubsection{Urządzenie czyszczące <CleaningDevice>}
 
+
 \subsubsection{Wyposażenie elektryczne urządzenia <ElectricalEquipment>}
+\noindent\textbf{Rodzice:} \texttt{Carry, Return, TakeUpSystem, DriveUnit}
+
 
 \subsubsection{Urządzenie dodatkowe <AdditionalEquipment>}
+\noindent\textbf{Rodzice:} \texttt{Carry, Return, DriveUnit}
+
 
 \section{Typy <Types>}
 Do formatu ConvML w wersji 1.2 wprowadzono pojęcie typu w celu uniknięcia
