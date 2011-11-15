@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<xs:schema xmlns="http://www.entertech.com.pl/bcml"
-           targetNamespace="http://www.entertech.com.pl/bcml"
-           xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:schema xmlns="http://www.entertech.com.pl/bcml" targetNamespace="http://www.entertech.com.pl/bcml" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:annotation>
     <xs:documentation>
       Metajęzyk opisu elementów przenośników taśmowych. Służy do zbierania informacji
@@ -58,7 +56,7 @@
             <xs:element name="MaterialType">
               <xs:complexType>
                 <xs:complexContent mixed="false">
-                  <xs:extension base="materialType">
+                  <xs:extension base="materialTypeType">
                     <xs:attributeGroup ref="typeAttrGroup" />
                   </xs:extension>
                 </xs:complexContent>
@@ -66,14 +64,17 @@
             </xs:element>
             <xs:element name="BeltSegmentType">
               <xs:complexType>
-                <xs:attributeGroup ref="typeAttrGroup" />
-                <xs:attributeGroup ref="beltSegmentAttrGroup" />
+                <xs:complexContent mixed="false">
+                  <xs:extension base="beltSegmentTypeType">
+                    <xs:attributeGroup ref="typeAttrGroup" />
+                  </xs:extension>
+                </xs:complexContent>
               </xs:complexType>
             </xs:element>
             <xs:element name="BeltSpliceType">
               <xs:complexType>
                 <xs:complexContent mixed="false">
-                  <xs:extension base="beltSpliceType">
+                  <xs:extension base="beltSpliceTypeType">
                     <xs:attributeGroup ref="typeAttrGroup" />
                   </xs:extension>
                 </xs:complexContent>
@@ -82,7 +83,7 @@
             <xs:element name="IdlerType">
               <xs:complexType>
                 <xs:complexContent mixed="false">
-                  <xs:extension base="idlerType">
+                  <xs:extension base="idlerTypeType">
                     <xs:attributeGroup ref="typeAttrGroup" />
                   </xs:extension>
                 </xs:complexContent>
@@ -116,13 +117,7 @@
   <!-- **************************************************************************************
        *                                        CONDITIONS                                     *
        ************************************************************************************** -->
-  <xs:element name="Conditions">
-    <xs:complexType>
-      <xs:complexContent mixed="false">
-        <xs:extension base="conditionsType" />
-      </xs:complexContent>
-    </xs:complexType>
-  </xs:element>
+  <xs:element name="Conditions" type="conditionsType" />
   <!-- * -->
   <xs:complexType name="conditionsType">
     <!-- xs:attributeGroup ref="instanceAttrGroup" / -->
@@ -153,12 +148,19 @@
     <xs:attribute name="lumpPercTopSize" type="nonNegativeDecimalType" />
   </xs:attributeGroup>
   <!-- * -->
-  <xs:complexType name="materialType">
-    <xs:attribute name="materialBeltFriction" type="nonNegativeDecimalType" />
-    <xs:attribute name="temperature" type="nonNegativeDecimalType" />
+  <xs:complexType name="materialTypeType">
     <xs:attributeGroup ref="materialAttrGroup" />
-    <xs:attributeGroup ref="instanceAttrGroup" />
     <xs:attributeGroup ref="commonAttrGroup" />
+  </xs:complexType>
+  <!-- * -->
+  <xs:complexType name="materialType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="materialTypeType">
+        <xs:attribute name="materialBeltFriction" type="nonNegativeDecimalType" />
+        <xs:attribute name="temperature" type="nonNegativeDecimalType" />
+        <xs:attributeGroup ref="instanceAttrGroup" />
+      </xs:extension>
+    </xs:complexContent>
   </xs:complexType>
   <!-- **************************************************************************************
        *                                        BELT CONVEYOR                                  *
@@ -202,7 +204,16 @@
   <!-- **************************************************************************************
        *                                        BELT SEGMENT                                   *
        ************************************************************************************** -->
-  <xs:element name="BeltSegment" type="beltSegmentType">
+  <xs:element name="BeltSegment">
+    <xs:complexType>
+      <xs:complexContent mixed="false">
+        <xs:extension base="beltSegmentType">
+          <xs:attribute name="length" type="nonNegativeDecimalType" />
+          <xs:attribute name="certificate" type="xs:string" />
+          <xs:attributeGroup ref="instanceAttrGroup" />
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
     <xs:keyref name="beltSegmentRef" refer="beltSegmentKey">
       <xs:selector xpath="." />
       <xs:field xpath="@type" />
@@ -226,12 +237,15 @@
     <xs:attribute name="coversDensity" type="nonNegativeDecimalType" />
   </xs:attributeGroup>
   <!-- * -->
-  <xs:complexType name="beltSegmentType">
+  <xs:complexType name="beltSegmentTypeType">
     <xs:attributeGroup ref="beltSegmentAttrGroup" />
-    <xs:attribute name="length" type="nonNegativeDecimalType" />
-    <xs:attribute name="certificate" type="xs:string" />
-    <xs:attributeGroup ref="instanceAttrGroup" />
     <xs:attributeGroup ref="commonAttrGroup" />
+  </xs:complexType>
+  <!-- * -->
+  <xs:complexType name="beltSegmentType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="beltSegmentTypeType" />
+    </xs:complexContent>
   </xs:complexType>
   <!-- **************************************************************************************
        *                                        BELT SPLICE                                    *
@@ -248,10 +262,17 @@
     <xs:attribute name="spliceType" type="xs:string" />
   </xs:attributeGroup>
   <!-- * -->
-  <xs:complexType name="beltSpliceType">
+  <xs:complexType name="beltSpliceTypeType">
     <xs:attributeGroup ref="beltSpliceAttrGroup" />
-    <xs:attributeGroup ref="instanceAttrGroup" />
     <xs:attributeGroup ref="commonAttrGroup" />
+  </xs:complexType>
+  <!-- * -->
+  <xs:complexType name="beltSpliceType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="beltSpliceTypeType">
+        <xs:attributeGroup ref="instanceAttrGroup" />
+      </xs:extension>
+    </xs:complexContent>
   </xs:complexType>
   <!-- **************************************************************************************
        *                                        ROUTE                                          *
@@ -302,13 +323,7 @@
   <!-- **************************************************************************************
        *                                        IDLER                                          *
        ************************************************************************************** -->
-  <xs:element name="Idler">
-    <xs:complexType>
-      <xs:complexContent mixed="false">
-        <xs:extension base="idlerType" />
-      </xs:complexContent>
-    </xs:complexType>
-  </xs:element>
+  <xs:element name="Idler" type="idlerType" />
   <!-- * -->
   <xs:attributeGroup name="idlerAttrGroup">
     <xs:attribute name="diameter" type="nonNegativeDecimalType" />
@@ -318,14 +333,21 @@
     <xs:attributeGroup ref="pulleyIdlerGroup" />
   </xs:attributeGroup>
   <!-- * -->
-  <xs:complexType name="idlerType">
+  <xs:complexType name="idlerTypeType">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="2" ref="Bearing" />
     </xs:sequence>
     <xs:attributeGroup ref="idlerAttrGroup" />
-    <xs:attribute name="troughingAngle" type="nonNegativeDecimalType" />
-    <xs:attributeGroup ref="instanceAttrGroup" />
     <xs:attributeGroup ref="commonAttrGroup" />
+  </xs:complexType>
+  <!-- * -->
+  <xs:complexType name="idlerType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="idlerTypeType">
+        <xs:attribute name="troughingAngle" type="nonNegativeDecimalType" />
+        <xs:attributeGroup ref="instanceAttrGroup" />
+      </xs:extension>
+    </xs:complexContent>
   </xs:complexType>
   <!-- **************************************************************************************
        *                                        CHUTE                                          *
