@@ -25,7 +25,7 @@
 
 \begin{abstract}
   Ten dokument zawiera opis funkcji i składni języka ConvML.  ConvML jest językiem
-  do zapisu strukturalnego modelu przenośnika taśmowego w formacie XML [XML10].
+  do zapisu strukturalnego modelu przenośnika taśmowego w formacie XML \cite{XML10}.
 
   Wersję PDF tego dokumentu można odnaleźć pod adresem
   \href{http://www.entertech.com.pl/convml/convml.pdf}{entertech.com.pl/convml/convml.pdf}.
@@ -46,7 +46,7 @@ uniwersalność zapisu i chęć popularyzacji modelu strukturalnego wprowadzono
 anglojęzyczne nazewnictwo poszczególnych podzespołów.
 
 Do opracowania systemu zapisu modelu strukturalnego przenośnika taśmowego
-wykorzystano język XML Schema [XSD10], ułatwiający definiowanie struktury i
+wykorzystano język XML Schema \cite{XSD0}, ułatwiający definiowanie struktury i
 kolejności podzespołów przenośnika taśmowego (Tabela 4 1) oraz umożliwiający w
 łatwy sposób jego adaptację na platformie informatycznej.  Istotną cechą modelu
 strukturalnego jest praktycznie nieograniczona możliwość jego rozbudowy, bez
@@ -71,8 +71,8 @@ http://www.entertech.com.pl/bcml.
 
 
 \section{Struktura dokumentu}
-Głównym elementem dokumentu jest ConvML.  Podelementy Meta oraz Types są
-opcjonalne. Element BeltConveyor musi wystąpić co najmniej raz aby dokument był
+Głównym elementem dokumentu jest \verb|ConvML|.  Podelementy \verb|Meta| oraz \verb|Types| są
+opcjonalne. Element \verb|BeltConveyor| musi wystąpić co najmniej raz aby dokument był
 poprawny.  Przykładowa instancja dokumentu może mieć następującą postać:
 
 \begin{verbatim}
@@ -94,7 +94,8 @@ poprawny.  Przykładowa instancja dokumentu może mieć następującą postać:
   \label{fig:convml-xsd}
 \end{figure}
 
-\paragraph{Definicje atrybutów}
+%\paragraph{Definicje atrybutów}
+\noindent\textbf{Definicje atrybutów:}
 \begin{description}
 \item[version] Zastosowana w dokumencie wersja języka ConvML.
 \end{description}
@@ -105,7 +106,7 @@ Górnicze przenośniki taśmowe definiuje się jako urządzenia służące do ci
 transportu na taśmie materiałów sypkich, pozyskiwanych podczas procesów
 związanych z prowadzeniem robót górniczych [Kulinowski2011].  Do zespołów
 głównych przenośnika taśmowego należą: stacja czołowa, stacja zwrotna, stacja
-napinania taśmy, taśma, trasa, zestawy krążnikowe i krążniki [Antoniak2005].
+napinania taśmy, taśma, trasa, zestawy krążnikowe i krążniki \cite{Antoniak2005}.
 
 \begin{figure}
   \centering
@@ -651,7 +652,7 @@ Element opisujący właściwości materiału podawanego na kosz zasypowy.
 Podstawowym zadaniem krążników jest właściwe ukształtowanie, podtrzymywanie i
 ochrona taśmy, a także zmniejszenie oporów ruchu przenośnika oraz właściwe
 podtrzymywanie transportowanego nosiwa.  Opory tarcia krążnika wpływają na siły
-napięcia taśmy i na zapotrzebowanie mocy napędu [Antoniak2005].  W języku ConvML
+napięcia taśmy i na zapotrzebowanie mocy napędu \cite{Antoniak2005}.  W języku ConvML
 pojedynczemu krążnikowi odpowiada element Idler. Krążniki pracują w zestawach
 (IdlerSet).
 
@@ -986,4 +987,7 @@ przenośnika taśmowego w programie BeltConvEditor.
   </BeltConveyor>
 </ConvML>
 \end{verbatim}
+
+\bibliographystyle{abbrv}
+\bibliography{all}
 \end{document}
