@@ -1,6 +1,6 @@
-task :default => "convml.pdf"
+task :default => :pdf
 
-file "convml.pdf" => ["convml.tex"] do
+task :pdf => ["convml.tex"] do
   sh "pdflatex convml.tex"
 end
 
@@ -14,7 +14,7 @@ done
 CMD
 end
 
-task :deploy => [:html, "convml.pdf"] do
+task :deploy => [:pdf, :html] do
   target = "entertech@entertech.com.pl:~/public_html"
   source = "convml"
 
