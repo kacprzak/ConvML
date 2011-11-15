@@ -70,6 +70,38 @@ przenośniku taśmowym.
 Elementy języka ConvML należą do przestrzeni nazw:
 http://www.entertech.com.pl/bcml.
 
+\subsection{Wersjonowanie}
+Od wersji 1.1 pliki ze schemą nazywane są convml\_WERSJABEZKROPKI.xsd. Numery
+wersji zakończone liczbą nieparzystą oznaczają wersje rozwojowe, a zakończone
+liczbą parzystą wersje stabilne.
+
+\subsection{Nazwy elementów i atrybutów}
+Nazwy elementów zapisywane są za pomocą tzw. \emph{Camel Case} oraz pierwszy znak jest
+zapisywany wielką literą. Nazwy atrybutów zapisywane są również przy użyciu
+\emph{Camel Case} ale zaczynają się małą literą.
+
+\subsection{XSD}
+Schemę zorganizowano według wzorca projektowego \emph{Venetian Blind} opisanego na
+stronie \href{http://www.xfront.com/GlobalVersusLocal.html}{xFront}. Wyjątkiem jest
+jedynie element {\tt Meta} gdzie świadomie zrezygnowano z tego wzorca.
+
+Grupy atrybutów mają dodany do nazwy dodany sufiks {\tt AttrGroup}. Do nazwy typów
+dodawany jest sufiks {\tt Type}.
+
+\subsection{Referencje}
+Wewnątrz instancji dokumentu mogą być utrzymywane relacje pomiędzy elementami
+które nie znajdują się w bezpośrednim sąsiedztwie.
+
+Przykładowo element {\tt Material} za pomocą atrybutu {\tt type} może wskazywać na
+element {\tt MaterialType}, którego wartość atrybutu {\tt typeId} zgadza się z
+wartością atrybutu {\tt type} elementu odwołującego się.
+
+Do modelowania takich powiązań wykorzystano technikę \emph{key/keyref} będącą
+częścią standardu XML Schema.
+
+Więcej informacji na temat typów w języku ConvML znajduje się w rodziale
+\ref{sec:Types}.
+
 
 \section{Struktura dokumentu}
 Głównym elementem dokumentu jest {\tt ConvML}.  Podelementy {\tt Meta} oraz
@@ -822,7 +854,7 @@ Wyposażenie elektryczne współpracujące z przenośnikiem taśmowym jako cało
 \noindent\textbf{Rodzice:} \texttt{Carry, Return, DriveUnit}
 
 
-\section{Typy <Types>}
+\section{Typy <Types>}\label{sec:Types}
 Do formatu ConvML w wersji 1.2 wprowadzono pojęcie typu w celu uniknięcia
 niepotrzebnych powtórzeń.  Typ w sensie rozumianym przez ConvML jest zbiorem
 wartości atrybutów, które mogą być współdzielone przez wiele instancji tego
