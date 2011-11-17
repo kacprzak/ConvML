@@ -204,16 +204,7 @@
   <!-- **************************************************************************************
        *                                        BELT SEGMENT                                   *
        ************************************************************************************** -->
-  <xs:element name="BeltSegment">
-    <xs:complexType>
-      <xs:complexContent mixed="false">
-        <xs:extension base="beltSegmentType">
-          <xs:attribute name="length" type="nonNegativeDecimalType" />
-          <xs:attribute name="certificate" type="xs:string" />
-          <xs:attributeGroup ref="instanceAttrGroup" />
-        </xs:extension>
-      </xs:complexContent>
-    </xs:complexType>
+  <xs:element name="BeltSegment" type="beltSegmentType">
     <xs:keyref name="beltSegmentRef" refer="beltSegmentKey">
       <xs:selector xpath="." />
       <xs:field xpath="@type" />
@@ -244,7 +235,12 @@
   <!-- * -->
   <xs:complexType name="beltSegmentType">
     <xs:complexContent mixed="false">
-      <xs:extension base="beltSegmentTypeType" />
+      <xs:extension base="beltSegmentTypeType">
+        <xs:attribute name="length" type="nonNegativeDecimalType" />
+        <xs:attribute name="certificate" type="xs:string" />
+        <xs:attribute name="signature" type="xs:string" />
+        <xs:attributeGroup ref="instanceAttrGroup" />
+      </xs:extension>
     </xs:complexContent>
   </xs:complexType>
   <!-- **************************************************************************************
@@ -270,6 +266,7 @@
   <xs:complexType name="beltSpliceType">
     <xs:complexContent mixed="false">
       <xs:extension base="beltSpliceTypeType">
+        <xs:attribute name="signature" type="xs:string" />
         <xs:attributeGroup ref="instanceAttrGroup" />
       </xs:extension>
     </xs:complexContent>
