@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ConvML version="1.2" xmlns="http://www.entertech.com.pl/convml">
   <Types>
-    <RouteSegmentType />
+    <BeltSegmentType typeId="bs1" />
+    <RouteSegmentType typeId="rs1"/>
   </Types>
   <BeltConveyor>
     <Conditions/>
     <Belt>
       <BeltSplice/>
-      <BeltSegment/>
+      <BeltSegment type="bs1"/>
     </Belt>
     <Tail length="50" angle="5">
       <Pulley y="2" diameter="1"/>
@@ -20,10 +21,7 @@
     </Tail>
     <Route>
       <RouteSection length="50">
-	<RouteSegment>
-	  <Carry/>
-	  <Return/>
-	</RouteSegment>
+	<RouteSegment type="set"/>
       </RouteSection>
     </Route>
     <Head length="50" angle="5">
