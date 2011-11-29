@@ -5,7 +5,13 @@ task :test do
   validate("routeSegmentTypeTest.xml")
 end
 
-def validate(file)
+def validate(file, shouldBeValid=true)
   schema = "../convml_11.xsd"
-  sh "xmllint --noout --schema #{schema} #{file}"
+  sh "xmllint --noout --schema #{schema} #{file} 2> test.log" do |ok, res|
+    if !ok && shouldBeValid
+      sh "cat test.log"
+    elsif ok && !shouldBeValid
+      puts "WARNING: #{file} should not be vaild!"
+    end
+  end
 end
