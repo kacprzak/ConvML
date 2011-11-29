@@ -17,7 +17,7 @@
        ************************************************************************************** -->
   <xs:element name="ConvML" type="convMLType">
     <xs:keyref name="materialRef" refer="materialKey">
-      <xs:selector xpath="conv:BeltConveyor/conv:BeltSegment" />
+      <xs:selector xpath=".//conv:Material" />
       <xs:field xpath="@type" />
     </xs:keyref>
     <xs:key name="materialKey">
@@ -25,7 +25,7 @@
       <xs:field xpath="@typeId" />
     </xs:key>
     <xs:keyref name="beltSegmentRef" refer="beltSegmentKey">
-      <xs:selector xpath="conv:BeltConveyor/conv:BeltSegment" />
+      <xs:selector xpath="conv:BeltConveyor/conv:Belt/conv:BeltSegment" />
       <xs:field xpath="@type" />
     </xs:keyref>
     <xs:key name="beltSegmentKey">
@@ -33,7 +33,7 @@
       <xs:field xpath="@typeId" />
     </xs:key>
     <xs:keyref name="beltSpliceRef" refer="beltSpliceKey">
-      <xs:selector xpath="conv:BeltConveyor/conv:BeltSplice" />
+      <xs:selector xpath="conv:BeltConveyor/conv:Belt/conv:BeltSplice" />
       <xs:field xpath="@type" />
     </xs:keyref>
     <xs:key name="beltSpliceKey">

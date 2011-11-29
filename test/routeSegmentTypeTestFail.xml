@@ -3,16 +3,17 @@
   <Types>
     <BeltSegmentType typeId="bs1" />
     <BeltSegmentType typeId="22" />
+    <BeltSpliceType typeId="beltSplice1" />
     <RouteSegmentType typeId="rs1"/>
   </Types>
   <BeltConveyor>
     <Conditions/>
     <Belt>
-      <BeltSplice/>
+      <BeltSplice type="beltSplice12"/>
       <BeltSegment type="bs1"/>
       <BeltSplice/>
       <BeltSegment type="bs456"/>
-      <BeltSplice/>
+      <BeltSplice type="beltSplice1"/>
       <BeltSegment type="2_2"/>      
     </Belt>
     <Tail length="50" angle="5">
@@ -26,9 +27,9 @@
     </Tail>
     <Route>
       <RouteSection length="50">
-	      <RouteSegment type="rs1"/>
+	      <RouteSegment type="rs12"/>
       </RouteSection>
-      <RouteSection length="20" segmentType="rs1" />
+      <RouteSection length="20" segmentType="rs13" />
     </Route>
     <Head length="50" angle="5">
       <Pulley y="2" diameter="1">
