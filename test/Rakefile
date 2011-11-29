@@ -3,6 +3,7 @@ task :default => [:test]
 task :test do
   validate("../convml_11_template.xml")
   validate("routeSegmentTypeTest.xml")
+  validate("routeSegmentTypeTestFail.xml", false)
 end
 
 def validate(file, shouldBeValid=true)
