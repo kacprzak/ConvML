@@ -1,0 +1,11 @@
+task :default => [:test]
+
+task :test do
+  validate("../convml_11_template.xml")
+  validate("routeSegmentTypeTest.xml")
+end
+
+def validate(file)
+  schema = "../convml_11.xsd"
+  sh "xmllint --noout --schema #{schema} #{file}"
+end
