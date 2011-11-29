@@ -21,9 +21,13 @@
       <xs:field xpath="@typeId" />
     </xs:key>
     <xs:key name="beltSegmentKey">
-      <xs:selector xpath="Types/BeltSegmentType" />
+      <xs:selector xpath="./Types/BeltSegmentType" />
       <xs:field xpath="@typeId" />
     </xs:key>
+    <xs:keyref name="beltSegmentRef" refer="beltSegmentKey">
+      <xs:selector xpath=".//BeltSegment" />
+      <xs:field xpath="@type" />
+    </xs:keyref>
     <xs:key name="beltSpliceKey">
       <xs:selector xpath="Types/BeltSpliceType" />
       <xs:field xpath="@typeId" />
@@ -227,12 +231,7 @@
   <!-- **************************************************************************************
        *                                        BELT SEGMENT                                   *
        ************************************************************************************** -->
-  <xs:element name="BeltSegment" type="beltSegmentType">
-    <xs:keyref name="beltSegmentRef" refer="beltSegmentKey">
-      <xs:selector xpath="." />
-      <xs:field xpath="@type" />
-    </xs:keyref>
-  </xs:element>
+  <xs:element name="BeltSegment" type="beltSegmentType" />
   <!-- * -->
   <xs:attributeGroup name="beltSegmentAttrGroup">
     <xs:attribute name="width" type="xs:nonNegativeInteger" />

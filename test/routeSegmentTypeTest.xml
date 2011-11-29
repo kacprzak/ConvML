@@ -8,7 +8,7 @@
     <Conditions/>
     <Belt>
       <BeltSplice/>
-      <BeltSegment type="bs1"/>
+      <BeltSegment type="bs2"/>
     </Belt>
     <Tail length="50" angle="5">
       <Pulley y="2" diameter="1"/>
@@ -21,7 +21,7 @@
     </Tail>
     <Route>
       <RouteSection length="50">
-	<RouteSegment type="set"/>
+	      <RouteSegment type="set"/>
       </RouteSection>
     </Route>
     <Head length="50" angle="5">
