@@ -15,7 +15,28 @@
   <!-- **************************************************************************************
        *                                        CONVML                                         *
        ************************************************************************************** -->
-  <xs:element name="ConvML" type="convMLType" />
+  <xs:element name="ConvML" type="convMLType">
+    <xs:key name="materialKey">
+      <xs:selector xpath="Types/MaterialType" />
+      <xs:field xpath="@typeId" />
+    </xs:key>
+    <xs:key name="beltSegmentKey">
+      <xs:selector xpath="Types/BeltSegmentType" />
+      <xs:field xpath="@typeId" />
+    </xs:key>
+    <xs:key name="beltSpliceKey">
+      <xs:selector xpath="Types/BeltSpliceType" />
+      <xs:field xpath="@typeId" />
+    </xs:key>
+    <xs:key name="idlerKey">
+      <xs:selector xpath="Types/IdlerType" />
+      <xs:field xpath="@typeId" />
+    </xs:key>
+    <xs:key name="routeSegmentKey">
+      <xs:selector xpath="Types/RouteSegmentType" />
+      <xs:field xpath="@typeId" />
+    </xs:key>
+  </xs:element>
   <!-- * -->
   <xs:complexType name="convMLType">
     <xs:sequence>
@@ -101,26 +122,6 @@
             </xs:element>
           </xs:choice>
         </xs:complexType>
-        <xs:key name="materialKey">
-          <xs:selector xpath="MaterialType" />
-          <xs:field xpath="@typeId" />
-        </xs:key>
-        <xs:key name="beltSegmentKey">
-          <xs:selector xpath="BeltSegmentType" />
-          <xs:field xpath="@typeId" />
-        </xs:key>
-        <xs:key name="beltSpliceKey">
-          <xs:selector xpath="BeltSpliceType" />
-          <xs:field xpath="@typeId" />
-        </xs:key>
-        <xs:key name="idlerKey">
-          <xs:selector xpath="IdlerType" />
-          <xs:field xpath="@typeId" />
-        </xs:key>
-        <xs:key name="routeSegmentKey">
-          <xs:selector xpath="RouteSegmentType" />
-          <xs:field xpath="@typeId" />
-        </xs:key>        
       </xs:element>
       <xs:element minOccurs="1" maxOccurs="unbounded" ref="BeltConveyor" />
     </xs:sequence>
