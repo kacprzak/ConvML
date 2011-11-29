@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!--Created with Liquid XML Studio - FREE Community Edition 7.0.2.746 (http://www.liquid-technologies.com)-->
-<xs:schema xmlns="http://www.entertech.com.pl/convml" elementFormDefault="qualified" targetNamespace="http://www.entertech.com.pl/convml" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:schema xmlns="http://www.entertech.com.pl/convml" xmlns:conv="http://www.entertech.com.pl/convml" elementFormDefault="qualified" targetNamespace="http://www.entertech.com.pl/convml" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:annotation>
     <xs:documentation>
       Metajęzyk opisu elementów przenośników taśmowych. Służy do zbierania informacji
@@ -16,28 +16,48 @@
        *                                        CONVML                                         *
        ************************************************************************************** -->
   <xs:element name="ConvML" type="convMLType">
+    <xs:keyref name="materialRef" refer="materialKey">
+      <xs:selector xpath="conv:BeltConveyor/conv:BeltSegment" />
+      <xs:field xpath="@type" />
+    </xs:keyref>
     <xs:key name="materialKey">
-      <xs:selector xpath="Types/MaterialType" />
-      <xs:field xpath="@typeId" />
-    </xs:key>
-    <xs:key name="beltSegmentKey">
-      <xs:selector xpath="./Types/BeltSegmentType" />
+      <xs:selector xpath="conv:Types/conv:MaterialType" />
       <xs:field xpath="@typeId" />
     </xs:key>
     <xs:keyref name="beltSegmentRef" refer="beltSegmentKey">
-      <xs:selector xpath=".//BeltSegment" />
+      <xs:selector xpath="conv:BeltConveyor/conv:BeltSegment" />
+      <xs:field xpath="@type" />
+    </xs:keyref>
+    <xs:key name="beltSegmentKey">
+      <xs:selector xpath="conv:Types/conv:BeltSegmentType" />
+      <xs:field xpath="@typeId" />
+    </xs:key>
+    <xs:keyref name="beltSpliceRef" refer="beltSpliceKey">
+      <xs:selector xpath="conv:BeltConveyor/conv:BeltSplice" />
       <xs:field xpath="@type" />
     </xs:keyref>
     <xs:key name="beltSpliceKey">
-      <xs:selector xpath="Types/BeltSpliceType" />
+      <xs:selector xpath="conv:Types/conv:BeltSpliceType" />
       <xs:field xpath="@typeId" />
     </xs:key>
+    <xs:keyref name="idlerRef" refer="idlerKey">
+      <xs:selector xpath=".//conv:Idler" />
+      <xs:field xpath="@type" />
+    </xs:keyref>
     <xs:key name="idlerKey">
-      <xs:selector xpath="Types/IdlerType" />
+      <xs:selector xpath="conv:Types/conv:IdlerType" />
       <xs:field xpath="@typeId" />
     </xs:key>
+    <xs:keyref name="routeSegmentRef" refer="routeSegmentKey">
+      <xs:selector xpath=".//conv:RouteSegment" />
+      <xs:field xpath="@type" />
+    </xs:keyref>
+    <xs:keyref name="routeSegmentRef_2" refer="routeSegmentKey">
+      <xs:selector xpath=".//conv:RouteSection" />
+      <xs:field xpath="@segmentType" />
+    </xs:keyref>
     <xs:key name="routeSegmentKey">
-      <xs:selector xpath="Types/RouteSegmentType" />
+      <xs:selector xpath="conv:Types/conv:RouteSegmentType" />
       <xs:field xpath="@typeId" />
     </xs:key>
   </xs:element>
@@ -162,13 +182,7 @@
   <!-- **************************************************************************************
        *                                        MATERIAL                                       *
        ************************************************************************************** -->
-  <xs:element name="Material">
-    <xs:complexType>
-      <xs:complexContent mixed="false">
-        <xs:extension base="materialType" />
-      </xs:complexContent>
-    </xs:complexType>
-  </xs:element>
+  <xs:element name="Material" type="materialType" />
   <!-- * -->
   <xs:attributeGroup name="materialAttrGroup">
     <xs:attribute name="name" type="xs:string" />
@@ -268,12 +282,7 @@
   <!-- **************************************************************************************
        *                                        BELT SPLICE                                    *
        ************************************************************************************** -->
-  <xs:element name="BeltSplice" type="beltSpliceType">
-    <xs:keyref name="beltSpliceRef" refer="beltSpliceKey">
-      <xs:selector xpath="." />
-      <xs:field xpath="@type" />
-    </xs:keyref>
-  </xs:element>
+  <xs:element name="BeltSplice" type="beltSpliceType" />
   <!-- * -->
   <xs:attributeGroup name="beltSpliceAttrGroup">
     <xs:attribute name="spliceStrength" type="nonNegativeDecimalType" />
@@ -322,13 +331,7 @@
   <!-- **************************************************************************************
        *                                        IDLER SET                                      *
        ************************************************************************************** -->
-  <xs:element name="IdlerSet">
-    <xs:complexType>
-      <xs:complexContent mixed="false">
-        <xs:extension base="idlerSetType" />
-      </xs:complexContent>
-    </xs:complexType>
-  </xs:element>
+  <xs:element name="IdlerSet" type="idlerSetType" />
   <!-- * -->
   <xs:complexType name="idlerSetType">
     <xs:sequence>
@@ -371,13 +374,7 @@
   <!-- **************************************************************************************
        *                                        CHUTE                                          *
        ************************************************************************************** -->
-  <xs:element name="Chute">
-    <xs:complexType>
-      <xs:complexContent mixed="false">
-        <xs:extension base="chuteType" />
-      </xs:complexContent>
-    </xs:complexType>
-  </xs:element>
+  <xs:element name="Chute" type="chuteType" />
   <!-- * -->
   <xs:attributeGroup name="chuteAttrGroup">
     <xs:attribute name="skirtLength" type="nonNegativeDecimalType" />
@@ -529,6 +526,7 @@
     <xs:attribute name="verticalRadius" type="xs:decimal" />
     <xs:attribute name="horizontalRadius" type="xs:decimal" />
     <!--xs:attribute name="number" type="xs:nonNegativeInteger" /-->
+    <xs:attribute name="segmentType" type="xs:token" />
     <xs:attributeGroup ref="commonAttrGroup" />
   </xs:complexType>
   <!-- **************************************************************************************
