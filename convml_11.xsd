@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
+<!--Created with Liquid XML Studio - FREE Community Edition 7.0.2.746 (http://www.liquid-technologies.com)-->
 <xs:schema xmlns="http://www.entertech.com.pl/bcml" targetNamespace="http://www.entertech.com.pl/bcml" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:annotation>
     <xs:documentation>
@@ -89,6 +90,15 @@
                 </xs:complexContent>
               </xs:complexType>
             </xs:element>
+            <xs:element name="RouteSegmentType">
+              <xs:complexType>
+                <xs:complexContent mixed="false">
+                  <xs:extension base="routeSegmentTypeType">
+                    <xs:attributeGroup ref="typeAttrGroup" />
+                  </xs:extension>
+                </xs:complexContent>
+              </xs:complexType>
+            </xs:element>
           </xs:choice>
         </xs:complexType>
         <xs:key name="materialKey">
@@ -107,6 +117,10 @@
           <xs:selector xpath="IdlerType" />
           <xs:field xpath="@typeId" />
         </xs:key>
+        <xs:key name="routeSegmentKey">
+          <xs:selector xpath="RouteSegmentType" />
+          <xs:field xpath="@typeId" />
+        </xs:key>        
       </xs:element>
       <xs:element minOccurs="1" maxOccurs="unbounded" ref="BeltConveyor" />
     </xs:sequence>
@@ -115,12 +129,24 @@
     <xs:attributeGroup ref="commonAttrGroup" />
   </xs:complexType>
   <!-- **************************************************************************************
+       *                                        LOCALIZATION                                   *
+       ************************************************************************************** -->
+  <xs:element name="Localization" type="localizationType" />
+  <!-- * -->
+  <xs:complexType name="localizationType">
+    <xs:attribute name="localization" type="xs:token" />
+    <xs:attribute name="mine" type="xs:token" />
+    <xs:attribute name="mineArea" type="xs:token" />
+    <xs:attribute name="convDivision" type="xs:token" />
+    <xs:attribute name="mineDivision" type="xs:string" />
+    <xs:attributeGroup ref="commonAttrGroup" />
+  </xs:complexType>
+  <!-- **************************************************************************************
        *                                        CONDITIONS                                     *
        ************************************************************************************** -->
   <xs:element name="Conditions" type="conditionsType" />
   <!-- * -->
   <xs:complexType name="conditionsType">
-    <!-- xs:attributeGroup ref="instanceAttrGroup" / -->
     <xs:attribute name="ambientTemperature" type="xs:decimal" />
     <xs:attribute name="workConditions" type="oneToFourEnumType" />
     <xs:attribute name="beltWorkConditions" type="oneToFourEnumType" />
@@ -169,6 +195,7 @@
   <!-- * -->
   <xs:complexType name="beltConveyorType">
     <xs:sequence>
+      <xs:element minOccurs="0" ref="Localization" />
       <xs:element ref="Conditions" />
       <xs:element ref="Belt" />
       <xs:element ref="Tail" />
@@ -178,11 +205,6 @@
     </xs:sequence>
     <xs:attribute name="beltSpeed" type="nonNegativeDecimalType" />
     <xs:attribute name="designCapacity" type="xs:nonNegativeInteger" />
-    <xs:attribute name="localization" type="xs:token" />
-    <xs:attribute name="mine" type="xs:token" />
-    <xs:attribute name="mineArea" type="xs:token" />
-    <xs:attribute name="convDivision" type="xs:token" />
-    <xs:attribute name="mineDivision" type="xs:string" />
     <xs:attribute name="maxCapacity" type="xs:nonNegativeInteger" />
     <xs:attributeGroup ref="instanceAttrGroup" />
     <xs:attributeGroup ref="commonAttrGroup" />
@@ -751,14 +773,21 @@
     <!--xs:attribute name="number" type="xs:nonNegativeInteger" /-->
   </xs:attributeGroup>
   <!-- * -->
-  <xs:complexType name="routeSegmentType">
+  <xs:complexType name="routeSegmentTypeType">
     <xs:sequence minOccurs="0">
       <xs:element ref="Carry" />
       <xs:element ref="Return" />
     </xs:sequence>
     <xs:attributeGroup ref="routeSegmentAttrGroup" />
-    <xs:attributeGroup ref="instanceAttrGroup" />
     <xs:attributeGroup ref="commonAttrGroup" />
+  </xs:complexType>
+  <!-- * -->
+  <xs:complexType name="routeSegmentType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="routeSegmentTypeType">
+        <xs:attributeGroup ref="instanceAttrGroup" />
+      </xs:extension>
+    </xs:complexContent>
   </xs:complexType>
   <!-- **************************************************************************************
        *                                        UNLOAD                                         *
