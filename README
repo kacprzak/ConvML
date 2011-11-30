@@ -17,6 +17,7 @@ Pliki i katalogi w repozytorium
 * docs - opisowa dokumentacja języka ConvML.
 * xslt - szablony transformacji w języku XSLT.
 * translations - tłumaczenia elementów i atrybutów.
+* test - dokumenty wykorzystywane do testowania schemy
 
 
 Przyjęte konwencje
@@ -81,3 +82,20 @@ W katalogu xslt znajduje się szablon transformacji convml_update_10to12.xslt,
 który służy do transformacji dokumentów ConvML 1.0 do ConvML 1.2.
 
 
+Testy
+-----
+
+Polecenie:
+
+    $ rake test
+    
+uruchamia sprawdzanie poprawności dokumentów znajdujących się w katalogu xml.
+Dokumenty w tym katalogu, których nazwa kończy się sufiksem Fail, nie powinny
+przejść walidacji pozytywnie. W razie negatywnego wyniku walidacji któregoś z
+dokumentów (lub pozytywnego dla dokumentów zawierających błędy) procedura
+testowa wyświetli ostrzeżenie.
+
+Do uruchomienia testów wymagana jest obecność w systemie programów:
+
+* Rake
+* xmllint

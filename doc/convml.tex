@@ -99,7 +99,7 @@ wartością atrybutu {\tt type} elementu odwołującego się.
 Do modelowania takich powiązań wykorzystano technikę \emph{key/keyref} będącą
 częścią standardu XML Schema.
 
-Więcej informacji na temat typów w języku ConvML znajduje się w rodziale
+Więcej informacji na temat typów w języku ConvML znajduje się w rozdziale
 \ref{sec:Types}.
 
 
@@ -181,14 +181,14 @@ trasy.
 \end{description}
 
 
-\subsection{Lokalizacja <Lokalization>}
+\subsection{Lokalizacja <Localization>}
 Element {\tt Conditions} grupuje atrybuty związane z lokalizacją przenośnika
 taśmowego.
 
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.6\textwidth]{png/liquid/Localization}
-  \caption{Definicja elementu Conditions}
+  \caption{Definicja elementu Localization}
   \label{fig:conditions-xsd}
 \end{figure}
 
@@ -447,18 +447,19 @@ Odcinek trasy jest elementem logicznego podziału trasy przenośnika na elementy
 różnej długości oraz nachyleniu. Podział na odcinki umożliwia zapis podstawowych
 parametrów geometrycznych przenośnika.
 
-Odcinek składa się z listy segmentów. Lokalizacja segmentu zależy od jego pozycji
-na liście oraz sumarycznej długości segmentów poprzedzających. Jeśli odcinek
-jest łukowy, segmenty z których się składa są "wpisane" w ten łuk co powoduje,
-że nie ma konieczności określania kąta nachylenia dla każdego segmentu z osobna.
+Odcinek składa się z listy segmentów. Lokalizacja segmentu zależy od jego
+pozycji na liście oraz sumarycznej długości segmentów poprzedzających. Jeśli
+odcinek jest łukowy, segmenty z których się składa są "wpisane" w ten łuk co
+powoduje, że nie ma konieczności określania kąta nachylenia dla każdego segmentu
+z osobna.
 
-Sumaryczna długość segmentów nie może przekraczać długości odcinka trasy do którego
-należą segmenty.
+Sumaryczna długość segmentów nie może przekraczać długości odcinka trasy do
+którego należą segmenty.
 
-Jeśli nie ma konieczności ewidencjonowania segmentów trasy możliwe jest wskazanie
-jedynie typu segmentów z jakich składa się odcinek. Służy do tego atrybut
-{\tt segmentType}. Ograniczenim tego rozwiązania jest fakt, że w takim przypadku
-odcinek może się składać jedynie z segmentów tego samego typu.
+Jeśli nie ma konieczności ewidencjonowania segmentów trasy możliwe jest
+wskazanie jedynie typu segmentów z jakich składa się odcinek. Służy do tego
+atrybut {\tt segmentType}. Ograniczeniem tego rozwiązania jest fakt, że w takim
+przypadku odcinek może się składać jedynie z segmentów tego samego typu.
 
 \begin{figure}[H]
   \centering
@@ -475,8 +476,8 @@ odcinek może się składać jedynie z segmentów tego samego typu.
 \item[angle] Kąt nachylenia elementu [$^\circ$]
 \item[verticalRadius] Promień łuku wertykalnego [m]
 \item[horizontalRadius] Promień łuku horyzontalnego [m]
-\item[segmentType] Typ segmentów z których składa się odcinek, w przypadaku w którym
-	segmenty nie są jawnie zdefiniowane jako podelementy
+\item[segmentType] Typ segmentów z których składa się odcinek, w przypadaku w
+  którym segmenty nie są jawnie zdefiniowane jako podelementy
 \end{description}
 
 
@@ -1084,7 +1085,8 @@ przenośnika taśmowego w programie BeltConvEditor.
 
 \begin{verbatim}
 <?xml version="1.0" encoding="utf-8"?>
-<ConvML version="1.2">
+<ConvML version="1.2"
+        xmlns="http://www.entertech.com.pl/convml">
   <BeltConveyor>
     <Conditions/>
     <Belt>
