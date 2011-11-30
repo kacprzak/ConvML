@@ -760,6 +760,7 @@
     <xs:attribute name="brakeFactor" type="nonNegativeDecimalType" />
     <xs:attribute name="driveEfficiency" type="nonNegativeDecimalType" />
     <xs:attribute name="startupControlSystem" type="xs:token" />
+    <xs:attributeGroup ref="commonAttrGroup" />
   </xs:complexType>
   <!-- **************************************************************************************
        *                                    ROUTE SEGMENT                                        *
