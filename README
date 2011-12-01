@@ -105,7 +105,7 @@ Instalator jest dostępny na stronie
 [rubyinstaller.org](http://rubyinstaller.org/).  Po instalacji wymagane jest
 jeszcze doinstalowanie biblioteki Nokogiri przy pomocy polecenia:
 
-	c:\>gem install nokogiri
+    c:\>gem install nokogiri
 	
 Bibliteka ta zastępuje program xmllint. Podczas instalacji języka Ruby
 automatycznie instalowany jest program Rake.

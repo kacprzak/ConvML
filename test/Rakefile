@@ -1,12 +1,17 @@
 require 'nokogiri'
+require 'logger'
+require './multiio.rb'
+
+File.delete("test.log") if File.exists?("test.log")
+log_file = File.open("test.log", "w")
+@@log = Logger.new(MultiIO.new(log_file, STDOUT))
+@@log.formatter = proc do |severity, datetime, progmane, msg|
+  "#{severity}: #{msg}\n"
+end
 
 task :default => [:test]
 
 task :test do
-  File.open("test.log", "w") do |f|
-    f.puts "Schema test: #{Time.now}"
-  end
-  
   # Test szablonu
   validate "../convml_11_template.xml"
   
@@ -41,20 +46,14 @@ def validateWithXmllint(schema, file, shouldBeValid=true)
 end
 
 def validateWithRuby(schema, file, shouldBeValid=true)
-  puts "validating #{file}"
+  @@log.info "validating #{file}"
   xsd = Nokogiri::XML::Schema(File.read(schema))
   doc = Nokogiri::XML(File.read(file))
-  
   errors = xsd.validate(doc)
   
-  if errors.any? && shouldBeValid
-    File.open("test.log", "a") do |f|
-      errors.each do |e|
-        puts e
-        f.puts e
-      end
-    end
+  if errors.any? && shouldBeValid   
+    errors.each {|e| @@log.fatal e }
   elsif errors.empty? && !shouldBeValid
-    puts "WARNING: #{file} should not be vaild!"
+    @@log.fatal "#{file} should not be valid!"
   end
 end
