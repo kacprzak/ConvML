@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ConvML version="1.2" xmlns="http://www.entertech.com.pl/convml">
+  <Types>
+    <BeltSegmentType typeId="bs1" />
+    <BeltSegmentType typeId="22" />
+    <RouteSegmentType typeId="rs1"/>
+  </Types>
+  <BeltConveyor>
+    <Conditions/>
+    <Belt>
+      <BeltSplice/>
+      <BeltSegment type="bs1"/>
+      <BeltSplice/>
+      <BeltSegment type="bs1"/>
+      <BeltSplice/>
+      <BeltSegment type="22"/>
+      <BeltSplice/>
+      <BeltSegment type="22"/>
+      <BeltSplice/>
+      <BeltSegment/>   	  
+    </Belt>
+    <Tail length="50" angle="5">
+      <Pulley y="2" diameter="1"/>
+      <Carry>
+	<Chute>
+	  <Material/>
+	</Chute>
+      </Carry>
+      <Return/>
+    </Tail>
+    <Route>
+      <RouteSection length="50">
+	      <RouteSegment type="rs1"/>
+      </RouteSection>
+      <RouteSection length="20" segmentType="rs1" />
+    </Route>
+    <Head length="50" angle="5">
+      <Pulley y="2" diameter="1">
+	<DriveUnit>
+	  <Motor/>
+	  <Coupling/>
+	  <Gearbox/>
+	  <ElectricalEquipment/>
+	</DriveUnit>
+      </Pulley>
+      <Carry/>
+      <Return/>
+    </Head>
+    <ConvElectricalEquipment>
+      <ControlSystem/>
+      <EmergencySystem/>
+      <SignalSystem/>
+      <FireSystem/>
+    </ConvElectricalEquipment>
+  </BeltConveyor>
+</ConvML>
