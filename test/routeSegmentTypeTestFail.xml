@@ -27,7 +27,7 @@
     </Tail>
     <Route>
       <RouteSection length="50">
-	      <RouteSegment type="rs12"/>
+	<RouteSegment type="rs12"/>
       </RouteSection>
       <RouteSection length="20" segmentType="rs13" />
     </Route>

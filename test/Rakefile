@@ -4,30 +4,30 @@ task :default => [:test]
 
 task :test do
   File.open("test.log", "w") do |f|
-	f.puts "Schema test: #{Time.now}"
+    f.puts "Schema test: #{Time.now}"
   end
-	
+  
   # Test szablonu
   validate "../convml_11_template.xml"
   
   # Testuje poprawne dokumenty
   Rake::FileList.new("*.xml").exclude("*Fail.xml").each do |f|
-	validate f
+    validate f
   end
   
-  # Testuje dokumenty z b³êdami
+  # Testuje dokumenty z bledami
   Rake::FileList.new("*Fail.xml").each do |f|
-	validate f, false
+    validate f, false
   end
 end
 
 def validate(file, shouldBeValid=true)
-	schema = "../convml_11.xsd"
-	if Rake::Win32::windows?
-		validateWithRuby schema, file, shouldBeValid
-	else
-		validateWithXmllint schema, file, shouldBeValid
-	end
+  schema = "../convml_11.xsd"
+  if Rake::Win32::windows?
+    validateWithRuby schema, file, shouldBeValid
+  else
+    validateWithXmllint schema, file, shouldBeValid
+  end
 end
 
 def validateWithXmllint(schema, file, shouldBeValid=true)
@@ -41,20 +41,20 @@ def validateWithXmllint(schema, file, shouldBeValid=true)
 end
 
 def validateWithRuby(schema, file, shouldBeValid=true)
-	puts "validating #{file}"
-	xsd = Nokogiri::XML::Schema(File.read(schema))
-	doc = Nokogiri::XML(File.read(file))
-	
-	errors = xsd.validate(doc)
-	
-	if errors.any? && shouldBeValid
-		File.open("test.log", "a") do |f|
-			errors.each do |e|
-				puts e
-				f.puts e
-			end
-		end
-	elsif errors.empty? && !shouldBeValid
-		puts "WARNING: #{file} should not be vaild!"
+  puts "validating #{file}"
+  xsd = Nokogiri::XML::Schema(File.read(schema))
+  doc = Nokogiri::XML(File.read(file))
+  
+  errors = xsd.validate(doc)
+  
+  if errors.any? && shouldBeValid
+    File.open("test.log", "a") do |f|
+      errors.each do |e|
+        puts e
+        f.puts e
+      end
     end
+  elsif errors.empty? && !shouldBeValid
+    puts "WARNING: #{file} should not be vaild!"
+  end
 end
