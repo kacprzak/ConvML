@@ -1,4 +1,4 @@
 @echo off
-call rake
+call rake test
 echo.
 pause

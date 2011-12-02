@@ -107,5 +107,5 @@ jeszcze doinstalowanie biblioteki Nokogiri przy pomocy polecenia:
 
     c:\>gem install nokogiri
 	
-Bibliteka ta zastępuje program xmllint. Podczas instalacji języka Ruby
+Biblioteka ta zastępuje program xmllint. Podczas instalacji języka Ruby
 automatycznie instalowany jest program Rake.
