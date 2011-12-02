@@ -13,7 +13,7 @@
       <Idler type="Kraznik_dolny_boczny"/>
       <Idler type="Kraznik_dolny_boczny"/>
     </IdlerSetType>
-    <RouteSegment typeId="Segment1">
+    <RouteSegmentType typeId="Segment1">
       <Carry>
         <IdlerSet type="Zestaw_gorny"/>
         <IdlerSet type="Zestaw_gorny"/>
@@ -22,7 +22,7 @@
       <Return>
         <IdlerSet type="Zestaw_dolny"/>
       </Return>
-    </RouteSegment>
+    </RouteSegmentType>
   </Types>
   <BeltConveyor designCapacity="788" beltSpeed="2.00">
     <Conditions ambientTemperature="-20" beltSideRunning="1" beltWorkConditions="4"/>
@@ -113,7 +113,7 @@
             </Pulley>
             <Pulley number="3" diameter="0.5" wrapAngle="-185"/>
             <Pulley number="4" diameter="0.5" wrapAngle="-180"/>
-            <Pulley number="5" diameter="0.5" wrapAngle="180"/>
+            <Pulley number="5" diameter="0.5" wrapAngle="180">
               <TakeUpSystem>
                 <ElectricalEquipment/>
                 <StrechingCar/>

@@ -53,6 +53,7 @@ def validateWithRuby(schema, file, shouldBeValid=true)
   
   if errors.any? && shouldBeValid   
     errors.each {|e| @@log.fatal e }
+    @@log.warn "#{errors.size} errors in #{file}"
   elsif errors.empty? && !shouldBeValid
     @@log.fatal "#{file} should not be valid!"
   end

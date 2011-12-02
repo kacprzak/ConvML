@@ -48,6 +48,14 @@
       <xs:selector xpath="conv:Types/conv:IdlerType" />
       <xs:field xpath="@typeId" />
     </xs:key>
+    <xs:keyref name="idlerSetRef" refer="idlerSetKey">
+      <xs:selector xpath=".//conv:IdlerSet" />
+      <xs:field xpath="@type" />
+    </xs:keyref>
+    <xs:key name="idlerSetKey">
+      <xs:selector xpath="conv:Types/conv:IdlerSetType" />
+      <xs:field xpath="@typeId" />
+    </xs:key>    
     <xs:keyref name="routeSegmentRef" refer="routeSegmentKey">
       <xs:selector xpath=".//conv:RouteSegment" />
       <xs:field xpath="@type" />
@@ -130,6 +138,15 @@
               <xs:complexType>
                 <xs:complexContent mixed="false">
                   <xs:extension base="idlerTypeType">
+                    <xs:attributeGroup ref="typeAttrGroup" />
+                  </xs:extension>
+                </xs:complexContent>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="IdlerSetType">
+              <xs:complexType>
+                <xs:complexContent mixed="false">
+                  <xs:extension base="idlerSetTypeType">
                     <xs:attributeGroup ref="typeAttrGroup" />
                   </xs:extension>
                 </xs:complexContent>
@@ -333,14 +350,21 @@
        ************************************************************************************** -->
   <xs:element name="IdlerSet" type="idlerSetType" />
   <!-- * -->
-  <xs:complexType name="idlerSetType">
+  <xs:complexType name="idlerSetTypeType">
     <xs:sequence>
-      <xs:element minOccurs="1" maxOccurs="5" ref="Idler" />
+      <xs:element minOccurs="0" maxOccurs="5" ref="Idler" />
     </xs:sequence>
-    <xs:attributeGroup ref="instanceAttrGroup" />
-    <xs:attributeGroup ref="coordinatesAttrGroup" />
     <xs:attribute name="idlerSetType" type="xs:string" />
     <xs:attributeGroup ref="commonAttrGroup" />
+  </xs:complexType>
+  <!-- * -->
+  <xs:complexType name="idlerSetType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="idlerSetTypeType">
+        <xs:attributeGroup ref="coordinatesAttrGroup" />
+        <xs:attributeGroup ref="instanceAttrGroup" />
+      </xs:extension>
+    </xs:complexContent>
   </xs:complexType>
   <!-- **************************************************************************************
        *                                        IDLER                                          *
@@ -864,7 +888,7 @@
   <xs:attributeGroup name="commonAttrGroup">
     <xs:attribute name="id" type="xs:ID" />
     <xs:attribute name="description" type="xs:string" />
-    <xs:anyAttribute />
+    <xs:anyAttribute namespace="##any" processContents="lax" />
   </xs:attributeGroup>
   <!-- **************************************************** -->
   <xs:attributeGroup name="instanceAttrGroup">
