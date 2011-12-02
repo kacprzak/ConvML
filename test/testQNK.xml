@@ -111,11 +111,9 @@
                 <ElectricalEquipment/>
               </DriveUnit>
             </Pulley>
-            <Pulley number="3" diameter="0.5" wrapAngle="-185">
-            </Pulley>
-            <Pulley number="4" diameter="0.5" wrapAngle="-180">
-            </Pulley>
-            <Pulley number="5" diameter="0.5" wrapAngle="180">
+            <Pulley number="3" diameter="0.5" wrapAngle="-185"/>
+            <Pulley number="4" diameter="0.5" wrapAngle="-180"/>
+            <Pulley number="5" diameter="0.5" wrapAngle="180"/>
               <TakeUpSystem>
                 <ElectricalEquipment/>
                 <StrechingCar/>
