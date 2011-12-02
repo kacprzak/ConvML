@@ -15,12 +15,12 @@
     </IdlerSetType>
     <RouteSegment typeId="Segment1">
       <Carry>
-	<IdlerSet type="Zestaw_gorny"/>
-	<IdlerSet type="Zestaw_gorny"/>
-	<IdlerSet type="Zestaw_gorny"/>
+        <IdlerSet type="Zestaw_gorny"/>
+        <IdlerSet type="Zestaw_gorny"/>
+        <IdlerSet type="Zestaw_gorny"/>
       </Carry>
       <Return>
-	<IdlerSet type="Zestaw_dolny"/>
+        <IdlerSet type="Zestaw_dolny"/>
       </Return>
     </RouteSegment>
   </Types>
@@ -29,7 +29,7 @@
     <Belt width="1000">
       <BeltSplice spliceStrength="80"/>
       <BeltSegment manufacturer="SEMPERTRANS Bełchatów" strength="800" mass="17.70" thickness="15.2" topCoverThickness="6" bottomCoverThickness="4"
-		   carcassThickness="5.2" carcassType="1" carcassCode="108.0" pliesNumber="4" coverDescription="X" elasticityModulus="5000"/>
+                   carcassThickness="5.2" carcassType="1" carcassCode="108.0" pliesNumber="4" coverDescription="X" elasticityModulus="5000"/>
     </Belt>
     <Tail>
       <Carry/>
@@ -44,217 +44,59 @@
       <RouteSection number="1" length="75.0" angle="0.00">
         <RouteSegment>
           <Carry>
-	    <IdlerSet type="Zestaw_gorny"/>
-	    <IdlerSet type="Zestaw_gorny"/>
-	    <IdlerSet type="Zestaw_gorny"/>
+            <IdlerSet type="Zestaw_gorny"/>
+            <IdlerSet type="Zestaw_gorny"/>
+            <IdlerSet type="Zestaw_gorny"/>
             <Chute capacity="788" horizontalSpeed="0.00" skirtMaterialFriction="0.60" skirtLength="3.00" skirtWidth="0.65">
               <Material density="1800" surchargeAngle="15" lumpSizeMaximum="0.250" lumpPercTopSize="20" materialBeltFriction="0.35"/>
             </Chute>
           </Carry>
           <Return>
-	    <IdlerSet type="Zestaw_dolny"/>
+            <IdlerSet type="Zestaw_dolny"/>
           </Return>
         </RouteSegment>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
+        <RouteSegment type="Segment1"/>
+        <RouteSegment type="Segment1"/>
+        <RouteSegment type="Segment1"/>
+        <RouteSegment type="Segment1"/>
+        <RouteSegment type="Segment1"/>
+        <RouteSegment type="Segment1"/>
+        <RouteSegment type="Segment1"/>
+        <RouteSegment type="Segment1"/>
+        <RouteSegment type="Segment1"/>
+        <RouteSegment type="Segment1"/>
+        <RouteSegment type="Segment1"/>
+        <RouteSegment type="Segment1"/>
+        <RouteSegment type="Segment1"/>
+        <RouteSegment type="Segment1"/>
+        <RouteSegment type="Segment1"/>
+        <RouteSegment type="Segment1"/>
+        <RouteSegment type="Segment1"/>
+        <RouteSegment type="Segment1"/>
+        <RouteSegment type="Segment1"/>
+        <RouteSegment type="Segment1"/>
+        <RouteSegment type="Segment1"/>
+        <RouteSegment type="Segment1"/>
+        <RouteSegment type="Segment1"/>
+        <RouteSegment type="Segment1"/>
       </RouteSection>
-      <RouteSection number="2" length="75.3" angle="-2.70">
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-      </RouteSection>
-      <RouteSection number="3" length="19.6" angle="-1.58" verticalRadius="-500.00">
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-      </RouteSection>
-      <RouteSection number="4" length="160.0" angle="-0.45" horizontalRadius="500.0">
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-      </RouteSection>
-      <RouteSection number="5" length="16.8" angle="-2.86" verticalRadius="200.00" horizontalRadius="450">
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-      </RouteSection>
-      <RouteSection number="6" length="29.9" angle="-5.26" horizontalRadius="550">
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-      </RouteSection>
-      <RouteSection number="7" length="33.7" angle="-4.30" verticalRadius="-1000" horizontalRadius="600">
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-      </RouteSection>
-      <RouteSection number="8" length="62.0" angle="-3.33">
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-      </RouteSection>
-      <RouteSection number="9" length="55.4" angle="1.21" verticalRadius="-350.00">
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-	<RouteSegment type="Segment1"/>
-      </RouteSection>
+      <RouteSection number="2" length="75.3" angle="-2.70" segmentType="Segment1"/>
+      <RouteSection number="3" length="19.6" angle="-1.58" verticalRadius="-500.00" segmentType="Segment1"/>
+      <RouteSection number="4" length="160.0" angle="-0.45" horizontalRadius="500.0" segmentType="Segment1"/>
+      <RouteSection number="5" length="16.8" angle="-2.86" verticalRadius="200.00" horizontalRadius="450" segmentType="Segment1"/>
+      <RouteSection number="6" length="29.9" angle="-5.26" horizontalRadius="550" segmentType="Segment1"/>
+      <RouteSection number="7" length="33.7" angle="-4.30" verticalRadius="-1000" horizontalRadius="600" segmentType="Segment1"/>
+      <RouteSection number="8" length="62.0" angle="-3.33" segmentType="Segment1"/>
+      <RouteSection number="9" length="55.4" angle="1.21" verticalRadius="-350.00" segmentType="Segment1"/>
       <RouteSection number="10" length="4.0" angle="5.74">
         <RouteSegment>
           <Carry>
-	    <IdlerSet type="Zestaw_gorny"/>
-	    <IdlerSet type="Zestaw_gorny"/>
-	    <IdlerSet type="Zestaw_gorny"/>
+            <IdlerSet type="Zestaw_gorny"/>
+            <IdlerSet type="Zestaw_gorny"/>
+            <IdlerSet type="Zestaw_gorny"/>
           </Carry>
           <Return>
-	    <IdlerSet type="Zestaw_dolny"/>
+            <IdlerSet type="Zestaw_dolny"/>
             <Pulley number="2" diameter="0.630" wrapAngle="205">
               <DriveUnit driveEfficiency="0.92">
                 <Motor power="37" nominalRotationalSpeed="1485"/>
