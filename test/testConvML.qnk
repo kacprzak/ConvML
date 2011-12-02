@@ -1,0 +1,2952 @@
+Parametry podstawowe
+788
+1000
+2.00
+Za³adunek
+1800
+15
+10.00
+5
+3
+0.60
+0.00
+0.65
+3.00
+
+0.250
+20
+opory za³adunku-| 1 |
+-20
+1
+Profil
+0.0420
+0
+10
+75.01
+0.00
+0.00
+100
+75.25
+-2.70
+-3.54
+100
+19.63
+-1.58
+-0.54
+100
+160
+-0.45
+-1.26
+100
+16.79
+-2.86
+-0.84
+100
+29.91
+-5.26
+-2.74
+100
+33.68
+-4.3
+-2.53
+100
+62
+-3.33
+-3.60
+100
+55.35
+1.21
+1.17
+100
+4
+5.74
+0.40
+100
+nofgfd
+fg
+fd
+0
+W/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/
+O/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/
+Kr¹¿niki
+1.20
+380
+380
+30
+6.88
+6.88
+3.02
+0
+600
+15
+0.00
+8.42
+108
+108
+0
+30
+1
+30
+1
+0.30
+1.60
+
+
+R/-/0/3.00/3.00/3.00/3.00/3.00/3.00/3.00/3.00/3.00/-/1.20/1.20/1.20/1.20/1.20/1.20/1.20/1.20/1.20/1.20/
+P/-/0.0/-350.00/0.00/-1000/0.00/200.00/0.00/-500.00/0.00/0.0/-/0.0/0.00/-500.00/0.00/200.00/0.00/-1000/0.00/-350.00/0.0/
+H/-/0/-0.01286/0/-0.00450/0/0.02250/0/-0.00900/0/0/-/0/0/-0.00144/0/0.00360/0/-0.00072/0/-0.00206/0/
+Napêd
+74
+0.92
+1.40
+205
+0.35
+1.20
+2//100,0000/////////////////////
+2
+37
+
+0.201
+-0.536
+-1
+0
+0
+Parametry kinematyczne
+1485
+24.961
+1030
+0.0
+Napedy
+L/-/2/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/
+N/-/37/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/
+T/0/1/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/
+K/-/205/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/
+W/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/
+Taœma
+17.70
+11.88
+9.50
+7.50
+6.00
+0.20
+z³e
+800
+EP 800/4  (6+4) X
+108.0
+5.2
+Urz¹dzenie napinaj¹ce
+2
+2
+44481
+2
+Wyniki
+1
+41047
+Czo³o
+3434
+
+
+
+2
+44481
+2-3
+38
+-69
+0
+30027
+3
+14423
+3-4
+531
+-203
+0
+
+4
+14751
+4-5
+595
+625
+0
+
+5
+15971
+5-6
+323
+438
+0
+
+6
+16732
+6-7
+286
+476
+0
+
+7
+17494
+7-8
+161
+145
+0
+
+8
+17800
+8-9
+1537
+218
+0
+
+9
+19555
+9-10
+188
+94
+0
+
+10
+19837
+10-11
+722
+616
+0
+
+11
+21175
+11-12
+720
+0
+0
+
+12
+21895
+Zwrotnia
+3434
+
+
+
+13
+25329
+13-14
+5401
+0
+0
+
+14
+30730
+14-15
+4471
+-616
+-3806
+
+15
+30779
+15-16
+1167
+-94
+-581
+
+16
+31271
+16-17
+9515
+-218
+-1349
+
+17
+39219
+17-18
+997
+-145
+-899
+
+18
+39172
+18-19
+1772
+-476
+-2944
+
+19
+37524
+19-20
+1998
+-438
+-2711
+
+20
+36373
+20-21
+3681
+-625
+-3867
+
+21
+35562
+21-22
+3291
+203
+1255
+
+22
+40311
+22-1
+237
+69
+430
+
+Masa zredukowana
+87909
+30027
+[Size]
+MainW_PCOpory=1538
+PanelTree=410
+PanelEdytorBebnow=424
+[Calculations]
+beltSagStat=0.015
+beltSagDyn=0.040
+beltSagModulus=1
+coeffC=1
+[Parameters]
+Prop_SkalaGrafBebnow=87
+Prop_SkalaSil=500
+Prop_UpDownDokl=90
+Prop_UpDownKatKier0=120.00
+WProfil_Sred_ng=30
+WProfil_Sred_np=20
+WProfil_skala=194
+WProfil_ScrollBar2=200
+WProfil_ScrollBar1=100
+[material transportowany]
+nazwa=
+gestosc=1800
+kat usypu=15
+kat tarcia wewnetrznego=
+bryly=0.250
+udzial bryl=20
+wsp.tarcia urobek-tasma=0.35
+sciernosc=
+ostrosc=
+gestosc min=
+gestosc max=
+kat usypu min=
+kat usypu max=
+kat nachylenia min=
+kat nachylenia max=
+[material transportowany dol]
+nazwa=
+gestosc=
+kat usypu=
+kat tarcia wewnetrznego=
+bryly=
+udzial bryl=
+wsp.tarcia urobek-tasma=
+[trasa]
+liczba bebnow=7
+liczba skrobakow=
+liczba odcinkow=10
+[tasma]
+producent=SEMPERTRANS Beˆchat¢w
+nazwa=EP 800/4  (6+4) X
+przeznaczenie=klasa X
+szerokosc tasmy=1000
+wytrzymalosc tasmy=800
+masa jednostkowa tasmy=17.70
+grubosc tasmy=15.2
+grubosc okladki gornej=6
+grubosc okladki dolnej=4
+grubosc rdzenia tasmy=5.2
+rodzaj tasmy=EP<poliamidowo-poliestrowy>
+typ rdzenia tasmy=1
+liczba rdzenia=108.0
+liczba przekladek=4
+srednica linki=
+oznaczenie okladek=X
+masa okladek=
+modul sprezystosci=5000
+[uklad napedowy]
+predkosc=2.00
+moc zainstalowana=74
+sprawnosc napedu=0.92
+liczba zestawow napedowych=2
+charakterystyka sprawnosci napedu=0
+[urzadzenie napinajace]
+nrpkt=2
+nrbeb=5
+kat opasania=180
+sila napinajaca=44481
+liczba obciaznikow=1
+masa obciaznika=9069
+liczba krazkow na obciazniku=1
+liczba krazkow na wozku=1
+[bebny]
+nrbeb_1=1
+odcinek tasmy_1=1-2
+wspolrzedna X bebna_1=0
+wspolrzedna Y bebna_1=0
+srednica bebna_1=0.63
+kat opasania_1=160
+kat nabiegania tasmy_1=-180
+kat zbiegania tasmy_1=-20
+masa bebna_1=
+wspolczynnik tarcia_1=
+moment bezwladnosci_1=
+liczba silnikow_1=0
+nrbeb_2=2
+odcinek tasmy_2=2-3
+wspolrzedna X bebna_2=2.7
+wspolrzedna Y bebna_2=-1
+srednica bebna_2=0.630
+kat opasania_2=205
+kat nabiegania tasmy_2=-20.00
+kat zbiegania tasmy_2=185
+masa bebna_2=
+wspolczynnik tarcia_2=
+moment bezwladnosci_2=
+liczba silnikow_2=2
+nrbeb_3=3
+odcinek tasmy_3=2-3
+wspolrzedna X bebna_3=2
+wspolrzedna Y bebna_3=-0.5
+srednica bebna_3=0.5
+kat opasania_3=-185
+kat nabiegania tasmy_3=185
+kat zbiegania tasmy_3=0
+masa bebna_3=
+wspolczynnik tarcia_3=
+moment bezwladnosci_3=
+liczba silnikow_3=0
+nrbeb_4=4
+odcinek tasmy_4=2-3
+wspolrzedna X bebna_4=13
+wspolrzedna Y bebna_4=-0.5
+srednica bebna_4=0.5
+kat opasania_4=-180
+kat nabiegania tasmy_4=0
+kat zbiegania tasmy_4=-180
+masa bebna_4=
+wspolczynnik tarcia_4=
+moment bezwladnosci_4=
+liczba silnikow_4=0
+nrbeb_5=5
+odcinek tasmy_5=2-3
+wspolrzedna X bebna_5=4.5
+wspolrzedna Y bebna_5=-1
+srednica bebna_5=0.5
+kat opasania_5=180
+kat nabiegania tasmy_5=-180
+kat zbiegania tasmy_5=0
+masa bebna_5=
+wspolczynnik tarcia_5=
+moment bezwladnosci_5=
+liczba silnikow_5=0
+nrbeb_6=6
+odcinek tasmy_6=12-13
+wspolrzedna X bebna_6=0.5
+wspolrzedna Y bebna_6=-0.3
+srednica bebna_6=0.3
+kat opasania_6=-12
+kat nabiegania tasmy_6=180
+kat zbiegania tasmy_6=192
+masa bebna_6=
+wspolczynnik tarcia_6=
+moment bezwladnosci_6=
+liczba silnikow_6=0
+nrbeb_7=7
+odcinek tasmy_7=12-13
+wspolrzedna X bebna_7=0
+wspolrzedna Y bebna_7=0
+srednica bebna_7=0.500
+kat opasania_7=192
+kat nabiegania tasmy_7=192
+kat zbiegania tasmy_7=0
+masa bebna_7=
+wspolczynnik tarcia_7=
+moment bezwladnosci_7=
+liczba silnikow_7=0
+[profil]
+nrodc_1=1
+Lodc_1=75.01
+dodc_1=0.00
+Hodc_1=0.00
+wspT_1=75
+wspZ_1=255.0
+wspX_1=-38
+wspY_1=65
+nrodc_2=2
+Lodc_2=75.25
+dodc_2=-2.70
+Hodc_2=-3.54
+wspT_2=150
+wspZ_2=251.5
+wspX_2=-75
+wspY_2=130
+nrodc_3=3
+Lodc_3=19.63
+dodc_3=-1.58
+Hodc_3=-0.54
+wspT_3=170
+wspZ_3=250.9
+wspX_3=-85
+wspY_3=147
+nrodc_4=4
+Lodc_4=160
+dodc_4=-0.45
+Hodc_4=-1.26
+wspT_4=330
+wspZ_4=249.7
+wspX_4=-142
+wspY_4=296
+nrodc_5=5
+Lodc_5=16.79
+dodc_5=-2.86
+Hodc_5=-0.84
+wspT_5=347
+wspZ_5=248.8
+wspX_5=-145
+wspY_5=312
+nrodc_6=6
+Lodc_6=29.91
+dodc_6=-5.26
+Hodc_6=-2.74
+wspT_6=376
+wspZ_6=246.1
+wspX_6=-149
+wspY_6=342
+nrodc_7=7
+Lodc_7=33.68
+dodc_7=-4.3
+Hodc_7=-2.53
+wspT_7=410
+wspZ_7=243.6
+wspX_7=-151
+wspY_7=373
+nrodc_8=8
+Lodc_8=62
+dodc_8=-3.33
+Hodc_8=-3.60
+wspT_8=472
+wspZ_8=240.0
+wspX_8=-155
+wspY_8=434
+nrodc_9=9
+Lodc_9=55.35
+dodc_9=1.21
+Hodc_9=1.17
+wspT_9=527
+wspZ_9=241.1
+wspX_9=-159
+wspY_9=490
+nrodc_10=10
+Lodc_10=4
+dodc_10=5.74
+Hodc_10=0.40
+wspT_10=531
+wspZ_10=241.5
+wspX_10=-159
+wspY_10=494
+x0=0
+y0=255
+dlugosc segmentu=3
+[kosz]
+predkosc poziomo=0.00
+wspolczynnik tarcia kosz=0.60
+dlugosc ograniczen=3.00
+szerokosc ograniczen=0.65
+[zestawy kraznikowe_g]
+rozstaw zestawow=1.20
+kat nachylenia kraznikow bocznych=30
+liczba kraznikow=3
+liczba zestawow=443
+typ zestawow kraznikowych=
+[zestawy kraznikowe_d]
+rozstaw zestawow=3.02
+kat nachylenia kraznikow bocznych=15
+liczba kraznikow=2
+liczba zestawow=176
+typ zestawow kraznikowych=
+[zestawy nadawowe]
+masa kraznika=10.00
+liczba kraznikow=3
+liczba zestawow=5
+srednica kraznika=5.00
+[warunki pracy przenosnika]
+temperatura pracy=-20
+zbieganie boczne=1
+warunki pracy przenosnika=z³e
+warunki pracy=4
+ilosc roboczogodzin=
+[kraznik_gs]
+producent=
+typ kraznika - opis=
+wykonanie=
+typ kraznika=
+dlugosc plaszcza kraznika srodkowego=380
+srednica kraznika=108
+dlugosc osi kraznika=
+srednica osi=
+koncowka osi=
+lozysko=
+odsadzenie lozyska=
+masa kraznika=6.88
+masa calkowita kraznika=
+wspolczynnik oporu obracania a=
+wspolczynnik oporu obracania b=
+opor kraznika=5
+[kraznik_gb]
+producent=
+typ kraznika - opis=
+wykonanie=
+typ kraznika=
+dlugosc plaszcza kraznika bocznego=380
+srednica kraznika=108
+dlugosc osi kraznika=
+srednica osi=
+koncowka osi=
+lozysko=
+odsadzenie lozyska=
+masa kraznika=6.88
+masa calkowita kraznika=
+wspolczynnik oporu obracania a=
+wspolczynnik oporu obracania b=
+opor kraznika=5
+[kraznik_ds]
+producent=
+typ kraznika - opis=
+wykonanie=
+typ kraznika=
+dlugosc plaszcza kraznika srodkowego=0
+srednica kraznika=108
+dlugosc osi kraznika=
+srednica osi=
+koncowka osi=
+lozysko=
+odsadzenie lozyska=
+masa kraznika=0.00
+masa calkowita kraznika=
+wspolczynnik oporu obracania a=
+wspolczynnik oporu obracania b=
+opor kraznika=
+[kraznik_db]
+producent=
+typ kraznika - opis=
+wykonanie=
+typ kraznika=
+dlugosc plaszcza kraznika bocznego=600
+srednica kraznika=108
+dlugosc osi kraznika=
+srednica osi=
+koncowka osi=
+lozysko=
+odsadzenie lozyska=
+masa kraznika=8.42
+masa calkowita kraznika=
+wspolczynnik oporu obracania a=
+wspolczynnik oporu obracania b=
+opor kraznika=5
+[luki w planie]
+nrodc_1=1
+promien luku_1=0.0
+kat zmiany kierunku_1=0.0
+nrodc_2=2
+promien luku_2=0.0
+kat zmiany kierunku_2=0.0
+nrodc_3=3
+promien luku_3=0.0
+kat zmiany kierunku_3=0.0
+nrodc_4=4
+promien luku_4=500.0
+kat zmiany kierunku_4=18.3346
+nrodc_5=5
+promien luku_5=450
+kat zmiany kierunku_5=2.1378
+nrodc_6=6
+promien luku_6=550
+kat zmiany kierunku_6=3.1158
+nrodc_7=7
+promien luku_7=600
+kat zmiany kierunku_7=2.9249
+nrodc_8=8
+promien luku_8=0.0
+kat zmiany kierunku_8=0.0
+nrodc_9=9
+promien luku_9=0.0
+kat zmiany kierunku_9=0.0
+nrodc_10=10
+promien luku_10=0.0
+kat zmiany kierunku_10=0.0
+[luki w profilu]
+nrodc_1=1
+promien luku_1=0.0
+nrodc_2=2
+promien luku_2=0.00
+nrodc_3=3
+promien luku_3=-500.00
+nrodc_4=4
+promien luku_4=0.00
+nrodc_5=5
+promien luku_5=200.00
+nrodc_6=6
+promien luku_6=0.00
+nrodc_7=7
+promien luku_7=-1000
+nrodc_8=8
+promien luku_8=0.00
+nrodc_9=9
+promien luku_9=-350.00
+nrodc_10=10
+promien luku_10=0.0
+[sekcje gora]
+nrodc_1=1
+rozstaw zestawow_1=1.20
+nachylenie zestawow_1=0.00
+zukosowanie zestawow_1=0.00
+nrodc_2=2
+rozstaw zestawow_2=1.20
+nachylenie zestawow_2=0.00
+zukosowanie zestawow_2=0.00
+nrodc_3=3
+rozstaw zestawow_3=1.20
+nachylenie zestawow_3=0.00
+zukosowanie zestawow_3=0.00
+nrodc_4=4
+rozstaw zestawow_4=1.20
+nachylenie zestawow_4=15
+zukosowanie zestawow_4=0.00
+nrodc_5=5
+rozstaw zestawow_5=1.20
+nachylenie zestawow_5=10
+zukosowanie zestawow_5=0.00
+nrodc_6=6
+rozstaw zestawow_6=1.20
+nachylenie zestawow_6=15.00
+zukosowanie zestawow_6=0.00
+nrodc_7=7
+rozstaw zestawow_7=1.20
+nachylenie zestawow_7=15
+zukosowanie zestawow_7=0.00
+nrodc_8=8
+rozstaw zestawow_8=1.20
+nachylenie zestawow_8=0.00
+zukosowanie zestawow_8=0.00
+nrodc_9=9
+rozstaw zestawow_9=1.20
+nachylenie zestawow_9=0.00
+zukosowanie zestawow_9=0.00
+nrodc_10=10
+rozstaw zestawow_10=1.20
+nachylenie zestawow_10=0.00
+zukosowanie zestawow_10=0.00
+[sekcje dol]
+nrodc_1=1
+rozstaw zestawow_1=3.00
+nachylenie zestawow_1=0.00
+zukosowanie zestawow_1=0.00
+nrodc_2=2
+rozstaw zestawow_2=3.00
+nachylenie zestawow_2=0.00
+zukosowanie zestawow_2=0.00
+nrodc_3=3
+rozstaw zestawow_3=3.00
+nachylenie zestawow_3=0.00
+zukosowanie zestawow_3=0.00
+nrodc_4=4
+rozstaw zestawow_4=3.00
+nachylenie zestawow_4=10
+zukosowanie zestawow_4=0.00
+nrodc_5=5
+rozstaw zestawow_5=3.00
+nachylenie zestawow_5=5.00
+zukosowanie zestawow_5=0.00
+nrodc_6=6
+rozstaw zestawow_6=3.00
+nachylenie zestawow_6=10
+zukosowanie zestawow_6=0.00
+nrodc_7=7
+rozstaw zestawow_7=3.00
+nachylenie zestawow_7=10
+zukosowanie zestawow_7=0.00
+nrodc_8=8
+rozstaw zestawow_8=3.00
+nachylenie zestawow_8=0.00
+zukosowanie zestawow_8=0.00
+nrodc_9=9
+rozstaw zestawow_9=3.00
+nachylenie zestawow_9=0.00
+zukosowanie zestawow_9=0.00
+nrodc_10=10
+rozstaw zestawow_10=0
+nachylenie zestawow_10=0.00
+zukosowanie zestawow_10=0.00
+[zestaw napedowy_1]
+nrodc=2-3
+nrbeb=2
+srednica bebna=630
+kat opasania=205
+wspolczynnik tarcia=
+nazwa=
+moc silnika=37
+obroty nominalne=1485
+Mr/Mn=
+Mmax/Mn=
+Mh/Mn=
+poslizg=0.0
+przelozenie=24.961
+moment bezwladnosci=
+[zestaw napedowy_2]
+nrodc=2-3
+nrbeb=2
+srednica bebna=630
+kat opasania=205
+wspolczynnik tarcia=
+nazwa=
+moc silnika=37
+obroty nominalne=1485
+Mr/Mn=
+Mmax/Mn=
+Mh/Mn=
+poslizg=0.0
+przelozenie=24.961
+moment bezwladnosci=
+[lozysko_gs]
+nazwa=
+nosnosc statyczna=
+nosnosc dynamiczna=
+srednica zewnetrzna=
+srednica wewnetrzna=
+[lozysko_gb]
+nazwa=
+nosnosc statyczna=
+nosnosc dynamiczna=
+srednica zewnetrzna=
+srednica wewnetrzna=
+[odcinek przejsciowy]
+dlugosc odcinka przejsciowego=
+wysokosc podniesienia bebna=
+[Tablica_punktow]
+xyo_1_1_1=
+xyo_1_1_2=
+xyo_1_1_3=
+xyo_1_1_4=
+xyo_1_2_1=
+xyo_1_2_2=
+xyo_1_2_3=
+xyo_1_2_4=
+xyo_2_1_1=
+xyo_2_1_2=
+xyo_2_1_3=
+xyo_2_1_4=
+xyo_2_2_1=
+xyo_2_2_2=
+xyo_2_2_3=
+xyo_2_2_4=
+xyo_3_1_1=
+xyo_3_1_2=
+xyo_3_1_3=
+xyo_3_1_4=
+xyo_3_2_1=
+xyo_3_2_2=
+xyo_3_2_3=
+xyo_3_2_4=
+xyo_4_1_1=
+xyo_4_1_2=
+xyo_4_1_3=
+xyo_4_1_4=
+xyo_4_2_1=
+xyo_4_2_2=
+xyo_4_2_3=
+xyo_4_2_4=
+xyo_5_1_1=
+xyo_5_1_2=
+xyo_5_1_3=
+xyo_5_1_4=
+xyo_5_2_1=
+xyo_5_2_2=
+xyo_5_2_3=
+xyo_5_2_4=
+xyo_6_1_1=
+xyo_6_1_2=
+xyo_6_1_3=
+xyo_6_1_4=
+xyo_6_2_1=
+xyo_6_2_2=
+xyo_6_2_3=
+xyo_6_2_4=
+xyo_7_1_1=
+xyo_7_1_2=
+xyo_7_1_3=
+xyo_7_1_4=
+xyo_7_2_1=
+xyo_7_2_2=
+xyo_7_2_3=
+xyo_7_2_4=
+xyo_8_1_1=
+xyo_8_1_2=
+xyo_8_1_3=
+xyo_8_1_4=
+xyo_8_2_1=
+xyo_8_2_2=
+xyo_8_2_3=
+xyo_8_2_4=
+xyo_9_1_1=
+xyo_9_1_2=
+xyo_9_1_3=
+xyo_9_1_4=
+xyo_9_2_1=
+xyo_9_2_2=
+xyo_9_2_3=
+xyo_9_2_4=
+xyo_10_1_1=
+xyo_10_1_2=
+xyo_10_1_3=
+xyo_10_1_4=
+xyo_10_2_1=
+xyo_10_2_2=
+xyo_10_2_3=
+xyo_10_2_4=
+xyo_11_1_1=
+xyo_11_1_2=
+xyo_11_1_3=
+xyo_11_1_4=
+xyo_11_2_1=
+xyo_11_2_2=
+xyo_11_2_3=
+xyo_11_2_4=
+xyo_12_1_1=
+xyo_12_1_2=
+xyo_12_1_3=
+xyo_12_1_4=
+xyo_12_2_1=
+xyo_12_2_2=
+xyo_12_2_3=
+xyo_12_2_4=
+xyo_13_1_1=
+xyo_13_1_2=
+xyo_13_1_3=
+xyo_13_1_4=
+xyo_13_2_1=
+xyo_13_2_2=
+xyo_13_2_3=
+xyo_13_2_4=
+xyo_14_1_1=
+xyo_14_1_2=
+xyo_14_1_3=
+xyo_14_1_4=
+xyo_14_2_1=
+xyo_14_2_2=
+xyo_14_2_3=
+xyo_14_2_4=
+xyo_15_1_1=
+xyo_15_1_2=
+xyo_15_1_3=
+xyo_15_1_4=
+xyo_15_2_1=
+xyo_15_2_2=
+xyo_15_2_3=
+xyo_15_2_4=
+xyo_16_1_1=
+xyo_16_1_2=
+xyo_16_1_3=
+xyo_16_1_4=
+xyo_16_2_1=
+xyo_16_2_2=
+xyo_16_2_3=
+xyo_16_2_4=
+xyo_17_1_1=
+xyo_17_1_2=
+xyo_17_1_3=
+xyo_17_1_4=
+xyo_17_2_1=
+xyo_17_2_2=
+xyo_17_2_3=
+xyo_17_2_4=
+xyo_18_1_1=
+xyo_18_1_2=
+xyo_18_1_3=
+xyo_18_1_4=
+xyo_18_2_1=
+xyo_18_2_2=
+xyo_18_2_3=
+xyo_18_2_4=
+xyo_19_1_1=
+xyo_19_1_2=
+xyo_19_1_3=
+xyo_19_1_4=
+xyo_19_2_1=
+xyo_19_2_2=
+xyo_19_2_3=
+xyo_19_2_4=
+xyo_20_1_1=
+xyo_20_1_2=
+xyo_20_1_3=
+xyo_20_1_4=
+xyo_20_2_1=
+xyo_20_2_2=
+xyo_20_2_3=
+xyo_20_2_4=
+xyo_21_1_1=
+xyo_21_1_2=
+xyo_21_1_3=
+xyo_21_1_4=
+xyo_21_2_1=
+xyo_21_2_2=
+xyo_21_2_3=
+xyo_21_2_4=
+xyo_22_1_1=
+xyo_22_1_2=
+xyo_22_1_3=
+xyo_22_1_4=
+xyo_22_2_1=
+xyo_22_2_2=
+xyo_22_2_3=
+xyo_22_2_4=
+xyo_23_1_1=
+xyo_23_1_2=
+xyo_23_1_3=
+xyo_23_1_4=
+xyo_23_2_1=
+xyo_23_2_2=
+xyo_23_2_3=
+xyo_23_2_4=
+xyo_24_1_1=
+xyo_24_1_2=
+xyo_24_1_3=
+xyo_24_1_4=
+xyo_24_2_1=
+xyo_24_2_2=
+xyo_24_2_3=
+xyo_24_2_4=
+xyo_25_1_1=
+xyo_25_1_2=
+xyo_25_1_3=
+xyo_25_1_4=
+xyo_25_2_1=
+xyo_25_2_2=
+xyo_25_2_3=
+xyo_25_2_4=
+xyo_26_1_1=
+xyo_26_1_2=
+xyo_26_1_3=
+xyo_26_1_4=
+xyo_26_2_1=
+xyo_26_2_2=
+xyo_26_2_3=
+xyo_26_2_4=
+xyo_27_1_1=
+xyo_27_1_2=
+xyo_27_1_3=
+xyo_27_1_4=
+xyo_27_2_1=
+xyo_27_2_2=
+xyo_27_2_3=
+xyo_27_2_4=
+xyo_28_1_1=
+xyo_28_1_2=
+xyo_28_1_3=
+xyo_28_1_4=
+xyo_28_2_1=
+xyo_28_2_2=
+xyo_28_2_3=
+xyo_28_2_4=
+xyo_29_1_1=
+xyo_29_1_2=
+xyo_29_1_3=
+xyo_29_1_4=
+xyo_29_2_1=
+xyo_29_2_2=
+xyo_29_2_3=
+xyo_29_2_4=
+xyo_30_1_1=
+xyo_30_1_2=
+xyo_30_1_3=
+xyo_30_1_4=
+xyo_30_2_1=
+xyo_30_2_2=
+xyo_30_2_3=
+xyo_30_2_4=
+xyo_31_1_1=
+xyo_31_1_2=
+xyo_31_1_3=
+xyo_31_1_4=
+xyo_31_2_1=
+xyo_31_2_2=
+xyo_31_2_3=
+xyo_31_2_4=
+xyo_32_1_1=
+xyo_32_1_2=
+xyo_32_1_3=
+xyo_32_1_4=
+xyo_32_2_1=
+xyo_32_2_2=
+xyo_32_2_3=
+xyo_32_2_4=
+xyo_33_1_1=
+xyo_33_1_2=
+xyo_33_1_3=
+xyo_33_1_4=
+xyo_33_2_1=
+xyo_33_2_2=
+xyo_33_2_3=
+xyo_33_2_4=
+xyo_34_1_1=
+xyo_34_1_2=
+xyo_34_1_3=
+xyo_34_1_4=
+xyo_34_2_1=
+xyo_34_2_2=
+xyo_34_2_3=
+xyo_34_2_4=
+xyo_35_1_1=
+xyo_35_1_2=
+xyo_35_1_3=
+xyo_35_1_4=
+xyo_35_2_1=
+xyo_35_2_2=
+xyo_35_2_3=
+xyo_35_2_4=
+xyo_36_1_1=
+xyo_36_1_2=
+xyo_36_1_3=
+xyo_36_1_4=
+xyo_36_2_1=
+xyo_36_2_2=
+xyo_36_2_3=
+xyo_36_2_4=
+xyo_37_1_1=
+xyo_37_1_2=
+xyo_37_1_3=
+xyo_37_1_4=
+xyo_37_2_1=
+xyo_37_2_2=
+xyo_37_2_3=
+xyo_37_2_4=
+xyo_38_1_1=
+xyo_38_1_2=
+xyo_38_1_3=
+xyo_38_1_4=
+xyo_38_2_1=
+xyo_38_2_2=
+xyo_38_2_3=
+xyo_38_2_4=
+xyo_39_1_1=
+xyo_39_1_2=
+xyo_39_1_3=
+xyo_39_1_4=
+xyo_39_2_1=
+xyo_39_2_2=
+xyo_39_2_3=
+xyo_39_2_4=
+xyo_40_1_1=
+xyo_40_1_2=
+xyo_40_1_3=
+xyo_40_1_4=
+xyo_40_2_1=
+xyo_40_2_2=
+xyo_40_2_3=
+xyo_40_2_4=
+xyo_41_1_1=
+xyo_41_1_2=
+xyo_41_1_3=
+xyo_41_1_4=
+xyo_41_2_1=
+xyo_41_2_2=
+xyo_41_2_3=
+xyo_41_2_4=
+xyo_42_1_1=
+xyo_42_1_2=
+xyo_42_1_3=
+xyo_42_1_4=
+xyo_42_2_1=
+xyo_42_2_2=
+xyo_42_2_3=
+xyo_42_2_4=
+xyo_43_1_1=
+xyo_43_1_2=
+xyo_43_1_3=
+xyo_43_1_4=
+xyo_43_2_1=
+xyo_43_2_2=
+xyo_43_2_3=
+xyo_43_2_4=
+xyo_44_1_1=
+xyo_44_1_2=
+xyo_44_1_3=
+xyo_44_1_4=
+xyo_44_2_1=
+xyo_44_2_2=
+xyo_44_2_3=
+xyo_44_2_4=
+xyo_45_1_1=
+xyo_45_1_2=
+xyo_45_1_3=
+xyo_45_1_4=
+xyo_45_2_1=
+xyo_45_2_2=
+xyo_45_2_3=
+xyo_45_2_4=
+xyo_46_1_1=
+xyo_46_1_2=
+xyo_46_1_3=
+xyo_46_1_4=
+xyo_46_2_1=
+xyo_46_2_2=
+xyo_46_2_3=
+xyo_46_2_4=
+xyo_47_1_1=
+xyo_47_1_2=
+xyo_47_1_3=
+xyo_47_1_4=
+xyo_47_2_1=
+xyo_47_2_2=
+xyo_47_2_3=
+xyo_47_2_4=
+xyo_48_1_1=
+xyo_48_1_2=
+xyo_48_1_3=
+xyo_48_1_4=
+xyo_48_2_1=
+xyo_48_2_2=
+xyo_48_2_3=
+xyo_48_2_4=
+xyo_49_1_1=
+xyo_49_1_2=
+xyo_49_1_3=
+xyo_49_1_4=
+xyo_49_2_1=
+xyo_49_2_2=
+xyo_49_2_3=
+xyo_49_2_4=
+xyo_50_1_1=
+xyo_50_1_2=
+xyo_50_1_3=
+xyo_50_1_4=
+xyo_50_2_1=
+xyo_50_2_2=
+xyo_50_2_3=
+xyo_50_2_4=
+xyo_51_1_1=
+xyo_51_1_2=
+xyo_51_1_3=
+xyo_51_1_4=
+xyo_51_2_1=
+xyo_51_2_2=
+xyo_51_2_3=
+xyo_51_2_4=
+xyo_52_1_1=
+xyo_52_1_2=
+xyo_52_1_3=
+xyo_52_1_4=
+xyo_52_2_1=
+xyo_52_2_2=
+xyo_52_2_3=
+xyo_52_2_4=
+xyo_53_1_1=
+xyo_53_1_2=
+xyo_53_1_3=
+xyo_53_1_4=
+xyo_53_2_1=
+xyo_53_2_2=
+xyo_53_2_3=
+xyo_53_2_4=
+xyo_54_1_1=
+xyo_54_1_2=
+xyo_54_1_3=
+xyo_54_1_4=
+xyo_54_2_1=
+xyo_54_2_2=
+xyo_54_2_3=
+xyo_54_2_4=
+xyo_55_1_1=
+xyo_55_1_2=
+xyo_55_1_3=
+xyo_55_1_4=
+xyo_55_2_1=
+xyo_55_2_2=
+xyo_55_2_3=
+xyo_55_2_4=
+xyo_56_1_1=
+xyo_56_1_2=
+xyo_56_1_3=
+xyo_56_1_4=
+xyo_56_2_1=
+xyo_56_2_2=
+xyo_56_2_3=
+xyo_56_2_4=
+xyo_57_1_1=
+xyo_57_1_2=
+xyo_57_1_3=
+xyo_57_1_4=
+xyo_57_2_1=
+xyo_57_2_2=
+xyo_57_2_3=
+xyo_57_2_4=
+xyo_58_1_1=
+xyo_58_1_2=
+xyo_58_1_3=
+xyo_58_1_4=
+xyo_58_2_1=
+xyo_58_2_2=
+xyo_58_2_3=
+xyo_58_2_4=
+xyo_59_1_1=
+xyo_59_1_2=
+xyo_59_1_3=
+xyo_59_1_4=
+xyo_59_2_1=
+xyo_59_2_2=
+xyo_59_2_3=
+xyo_59_2_4=
+xyo_60_1_1=
+xyo_60_1_2=
+xyo_60_1_3=
+xyo_60_1_4=
+xyo_60_2_1=
+xyo_60_2_2=
+xyo_60_2_3=
+xyo_60_2_4=
+xyo_61_1_1=
+xyo_61_1_2=
+xyo_61_1_3=
+xyo_61_1_4=
+xyo_61_2_1=
+xyo_61_2_2=
+xyo_61_2_3=
+xyo_61_2_4=
+xyo_62_1_1=
+xyo_62_1_2=
+xyo_62_1_3=
+xyo_62_1_4=
+xyo_62_2_1=
+xyo_62_2_2=
+xyo_62_2_3=
+xyo_62_2_4=
+xyo_63_1_1=
+xyo_63_1_2=
+xyo_63_1_3=
+xyo_63_1_4=
+xyo_63_2_1=
+xyo_63_2_2=
+xyo_63_2_3=
+xyo_63_2_4=
+xyo_64_1_1=
+xyo_64_1_2=
+xyo_64_1_3=
+xyo_64_1_4=
+xyo_64_2_1=
+xyo_64_2_2=
+xyo_64_2_3=
+xyo_64_2_4=
+xyo_65_1_1=
+xyo_65_1_2=
+xyo_65_1_3=
+xyo_65_1_4=
+xyo_65_2_1=
+xyo_65_2_2=
+xyo_65_2_3=
+xyo_65_2_4=
+xyo_66_1_1=
+xyo_66_1_2=
+xyo_66_1_3=
+xyo_66_1_4=
+xyo_66_2_1=
+xyo_66_2_2=
+xyo_66_2_3=
+xyo_66_2_4=
+xyo_67_1_1=
+xyo_67_1_2=
+xyo_67_1_3=
+xyo_67_1_4=
+xyo_67_2_1=
+xyo_67_2_2=
+xyo_67_2_3=
+xyo_67_2_4=
+xyo_68_1_1=
+xyo_68_1_2=
+xyo_68_1_3=
+xyo_68_1_4=
+xyo_68_2_1=
+xyo_68_2_2=
+xyo_68_2_3=
+xyo_68_2_4=
+xyo_69_1_1=
+xyo_69_1_2=
+xyo_69_1_3=
+xyo_69_1_4=
+xyo_69_2_1=
+xyo_69_2_2=
+xyo_69_2_3=
+xyo_69_2_4=
+xyo_70_1_1=
+xyo_70_1_2=
+xyo_70_1_3=
+xyo_70_1_4=
+xyo_70_2_1=
+xyo_70_2_2=
+xyo_70_2_3=
+xyo_70_2_4=
+xyo_71_1_1=
+xyo_71_1_2=
+xyo_71_1_3=
+xyo_71_1_4=
+xyo_71_2_1=
+xyo_71_2_2=
+xyo_71_2_3=
+xyo_71_2_4=
+xyo_72_1_1=
+xyo_72_1_2=
+xyo_72_1_3=
+xyo_72_1_4=
+xyo_72_2_1=
+xyo_72_2_2=
+xyo_72_2_3=
+xyo_72_2_4=
+xyo_73_1_1=
+xyo_73_1_2=
+xyo_73_1_3=
+xyo_73_1_4=
+xyo_73_2_1=
+xyo_73_2_2=
+xyo_73_2_3=
+xyo_73_2_4=
+xyo_74_1_1=
+xyo_74_1_2=
+xyo_74_1_3=
+xyo_74_1_4=
+xyo_74_2_1=
+xyo_74_2_2=
+xyo_74_2_3=
+xyo_74_2_4=
+xyo_75_1_1=
+xyo_75_1_2=
+xyo_75_1_3=
+xyo_75_1_4=
+xyo_75_2_1=
+xyo_75_2_2=
+xyo_75_2_3=
+xyo_75_2_4=
+xyo_76_1_1=
+xyo_76_1_2=
+xyo_76_1_3=
+xyo_76_1_4=
+xyo_76_2_1=
+xyo_76_2_2=
+xyo_76_2_3=
+xyo_76_2_4=
+xyo_77_1_1=
+xyo_77_1_2=
+xyo_77_1_3=
+xyo_77_1_4=
+xyo_77_2_1=
+xyo_77_2_2=
+xyo_77_2_3=
+xyo_77_2_4=
+xyo_78_1_1=
+xyo_78_1_2=
+xyo_78_1_3=
+xyo_78_1_4=
+xyo_78_2_1=
+xyo_78_2_2=
+xyo_78_2_3=
+xyo_78_2_4=
+xyo_79_1_1=
+xyo_79_1_2=
+xyo_79_1_3=
+xyo_79_1_4=
+xyo_79_2_1=
+xyo_79_2_2=
+xyo_79_2_3=
+xyo_79_2_4=
+xyo_80_1_1=
+xyo_80_1_2=
+xyo_80_1_3=
+xyo_80_1_4=
+xyo_80_2_1=
+xyo_80_2_2=
+xyo_80_2_3=
+xyo_80_2_4=
+xyo_81_1_1=
+xyo_81_1_2=
+xyo_81_1_3=
+xyo_81_1_4=
+xyo_81_2_1=
+xyo_81_2_2=
+xyo_81_2_3=
+xyo_81_2_4=
+xyo_82_1_1=
+xyo_82_1_2=
+xyo_82_1_3=
+xyo_82_1_4=
+xyo_82_2_1=
+xyo_82_2_2=
+xyo_82_2_3=
+xyo_82_2_4=
+xyo_83_1_1=
+xyo_83_1_2=
+xyo_83_1_3=
+xyo_83_1_4=
+xyo_83_2_1=
+xyo_83_2_2=
+xyo_83_2_3=
+xyo_83_2_4=
+xyo_84_1_1=
+xyo_84_1_2=
+xyo_84_1_3=
+xyo_84_1_4=
+xyo_84_2_1=
+xyo_84_2_2=
+xyo_84_2_3=
+xyo_84_2_4=
+xyo_85_1_1=
+xyo_85_1_2=
+xyo_85_1_3=
+xyo_85_1_4=
+xyo_85_2_1=
+xyo_85_2_2=
+xyo_85_2_3=
+xyo_85_2_4=
+xyo_86_1_1=
+xyo_86_1_2=
+xyo_86_1_3=
+xyo_86_1_4=
+xyo_86_2_1=
+xyo_86_2_2=
+xyo_86_2_3=
+xyo_86_2_4=
+xyo_87_1_1=
+xyo_87_1_2=
+xyo_87_1_3=
+xyo_87_1_4=
+xyo_87_2_1=
+xyo_87_2_2=
+xyo_87_2_3=
+xyo_87_2_4=
+xyo_88_1_1=
+xyo_88_1_2=
+xyo_88_1_3=
+xyo_88_1_4=
+xyo_88_2_1=
+xyo_88_2_2=
+xyo_88_2_3=
+xyo_88_2_4=
+xyo_89_1_1=
+xyo_89_1_2=
+xyo_89_1_3=
+xyo_89_1_4=
+xyo_89_2_1=
+xyo_89_2_2=
+xyo_89_2_3=
+xyo_89_2_4=
+xyo_90_1_1=
+xyo_90_1_2=
+xyo_90_1_3=
+xyo_90_1_4=
+xyo_90_2_1=
+xyo_90_2_2=
+xyo_90_2_3=
+xyo_90_2_4=
+xyo_91_1_1=
+xyo_91_1_2=
+xyo_91_1_3=
+xyo_91_1_4=
+xyo_91_2_1=
+xyo_91_2_2=
+xyo_91_2_3=
+xyo_91_2_4=
+xyo_92_1_1=
+xyo_92_1_2=
+xyo_92_1_3=
+xyo_92_1_4=
+xyo_92_2_1=
+xyo_92_2_2=
+xyo_92_2_3=
+xyo_92_2_4=
+xyo_93_1_1=
+xyo_93_1_2=
+xyo_93_1_3=
+xyo_93_1_4=
+xyo_93_2_1=
+xyo_93_2_2=
+xyo_93_2_3=
+xyo_93_2_4=
+xyo_94_1_1=
+xyo_94_1_2=
+xyo_94_1_3=
+xyo_94_1_4=
+xyo_94_2_1=
+xyo_94_2_2=
+xyo_94_2_3=
+xyo_94_2_4=
+xyo_95_1_1=
+xyo_95_1_2=
+xyo_95_1_3=
+xyo_95_1_4=
+xyo_95_2_1=
+xyo_95_2_2=
+xyo_95_2_3=
+xyo_95_2_4=
+xyo_96_1_1=
+xyo_96_1_2=
+xyo_96_1_3=
+xyo_96_1_4=
+xyo_96_2_1=
+xyo_96_2_2=
+xyo_96_2_3=
+xyo_96_2_4=
+xyo_97_1_1=
+xyo_97_1_2=
+xyo_97_1_3=
+xyo_97_1_4=
+xyo_97_2_1=
+xyo_97_2_2=
+xyo_97_2_3=
+xyo_97_2_4=
+xyo_98_1_1=
+xyo_98_1_2=
+xyo_98_1_3=
+xyo_98_1_4=
+xyo_98_2_1=
+xyo_98_2_2=
+xyo_98_2_3=
+xyo_98_2_4=
+xyo_99_1_1=
+xyo_99_1_2=
+xyo_99_1_3=
+xyo_99_1_4=
+xyo_99_2_1=
+xyo_99_2_2=
+xyo_99_2_3=
+xyo_99_2_4=
+xyo_100_1_1=
+xyo_100_1_2=
+xyo_100_1_3=
+xyo_100_1_4=
+xyo_100_2_1=
+xyo_100_2_2=
+xyo_100_2_3=
+xyo_100_2_4=
+[Plan]
+KatKier=120.00
+x0=0
+y0=0
+[skrajnia trasy]
+numer przekroju_1=1
+opis_1=0PT3
+wsp_x_L_1=0.5
+wsp_y_L_1=0.5
+wsp_z_L_1_1=252.4
+wsp_z_L_2_1=257.40
+wysokosc_L_1=5.00
+wsp_x_R_1=-0.65
+wsp_y_R_1=-0.38
+wsp_z_R_1_1=252.4
+wsp_z_R_2_1=257.40
+wysokosc_R_1=5.00
+numer przekroju_2=2
+opis_2=25
+wsp_x_L_2=-11.89
+wsp_y_L_2=22.01
+wsp_z_L_1_2=253.2
+wsp_z_L_2_2=258.20
+wysokosc_L_2=5.00
+wsp_x_R_2=-13.18
+wsp_y_R_2=21.25
+wsp_z_R_1_2=253.2
+wsp_z_R_2_2=258.20
+wysokosc_R_2=5.00
+numer przekroju_3=3
+opis_3=50
+wsp_x_L_3=-24.42
+wsp_y_L_3=43.63
+wsp_z_L_1_3=253.4
+wsp_z_L_2_3=258.40
+wysokosc_L_3=5.00
+wsp_x_R_3=-25.72
+wsp_y_R_3=42.88
+wsp_z_R_1_3=253.4
+wsp_z_R_2_3=258.40
+wysokosc_R_3=5.00
+numer przekroju_4=4
+opis_4=75
+wsp_x_L_4=-36.96
+wsp_y_L_4=65.26
+wsp_z_L_1_4=253.7
+wsp_z_L_2_4=258.70
+wysokosc_L_4=5.00
+wsp_x_R_4=-38.26
+wsp_y_R_4=64.51
+wsp_z_R_1_4=253.7
+wsp_z_R_2_4=258.70
+wysokosc_R_4=5.00
+numer przekroju_5=5
+opis_5=100
+wsp_x_L_5=-49.49
+wsp_y_L_5=86.89
+wsp_z_L_1_5=253
+wsp_z_L_2_5=258.00
+wysokosc_L_5=5.00
+wsp_x_R_5=-50.79
+wsp_y_R_5=86.14
+wsp_z_R_1_5=253
+wsp_z_R_2_5=258.00
+wysokosc_R_5=5.00
+numer przekroju_6=6
+opis_6=125
+wsp_x_L_6=-62.03
+wsp_y_L_6=108.52
+wsp_z_L_1_6=252
+wsp_z_L_2_6=257.00
+wysokosc_L_6=5.00
+wsp_x_R_6=-63.33
+wsp_y_R_6=107.77
+wsp_z_R_1_6=252
+wsp_z_R_2_6=257.00
+wysokosc_R_6=5.00
+numer przekroju_7=7
+opis_7=150
+wsp_x_L_7=-74.57
+wsp_y_L_7=130.15
+wsp_z_L_1_7=250.5
+wsp_z_L_2_7=255.50
+wysokosc_L_7=5.00
+wsp_x_R_7=-75.87
+wsp_y_R_7=129.40
+wsp_z_R_1_7=250.5
+wsp_z_R_2_7=255.50
+wysokosc_R_7=5.00
+numer przekroju_8=8
+opis_8=175
+wsp_x_L_8=-83.44
+wsp_y_L_8=145.46
+wsp_z_L_1_8=249.8
+wsp_z_L_2_8=254.80
+wysokosc_L_8=5.00
+wsp_x_R_8=-84.74
+wsp_y_R_8=144.71
+wsp_z_R_1_8=249.8
+wsp_z_R_2_8=254.80
+wysokosc_R_8=5.00
+numer przekroju_9=9
+opis_9=200
+wsp_x_L_9=-95.39
+wsp_y_L_9=167.41
+wsp_z_L_1_9=249.4
+wsp_z_L_2_9=254.40
+wysokosc_L_9=5.00
+wsp_x_R_9=-96.69
+wsp_y_R_9=166.71
+wsp_z_R_1_9=249.4
+wsp_z_R_2_9=254.40
+wysokosc_R_9=5.00
+numer przekroju_10=10
+opis_10=225m
+wsp_x_L_10=-106.16
+wsp_y_L_10=189.68
+wsp_z_L_1_10=249
+wsp_z_L_2_10=254.00
+wysokosc_L_10=5.00
+wsp_x_R_10=-107.52
+wsp_y_R_10=189.08
+wsp_z_R_1_10=249
+wsp_z_R_2_10=254.00
+wysokosc_R_10=5.00
+numer przekroju_11=11
+opis_11=250m
+wsp_x_L_11=-115.91
+wsp_y_L_11=212.71
+wsp_z_L_1_11=248.4
+wsp_z_L_2_11=253.40
+wysokosc_L_11=5.00
+wsp_x_R_11=-117.31
+wsp_y_R_11=212.11
+wsp_z_R_1_11=248.4
+wsp_z_R_2_11=253.40
+wysokosc_R_11=5.00
+numer przekroju_12=12
+opis_12=275m
+wsp_x_L_12=-124.46
+wsp_y_L_12=235.99
+wsp_z_L_1_12=248.5
+wsp_z_L_2_12=253.50
+wysokosc_L_12=5.00
+wsp_x_R_12=-125.89
+wsp_y_R_12=235.52
+wsp_z_R_1_12=248.5
+wsp_z_R_2_12=253.50
+wysokosc_R_12=5.00
+numer przekroju_13=13
+opis_13=300m
+wsp_x_L_13=-131.82
+wsp_y_L_13=259.81
+wsp_z_L_1_13=248.4
+wsp_z_L_2_13=253.40
+wysokosc_L_13=5.00
+wsp_x_R_13=-133.26
+wsp_y_R_13=259.38
+wsp_z_R_1_13=248.4
+wsp_z_R_2_13=253.40
+wysokosc_R_13=5.00
+numer przekroju_14=14
+opis_14=325m
+wsp_x_L_14=-137.99
+wsp_y_L_14=283.75
+wsp_z_L_1_14=248.3
+wsp_z_L_2_14=253.30
+wysokosc_L_14=5.00
+wsp_x_R_14=-139.46
+wsp_y_R_14=283.46
+wsp_z_R_1_14=248.3
+wsp_z_R_2_14=253.30
+wysokosc_R_14=5.00
+numer przekroju_15=15
+opis_15=350m
+wsp_x_L_15=-143.00
+wsp_y_L_15=308.23
+wsp_z_L_1_15=247.8
+wsp_z_L_2_15=252.80
+wysokosc_L_15=5.00
+wsp_x_R_15=-144.46
+wsp_y_R_15=308.01
+wsp_z_R_1_15=247.8
+wsp_z_R_2_15=252.80
+wysokosc_R_15=5.00
+numer przekroju_16=16
+opis_16=375m
+wsp_x_L_16=-146.76
+wsp_y_L_16=332.93
+wsp_z_L_1_16=245.5
+wsp_z_L_2_16=250.50
+wysokosc_L_16=5.00
+wsp_x_R_16=-148.23
+wsp_y_R_16=332.75
+wsp_z_R_1_16=245.5
+wsp_z_R_2_16=250.50
+wysokosc_R_16=5.00
+numer przekroju_17=17
+opis_17=400m
+wsp_x_L_17=-149.27
+wsp_y_L_17=357.72
+wsp_z_L_1_17=242.4
+wsp_z_L_2_17=247.40
+wysokosc_L_17=5.00
+wsp_x_R_17=-150.74
+wsp_y_R_17=357.58
+wsp_z_R_1_17=242.4
+wsp_z_R_2_17=247.40
+wysokosc_R_17=5.00
+numer przekroju_18=18
+opis_18=425m
+wsp_x_L_18=-150.95
+wsp_y_L_18=382.67
+wsp_z_L_1_18=241.5
+wsp_z_L_2_18=246.50
+wysokosc_L_18=5.00
+wsp_x_R_18=-152.42
+wsp_y_R_18=382.58
+wsp_z_R_1_18=241.5
+wsp_z_R_2_18=246.50
+wysokosc_R_18=5.00
+numer przekroju_19=19
+opis_19=450
+wsp_x_L_19=-152.56
+wsp_y_L_19=407.62
+wsp_z_L_1_19=239.7
+wsp_z_L_2_19=244.70
+wysokosc_L_19=5.00
+wsp_x_R_19=-154.04
+wsp_y_R_19=407.52
+wsp_z_R_1_19=239.7
+wsp_z_R_2_19=244.70
+wysokosc_R_19=5.00
+numer przekroju_20=20
+opis_20=475
+wsp_x_L_20=-154.17
+wsp_y_L_20=432.57
+wsp_z_L_1_20=238
+wsp_z_L_2_20=243.00
+wysokosc_L_20=5.00
+wsp_x_R_20=-155.65
+wsp_y_R_20=432.47
+wsp_z_R_1_20=238
+wsp_z_R_2_20=243.00
+wysokosc_R_20=5.00
+numer przekroju_21=21
+opis_21=500
+wsp_x_L_21=-155.79
+wsp_y_L_21=457.51
+wsp_z_L_1_21=237.3
+wsp_z_L_2_21=242.30
+wysokosc_L_21=5.00
+wsp_x_R_21=-157.26
+wsp_y_R_21=457.42
+wsp_z_R_1_21=237.3
+wsp_z_R_2_21=242.30
+wysokosc_R_21=5.00
+numer przekroju_22=22
+opis_22=525
+wsp_x_L_22=-157.39
+wsp_y_L_22=482.46
+wsp_z_L_1_22=237
+wsp_z_L_2_22=242.00
+wysokosc_L_22=5.00
+wsp_x_R_22=-158.87
+wsp_y_R_22=482.37
+wsp_z_R_1_22=237
+wsp_z_R_2_22=242.00
+wysokosc_R_22=5.00
+numer przekroju_23=23
+opis_23=535
+wsp_x_L_23=-158.07
+wsp_y_L_23=493.07
+wsp_z_L_1_23=237
+wsp_z_L_2_23=242.00
+wysokosc_L_23=5.00
+wsp_x_R_23=-159.56
+wsp_y_R_23=492.97
+wsp_z_R_1_23=237
+wsp_z_R_2_23=242.00
+wysokosc_R_23=5.00
+numer przekroju_24=
+opis_24=
+wsp_x_L_24=
+wsp_y_L_24=
+wsp_z_L_1_24=
+wsp_z_L_2_24=
+wysokosc_L_24=
+wsp_x_R_24=
+wsp_y_R_24=
+wsp_z_R_1_24=
+wsp_z_R_2_24=
+wysokosc_R_24=
+numer przekroju_25=
+opis_25=
+wsp_x_L_25=
+wsp_y_L_25=
+wsp_z_L_1_25=
+wsp_z_L_2_25=
+wysokosc_L_25=
+wsp_x_R_25=
+wsp_y_R_25=
+wsp_z_R_1_25=
+wsp_z_R_2_25=
+wysokosc_R_25=
+numer przekroju_26=
+opis_26=
+wsp_x_L_26=
+wsp_y_L_26=
+wsp_z_L_1_26=
+wsp_z_L_2_26=
+wysokosc_L_26=
+wsp_x_R_26=
+wsp_y_R_26=
+wsp_z_R_1_26=
+wsp_z_R_2_26=
+wysokosc_R_26=
+numer przekroju_27=
+opis_27=
+wsp_x_L_27=
+wsp_y_L_27=
+wsp_z_L_1_27=
+wsp_z_L_2_27=
+wysokosc_L_27=
+wsp_x_R_27=
+wsp_y_R_27=
+wsp_z_R_1_27=
+wsp_z_R_2_27=
+wysokosc_R_27=
+numer przekroju_28=
+opis_28=
+wsp_x_L_28=
+wsp_y_L_28=
+wsp_z_L_1_28=
+wsp_z_L_2_28=
+wysokosc_L_28=
+wsp_x_R_28=
+wsp_y_R_28=
+wsp_z_R_1_28=
+wsp_z_R_2_28=
+wysokosc_R_28=
+numer przekroju_29=
+opis_29=
+wsp_x_L_29=
+wsp_y_L_29=
+wsp_z_L_1_29=
+wsp_z_L_2_29=
+wysokosc_L_29=
+wsp_x_R_29=
+wsp_y_R_29=
+wsp_z_R_1_29=
+wsp_z_R_2_29=
+wysokosc_R_29=
+numer przekroju_30=
+opis_30=
+wsp_x_L_30=
+wsp_y_L_30=
+wsp_z_L_1_30=
+wsp_z_L_2_30=
+wysokosc_L_30=
+wsp_x_R_30=
+wsp_y_R_30=
+wsp_z_R_1_30=
+wsp_z_R_2_30=
+wysokosc_R_30=
+numer przekroju_31=
+opis_31=
+wsp_x_L_31=
+wsp_y_L_31=
+wsp_z_L_1_31=
+wsp_z_L_2_31=
+wysokosc_L_31=
+wsp_x_R_31=
+wsp_y_R_31=
+wsp_z_R_1_31=
+wsp_z_R_2_31=
+wysokosc_R_31=
+numer przekroju_32=
+opis_32=
+wsp_x_L_32=
+wsp_y_L_32=
+wsp_z_L_1_32=
+wsp_z_L_2_32=
+wysokosc_L_32=
+wsp_x_R_32=
+wsp_y_R_32=
+wsp_z_R_1_32=
+wsp_z_R_2_32=
+wysokosc_R_32=
+numer przekroju_33=
+opis_33=
+wsp_x_L_33=
+wsp_y_L_33=
+wsp_z_L_1_33=
+wsp_z_L_2_33=
+wysokosc_L_33=
+wsp_x_R_33=
+wsp_y_R_33=
+wsp_z_R_1_33=
+wsp_z_R_2_33=
+wysokosc_R_33=
+numer przekroju_34=
+opis_34=
+wsp_x_L_34=
+wsp_y_L_34=
+wsp_z_L_1_34=
+wsp_z_L_2_34=
+wysokosc_L_34=
+wsp_x_R_34=
+wsp_y_R_34=
+wsp_z_R_1_34=
+wsp_z_R_2_34=
+wysokosc_R_34=
+numer przekroju_35=
+opis_35=
+wsp_x_L_35=
+wsp_y_L_35=
+wsp_z_L_1_35=
+wsp_z_L_2_35=
+wysokosc_L_35=
+wsp_x_R_35=
+wsp_y_R_35=
+wsp_z_R_1_35=
+wsp_z_R_2_35=
+wysokosc_R_35=
+numer przekroju_36=
+opis_36=
+wsp_x_L_36=
+wsp_y_L_36=
+wsp_z_L_1_36=
+wsp_z_L_2_36=
+wysokosc_L_36=
+wsp_x_R_36=
+wsp_y_R_36=
+wsp_z_R_1_36=
+wsp_z_R_2_36=
+wysokosc_R_36=
+numer przekroju_37=
+opis_37=
+wsp_x_L_37=
+wsp_y_L_37=
+wsp_z_L_1_37=
+wsp_z_L_2_37=
+wysokosc_L_37=
+wsp_x_R_37=
+wsp_y_R_37=
+wsp_z_R_1_37=
+wsp_z_R_2_37=
+wysokosc_R_37=
+numer przekroju_38=
+opis_38=
+wsp_x_L_38=
+wsp_y_L_38=
+wsp_z_L_1_38=
+wsp_z_L_2_38=
+wysokosc_L_38=
+wsp_x_R_38=
+wsp_y_R_38=
+wsp_z_R_1_38=
+wsp_z_R_2_38=
+wysokosc_R_38=
+numer przekroju_39=
+opis_39=
+wsp_x_L_39=
+wsp_y_L_39=
+wsp_z_L_1_39=
+wsp_z_L_2_39=
+wysokosc_L_39=
+wsp_x_R_39=
+wsp_y_R_39=
+wsp_z_R_1_39=
+wsp_z_R_2_39=
+wysokosc_R_39=
+numer przekroju_40=
+opis_40=
+wsp_x_L_40=
+wsp_y_L_40=
+wsp_z_L_1_40=
+wsp_z_L_2_40=
+wysokosc_L_40=
+wsp_x_R_40=
+wsp_y_R_40=
+wsp_z_R_1_40=
+wsp_z_R_2_40=
+wysokosc_R_40=
+numer przekroju_41=
+opis_41=
+wsp_x_L_41=
+wsp_y_L_41=
+wsp_z_L_1_41=
+wsp_z_L_2_41=
+wysokosc_L_41=
+wsp_x_R_41=
+wsp_y_R_41=
+wsp_z_R_1_41=
+wsp_z_R_2_41=
+wysokosc_R_41=
+numer przekroju_42=
+opis_42=
+wsp_x_L_42=
+wsp_y_L_42=
+wsp_z_L_1_42=
+wsp_z_L_2_42=
+wysokosc_L_42=
+wsp_x_R_42=
+wsp_y_R_42=
+wsp_z_R_1_42=
+wsp_z_R_2_42=
+wysokosc_R_42=
+numer przekroju_43=
+opis_43=
+wsp_x_L_43=
+wsp_y_L_43=
+wsp_z_L_1_43=
+wsp_z_L_2_43=
+wysokosc_L_43=
+wsp_x_R_43=
+wsp_y_R_43=
+wsp_z_R_1_43=
+wsp_z_R_2_43=
+wysokosc_R_43=
+numer przekroju_44=
+opis_44=
+wsp_x_L_44=
+wsp_y_L_44=
+wsp_z_L_1_44=
+wsp_z_L_2_44=
+wysokosc_L_44=
+wsp_x_R_44=
+wsp_y_R_44=
+wsp_z_R_1_44=
+wsp_z_R_2_44=
+wysokosc_R_44=
+numer przekroju_45=
+opis_45=
+wsp_x_L_45=
+wsp_y_L_45=
+wsp_z_L_1_45=
+wsp_z_L_2_45=
+wysokosc_L_45=
+wsp_x_R_45=
+wsp_y_R_45=
+wsp_z_R_1_45=
+wsp_z_R_2_45=
+wysokosc_R_45=
+numer przekroju_46=
+opis_46=
+wsp_x_L_46=
+wsp_y_L_46=
+wsp_z_L_1_46=
+wsp_z_L_2_46=
+wysokosc_L_46=
+wsp_x_R_46=
+wsp_y_R_46=
+wsp_z_R_1_46=
+wsp_z_R_2_46=
+wysokosc_R_46=
+numer przekroju_47=
+opis_47=
+wsp_x_L_47=
+wsp_y_L_47=
+wsp_z_L_1_47=
+wsp_z_L_2_47=
+wysokosc_L_47=
+wsp_x_R_47=
+wsp_y_R_47=
+wsp_z_R_1_47=
+wsp_z_R_2_47=
+wysokosc_R_47=
+numer przekroju_48=
+opis_48=
+wsp_x_L_48=
+wsp_y_L_48=
+wsp_z_L_1_48=
+wsp_z_L_2_48=
+wysokosc_L_48=
+wsp_x_R_48=
+wsp_y_R_48=
+wsp_z_R_1_48=
+wsp_z_R_2_48=
+wysokosc_R_48=
+numer przekroju_49=
+opis_49=
+wsp_x_L_49=
+wsp_y_L_49=
+wsp_z_L_1_49=
+wsp_z_L_2_49=
+wysokosc_L_49=
+wsp_x_R_49=
+wsp_y_R_49=
+wsp_z_R_1_49=
+wsp_z_R_2_49=
+wysokosc_R_49=
+numer przekroju_50=
+opis_50=
+wsp_x_L_50=
+wsp_y_L_50=
+wsp_z_L_1_50=
+wsp_z_L_2_50=
+wysokosc_L_50=
+wsp_x_R_50=
+wsp_y_R_50=
+wsp_z_R_1_50=
+wsp_z_R_2_50=
+wysokosc_R_50=
+numer przekroju_51=
+opis_51=
+wsp_x_L_51=
+wsp_y_L_51=
+wsp_z_L_1_51=
+wsp_z_L_2_51=
+wysokosc_L_51=
+wsp_x_R_51=
+wsp_y_R_51=
+wsp_z_R_1_51=
+wsp_z_R_2_51=
+wysokosc_R_51=
+numer przekroju_52=
+opis_52=
+wsp_x_L_52=
+wsp_y_L_52=
+wsp_z_L_1_52=
+wsp_z_L_2_52=
+wysokosc_L_52=
+wsp_x_R_52=
+wsp_y_R_52=
+wsp_z_R_1_52=
+wsp_z_R_2_52=
+wysokosc_R_52=
+numer przekroju_53=
+opis_53=
+wsp_x_L_53=
+wsp_y_L_53=
+wsp_z_L_1_53=
+wsp_z_L_2_53=
+wysokosc_L_53=
+wsp_x_R_53=
+wsp_y_R_53=
+wsp_z_R_1_53=
+wsp_z_R_2_53=
+wysokosc_R_53=
+numer przekroju_54=
+opis_54=
+wsp_x_L_54=
+wsp_y_L_54=
+wsp_z_L_1_54=
+wsp_z_L_2_54=
+wysokosc_L_54=
+wsp_x_R_54=
+wsp_y_R_54=
+wsp_z_R_1_54=
+wsp_z_R_2_54=
+wysokosc_R_54=
+numer przekroju_55=
+opis_55=
+wsp_x_L_55=
+wsp_y_L_55=
+wsp_z_L_1_55=
+wsp_z_L_2_55=
+wysokosc_L_55=
+wsp_x_R_55=
+wsp_y_R_55=
+wsp_z_R_1_55=
+wsp_z_R_2_55=
+wysokosc_R_55=
+numer przekroju_56=
+opis_56=
+wsp_x_L_56=
+wsp_y_L_56=
+wsp_z_L_1_56=
+wsp_z_L_2_56=
+wysokosc_L_56=
+wsp_x_R_56=
+wsp_y_R_56=
+wsp_z_R_1_56=
+wsp_z_R_2_56=
+wysokosc_R_56=
+numer przekroju_57=
+opis_57=
+wsp_x_L_57=
+wsp_y_L_57=
+wsp_z_L_1_57=
+wsp_z_L_2_57=
+wysokosc_L_57=
+wsp_x_R_57=
+wsp_y_R_57=
+wsp_z_R_1_57=
+wsp_z_R_2_57=
+wysokosc_R_57=
+numer przekroju_58=
+opis_58=
+wsp_x_L_58=
+wsp_y_L_58=
+wsp_z_L_1_58=
+wsp_z_L_2_58=
+wysokosc_L_58=
+wsp_x_R_58=
+wsp_y_R_58=
+wsp_z_R_1_58=
+wsp_z_R_2_58=
+wysokosc_R_58=
+numer przekroju_59=
+opis_59=
+wsp_x_L_59=
+wsp_y_L_59=
+wsp_z_L_1_59=
+wsp_z_L_2_59=
+wysokosc_L_59=
+wsp_x_R_59=
+wsp_y_R_59=
+wsp_z_R_1_59=
+wsp_z_R_2_59=
+wysokosc_R_59=
+numer przekroju_60=
+opis_60=
+wsp_x_L_60=
+wsp_y_L_60=
+wsp_z_L_1_60=
+wsp_z_L_2_60=
+wysokosc_L_60=
+wsp_x_R_60=
+wsp_y_R_60=
+wsp_z_R_1_60=
+wsp_z_R_2_60=
+wysokosc_R_60=
+numer przekroju_61=
+opis_61=
+wsp_x_L_61=
+wsp_y_L_61=
+wsp_z_L_1_61=
+wsp_z_L_2_61=
+wysokosc_L_61=
+wsp_x_R_61=
+wsp_y_R_61=
+wsp_z_R_1_61=
+wsp_z_R_2_61=
+wysokosc_R_61=
+numer przekroju_62=
+opis_62=
+wsp_x_L_62=
+wsp_y_L_62=
+wsp_z_L_1_62=
+wsp_z_L_2_62=
+wysokosc_L_62=
+wsp_x_R_62=
+wsp_y_R_62=
+wsp_z_R_1_62=
+wsp_z_R_2_62=
+wysokosc_R_62=
+numer przekroju_63=
+opis_63=
+wsp_x_L_63=
+wsp_y_L_63=
+wsp_z_L_1_63=
+wsp_z_L_2_63=
+wysokosc_L_63=
+wsp_x_R_63=
+wsp_y_R_63=
+wsp_z_R_1_63=
+wsp_z_R_2_63=
+wysokosc_R_63=
+numer przekroju_64=
+opis_64=
+wsp_x_L_64=
+wsp_y_L_64=
+wsp_z_L_1_64=
+wsp_z_L_2_64=
+wysokosc_L_64=
+wsp_x_R_64=
+wsp_y_R_64=
+wsp_z_R_1_64=
+wsp_z_R_2_64=
+wysokosc_R_64=
+numer przekroju_65=
+opis_65=
+wsp_x_L_65=
+wsp_y_L_65=
+wsp_z_L_1_65=
+wsp_z_L_2_65=
+wysokosc_L_65=
+wsp_x_R_65=
+wsp_y_R_65=
+wsp_z_R_1_65=
+wsp_z_R_2_65=
+wysokosc_R_65=
+numer przekroju_66=
+opis_66=
+wsp_x_L_66=
+wsp_y_L_66=
+wsp_z_L_1_66=
+wsp_z_L_2_66=
+wysokosc_L_66=
+wsp_x_R_66=
+wsp_y_R_66=
+wsp_z_R_1_66=
+wsp_z_R_2_66=
+wysokosc_R_66=
+numer przekroju_67=
+opis_67=
+wsp_x_L_67=
+wsp_y_L_67=
+wsp_z_L_1_67=
+wsp_z_L_2_67=
+wysokosc_L_67=
+wsp_x_R_67=
+wsp_y_R_67=
+wsp_z_R_1_67=
+wsp_z_R_2_67=
+wysokosc_R_67=
+numer przekroju_68=
+opis_68=
+wsp_x_L_68=
+wsp_y_L_68=
+wsp_z_L_1_68=
+wsp_z_L_2_68=
+wysokosc_L_68=
+wsp_x_R_68=
+wsp_y_R_68=
+wsp_z_R_1_68=
+wsp_z_R_2_68=
+wysokosc_R_68=
+numer przekroju_69=
+opis_69=
+wsp_x_L_69=
+wsp_y_L_69=
+wsp_z_L_1_69=
+wsp_z_L_2_69=
+wysokosc_L_69=
+wsp_x_R_69=
+wsp_y_R_69=
+wsp_z_R_1_69=
+wsp_z_R_2_69=
+wysokosc_R_69=
+numer przekroju_70=
+opis_70=
+wsp_x_L_70=
+wsp_y_L_70=
+wsp_z_L_1_70=
+wsp_z_L_2_70=
+wysokosc_L_70=
+wsp_x_R_70=
+wsp_y_R_70=
+wsp_z_R_1_70=
+wsp_z_R_2_70=
+wysokosc_R_70=
+numer przekroju_71=
+opis_71=
+wsp_x_L_71=
+wsp_y_L_71=
+wsp_z_L_1_71=
+wsp_z_L_2_71=
+wysokosc_L_71=
+wsp_x_R_71=
+wsp_y_R_71=
+wsp_z_R_1_71=
+wsp_z_R_2_71=
+wysokosc_R_71=
+numer przekroju_72=
+opis_72=
+wsp_x_L_72=
+wsp_y_L_72=
+wsp_z_L_1_72=
+wsp_z_L_2_72=
+wysokosc_L_72=
+wsp_x_R_72=
+wsp_y_R_72=
+wsp_z_R_1_72=
+wsp_z_R_2_72=
+wysokosc_R_72=
+numer przekroju_73=
+opis_73=
+wsp_x_L_73=
+wsp_y_L_73=
+wsp_z_L_1_73=
+wsp_z_L_2_73=
+wysokosc_L_73=
+wsp_x_R_73=
+wsp_y_R_73=
+wsp_z_R_1_73=
+wsp_z_R_2_73=
+wysokosc_R_73=
+numer przekroju_74=
+opis_74=
+wsp_x_L_74=
+wsp_y_L_74=
+wsp_z_L_1_74=
+wsp_z_L_2_74=
+wysokosc_L_74=
+wsp_x_R_74=
+wsp_y_R_74=
+wsp_z_R_1_74=
+wsp_z_R_2_74=
+wysokosc_R_74=
+numer przekroju_75=
+opis_75=
+wsp_x_L_75=
+wsp_y_L_75=
+wsp_z_L_1_75=
+wsp_z_L_2_75=
+wysokosc_L_75=
+wsp_x_R_75=
+wsp_y_R_75=
+wsp_z_R_1_75=
+wsp_z_R_2_75=
+wysokosc_R_75=
+numer przekroju_76=
+opis_76=
+wsp_x_L_76=
+wsp_y_L_76=
+wsp_z_L_1_76=
+wsp_z_L_2_76=
+wysokosc_L_76=
+wsp_x_R_76=
+wsp_y_R_76=
+wsp_z_R_1_76=
+wsp_z_R_2_76=
+wysokosc_R_76=
+numer przekroju_77=
+opis_77=
+wsp_x_L_77=
+wsp_y_L_77=
+wsp_z_L_1_77=
+wsp_z_L_2_77=
+wysokosc_L_77=
+wsp_x_R_77=
+wsp_y_R_77=
+wsp_z_R_1_77=
+wsp_z_R_2_77=
+wysokosc_R_77=
+numer przekroju_78=
+opis_78=
+wsp_x_L_78=
+wsp_y_L_78=
+wsp_z_L_1_78=
+wsp_z_L_2_78=
+wysokosc_L_78=
+wsp_x_R_78=
+wsp_y_R_78=
+wsp_z_R_1_78=
+wsp_z_R_2_78=
+wysokosc_R_78=
+numer przekroju_79=
+opis_79=
+wsp_x_L_79=
+wsp_y_L_79=
+wsp_z_L_1_79=
+wsp_z_L_2_79=
+wysokosc_L_79=
+wsp_x_R_79=
+wsp_y_R_79=
+wsp_z_R_1_79=
+wsp_z_R_2_79=
+wysokosc_R_79=
+numer przekroju_80=
+opis_80=
+wsp_x_L_80=
+wsp_y_L_80=
+wsp_z_L_1_80=
+wsp_z_L_2_80=
+wysokosc_L_80=
+wsp_x_R_80=
+wsp_y_R_80=
+wsp_z_R_1_80=
+wsp_z_R_2_80=
+wysokosc_R_80=
+numer przekroju_81=
+opis_81=
+wsp_x_L_81=
+wsp_y_L_81=
+wsp_z_L_1_81=
+wsp_z_L_2_81=
+wysokosc_L_81=
+wsp_x_R_81=
+wsp_y_R_81=
+wsp_z_R_1_81=
+wsp_z_R_2_81=
+wysokosc_R_81=
+numer przekroju_82=
+opis_82=
+wsp_x_L_82=
+wsp_y_L_82=
+wsp_z_L_1_82=
+wsp_z_L_2_82=
+wysokosc_L_82=
+wsp_x_R_82=
+wsp_y_R_82=
+wsp_z_R_1_82=
+wsp_z_R_2_82=
+wysokosc_R_82=
+numer przekroju_83=
+opis_83=
+wsp_x_L_83=
+wsp_y_L_83=
+wsp_z_L_1_83=
+wsp_z_L_2_83=
+wysokosc_L_83=
+wsp_x_R_83=
+wsp_y_R_83=
+wsp_z_R_1_83=
+wsp_z_R_2_83=
+wysokosc_R_83=
+numer przekroju_84=
+opis_84=
+wsp_x_L_84=
+wsp_y_L_84=
+wsp_z_L_1_84=
+wsp_z_L_2_84=
+wysokosc_L_84=
+wsp_x_R_84=
+wsp_y_R_84=
+wsp_z_R_1_84=
+wsp_z_R_2_84=
+wysokosc_R_84=
+numer przekroju_85=
+opis_85=
+wsp_x_L_85=
+wsp_y_L_85=
+wsp_z_L_1_85=
+wsp_z_L_2_85=
+wysokosc_L_85=
+wsp_x_R_85=
+wsp_y_R_85=
+wsp_z_R_1_85=
+wsp_z_R_2_85=
+wysokosc_R_85=
+numer przekroju_86=
+opis_86=
+wsp_x_L_86=
+wsp_y_L_86=
+wsp_z_L_1_86=
+wsp_z_L_2_86=
+wysokosc_L_86=
+wsp_x_R_86=
+wsp_y_R_86=
+wsp_z_R_1_86=
+wsp_z_R_2_86=
+wysokosc_R_86=
+numer przekroju_87=
+opis_87=
+wsp_x_L_87=
+wsp_y_L_87=
+wsp_z_L_1_87=
+wsp_z_L_2_87=
+wysokosc_L_87=
+wsp_x_R_87=
+wsp_y_R_87=
+wsp_z_R_1_87=
+wsp_z_R_2_87=
+wysokosc_R_87=
+numer przekroju_88=
+opis_88=
+wsp_x_L_88=
+wsp_y_L_88=
+wsp_z_L_1_88=
+wsp_z_L_2_88=
+wysokosc_L_88=
+wsp_x_R_88=
+wsp_y_R_88=
+wsp_z_R_1_88=
+wsp_z_R_2_88=
+wysokosc_R_88=
+numer przekroju_89=
+opis_89=
+wsp_x_L_89=
+wsp_y_L_89=
+wsp_z_L_1_89=
+wsp_z_L_2_89=
+wysokosc_L_89=
+wsp_x_R_89=
+wsp_y_R_89=
+wsp_z_R_1_89=
+wsp_z_R_2_89=
+wysokosc_R_89=
+numer przekroju_90=
+opis_90=
+wsp_x_L_90=
+wsp_y_L_90=
+wsp_z_L_1_90=
+wsp_z_L_2_90=
+wysokosc_L_90=
+wsp_x_R_90=
+wsp_y_R_90=
+wsp_z_R_1_90=
+wsp_z_R_2_90=
+wysokosc_R_90=
+numer przekroju_91=
+opis_91=
+wsp_x_L_91=
+wsp_y_L_91=
+wsp_z_L_1_91=
+wsp_z_L_2_91=
+wysokosc_L_91=
+wsp_x_R_91=
+wsp_y_R_91=
+wsp_z_R_1_91=
+wsp_z_R_2_91=
+wysokosc_R_91=
+numer przekroju_92=
+opis_92=
+wsp_x_L_92=
+wsp_y_L_92=
+wsp_z_L_1_92=
+wsp_z_L_2_92=
+wysokosc_L_92=
+wsp_x_R_92=
+wsp_y_R_92=
+wsp_z_R_1_92=
+wsp_z_R_2_92=
+wysokosc_R_92=
+numer przekroju_93=
+opis_93=
+wsp_x_L_93=
+wsp_y_L_93=
+wsp_z_L_1_93=
+wsp_z_L_2_93=
+wysokosc_L_93=
+wsp_x_R_93=
+wsp_y_R_93=
+wsp_z_R_1_93=
+wsp_z_R_2_93=
+wysokosc_R_93=
+numer przekroju_94=
+opis_94=
+wsp_x_L_94=
+wsp_y_L_94=
+wsp_z_L_1_94=
+wsp_z_L_2_94=
+wysokosc_L_94=
+wsp_x_R_94=
+wsp_y_R_94=
+wsp_z_R_1_94=
+wsp_z_R_2_94=
+wysokosc_R_94=
+numer przekroju_95=
+opis_95=
+wsp_x_L_95=
+wsp_y_L_95=
+wsp_z_L_1_95=
+wsp_z_L_2_95=
+wysokosc_L_95=
+wsp_x_R_95=
+wsp_y_R_95=
+wsp_z_R_1_95=
+wsp_z_R_2_95=
+wysokosc_R_95=
+numer przekroju_96=
+opis_96=
+wsp_x_L_96=
+wsp_y_L_96=
+wsp_z_L_1_96=
+wsp_z_L_2_96=
+wysokosc_L_96=
+wsp_x_R_96=
+wsp_y_R_96=
+wsp_z_R_1_96=
+wsp_z_R_2_96=
+wysokosc_R_96=
+numer przekroju_97=
+opis_97=
+wsp_x_L_97=
+wsp_y_L_97=
+wsp_z_L_1_97=
+wsp_z_L_2_97=
+wysokosc_L_97=
+wsp_x_R_97=
+wsp_y_R_97=
+wsp_z_R_1_97=
+wsp_z_R_2_97=
+wysokosc_R_97=
+numer przekroju_98=
+opis_98=
+wsp_x_L_98=
+wsp_y_L_98=
+wsp_z_L_1_98=
+wsp_z_L_2_98=
+wysokosc_L_98=
+wsp_x_R_98=
+wsp_y_R_98=
+wsp_z_R_1_98=
+wsp_z_R_2_98=
+wysokosc_R_98=
+numer przekroju_99=
+opis_99=
+wsp_x_L_99=
+wsp_y_L_99=
+wsp_z_L_1_99=
+wsp_z_L_2_99=
+wysokosc_L_99=
+wsp_x_R_99=
+wsp_y_R_99=
+wsp_z_R_1_99=
+wsp_z_R_2_99=
+wysokosc_R_99=
+numer przekroju_100=
+opis_100=
+wsp_x_L_100=
+wsp_y_L_100=
+wsp_z_L_1_100=
+wsp_z_L_2_100=
+wysokosc_L_100=
+wsp_x_R_100=
+wsp_y_R_100=
+wsp_z_R_1_100=
+wsp_z_R_2_100=
+wysokosc_R_100=
+[zaladunek]
+nrodc_1=1.
+wydajnosc punktu zaladowczego_1=788
+wydajnosc masowa_1=788
+wydajnosc objetosciowa_1=438
+wspolczynnik kz_1=0.564
+masa urobku na 1m_1=109
+nrodc_2=2.
+wydajnosc punktu zaladowczego_2=0
+wydajnosc masowa_2=788
+wydajnosc objetosciowa_2=438
+wspolczynnik kz_2=0.564
+masa urobku na 1m_2=109
+nrodc_3=3.
+wydajnosc punktu zaladowczego_3=0
+wydajnosc masowa_3=788
+wydajnosc objetosciowa_3=438
+wspolczynnik kz_3=0.564
+masa urobku na 1m_3=109
+nrodc_4=4.
+wydajnosc punktu zaladowczego_4=0
+wydajnosc masowa_4=788
+wydajnosc objetosciowa_4=438
+wspolczynnik kz_4=0.564
+masa urobku na 1m_4=109
+nrodc_5=5.
+wydajnosc punktu zaladowczego_5=0
+wydajnosc masowa_5=788
+wydajnosc objetosciowa_5=438
+wspolczynnik kz_5=0.564
+masa urobku na 1m_5=109
+nrodc_6=6.
+wydajnosc punktu zaladowczego_6=0
+wydajnosc masowa_6=788
+wydajnosc objetosciowa_6=438
+wspolczynnik kz_6=0.564
+masa urobku na 1m_6=109
+nrodc_7=7.
+wydajnosc punktu zaladowczego_7=0
+wydajnosc masowa_7=788
+wydajnosc objetosciowa_7=438
+wspolczynnik kz_7=0.564
+masa urobku na 1m_7=109
+nrodc_8=8.
+wydajnosc punktu zaladowczego_8=0
+wydajnosc masowa_8=788
+wydajnosc objetosciowa_8=438
+wspolczynnik kz_8=0.564
+masa urobku na 1m_8=109
+nrodc_9=9.
+wydajnosc punktu zaladowczego_9=0
+wydajnosc masowa_9=788
+wydajnosc objetosciowa_9=438
+wspolczynnik kz_9=0.564
+masa urobku na 1m_9=109
+nrodc_10=10.
+wydajnosc punktu zaladowczego_10=0
+wydajnosc masowa_10=788
+wydajnosc objetosciowa_10=438
+wspolczynnik kz_10=0.564
+masa urobku na 1m_10=109
+[zaladunek dol]
+nrodc_1=10.
+wydajnosc punktu zaladowczego_1=
+wydajnosc masowa_1=
+wydajnosc objetosciowa_1=
+wspolczynnik kz_1=
+masa urobku na 1m_1=
+nrodc_2=9.
+wydajnosc punktu zaladowczego_2=
+wydajnosc masowa_2=
+wydajnosc objetosciowa_2=
+wspolczynnik kz_2=
+masa urobku na 1m_2=
+nrodc_3=8.
+wydajnosc punktu zaladowczego_3=
+wydajnosc masowa_3=
+wydajnosc objetosciowa_3=
+wspolczynnik kz_3=
+masa urobku na 1m_3=
+nrodc_4=7.
+wydajnosc punktu zaladowczego_4=
+wydajnosc masowa_4=
+wydajnosc objetosciowa_4=
+wspolczynnik kz_4=
+masa urobku na 1m_4=
+nrodc_5=6.
+wydajnosc punktu zaladowczego_5=
+wydajnosc masowa_5=
+wydajnosc objetosciowa_5=
+wspolczynnik kz_5=
+masa urobku na 1m_5=
+nrodc_6=5.
+wydajnosc punktu zaladowczego_6=
+wydajnosc masowa_6=
+wydajnosc objetosciowa_6=
+wspolczynnik kz_6=
+masa urobku na 1m_6=
+nrodc_7=4.
+wydajnosc punktu zaladowczego_7=
+wydajnosc masowa_7=
+wydajnosc objetosciowa_7=
+wspolczynnik kz_7=
+masa urobku na 1m_7=
+nrodc_8=3.
+wydajnosc punktu zaladowczego_8=
+wydajnosc masowa_8=
+wydajnosc objetosciowa_8=
+wspolczynnik kz_8=
+masa urobku na 1m_8=
+nrodc_9=2.
+wydajnosc punktu zaladowczego_9=
+wydajnosc masowa_9=
+wydajnosc objetosciowa_9=
+wspolczynnik kz_9=
+masa urobku na 1m_9=
+nrodc_10=1.
+wydajnosc punktu zaladowczego_10=
+wydajnosc masowa_10=
+wydajnosc objetosciowa_10=
+wspolczynnik kz_10=
+masa urobku na 1m_10=
