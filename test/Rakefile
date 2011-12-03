@@ -26,23 +26,18 @@ task :test do
   end
 end
 
-def validate(file, shouldBeValid=true)
-  schema = "../convml_11.xsd"
-  if Rake::Win32::windows?
-    validateWithRuby schema, file, shouldBeValid
-  else
-    validateWithXmllint schema, file, shouldBeValid
-  end
+task :stron => ["convml_11_sch-compiled.xsl"] do
+  schematron "../convml_11_template.xml"
+
+  Rake::FileList.new("*.xml").each do |f|
+    schematron f
+  end  
 end
 
-def validateWithXmllint(schema, file, shouldBeValid=true)
-  sh "xmllint --noout --schema #{schema} #{file} 2> test.log" do |ok, res|
-    if !ok && shouldBeValid
-      sh "cat test.log"
-    elsif ok && !shouldBeValid
-      puts "WARNING: #{file} should not be vaild!"
-    end
-  end
+
+def validate(file, shouldBeValid=true)
+  schema = "../convml_11.xsd"
+  validateWithRuby schema, file, shouldBeValid
 end
 
 def validateWithRuby(schema, file, shouldBeValid=true)
@@ -58,3 +53,42 @@ def validateWithRuby(schema, file, shouldBeValid=true)
     @@log.fatal "#{file} should not be valid!"
   end
 end
+
+def rule_hints(results_doc, instance_doc)
+  results = []
+  rule_type = 'failed-assert'
+
+  results_doc.xpath("//svrl:#{rule_type}").each do |hit|
+    context = instance_doc.xpath(hit['location']).first
+    
+    hit.xpath('svrl:text/text()').each do |message|
+      results << {
+        :rule_type => rule_type,
+        #:type => context.node_type_name,
+        :name => context.name,
+        :line => context.line,
+        :message => message.content.strip }
+    end
+  end
+  results  
+end
+
+def schematron(file, shouldBeValid=true)
+  xsl = Nokogiri::XSLT(File.read('convml_11_sch-compiled.xsl'))
+  doc = Nokogiri::XML(File.read(file))
+
+  report = xsl.transform(doc)
+  errors = rule_hints(report, doc)
+  errors.each {|e| @@log.fatal e } 
+end
+
+file "convml_11_sch-compiled.xsl" => ["../convml_11.sch"] do
+  @@log.info "compiling ../convml_11.sch"
+  xsl = Nokogiri::XSLT(File.open('../ISO_Schematron/iso_svrl_for_xslt1.xsl', 'r'))
+  doc = Nokogiri::XML(File.read('../convml_11.sch'))
+
+  File.open("convml_11_sch-compiled.xsl", "w") do |f|
+    f.puts xsl.transform(doc)
+  end
+end
+
