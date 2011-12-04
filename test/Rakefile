@@ -2,16 +2,17 @@ require 'nokogiri'
 require 'logger'
 require './multiio.rb'
 
-File.delete("test.log") if File.exists?("test.log")
-log_file = File.open("test.log", "w")
-@@log = Logger.new(MultiIO.new(log_file, STDOUT))
-@@log.formatter = proc do |severity, datetime, progmane, msg|
+LOG_FILE = "test.log"
+File.delete(LOG_FILE) if File.exists?(LOG_FILE)
+log_file = File.open(LOG_FILE, "w")
+LOG = Logger.new(MultiIO.new(log_file, STDOUT))
+LOG.formatter = proc do |severity, datetime, progname, msg|
   "#{severity}: #{msg}\n"
 end
 
 task :default => [:test]
 
-task :test do
+task :test => ["convml_11_sch-compiled.xsl"] do
   # Test szablonu
   validate "../convml_11_template.xml"
   
@@ -26,32 +27,25 @@ task :test do
   end
 end
 
-task :stron => ["convml_11_sch-compiled.xsl"] do
-  schematron "../convml_11_template.xml"
-
-  Rake::FileList.new("*.xml").each do |f|
-    schematron f
-  end  
-end
-
-
 def validate(file, shouldBeValid=true)
-  schema = "../convml_11.xsd"
-  validateWithRuby schema, file, shouldBeValid
+  LOG.info "validating #{file}"
+
+  errors = xsd_validate file
+  errors += schematron file
+
+  if errors.any? && shouldBeValid   
+    errors.each {|e| LOG.fatal e }
+    LOG.warn "#{errors.size} errors in #{file}"
+  elsif errors.empty? && !shouldBeValid
+    LOG.fatal "#{file} should not be valid!"
+  end
 end
 
-def validateWithRuby(schema, file, shouldBeValid=true)
-  @@log.info "validating #{file}"
+def xsd_validate(file)
+  schema = "../convml_11.xsd"
   xsd = Nokogiri::XML::Schema(File.read(schema))
   doc = Nokogiri::XML(File.read(file))
-  errors = xsd.validate(doc)
-  
-  if errors.any? && shouldBeValid   
-    errors.each {|e| @@log.fatal e }
-    @@log.warn "#{errors.size} errors in #{file}"
-  elsif errors.empty? && !shouldBeValid
-    @@log.fatal "#{file} should not be valid!"
-  end
+  errors = xsd.validate(doc)  
 end
 
 def rule_hints(results_doc, instance_doc)
@@ -73,17 +67,16 @@ def rule_hints(results_doc, instance_doc)
   results  
 end
 
-def schematron(file, shouldBeValid=true)
+def schematron(file)
   xsl = Nokogiri::XSLT(File.read('convml_11_sch-compiled.xsl'))
   doc = Nokogiri::XML(File.read(file))
 
   report = xsl.transform(doc)
   errors = rule_hints(report, doc)
-  errors.each {|e| @@log.fatal e } 
 end
 
 file "convml_11_sch-compiled.xsl" => ["../convml_11.sch"] do
-  @@log.info "compiling ../convml_11.sch"
+  LOG.info "compiling ../convml_11.sch"
   xsl = Nokogiri::XSLT(File.open('../ISO_Schematron/iso_svrl_for_xslt1.xsl', 'r'))
   doc = Nokogiri::XML(File.read('../convml_11.sch'))
 

@@ -3,7 +3,7 @@
   <Types>
     <BeltSegmentType typeId="bs1" />
     <BeltSegmentType typeId="22" />
-    <RouteSegmentType typeId="rs1"/>
+    <RouteSegmentType typeId="rs1" length="3"/>
   </Types>
   <BeltConveyor>
     <Conditions/>

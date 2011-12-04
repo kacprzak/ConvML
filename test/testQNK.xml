@@ -13,7 +13,7 @@
       <Idler type="Kraznik_dolny_boczny"/>
       <Idler type="Kraznik_dolny_boczny"/>
     </IdlerSetType>
-    <RouteSegmentType typeId="Segment1">
+    <RouteSegmentType typeId="Segment1" length="3">
       <Carry>
         <IdlerSet type="Zestaw_gorny"/>
         <IdlerSet type="Zestaw_gorny"/>
