@@ -39,7 +39,7 @@
     </Tail>
     <Route>
       <RouteSection length="75.0" number="1" angle="0.00">
-        <RouteSegment>
+        <RouteSegment length="3">
           <Carry>
             <IdlerSet type="Zestaw_gorny"/>
             <IdlerSet type="Zestaw_gorny"/>

@@ -17,7 +17,7 @@
     </Tail>
     <Route>
       <RouteSection length="50">
-	<RouteSegment>
+	<RouteSegment length="50">
 	  <Carry/>
 	  <Return/>
 	</RouteSegment>
