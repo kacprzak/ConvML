@@ -13,11 +13,14 @@ Pliki i katalogi w repozytorium
 * convml_10_template.xml - najprostszy plik w ConvML'a 1.0 (minimalny szablon).
 * convml_11.xsd - wersja 1.2 ConvML'a (developerska).
 * convml_11_template.xml - minimalny szablon dla wersji ConvML 1.2.
+* convml_11.sch - schema w fomacie Schematron wykonująca dodatkową walidację
+  reguł niemożliwych do sprawdzenia za pomocą XML Schema.
 
 * docs - opisowa dokumentacja języka ConvML.
 * xslt - szablony transformacji w języku XSLT.
 * translations - tłumaczenia elementów i atrybutów.
-* test - dokumenty wykorzystywane do testowania schemy
+* test - dokumenty wykorzystywane do testowania schemy.
+* ISO_Schematron - implementacja narzędzia Schematron w XSLT 1.0
 
 
 Przyjęte konwencje
@@ -95,17 +98,13 @@ przejść walidacji pozytywnie. W razie negatywnego wyniku walidacji któregoś 
 dokumentów (lub pozytywnego dla dokumentów zawierających błędy) procedura
 testowa wyświetli ostrzeżenie.
 
-Do uruchomienia testów wymagana jest obecność w systemie programów:
+Do uruchomienia testów wymagana jest obecność w systemie:
 
-* Rake
-* xmllint
+* języka Ruby 1.9
+* biblioteki Nokogiri
 
-W systemie Windows do uruchomienia testów wystarczy instalacja języka Ruby.
-Instalator jest dostępny na stronie
-[rubyinstaller.org](http://rubyinstaller.org/).  Po instalacji wymagane jest
+Instalator języka Ruby dla systemu Windows jest dostępny na stronie
+[rubyinstaller.org](http://rubyinstaller.org/). Po instalacji wymagane jest
 jeszcze doinstalowanie biblioteki Nokogiri przy pomocy polecenia:
 
     c:\>gem install nokogiri
-	
-Biblioteka ta zastępuje program xmllint. Podczas instalacji języka Ruby
-automatycznie instalowany jest program Rake.
