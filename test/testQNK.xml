@@ -30,7 +30,7 @@
       <BeltSplice spliceStrength="80"/>
       <BeltSegment carcassType="1" elasticityModulus="5000" thickness="15.2" pliesNumber="4" mass="17.70" strength="800" coverDescription="X" bottomCoverThickness="4" topCoverThickness="6" carcassThickness="5.2" carcassCode="108.0" manufacturer="SEMPERTRANS Bełchatów"/>
     </Belt>
-    <Tail>
+    <Tail length="3">
       <Carry/>
       <Return>
         <Pulley x="0.5" y="-0.3" wrapAngle="-12" number="6" diameter="0.3"/>
@@ -122,7 +122,7 @@
         </RouteSegment>
       </RouteSection>
     </Route>
-    <Head>
+    <Head length="3">
       <Carry/>
       <Return/>
       <Pulley wrapAngle="160" number="1" diameter="0.63"/>

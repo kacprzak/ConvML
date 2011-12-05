@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<!--Created with Liquid XML Studio - FREE Community Edition 7.0.2.746 (http://www.liquid-technologies.com)-->
 <xs:schema xmlns="http://www.entertech.com.pl/convml" xmlns:conv="http://www.entertech.com.pl/convml" elementFormDefault="qualified" targetNamespace="http://www.entertech.com.pl/convml" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:annotation>
     <xs:documentation>
@@ -55,7 +54,7 @@
     <xs:key name="idlerSetKey">
       <xs:selector xpath="conv:Types/conv:IdlerSetType" />
       <xs:field xpath="@typeId" />
-    </xs:key>    
+    </xs:key>
     <xs:keyref name="routeSegmentRef" refer="routeSegmentKey">
       <xs:selector xpath=".//conv:RouteSegment" />
       <xs:field xpath="@type" />
@@ -167,7 +166,6 @@
       <xs:element minOccurs="1" maxOccurs="unbounded" ref="BeltConveyor" />
     </xs:sequence>
     <xs:attribute fixed="1.2" name="version" type="xs:token" />
-    <!--xs:attributeGroup ref="dataBaseGroup" /-->
     <xs:attributeGroup ref="commonAttrGroup" />
   </xs:complexType>
   <!-- **************************************************************************************
@@ -255,7 +253,6 @@
       <xs:element ref="BeltSplice" />
       <xs:element ref="BeltSegment" />
     </xs:sequence>
-    <!-- xs:attributeGroup ref="instanceAttrGroup" / -->
     <xs:attribute name="width" type="xs:nonNegativeInteger" />
     <xs:attributeGroup ref="commonAttrGroup" />
   </xs:complexType>
@@ -424,7 +421,6 @@
   <!-- * -->
   <xs:attributeGroup name="pulleyAttrGroup">
     <xs:attribute name="diameter" type="nonNegativeDecimalType" />
-    <!-- xs:attribute name="number" type="xs:nonNegativeInteger" /-->
     <xs:attributeGroup ref="pulleyIdlerGroup" />
   </xs:attributeGroup>
   <!-- * -->
@@ -549,7 +545,6 @@
     <xs:attributeGroup ref="lengthAngleGroup" />
     <xs:attribute name="verticalRadius" type="xs:decimal" />
     <xs:attribute name="horizontalRadius" type="xs:decimal" />
-    <!--xs:attribute name="number" type="xs:nonNegativeInteger" /-->
     <xs:attribute name="segmentType" type="xs:token" />
     <xs:attributeGroup ref="commonAttrGroup" />
   </xs:complexType>
@@ -793,7 +788,6 @@
   <!-- * -->
   <xs:attributeGroup name="routeSegmentAttrGroup">
     <xs:attribute name="length" type="nonNegativeDecimalType" />
-    <!--xs:attribute name="number" type="xs:nonNegativeInteger" /-->
   </xs:attributeGroup>
   <!-- * -->
   <xs:complexType name="routeSegmentTypeType">
@@ -878,13 +872,6 @@
     </xs:restriction>
   </xs:simpleType>
   <!-- ATTRIBUTE GROUPS *********************************** -->
-  <!--xs:attributeGroup name="dataBaseGroup">
-      <xs:annotation>
-      <xs:documentation>Atrybuty powiązane z obsługą relacyjnych baz danych</xs:documentation>
-      </xs:annotation>
-      <xs:attribute name="id" type="xs:long" />
-      </xs:attributeGroup-->
-  <!-- **************************************************** -->
   <xs:attributeGroup name="commonAttrGroup">
     <xs:attribute name="id" type="xs:ID" />
     <xs:attribute name="description" type="xs:string" />
@@ -904,7 +891,7 @@
   </xs:attributeGroup>
   <!-- **************************************************** -->
   <xs:attributeGroup name="lengthAngleGroup">
-    <xs:attribute name="length" type="nonNegativeDecimalType" />
+    <xs:attribute name="length" type="nonNegativeDecimalType" use="required" />
     <xs:attribute name="angle">
       <xs:simpleType>
         <xs:restriction base="xs:decimal">
