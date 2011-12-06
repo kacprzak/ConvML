@@ -79,21 +79,28 @@ def rule_hints(results_doc, instance_doc, rule_type='failed-assert')
 end
 
 def schematron(file)
-  xsl = Nokogiri::XSLT(File.read('convml_11_sch-compiled.xsl'))
+  xsl_file = "convml_11_sch-compiled.xsl"
+  out_file = "temp.svrl"
+  xslt2_transform(xsl_file, file, out_file)
+  
   doc = Nokogiri::XML(File.read(file))
+  report = Nokogiri::XML(File.read(out_file))
 
-  report = xsl.transform(doc)
   rule_hints(report, doc, 'successful-report').each {|r| LOG.info r}
   errors = rule_hints(report, doc)
 end
 
 file "convml_11_sch-compiled.xsl" => ["../convml_11.sch"] do
-  LOG.info "compiling ../convml_11.sch"
-  xsl = Nokogiri::XSLT(File.open('../ISO_Schematron/iso_svrl_for_xslt1.xsl', 'r'))
-  doc = Nokogiri::XML(File.read('../convml_11.sch'))
+  schema_file = "../convml_11.sch"
+  stron_file = "../thirdparty/iso-schematron-xslt2/iso_svrl_for_xslt2.xsl"
+  output_file = "convml_11_sch-compiled.xsl"
 
-  File.open("convml_11_sch-compiled.xsl", "w") do |f|
-    f.puts xsl.transform(doc)
-  end
+  LOG.info "compiling #{schema_file}"
+  xslt2_transform(stron_file, schema_file, output_file)
 end
 
+def xslt2_transform(xsl_file, in_file, out_file)
+  saxon_jar = "../thirdparty/saxon9he.jar"
+  flag = "" #"-t"
+  sh "java -cp #{saxon_jar} net.sf.saxon.Transform #{flag} -s:#{in_file} -xsl:#{xsl_file} -o:#{out_file}"
+end

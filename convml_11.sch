@@ -28,9 +28,12 @@
 
   <pattern name="RouteSection pattern">
     <rule context="conv:RouteSection[conv:RouteSegment]">
-      <!--report test="@length">
+      <let name="segTypes" value="//conv:RouteSegmentType" />
+      <let name="segments" value="conv:RouteSegment" />
+      
+      <!--report test="$segments">
 	RouteSection length = <value-of select="@length"/>,
-and sub-segments length = <value-of select="sum(conv:RouteSegment/@length | key('routeSegmentKey', conv:RouteSegment/@type)/@length)"/>
+and sub-segments length = <value-of select="sum($segments/@length | $segments[$segTypes[@typeId = @type])"/>
       </report-->    
     </rule>
   </pattern>

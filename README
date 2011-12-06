@@ -102,6 +102,7 @@ Do uruchomienia testów wymagana jest obecność w systemie:
 
 * języka Ruby 1.9
 * biblioteki Nokogiri
+* JavaVM 1.5
 
 Instalator języka Ruby dla systemu Windows jest dostępny na stronie
 [rubyinstaller.org](http://rubyinstaller.org/). Po instalacji wymagane jest
