@@ -1,5 +1,8 @@
 # -*- coding: utf-8 -*-
-# Program do zmiany nazw elementów ConvML w plikach tekstowych
+# Program do zmiany nazw elementów ConvML w plikach tekstowych.
+#
+# Sposób użycia:
+#   ruby rename_elements.rb plik_1 [plik_n]
 
 require 'nokogiri'
 
@@ -28,7 +31,10 @@ def rename_elements(rename_hash, file_in, file_out=file_in + ".out", prefix="=")
   end
 end
 
-FILES = ["polish.lng", "english.lng"]
+files = ["polish.lng", "english.lng"]
+unless ARGV.empty?
+  files = ARGV
+end
 
 rh = create_rename_hash
-FILES.each { |fn| rename_elements(rh, fn) }
+files.each { |fn| rename_elements(rh, fn) }
