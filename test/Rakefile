@@ -1,6 +1,6 @@
 require 'nokogiri'
 require 'logger'
-require './multiio.rb'
+require '../tools/multiio.rb'
 
 LOG_FILE = "test.log"
 File.delete(LOG_FILE) if File.exists?(LOG_FILE)

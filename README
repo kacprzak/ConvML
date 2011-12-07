@@ -20,7 +20,8 @@ Pliki i katalogi w repozytorium
 * xslt - szablony transformacji w języku XSLT.
 * translations - tłumaczenia elementów i atrybutów.
 * test - dokumenty wykorzystywane do testowania schemy.
-* ISO_Schematron - implementacja narzędzia Schematron w XSLT 1.0
+* thirdparty - narzędzia autorów trzecich.
+* tools - narzędzia/skrypty pomocne podczas pracy z ConvML.
 
 
 Przyjęte konwencje

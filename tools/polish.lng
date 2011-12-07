@@ -1,0 +1,2882 @@
+[jezyk]
+OPIS=polski
+SYMBOL=Windows-1250
+JEDNOSTKA=1
+HINT=polski
+CONVML=
+[parametry podstawowe]
+OPIS=Parametry podstawowe
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=
+ELEMENT=
+[oznaczenie przenosnika]
+OPIS=Opis przenoœnika
+SYMBOL=
+JEDNOSTKA=
+HINT=Typ przenoœnika i jego miejsce w systemie transportowym
+CONVML=description
+ELEMENT=BELT_CONVEYOR
+[wydajnosc]
+OPIS		=Wydajnoœæ nominalna przenoœnika
+SYMBOL		=Q
+JEDNOSTKA	=t/h
+HINT		=Lokalizacjê punktów za³adowczych nale¿y zaznaczyæ na schemacie trasy
+CONVML=designCapacity
+ELEMENT=BELT_CONVEYOR
+[dlugosc]
+OPIS		=D³ugoœæ przenoœnika
+SYMBOL		=L
+JEDNOSTKA	=m
+HINT=Rozstaw miêdzy osiami bêbna czo³owego i zwrotnego
+CONVML=length
+ELEMENT=BELT_CONVEYOR
+[kat nachylenia]
+OPIS		=K¹t nachylenia
+SYMBOL		=@d
+JEDNOSTKA	=°
+HINT="+" w górê, "-" w dó³ 
+CONVML=angleInclination 
+ELEMENT=BELT_CONVEYOR
+[wysokosc podnoszenia]
+OPIS=Wysokoœæ podnoszenia
+SYMBOL=H
+JEDNOSTKA=m
+HINT="+" w górê, "-" w dó³ 
+CONVML=heightInclination
+ELEMENT=BELT_CONVEYOR
+[predkosc]
+OPIS		=Prêdkoœæ taœmy przenoœnika
+SYMBOL		=v
+JEDNOSTKA	=m/s
+HINT=Prêdkoœæ taœmy przenoœnika
+CONVML=beltSpeed
+ELEMENT=BELT_CONVEYOR
+[szerokosc tasmy]
+OPIS		=Szerokoœæ taœmy
+SYMBOL		=B
+JEDNOSTKA	=mm
+HINT		=Szerokoœæ taœmy
+CONVML=width
+ELEMENT=BELT
+[material transportowany]
+OPIS=Materia³ transportowany
+SYMBOL=
+JEDNOSTKA=
+HINT=Opis w³asnoœci materia³u transportowanego
+CONVML=conveyedMaterial
+ELEMENT=MATERIAL
+[rodzaj materialu]
+OPIS=Rodzaj materia³u transportowanego
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=sort
+ELEMENT=MATERIAL
+[gestosc]
+OPIS		=Gêstoœæ nasypowa materia³u transportowanego
+SYMBOL		=@g
+JEDNOSTKA	=kg/m^3
+HINT		=
+CONVML=density
+ELEMENT=MATERIAL
+[kat tarcia wewnetrznego]
+OPIS		=K¹t tarcia wewnêtrznego
+SYMBOL		=@f_w
+JEDNOSTKA	=°
+HINT		=K¹t tarcia wewnêtrznego
+CONVML=reposeAngle
+ELEMENT=MATERIAL
+[kat usypu]
+OPIS=K¹t usypu materia³u na taœmie
+SYMBOL=@r
+JEDNOSTKA=°
+HINT=K¹t usypu materia³u na taœmie
+CONVML=surchargeAngle
+ELEMENT=MATERIAL
+[obciazenie trasy]
+OPIS=Obci¹¿enie taœmy materia³em transportowanym
+SYMBOL=
+JEDNOSTKA=%
+HINT=Obci¹¿enie taœmy materia³em transportowanym
+CONVML=load
+[opory ruchu]
+OPIS=Opory ruchu przenoœnika
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=resistance
+[wspolczynnik oporu ruchu]
+OPIS=Wspó³czynnik oporów ruchu
+SYMBOL		=f
+JEDNOSTKA	=
+HINT		=
+CONVML=coefficientFriction
+[temperatura pracy]
+OPIS=Temperatura otoczenia przenoœnika
+SYMBOL=T
+JEDNOSTKA=°C
+HINT=Temperatura otoczenia przenoœnika
+CONVML=ambientTemperature
+ELEMENT=CONDITIONS
+[temperatura materialu]
+OPIS=Temperatura materia³u transportowanego
+SYMBOL=Tm
+JEDNOSTKA=°C
+HINT=
+CONVML=temperature
+ELEMENT=MATERIAL
+[profil]
+OPIS=Schemat trasy przenoœnika
+SYMBOL=
+JEDNOSTKA=
+HINT=Kierunek transportu, d³ugoœæ i k¹t nachylenia poszczególnych odcinków trasy, lokalizacja punktów za³adowczych
+CONVML=schemaConveyorProfile
+[nrodc]
+OPIS=Nr odc.
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=number
+ELEMENT=ROUTE_SECTION
+[Lodc]
+OPIS=D³ugoœæ odcinka
+SYMBOL=L
+JEDNOSTKA=m
+HINT=
+CONVML=length
+ELEMENT=ROUTE_SECTION
+[dodc]
+OPIS=K¹t nachylenia
+SYMBOL=@d
+JEDNOSTKA=°
+HINT=
+CONVML=angle
+ELEMENT=ROUTE_SECTION
+[Hodc]
+OPIS=Wysokoœæ
+SYMBOL=H
+JEDNOSTKA=m
+HINT=
+CONVML=lift 
+ELEMENT=ROUTE_SECTION
+[obcodc]
+OPIS=Obci¹¿enie mat.transp.
+SYMBOL=
+JEDNOSTKA=%Qn
+HINT=
+CONVML=loadSection
+ELEMENT=ROUTE_SECTION
+[Lpodc]
+OPIS=D³ugoœæ rzutu odcinka
+SYMBOL=Lp
+JEDNOSTKA=m
+HINT=
+CONVML=lengthHoriz
+ELEMENT=ROUTE_SECTION
+[dlugosc petlicy]
+OPIS=D³ugoœæ pêtlicy
+SYMBOL=L_z
+JEDNOSTKA=m
+HINT=D³ugoœæ pêtlicy
+CONVML=lengthContainer
+[szkic]
+OPIS=Szkic
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=schematicDiagram
+[trasa]
+OPIS=Trasa
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=routeConveyor
+[krazniki]
+OPIS=Kr¹zniki
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=idlers
+[gorne]
+OPIS=Ga³¹Ÿ górna
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=carry
+[dolne]
+OPIS=Ga³¹Ÿ dolna
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=return
+[rozstaw]
+OPIS=Rozstaw zestawów kr¹¿nikowych
+SYMBOL=l
+JEDNOSTKA=m
+HINT=Odleg³oœæ miêdzy zestawami (podporami) kr¹¿nikowymi
+CONVML=idlerSetSpacing
+ELEMENT=
+[liczba kraznikow]
+OPIS=Liczba kr¹¿ników w zestawie
+SYMBOL=z_k
+JEDNOSTKA=
+HINT=
+CONVML=numberIdlers
+[dlugosc kraznika]
+OPIS=D³ugoœæ p³aszcza kr¹¿nika
+SYMBOL=L_k
+JEDNOSTKA=mm
+HINT=
+CONVML=length
+ELEMENT=IDLER
+[srednica kraznika]
+OPIS=Œrednica kr¹¿nika
+SYMBOL=D_k
+JEDNOSTKA=mm
+HINT=
+CONVML=diameter
+ELEMENT=IDLER
+[masa kraznika]
+OPIS=Masa czêœci obrotowych kr¹¿nika
+SYMBOL=m_k
+JEDNOSTKA=kg
+HINT=Masa czêœci obrotowych kr¹¿nika
+CONVML=rotatingPartsMass
+ELEMENT=IDLER
+[kat nachylenia kraznikow bocznych]
+OPIS=K¹t nachylenia kr¹¿ników bocznych
+SYMBOL=@b
+JEDNOSTKA=°
+HINT=
+CONVML=troughingAngle
+ELEMENT=IDLER
+[tasma]
+OPIS=Taœma
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=belt
+[rodzaj tasmy]
+OPIS=Typ rdzenia taœmy
+SYMBOL=
+JEDNOSTKA=
+HINT=Tkaninowa (liczba przek³adek), z linkami stalowymi
+CONVML=carcassType
+ELEMENT=BELT_SEGMENT
+[przeznaczenie tasmy]
+OPIS=Przeznaczenie taœmy
+SYMBOL=
+JEDNOSTKA=
+HINT=Zwyk³a, trudnozapalna, trudnopalna, mrozoodporna, odporna na temperaturê
+CONVML=characteristics
+ELEMENT=BELT_SEGMENT
+[oznaczenie tasmy]
+OPIS=Oznaczenie taœmy
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=description
+ELEMENT=BELT_SEGMENT
+[rodzaj polaczen]
+OPIS=Sposób ³¹czenia taœmy
+SYMBOL=
+JEDNOSTKA=
+HINT=Wulkanizacja, klejenie na zimno, mechaniczne po³¹czenia
+CONVML=description
+ELEMENT=BELT_SPLICING
+[wytrzymalosc tasmy]
+OPIS=Nominalna wytrzyma³oœæ taœmy
+SYMBOL=K_n
+JEDNOSTKA=kN/m
+HINT=
+CONVML=strength
+ELEMENT=BELT_SEGMENT
+[masa jednostkowa tasmy]
+OPIS=Masa taœmy
+SYMBOL=m_tj
+JEDNOSTKA=kg/m^2
+HINT=Masa jednostkowa taœmy
+CONVML=mass
+ELEMENT=BELT_SEGMENT
+[grubosc tasmy]
+OPIS=Gruboœæ taœmy
+SYMBOL=g_t
+JEDNOSTKA=mm
+HINT=
+CONVML=thickness
+ELEMENT=BELT_SEGMENT
+[grubosc rdzenia tasmy]
+OPIS=Gruboœæ rdzenia taœmy
+SYMBOL=g_r
+JEDNOSTKA=mm
+HINT=
+CONVML=carcassThickness
+ELEMENT=BELT_SEGMENT
+[grubosc okladki gornej]
+OPIS=Gruboœæ ok³adki górnej (noœnej)
+SYMBOL=g_n
+JEDNOSTKA=mm
+HINT=
+CONVML=topCoverThickness
+ELEMENT=BELT_SEGMENT
+[grubosc okladki dolnej]
+OPIS=Gruboœæ ok³adki dolnej (bie¿nej)
+SYMBOL=g_b
+JEDNOSTKA=mm
+HINT=
+CONVML=bottomCoverThickness
+ELEMENT=BELT_SEGMENT
+[liczba przekladek]
+OPIS=Liczba przek³adek lub linek
+SYMBOL=l_p
+JEDNOSTKA=
+HINT=
+CONVML=pliesNumber
+ELEMENT=BELT_SEGMENT
+[warunki pracy przenosnika]
+OPIS=Warunki pracy przenoœnika
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=workConditions
+[wspolczynnik bezpieczenstwa tasmy]
+OPIS=Ca³kowity wspó³czynnik bezpieczeñstwa taœmy
+SYMBOL=s
+JEDNOSTKA=
+HINT=
+CONVML=safetyFactor
+[wspolczynnik straty wytrzymalosci tasmy]
+OPIS=Wspó³czynnik straty wytrzyma³oœci taœmy w miejscu po³¹czenia
+SYMBOL=r_p
+JEDNOSTKA=
+HINT=Wspó³czynnik straty wytrzyma³oœci taœmy   
+CONVML=splicingCoefficient
+ELEMENT=BELT_SPLICING
+[schemat]
+OPIS=Schemat
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=sketch
+[dopuszczalne srednice bebnow]
+OPIS=Dopuszczalne œrednice bêbnów
+SYMBOL=
+JEDNOSTKA=mm
+HINT=
+CONVML=minimumPulleyDiameters
+[bebny napedowe]
+OPIS=Bêbny napêdowe
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[bebny zwrotne]
+OPIS=Bêbny zwrotne
+SYMBOL=
+JEDNOSTKA=
+HINT=Bêbny zwrotne
+[bebny odchylajace]
+OPIS=Bêbny odchylaj¹ce
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[uklad napedowy]
+OPIS=Uk³ad napêdowy
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=drive
+[moc zainstalowana]
+OPIS=Moc napêdu
+SYMBOL=N_z
+JEDNOSTKA=kW
+HINT=Sumaryczna moc silników w napêdzie
+CONVML=drivePowerInstalled
+ELEMENT=BELT_CONVEYOR
+[moc silnika]
+OPIS=Moc pojedyñczego silnika
+SYMBOL=N_i
+JEDNOSTKA=kW
+HINT=
+CONVML=power
+ELEMENT=MOTOR
+[liczba silnikow]
+OPIS=Liczba silników
+SYMBOL=
+JEDNOSTKA=
+HINT=Liczba silników
+CONVML=numberMotors
+[sprawnosc napedu]
+OPIS=Sprawnoœæ napêdu
+SYMBOL=@h
+JEDNOSTKA=
+HINT=
+CONVML=driveEfficiency
+ELEMENT=DRIVE_UNIT
+[wspolczynnik tarcia]
+OPIS=Wspó³czynnik tarcia miêdzy taœm¹ a bêbnem napêdowym
+SYMBOL=@m
+JEDNOSTKA=
+HINT=
+CONVML=pulleyBeltFriction
+ELEMENT=PULLEY
+[kat opasania]
+OPIS=Kat opasania bêbnów taœm¹
+SYMBOL=@a
+JEDNOSTKA=°
+HINT=
+CONVML=wrapAngle
+ELEMENT=PULLEY
+[wspolczynnik poslizgu]
+OPIS=Wspó³czynnik zabezpieczenia przed makropoœlizgiem
+SYMBOL=k_p
+JEDNOSTKA=
+HINT=
+[rodzaj rozruchu]
+OPIS=Rodzaj urz¹dzenia rozruchowego
+SYMBOL=
+JEDNOSTKA=
+HINT=Rozruch bezpoœredni (stycznikowy), sprzêg³o hydrokinetyczne, rozrusznik tyrystorowy, przemiennik czêstotliwoœci (falownik) 
+CONVML=startupDevice
+ELEMENT=DRIVE_UNIT
+[stycznik]
+OPIS=Rozruch bezpoœredni, stycznikowy
+SYMBOL=
+JEDNOSTKA=
+HINT=wg. DIN - przenoœniki ma³e (do 30 kW)
+CONVML=directStartup
+ELEMENT=
+[sprzeglo]
+OPIS=Sprzêg³o hydrokinetyczne
+SYMBOL=
+JEDNOSTKA=
+HINT=Przenoœniki normalne (silniki powy¿ej 30 kW)
+CONVML=fluidCoupling
+[falownik]
+OPIS=Rozruch sterowany przemiennikiem czêstotliwoœci, falownikiem
+SYMBOL=
+JEDNOSTKA=
+HINT=Sterowanie czasem rozruchu lub wartoœci¹ si³y napêdowej
+CONVML=frequencyController
+[tyrystor]
+OPIS=Rozrusznik tyrystorowy
+SYMBOL=
+JEDNOSTKA=
+HINT=Kr = 1.3 - 2.0 w zale¿noœci ustawieñ rozrusznika i konfiguracji przenoœnika
+CONVML=thyristorStartup
+[gwiazda-trojkat]
+OPIS=Prze³¹cznik gwiazda-trójk¹t
+SYMBOL=
+JEDNOSTKA=
+HINT=wg. DIN - tylko dla przenoœników pró¿nych przy rozruchu
+CONVML=switchStarTriangle
+[Mr/Mn]
+OPIS=Wspó³czynnik przeci¹¿alnoœci napêdu
+SYMBOL=K_r
+JEDNOSTKA=
+HINT=
+CONVML=driveFactor
+ELEMENT=MOTOR
+[przyspieszenie]
+OPIS=Przyspieszenie
+SYMBOL=a
+JEDNOSTKA=m/s^2
+HINT=
+CONVML=
+[Mh/Mn]
+OPIS=Stosunek momentu hamowania do nominalnego momentu napêdu
+SYMBOL=Mh/Mn
+JEDNOSTKA=
+HINT=Stosunek momentu hamowania do nominalnego momentu napêdu
+CONVML=brakeFactor
+ELEMENT=DRIVE_UNIT
+[opoznienie]
+OPIS=OpóŸnienie
+SYMBOL=b
+JEDNOSTKA=m/s^2
+HINT=Przybli¿ona wartoœæ opóŸnienia taœmy
+CONVML=
+[urzadzenie napinajace]
+OPIS=Urz¹dzenie napinaj¹ce
+SYMBOL=
+JEDNOSTKA=
+HINT=Wci¹garkowe, hydrauliczne, pneumatyczne, ciê¿arowe (grawitacyjne), automatyczne-nad¹¿ne
+CONVML=takeUp
+[sila napinajaca]
+OPIS=Si³a napinaj¹ca
+SYMBOL=S_n
+JEDNOSTKA=N
+HINT=
+CONVML=takeUpTension
+ELEMENT=TAKEUP_SYSTEM
+[skok]
+OPIS=Skok bêbna napinaj¹cego
+SYMBOL=sw
+JEDNOSTKA=m
+HINT=
+CONVML=pulleyTakeUpMovement
+ELEMENT=TAKEUP_SYSTEM
+[lokalizacja un]
+OPIS=Lokalizacja urz¹dzenia napinaj¹cego
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[wciagarkowe]
+OPIS=Wci¹garkowe
+SYMBOL=
+JEDNOSTKA=
+HINT=Sztywne - kompensuj¹ce trwa³e wyd³u¿enia taœmy (uruchamiane okresowo)
+[hydrauliczne]
+OPIS=Hydrauliczne - sta³onapiêciowe
+SYMBOL=
+JEDNOSTKA=
+HINT=Sta³onapiêciowe - wywo³uj¹ce sta³¹ siê w taœmie (hydrauliczne, pneumatyczne
+[grawitacyjne]
+OPIS=Grawitacyjne
+SYMBOL=
+JEDNOSTKA=
+HINT=grawitacyjne (ciê¿arowe)
+[nadazne]
+OPIS=Automatyczne, nad¹¿ne
+SYMBOL=
+JEDNOSTKA=
+HINT=Nad¹¿ne (dwuwózkowe)
+[podstawowe wyniki]
+OPIS=Podstawowe wyniki
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[teoretyczna wydajnosc]
+OPIS=Teoretyczna maksymalna wydajnoœæ przenoœnika
+SYMBOL=Q
+JEDNOSTKA=t/h
+HINT=Teoretyczna maksymalna wydajnoœæ przenoœnika
+[niezbedna moc]
+OPIS=Niezbêdna moc napêdu
+SYMBOL=N
+JEDNOSTKA=kW
+HINT=Niezbêdna moc napêdu
+[niezbedna wytrzymalosc]
+OPIS=Niezbêdna wytrzyma³oœæ taœmy
+SYMBOL=K
+JEDNOSTKA=kN/m
+HINT=Niezbêdna wytrzyma³oœæ taœmy
+CONVML=beltStrength
+[sily]
+OPIS=Si³y w taœmie przenoœnika
+SYMBOL=S
+JEDNOSTKA=N
+HINT=
+[ustalony]
+OPIS=Praca ustalona
+SYMBOL=
+JEDNOSTKA=
+HINT=Praca ustalona
+[rozruch]
+OPIS=Rozruch
+SYMBOL=
+JEDNOSTKA=
+HINT=Rozruch
+CONVML=
+ELEMENT=
+[hamowanie]
+OPIS=Hamowanie
+SYMBOL=
+JEDNOSTKA=
+HINT=Hamowanie
+[postoj]
+OPIS=Postój
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[raport]
+OPIS=Raport z obliczeñ programu QNK Pro
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[odcinek]
+OPIS=Odcinek
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=section
+[sila napedowa]
+OPIS=Si³a napêdowa
+SYMBOL=P
+JEDNOSTKA=N
+HINT=
+[punkt]
+OPIS=Punkt
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[ankieta]
+OPIS=Ankieta QNK
+SYMBOL=
+JEDNOSTKA=
+HINT=Zestaw danych dla doboru taœmy i mocy napêdu
+[zamawiajacy]
+OPIS=Zamawiaj¹cy
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=client
+[lokalizacja]
+OPIS=Lokalizacja przenoœnika
+SYMBOL=
+JEDNOSTKA=
+HINT=Kopalnia podziemna, odkrywkowa, zak³ad przemys³owy
+CONVML=location
+[bryly]
+OPIS=Maksymalny wymiar bry³
+SYMBOL=d
+JEDNOSTKA=mm
+HINT=
+CONVML=lumpSizeMaximum
+[wysokosc spadku]
+OPIS=Wysokoœæ spadku materia³u na taœmê
+SYMBOL=H_s
+JEDNOSTKA=mm
+HINT=Wysokoœæ spadku materia³u na taœmê w miejscu za³adunku
+CONVML=heightFallMaterial
+ELEMENT=CHUTE
+[sposob rozladunku]
+OPIS=Sposób roz³adunku
+SYMBOL=
+JEDNOSTKA=
+HINT=Przez bêben czo³owy, za pomoc¹ wózków zrzutowych
+CONVML=discharging
+[schemat kinematyczny]
+OPIS=Kinematyczny schemat przenoœnika
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=
+[przewijanie]
+OPIS=Schemat przewijania taœmy przez bêbny
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[parametry bebnow]
+OPIS=Bêbny - lokalizacja, œrednica, k¹t opasania, ok³adzina
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[parametry napedow]
+OPIS=Iloœæ, moc i lokalizacja napêdów (silników)
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[data]
+OPIS=Data
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=date
+[podpis]
+OPIS=Podpis
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=signature
+[karta]
+OPIS=Karta katalogowa
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[informacje]
+OPIS=Informacje
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[wykres sil]
+OPIS=Wykres si³
+SYMBOL=
+JEDNOSTKA=
+HINT=Wykres si³
+[wykresy]
+OPIS=Wykresy statyczne
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[analiza dynamiki]
+OPIS=Analiza dynamiki
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[analiza modelu]
+OPIS=Analiza modelu
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[ustawienia]
+OPIS=Ustawienia
+SYMBOL=
+JEDNOSTKA=
+HINT=Ustawienia opcji programu
+[nowy]
+OPIS=Nowy
+SYMBOL=
+JEDNOSTKA=
+HINT=Wczytanie nowego, domyœlnego zestawu danych
+[zachowaj]
+OPIS=Zachowaj
+SYMBOL=
+JEDNOSTKA=
+HINT=Zachowaj
+[zachowaj jako]
+OPIS=Zachowaj jako ...
+SYMBOL=
+JEDNOSTKA=
+HINT=Zachowaj jako ...
+[utworz szablon]
+OPIS=Utwórz szablon
+SYMBOL=
+JEDNOSTKA=
+HINT=Zapis danych konstrukcyjnych przenoœnika do szablonu
+[wczytaj szablon]
+OPIS=Wczytaj szablon
+SYMBOL=
+JEDNOSTKA=
+HINT=Wczytanie szablonu danych konstrukcyjnych przenoœnika
+[zapisz html]
+OPIS=Zapisz w formacie HTML
+SYMBOL=
+JEDNOSTKA=
+HINT=Zapis raportu obliczeñ w formacie HTML
+[plik]
+OPIS=Plik
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[wyjscie]
+OPIS=Wyjœcie
+SYMBOL=
+JEDNOSTKA=
+HINT=Wybór tej opcji spowoduje zamkniêcie programu
+[otworz]
+OPIS=Otwórz
+SYMBOL=
+JEDNOSTKA=
+HINT=Otwórz
+[drukuj]
+OPIS=Drukuj
+SYMBOL=
+JEDNOSTKA=
+HINT=Drukuj
+[zamknij]
+OPIS=Zamknij
+SYMBOL=
+JEDNOSTKA=
+HINT=Zamknij
+[sily napedowe]
+OPIS=Si³y napêdowe
+SYMBOL=Pn
+JEDNOSTKA=[N]
+HINT=
+[sily reakcji]
+OPIS=Si³y dzia³aj¹ce na bêbny
+SYMBOL=Pr
+JEDNOSTKA=[N]
+HINT=
+CONVML=
+ELEMENT=
+[podglad wydruku]
+OPIS=Podgl¹d wydruku
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[siatka]
+OPIS=Siatka
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[odswiez]
+OPIS=Odœwie¿
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[kopiuj]
+OPIS=Kopiuj
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[przyspieszenia]
+OPIS=Przyspieszenia
+SYMBOL=a
+JEDNOSTKA=[m/s^2]
+HINT=
+[predkosci]
+OPIS=Prêdkoœci
+SYMBOL=v
+JEDNOSTKA=[m/s]
+HINT=
+[przemieszczenia]
+OPIS=Przemieszczenia
+SYMBOL=
+JEDNOSTKA=[m]
+HINT=
+[punkty]
+OPIS=Punkty
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[zakres]
+OPIS=Zakres
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[czas]
+OPIS=Czas
+SYMBOL=t
+JEDNOSTKA=[s]
+HINT=
+[odczytano]
+OPIS=Odczytano
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[skala]
+OPIS=Skala
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[plik]
+OPIS=&Plik
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[opcje]
+OPIS=&Opcje
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[info]
+OPIS=Info
+SYMBOL=
+JEDNOSTKA=
+HINT=Info
+[linia]
+OPIS=Wykres liniowy
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[kolor]
+OPIS=Wykres kolorowy
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[czysc]
+OPIS=Czyœæ
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[schowek]
+OPIS=Schowek
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[grubosc linii]
+OPIS=Gruboœæ linii
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[tempo]
+OPIS=Tempo
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[srednica]
+OPIS=Œrednica
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=diameter
+[modul sprezystosci]
+OPIS=Modu³ sprê¿ystoœci taœmy
+SYMBOL=E
+JEDNOSTKA=kN/m
+HINT=
+CONVML=elasticityModulus
+ELEMENT=BELT_SEGMENT
+[zbieganie boczne]
+OPIS=Zbieganie boczne taœmy
+SYMBOL=kl_zb
+JEDNOSTKA=
+HINT=1-brak, 2-ma³e, 3-œrednie, 4-du¿e
+CONVML=beltSideRunning
+ELEMENT=CONDITIONS
+[warunki pracy]
+OPIS=Warunki eksploatacji taœmy: 1-bardzo dobre, 2- dobre, 3-przeciêtne, 4-ciezkie
+SYMBOL=kl_war
+JEDNOSTKA=
+HINT=1-bardzo dobre, 2- dobre, 3-przeciêtne, 4-ciezkie
+CONVML=beltWorkConditions
+ELEMENT=
+[typ rdzenia tasmy]
+OPIS=Typ rdzenia taœmy
+SYMBOL=t_tas
+JEDNOSTKA=
+HINT=1 - tkaninowa, 2 - z linkami stalowymi
+CONVML=carcassType
+ELEMENT=BELT_SEGMENT
+[srednica linki]
+OPIS=Œrednica linki
+SYMBOL=d_l
+JEDNOSTKA=mm
+HINT=
+CONVML=cableDiameter
+ELEMENT=BELT_SEGMENT
+[rozstaw zestawow]
+OPIS=Rozstaw zestawów kr¹¿nikowych
+SYMBOL=l
+JEDNOSTKA=m
+HINT=Odleg³oœæ miêdzy zestawami (podporami) kr¹¿nikowymi
+CONVML=idlerSetSpacing
+ELEMENT=
+[dlugosc plaszcza kraznika srodkowego]
+OPIS=D³ugoœæ p³aszcza kr¹¿nika œrodkowego
+SYMBOL=L_ks
+JEDNOSTKA=mm
+HINT=
+CONVML=length
+ELEMENT=IDLER
+[dlugosc plaszcza kraznika bocznego]
+OPIS=D³ugoœæ p³aszcza kr¹¿nika bocznego
+SYMBOL=L_kb
+JEDNOSTKA=mm
+HINT=
+CONVML=length
+ELEMENT=IDLER
+[masa czesci obrotowych kraznika srodkowego]
+OPIS=Masa czêœci obrotowych kr¹¿nika œrodkowego
+SYMBOL=m_ks
+JEDNOSTKA=kg
+HINT=Masa czêœci obrotowych kr¹¿nika œrodkowego
+CONVML=rotatingPartsMass
+ELEMENT=IDLER
+[masa czesci obrotowych kraznika bocznego]
+OPIS=Masa czêœci obrotowych kr¹¿nika bocznego
+SYMBOL=m_kb
+JEDNOSTKA=kg
+HINT=Masa czêœci obrotowych kr¹¿nika bocznego
+CONVML=
+[typ kraznika - opis]
+OPIS=Typ kr¹¿nika
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=typeDescription
+ELEMENT=IDLER
+[liczba zestawow]
+OPIS=Liczba zestawów kr¹¿nikowych
+SYMBOL=n_k
+JEDNOSTKA=
+HINT=
+CONVML=numberIdlerSets
+[typ kraznika]
+OPIS=Typ kr¹¿nika
+SYMBOL=t_kd
+JEDNOSTKA=
+HINT=1- z pierœcieniami, 2 - g³adki
+CONVML=type
+ELEMENT=IDLER
+[masa calkowita kraznika]
+OPIS=Masa ca³kowita kr¹¿nika
+SYMBOL=m
+JEDNOSTKA=kg
+HINT=
+CONVML=mass
+ELEMENT=IDLER
+[dlugosc osi kraznika]
+OPIS=D³ugoœæ osi kr¹¿nika
+SYMBOL=l_od
+JEDNOSTKA=mm
+HINT=
+[wspolczynnik oporu obracania a]
+OPIS=Wspó³czynnik oporów obracania kr¹¿nika a
+SYMBOL=a_l
+JEDNOSTKA=N
+HINT=
+[wspolczynnik oporu obracania b]
+OPIS=Wspó³czynnik oporów obracania kr¹¿nika b
+SYMBOL=b_l
+JEDNOSTKA=N*s/m
+HINT=
+[opor kraznika]
+OPIS=Opór kr¹¿nika
+SYMBOL=Wk_std
+JEDNOSTKA=N
+HINT=
+CONVML=idlerResistance
+[typ zestawow kraznikowych]
+OPIS=Typ zestawów kr¹¿nikowych: 1 - przegubowe, 2 - sztywne
+SYMBOL=t_zk
+JEDNOSTKA=
+HINT=1 - przegubowe, 2 - sztywne
+CONVML=type
+ELEMENT=IDLER_SET
+[bebny]
+OPIS=Bêbny
+SYMBOL=
+JEDNOSTKA=
+HINT=Bêbny
+[oznaczenie]
+OPIS=Oznaczenie
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[wartosc]
+OPIS=Wartoœæ
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[jednostka]
+OPIS=Jednostka
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[opis]
+OPIS=Opis
+SYMBOL=
+JEDNOSTKA=
+HINT=Opis
+CONVML=description
+[obroty nominalne]
+OPIS=Nominalna prêdkoœæ obrotowa
+SYMBOL=n_n
+JEDNOSTKA=1/min
+HINT=
+CONVML=nominalRotationalSpeed
+ELEMENT=MOTOR
+[poslizg]
+OPIS=Poœlizg sprzêg³a hydrokinetycznego
+SYMBOL=s
+JEDNOSTKA=%
+HINT=
+CONVML=slip
+ELEMENT=FLUID_COUPLING
+[przelozenie]
+OPIS=Prze³o¿enie przek³adni
+SYMBOL=i
+JEDNOSTKA=
+HINT=
+CONVML=gearRatio
+[nrpkt]
+OPIS=Nr punktu
+SYMBOL=Nr_pkt
+JEDNOSTKA=
+HINT=
+CONVML=pointNumber
+ELEMENT=
+[zestaw napedowy]
+OPIS=Zestaw napêdowy
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=
+ELEMENT=DRIVE_UNIT
+[srednica bebna]
+OPIS=Œrednica bêbna
+SYMBOL=D_b
+JEDNOSTKA=mm
+HINT=
+CONVML=diameter
+ELEMENT=PULLEY
+[beben]
+OPIS=Bêben
+SYMBOL=Nr_b
+JEDNOSTKA=
+HINT=
+CONVML=pulley
+[warunki eksploatacyjne]
+OPIS=Warunki eksploatacji
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[zestawy kraznikowe gorne]
+OPIS=Górna trasa
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[zestawy kraznikowe dolne]
+OPIS=Dolna trasa
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[kraznik gorny srodkowy]
+OPIS=Kr¹¿nik górny œrodkowy
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[kraznik gorny boczny]
+OPIS=Kr¹¿nik górny boczny
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[kraznik dolny srodkowy]
+OPIS=Kr¹¿nik dolny œrodkowy
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[kraznik dolny boczny]
+OPIS=Kr¹¿nik dolny boczny
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[urzadzenia czyszczace]
+OPIS=Urz¹dzenia czyszcz¹ce
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[zaladunek]
+OPIS=Za³adunek
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[kosz]
+OPIS=Kosz zasypowy
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=chute
+[zestawy nadawowe]
+OPIS=Zestawy kr¹¿ników nadawowych
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[prawa autorskie]
+OPIS=Program jest chroniony prawem autorskim, postanowieniami umów miêdzynarodowych o prawach autorskich, oraz innym ustawodawstwem i umowami miêdzynarodowymi o ochronie praw w³asnoœci intelektualnej.
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[sekcje gora]
+OPIS=Zestawy kr¹¿nikowe górne
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[sekcje dol]
+OPIS=Zestawy kr¹¿nikowe dolne
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[predkosc poziomo]
+OPIS=Sk³adowa prêdkoœci taœmy
+SYMBOL=v_0
+JEDNOSTKA=m/s
+HINT=
+CONVML=horizontalSpeed
+ELEMENT=CHUTE
+[wspolczynnik tarcia kosz]
+OPIS=Wspó³czynnik tarcia miêdzy urobkiem a ograniczeniami bocznymi
+SYMBOL=@m_o
+JEDNOSTKA=
+HINT=
+CONVML=skirtMaterialFriction
+ELEMENT=CHUTE
+[dlugosc ograniczen]
+OPIS=D³ugoœæ ograniczeñ bocznych
+SYMBOL=L_o
+JEDNOSTKA=m
+HINT=
+CONVML=skirtLength
+ELEMENT=CHUTE
+[szerokosc ograniczen]
+OPIS=Szerokoœæ ograniczeñ bocznych
+SYMBOL=B_o
+JEDNOSTKA=m
+HINT=
+CONVML=skirtWidth
+ELEMENT=CHUTE
+[udzial bryl]
+OPIS=Procentowy udzia³ bry³
+SYMBOL=p_b
+JEDNOSTKA=%
+HINT=
+CONVML=lumpPercTopSize
+ELEMENT=MATERIAL
+[wsp.tarcia urobek-tasma]
+OPIS=Wspó³czynnik tarcia urobek-taœma
+SYMBOL=@m_u-t
+JEDNOSTKA=
+HINT=
+CONVML=materialBeltFriction
+[sciernosc]
+OPIS=Œciernoœæ
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[ostrosc]
+OPIS=Ostroœæ krawêdzi
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[gestosc min]
+OPIS=Minimalna gêstoœæ nasypowa materia³u transportowanego
+SYMBOL=@g_min
+JEDNOSTKA=kg/m^3
+HINT=
+[gestosc max]
+OPIS=Maksymalna gêstoœæ nasypowa materia³u transportowanego
+SYMBOL=@g_max
+JEDNOSTKA=kg/m^3
+HINT=
+[kat usypu min]
+OPIS=Minimalny k¹t usypu
+SYMBOL=@r_min
+JEDNOSTKA=°
+HINT=
+[kat usypu max]
+OPIS=Maksymalny k¹t usypu
+SYMBOL=@r_max
+JEDNOSTKA=°
+HINT=
+[kat nachylenia min]
+OPIS=Minimalny dopuszczalny k¹t nachylenia
+SYMBOL=@d_min
+JEDNOSTKA=°
+HINT=
+[kat nachylenia max]
+OPIS=Maksymalny dopuszczalny k¹t nachylenia
+SYMBOL=@d_max
+JEDNOSTKA=°
+HINT=
+[producent]
+OPIS=Producent
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=manufacturer
+[lozysko]
+OPIS=£o¿ysko
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=
+[wykonanie]
+OPIS=Wykonanie
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[koncowka osi]
+OPIS=D³ugoœæ koñcówki osi
+SYMBOL=l_o
+JEDNOSTKA=mm
+HINT=
+[liczba bebnow]
+OPIS=Liczba bêbnów
+SYMBOL=L_b
+JEDNOSTKA=
+HINT=Liczba bêbnów
+CONVML=pulleyNumber
+ELEMENT=
+[liczba skrobakow]
+OPIS=Liczba skrobaków
+SYMBOL=L_sk
+JEDNOSTKA=
+HINT=
+CONVML=numberScrapers
+[liczba odcinkow]
+OPIS=Liczba odcinków
+SYMBOL=L_o
+JEDNOSTKA=
+HINT=
+CONVML=numberSections
+[nazwa]
+OPIS=Nazwa lub oznaczenie
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=
+[przeznaczenie]
+OPIS=Przeznaczenie
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=
+[liczba rdzenia]
+OPIS=Wspó³czynnik rodzaju materia³u rdzenia
+SYMBOL=c
+JEDNOSTKA=
+HINT=
+CONVML=carcassCode
+ELEMENT=BELT_SEGMENT
+[masa okladek]
+OPIS=Gêstoœæ mieszanki ok³adkowej
+SYMBOL=g_o
+JEDNOSTKA=kg/mm*m^2
+HINT=
+CONVML=coversDensity
+ELEMENT=BELT_SEGMENT
+[oznaczenie okladek]
+OPIS=Oznaczenie ok³adek
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=coverDescription
+ELEMENT=BELT_SEGMENT
+[liczba zestawow napedowych]
+OPIS=Liczba zestawów napêdowych
+SYMBOL=L_nap
+JEDNOSTKA=
+HINT=
+CONVML=amountDrives
+[nrbeb]
+OPIS=Nr bêbna
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=number
+ELEMENT=PULLEY
+[wydajnosc masowa]
+OPIS=Wydajnoœæ masowa
+SYMBOL=Q_m
+JEDNOSTKA=t/h
+HINT=
+CONVML=capacityMass
+[wydajnosc objetosciowa]
+OPIS=Wydajnoœæ objêtoœciowa
+SYMBOL=Q_v
+JEDNOSTKA=m^3/h
+HINT=
+CONVML=capacityVolume
+[wspolczynnik kz]
+OPIS=Wspó³czynnik wype³nienia urobkiem
+SYMBOL=k_z
+JEDNOSTKA=
+HINT=
+[masa urobku na 1m]
+OPIS=Masa urobku na 1m przenoœnika
+SYMBOL=q_n
+JEDNOSTKA=kg/m
+HINT=
+[moment bezwladnosci]
+OPIS=Moment bezw³adnoœci
+SYMBOL=I
+JEDNOSTKA=kgm^2
+HINT=
+CONVML=inertiaMoment
+[Mmax/Mn]
+OPIS=Wspó³czynnik Mmax/Mn
+SYMBOL=Mmax/Mn
+JEDNOSTKA=
+HINT=
+[min dlugosc odcinka]
+OPIS=Minimalna d³ugoœæ odcinka
+SYMBOL=L_min
+JEDNOSTKA=m
+HINT=
+CONVML=arcLengthMin
+[sredni kat nachylenia]
+OPIS=Œredni k¹t nachylenia
+SYMBOL=@d_md
+JEDNOSTKA=°
+HINT=
+CONVML=arcAngle
+ELEMENT=BELT_CONVEYOR
+[max promien luku]
+OPIS=Maksymalny promieñ ³uku dla odcinka
+SYMBOL=R_Vmax
+JEDNOSTKA=m
+HINT=
+CONVML=arcRadiusMax
+[promien luku]
+OPIS=Promieñ ³uku
+SYMBOL=R
+JEDNOSTKA=m
+HINT=Promieñ ³uku
+CONVML=arcRadius
+[wydajnosc punktu zaladowczego]
+OPIS=Wydajnoœæ punktu za³adowczego
+SYMBOL=Q_pz
+JEDNOSTKA=t/h
+HINT=
+CONVML=capacity
+ELEMENT=CHUTE
+[liczba obciaznikow]
+OPIS=Liczba obci¹¿ników
+SYMBOL=n_o
+JEDNOSTKA=
+HINT=
+CONVML=amount
+ELEMENT=
+[liczba krazkow na obciazniku]
+OPIS=Liczba kr¹¿ków na pojedynczym obci¹¿niku
+SYMBOL=i_o
+JEDNOSTKA=
+HINT=
+CONVML=disksNumber
+ELEMENT=
+[liczba krazkow na wozku]
+OPIS=Liczba kr¹¿ków na wózku napinaj¹cym
+SYMBOL=i_w
+JEDNOSTKA=
+HINT=
+CONVML=disksNumber
+ELEMENT=
+[masa obciaznika]
+OPIS=Masa pojedynczego obci¹¿nika
+SYMBOL=m_o
+JEDNOSTKA=kg
+HINT=
+[nosnosc statyczna]
+OPIS=Noœnoœæ statyczna ³o¿yska
+SYMBOL=C_0
+JEDNOSTKA=N
+HINT=
+CONVML=loadRatStatic
+ELEMENT=BEARING
+[nosnosc dynamiczna]
+OPIS=Noœnoœæ dynamiczna ³o¿yska
+SYMBOL=C
+JEDNOSTKA=N
+HINT=
+CONVML=loadRatDynamic
+ELEMENT=BEARING
+[srednica zewnetrzna]
+OPIS=Œrednica zewnêtrzna
+SYMBOL=D_z
+JEDNOSTKA=mm
+HINT=
+[srednica wewnetrzna]
+OPIS=Œrednica wewnêtrzna
+SYMBOL=D_w
+JEDNOSTKA=mm
+HINT=
+[odsadzenie lozyska]
+OPIS=Odsadzenie ³o¿yska
+SYMBOL=l_z
+JEDNOSTKA=mm
+HINT=
+[srednica osi]
+OPIS=Œrednica osi
+SYMBOL=D_o
+JEDNOSTKA=mm
+HINT=
+[lozysko gorny srodkowy]
+OPIS=£o¿ysko
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[lozysko gorny boczny]
+OPIS=£o¿ysko
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[baza danych]
+OPIS=Baza danych
+SYMBOL=
+JEDNOSTKA=
+HINT=Baza danych
+[edycja]
+OPIS=Edycja
+SYMBOL=
+JEDNOSTKA=
+HINT=Edycja
+[aktywacja]
+OPIS=Aktywacja
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[import]
+OPIS=Import
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[opory dodatkowe]
+OPIS=Opory dodatkowe
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[opory petlicy]
+OPIS=Opory pêtlicy
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[opory zaladunku]
+OPIS=Opory za³adunku
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[opory centrowania]
+OPIS=Opory centrowania
+SYMBOL=
+JEDNOSTKA=
+HINT=Opory centrowania na zestawach kr¹¿nikowych
+[opory dodatkowe inne]
+OPIS=Pozosta³e opory dodatkowe
+SYMBOL=
+JEDNOSTKA=
+HINT=Tabela dodatkowych oporów dodatkowych
+[wyniki]
+OPIS=Wyniki
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[opory]
+OPIS=Opory
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[material]
+OPIS=Materia³
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[profil abb]
+OPIS=Profil trasy
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=
+ELEMENT=
+[napinanie]
+OPIS=Napinanie
+SYMBOL=
+JEDNOSTKA=
+HINT=Urz¹dzenie napinaj¹ce
+[naped]
+OPIS=Napêd
+SYMBOL=
+JEDNOSTKA=
+HINT=Uk³ad napêdowy
+[warunki]
+OPIS=Warunki pracy
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[email]
+OPIS=Wyœlij e-mail
+SYMBOL=
+JEDNOSTKA=
+HINT=Wyœlij e-mail
+[help]
+OPIS=Pomoc
+SYMBOL=
+JEDNOSTKA=
+HINT=Pomoc
+[struktura]
+OPIS=Model strukturalny
+SYMBOL=
+JEDNOSTKA=
+HINT=Model strukturalny
+[zwrotnia]
+OPIS=Zwrotnia
+SYMBOL=
+JEDNOSTKA=
+HINT=Zwrotnia
+CONVML=
+ELEMENT=TAIL
+[czolo]
+OPIS=Czo³o
+SYMBOL=
+JEDNOSTKA=
+HINT=Czo³o
+[% obc. nap.]
+OPIS=% Obc. nap.
+SYMBOL=
+JEDNOSTKA=
+HINT=% Obc. nap.
+[opor]
+OPIS=Opór
+SYMBOL=W
+JEDNOSTKA=N
+HINT=Opór ruchu
+[komunikaty]
+OPIS=Komunikaty
+SYMBOL=
+JEDNOSTKA=
+HINT=Komunikaty
+[tasma sila ciezkosci]
+OPIS=Taœma - si³a ciê¿koœci
+SYMBOL=F_t
+JEDNOSTKA=N
+HINT=Taœma - sk³adowa si³y ciê¿koœci
+[material transportowany sila ciezkosci]
+OPIS=Materia³ transportowany - si³a ciê¿koœci
+SYMBOL=F_n
+JEDNOSTKA=N
+HINT=Sk³adowa si³y ciê¿koœci materia³u transportowanego
+[sila obwodowa]
+OPIS=Si³a obwodowa
+SYMBOL=P
+JEDNOSTKA=N
+HINT=Si³a obwodowa na bêbnach napêdowych
+[sila bezwladnosci przyspieszenia]
+OPIS=Si³a bezw³adnoœci przyspieszenia
+SYMBOL=F_ao
+JEDNOSTKA=N
+HINT=Si³a bezw³adnoœci przyspieszenia
+[sila bezwladnosci opoznienia]
+OPIS=Si³a bezw³adnoœci opóŸnienia
+SYMBOL=F_bo
+JEDNOSTKA=N
+HINT=Si³a bezw³adnoœci opóŸnienia
+[wysokosc]
+OPIS=Wyskoœæ
+SYMBOL=H
+JEDNOSTKA=m
+HINT=
+[trwalosc]
+OPIS=Trwa³oœæ
+SYMBOL=L_h
+JEDNOSTKA=h
+HINT=Trwa³oœæ
+[stan obciazenia]
+OPIS=Stan obci¹¿enia
+SYMBOL=
+JEDNOSTKA=
+HINT=Stan obci¹¿enia przenoœnika urobkiem
+[obciazenie pelny przenosnik]
+OPIS=Pe³ne obci¹¿enie przenoœnika Qn
+SYMBOL=
+JEDNOSTKA=
+HINT=Pe³ne obci¹¿enie przenoœnika Qn
+[obciazenie pusty przenosnik]
+OPIS=Przenoœnik pró¿ny
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[obciazenie max sila]
+OPIS=Max si³a w taœmie (za³adunek lub roz³adunek)
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[obciazenie wznoszace]
+OPIS=Odcinki wznosz¹ce obci¹¿one
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[obciazenie opadajace]
+OPIS=Odcinki opadaj¹ce obci¹¿one
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[f dobre]
+OPIS=Dobre u³o¿enie przenoœnika, kr¹¿niki lekko obracaj¹ce siê, ³adunek z ma³ym tarciem wewnêtrznym
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[f normalne]
+OPIS=Wykonanie normalne, ³adunek z przeciêtnym tarciem wewnêtrznym
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[f zle]
+OPIS=Niekorzystne warunki ruchowe, ³adunek  z du¿ym tarciem wewnêtrznym
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[f gornicze]
+OPIS=Przenoœniki w górnictwie podziemnym - 0.025 ÷ 0.030
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[f w dol]
+OPIS=Przenoœniki transportuj¹ce silnie w dó³ - hamowanie generatorowe - 0.012 ÷ 0.016
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[f niskie temperatury]
+OPIS=Ekstremalnie niskie temperatury - 0.035
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[sprzeglo specjalne]
+OPIS=Sprzêg³o hydrokinetyczne o regulowanym wype³nieniu
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[narzedzia]
+OPIS=Narzêdzia
+SYMBOL=
+JEDNOSTKA=
+HINT=Narzêdzia
+[kalkulator wydajnosci kombajnu]
+OPIS=Kalkulator kombajnu
+SYMBOL=
+JEDNOSTKA=
+HINT=Kalkulator wydajnoœci kombajnu œcianowego
+[kalkulator parametrow kinematycznych napedu]
+OPIS=Kalkulator kinematyki
+SYMBOL=
+JEDNOSTKA=
+HINT=Kalkulator parametrów kinematycznych napêdu
+[wyznacz f]
+OPIS=Wyznacz f
+SYMBOL=
+JEDNOSTKA=
+HINT=Wyznacz wspó³czynnik oporów ruchu f
+[oblicz f]
+OPIS=Oblicz f
+SYMBOL=
+JEDNOSTKA=
+HINT=Oblicz wspó³czynnik oporów ruchu f
+[wspolczynnik fg fd]
+OPIS=Wspó³czynnik oporów ruchu fg i fd
+SYMBOL=
+JEDNOSTKA=
+HINT=Wspó³czynnik oporów ruchu taœmy górnej i dolnej (fg i fd)
+[punkty zaladowcze]
+OPIS=Punkty za³adunku
+SYMBOL=
+JEDNOSTKA=
+HINT=Wybór lokalizacji punktów za³adowczych
+CONVML=
+ELEMENT=
+[podzial przenosnika]
+OPIS=Podziel przenoœnik
+SYMBOL=
+JEDNOSTKA=
+HINT=Podziel przenoœnik na odcinki
+[tabela]
+OPIS=Tabela
+SYMBOL=
+JEDNOSTKA=
+HINT=Tabela
+[rysunek]
+OPIS=Rysunek
+SYMBOL=
+JEDNOSTKA=
+HINT=Rysunek
+[szukaj lokalizacji napedu]
+OPIS=Szukaj lokalizacji napêdu
+SYMBOL=
+JEDNOSTKA=
+HINT=Szukaj najkorzystniejszej lokalizacji napêdu
+[szukaj lokalizacji UN]
+OPIS=Szukaj lokalizacji uk³adu napinania
+SYMBOL=
+JEDNOSTKA=
+HINT=Szukaj najkorzystniejszej lokalizacji uk³adu napinania
+[wolny wybieg]
+OPIS=Wolny wybieg
+SYMBOL=
+JEDNOSTKA=
+HINT=Wolny wybieg przenoœnika podczas hamowania
+[nadwyzka mocy napedu]
+OPIS=5-10% nadwy¿ki mocy napêdu
+SYMBOL=
+JEDNOSTKA=
+HINT=5-10% nadwy¿ki mocy napêdu z uwagi na iloœæ silników
+[oblicz moc zmienny profil]
+OPIS=Oblicz moc dla zmiennego profilu trasy
+SYMBOL=
+JEDNOSTKA=
+HINT=Oblicz moc dla zmiennego profilu trasy
+[wybierz typ UN]
+OPIS=Wybierz typ uk³adu napinania
+SYMBOL=
+JEDNOSTKA=
+HINT=Wybierz typ uk³adu napinania
+[korekta sily napinajacej rozruch]
+OPIS=Korekta si³ napinaj¹cych taœmê (rozruch)
+SYMBOL=
+JEDNOSTKA=
+HINT=Korekta si³ napinaj¹cych taœmê dla okreœlonych warunków rozruchu
+[korekta sily napinajacej praca ustalona]
+OPIS=Korekta si³ napinaj¹cych taœmê (praca ustalona)
+SYMBOL=
+JEDNOSTKA=
+HINT=Korekta si³ napinaj¹cych taœmê dla okreœlonych warunków pracy ustalonej
+[wybierz punkt zbiegania]
+OPIS=Wybierz punkt zbiegania taœmy z bêbna napêdowego
+SYMBOL=
+JEDNOSTKA=
+HINT=Wybierz punkt zbiegania taœmy z bêbna napêdowego
+[punkt zbiegania]
+OPIS=Punkt zbiegania taœmy z bêbna napêdowego
+SYMBOL=
+JEDNOSTKA=
+HINT=Punkt zbiegania taœmy z bêbna napêdowego
+[tabela dopuszczalnych srednic]
+OPIS=Tabela dopuszczalnych œrednic bêbnów
+SYMBOL=
+JEDNOSTKA=
+HINT=Tabela dopuszczalnych œrednic bêbnów
+[brak korekcji]
+OPIS=Brak korekcji
+SYMBOL=
+JEDNOSTKA=
+HINT=Brak korekcji si³
+[cofnij]
+OPIS=Cofnij
+SYMBOL=
+JEDNOSTKA=
+HINT=Cofnij
+[kalkulator]
+OPIS=Kalkulator
+SYMBOL=
+JEDNOSTKA=
+HINT=Kalkulator
+[otworz formularz]
+OPIS=Otwórz formularz
+SYMBOL=
+JEDNOSTKA=
+HINT=Otwórz formularz
+[instrukcja]
+OPIS=Instrukcja
+SYMBOL=
+JEDNOSTKA=
+HINT=Instrukcja
+[o programie]
+OPIS=O programie ...
+SYMBOL=
+JEDNOSTKA=
+HINT=O programie ...
+[brak]
+OPIS=brak
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=
+ELEMENT=
+[male]
+OPIS=ma³e
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[srednie]
+OPIS=œrednie
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[duze]
+OPIS=du¿e
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[bardzo dobre]
+OPIS=bardzo dobre
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[dobre]
+OPIS=dobre
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[zle]
+OPIS=z³e
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[k dane poprawne]
+OPIS=Dane poprawne
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[k korekcja sil]
+[k blad]
+
+OPIS=Kod b³edu
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[echoes_0_2]
+OPIS=B³¹d obliczeñ modu³u         
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[echoes_0_3]
+OPIS=Brak napêdu bêbnowego lub zbyt du¿a moc napêdu pomocniczego
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[echoes_0_4]
+OPIS=B³ad odczytu danej
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[echoes_0_5]
+OPIS=Test b³edów:  
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[echoes_0_6]
+OPIS=Niew³aœciwy format bazy danych
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[echoes_0_7]
+OPIS=Zbyt ma³a wartoœæ si³y w taœmie
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[echoes_1_2]
+OPIS=Moc zainstalowana jest mniejsza od mocy niezbêdnej
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[echoes_1_3]
+OPIS=N mniejsza od 0 - nale¿y skorygowaæ wspó³czynnik oporów ruchu - f i sprawnoœæ napêdu 0.95-1.0
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=
+[echoes_1_4]
+OPIS=Wymagana korekcja si³ w czasie rozruchu w punkcie: 
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[echoes_1_5]
+OPIS=Wymagana korekcja si³ w czasie hamowania w punkcie: 
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[echoes_1_6]
+OPIS=Zbyt ma³a wytrzyma³oœæ taœmy
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[echoes_1_7]
+OPIS=Dodaæ rekord do bazy danych?
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=
+ELEMENT=
+[echoes_1_8]
+OPIS=Nadpisaæ istniej¹cy plik:
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=
+ELEMENT=
+[echoes_1_9]
+OPIS=Wydajnoœæ nominalna przekracza wydajnoœæ maksymaln¹ 
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=
+ELEMENT=
+[echoes_1_10]
+OPIS=Nieznany typ taœmy
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=
+ELEMENT=
+[echoes_1_11]
+OPIS=Brak statecznoœci taœmy
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=
+ELEMENT=
+[echoes_1_12]
+OPIS=Modyfikowaæ rekord bazy danych? 
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=
+ELEMENT=
+[echoes_1_13]
+OPIS=Brak zestawów kr¹¿nikowych na odcinku taœmy
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=
+ELEMENT=
+[echoes_1_14]
+OPIS=Wyd³u¿ czas rozruchu przenoœnika: Kr > 1.3
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=
+ELEMENT=
+[echoes_1_15]
+OPIS=Zbyt ma³a d³ugoœæ ograniczen bocznych
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[echoes_2_2]
+OPIS=Nie rozpoznano w³asnoœci materia³u rdzenia w bazie danych RDZEN.DBF
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[echoes_2_3]
+OPIS=Korekcja si³ ze wzglêdu na pracê urz¹dzenia napinaj¹cego, w punkcie:  
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[echoes_2_4]
+OPIS=Korekcja si³ ze wzglêdu na zwis taœmy dolnej w punkcie:   
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[echoes_2_5]
+OPIS=Korekcja si³ ze wzglêdu na zwis taœmy górnej w punkcie:  
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[echoes_2_6]
+OPIS=Brak korekcji si³ ze wzglêdu na zwis taœmy
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[echoes_2_7]
+OPIS=Korekcja si³ ze wzglêdu na sprzê¿enie cierne:   
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[echoes_2_8]
+OPIS=Brak korekcji wartoœci si³ w taœmie
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[echoes_2_9]
+OPIS=  
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[echoes_2_10]
+OPIS=Nie znaleziono pliku opisowego
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=
+ELEMENT=
+[echoes_2_11]
+OPIS=Modu³ obliczen oporów ruchu:  
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[echoes_2_12]
+OPIS=Nie znaleziono wybranego typu taœmy w bazie danych
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[echoes_2_13]
+OPIS=Odczytano dane z okna struktury przenoœnika
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[echoes_2_14]
+OPIS=Zmieniono bazê danych  
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[echoes_2_15]
+OPIS=Rozszerzono bazê danych  
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[echoes_2_16]
+OPIS=W schowku zapisano rysunek w formacie "Mapa bitowa" z obiektu:  
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[echoes_2_17]
+OPIS=Aktualizacja bazy danych  
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[echoes_2_18]
+OPIS=Brak rekordu spe³niaj¹cego za³o¿one kryteria  
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[echoes_2_19]
+OPIS=W schowku zapisano rysunek w formacie "Enhanced metafile" z obiektu:    
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[echoes_2_20]
+OPIS=Znaleziono kr¹¿ników:  
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[echoes_2_21]
+OPIS=Opory górnych zestawów kr¹¿nikowych  
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[echoes_2_22]
+OPIS=Opory dolnych zestawów kr¹¿nikowych
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[echoes_2_23]
+OPIS=Opory przewijania taœmy przez bêbny
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[echoes_2_24]
+OPIS=Opory skrobaków
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[echoes_2_25]
+OPIS=Opory za³adunku
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[echoes_2_26]
+OPIS=Typ taœmy: 
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[echoes_2_27]
+OPIS=Korekcja szerokoœci ograniczeñ bocznych
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[echoes_2_28]
+OPIS=Korekcja d³ugoœci ograniczeñ bocznych
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[echoes_2_29]
+OPIS=Obliczenia trwa³oœci ³o¿ysk kr¹¿ników górnych
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[echoes_2_30]
+OPIS=Proszê czekaæ ...
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[echoes_2_31]
+OPIS=Odczyt baz danych taœm przenoœnikowych
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[echoes_2_32]
+OPIS=Obliczenia ... Proszê czekaæ ...
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[echoes_2_33]
+OPIS=Wybierz typ urz¹dzenia napinaj¹cego taœmê
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=
+ELEMENT=
+[echoes_2_34]
+OPIS=Odczyt danych starego formatu
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=
+ELEMENT=
+[echoes_2_35]
+OPIS=Odczyt danych nowego formatu
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=
+ELEMENT=
+[echoes_2_36]
+[echoes_3_37]
+OPIS=Podzia³ na odcinki: 
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[echoes_3_3]
+OPIS=Wyniki obliczeñ
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[echoes_3_4]
+OPIS=Dane poprawne
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[echoes_4_2]
+OPIS=Opory górnego zestawu kr¹¿nikowego na odcinku przenoœnika: 
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[echoes_4_3]
+[echoes_4_4]
+[echoes_4_5]
+[echoes_4_6]
+[echoes_4_7]
+OPIS=Opory za³adunku na odcinku przenoœnika:   
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[echoes_4_8]
+OPIS=Minimalna d³ugoœæ ograniczen bocznych: 
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[komunikatyTT_0_0_1]
+[komunikatyTT_0_0_2]
+[komunikatyTT_0_0_3]
+[komunikatyTT_0_0_4]
+[komunikatyTT_0_1_1]
+OPIS=odwrotne nachylenie boczne zestawu
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[komunikatyTT_0_1_2]
+[komunikatyTT_0_1_3]
+OPIS=zbyt ciasne ograniczenia boczne
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[komunikatyTT_0_1_4]
+[komunikatyTT_0_2_1]
+OPIS=potrzebna niecka na luku poziomym
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[komunikatyTT_0_2_2]
+[komunikatyTT_0_2_3]
+[komunikatyTT_0_2_4]
+[komunikatyTT_0_3_1]
+OPIS=brak rownowagi w tasmie na luku trasy
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[komunikatyTT_0_3_2]
+[komunikatyTT_0_3_3]
+[komunikatyTT_0_3_4]
+[komunikatyTT_0_4_1]
+[komunikatyTT_0_4_2]
+[komunikatyTT_0_4_3]
+[komunikatyTT_0_4_4]
+[komunikatyTT_0_5_1]
+[komunikatyTT_0_5_2]
+[komunikatyTT_0_5_3]
+[komunikatyTT_0_5_4]
+[komunikatyTT_0_6_1]
+[komunikatyTT_0_6_2]
+[komunikatyTT_0_6_3]
+[komunikatyTT_0_6_4]
+[komunikatyTT_0_7_1]
+[komunikatyTT_0_7_2]
+[komunikatyTT_0_7_3]
+[komunikatyTT_0_7_4]
+[komunikatyTT_0_8_1]
+[komunikatyTT_0_8_2]
+[komunikatyTT_0_8_3]
+[komunikatyTT_0_8_4]
+[komunikatyTT_0_9_1]
+[komunikatyTT_0_9_2]
+[komunikatyTT_0_9_3]
+[komunikatyTT_0_9_4]
+[komunikatyTT_1_0_1]
+[komunikatyTT_1_0_2]
+[komunikatyTT_1_0_3]
+[komunikatyTT_1_0_4]
+[komunikatyTT_1_1_1]
+OPIS=przyjeto mniejszy kat naturalnego usypu
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[komunikatyTT_1_1_2]
+OPIS=srednice czopa walu bebna obliczono
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[komunikatyTT_1_1_3]
+OPIS=obliczono wsp.tarcia urobek-tasma
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[komunikatyTT_1_1_4]
+OPIS=przyjeto standardowy nacisk skrobaka
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[komunikatyTT_1_2_1]
+OPIS=Gruboœæ rdzenia taœmy obliczono
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[komunikatyTT_1_2_2]
+OPIS=grubosc rdzenia tasmy obliczono
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[komunikatyTT_1_2_3]
+OPIS=obliczono szerokosc ograniczen bocznych
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[komunikatyTT_1_2_4]
+OPIS=przyjeto jeden skrobak
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[komunikatyTT_1_3_1]
+OPIS=obliczono mase jednostowa tasmy
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[komunikatyTT_1_3_2]
+OPIS=wsp.c1 oporu bebna wyznaczono awaryjnie
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[komunikatyTT_1_3_3]
+OPIS=Skorygowano wspó³czynnik tarcia urobku o ograniczenia boczne
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[komunikatyTT_1_3_4]
+OPIS=przyjeto standardowy wsp.tarcia skrobaka
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[komunikatyTT_1_4_1]
+[komunikatyTT_1_4_2]
+OPIS=wsk.K1 oporu bebna wyznaczono awaryjnie
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[komunikatyTT_1_4_3]
+OPIS=skorygowano dlugosc ograniczen bocznych
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[komunikatyTT_1_4_4]
+[komunikatyTT_1_5_1]
+OPIS=zbieganie tasmy/strugi urobku mniejsze niz zakladane
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[komunikatyTT_1_5_2]
+OPIS=skorygowano podane parametry
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[komunikatyTT_1_5_3]
+OPIS=skorygowano podane parametry
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[komunikatyTT_1_5_4]
+OPIS=skorygowano podane parametry
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[komunikatyTT_1_6_1]
+OPIS=przyjeto domyslne wartosci danych kraznikow
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[komunikatyTT_1_6_2]
+[komunikatyTT_1_6_3]
+[komunikatyTT_1_6_4]
+[komunikatyTT_1_7_1]
+OPIS=skorygowano podane parametry
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[komunikatyTT_1_7_2]
+[komunikatyTT_1_7_3]
+[komunikatyTT_1_7_4]
+[komunikatyTT_1_8_1]
+OPIS=nadmierne ugiecie osi kraznika
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[komunikatyTT_1_8_2]
+[komunikatyTT_1_8_3]
+[komunikatyTT_1_8_4]
+[komunikatyTT_1_9_1]
+[komunikatyTT_1_9_2]
+[komunikatyTT_1_9_3]
+[komunikatyTT_1_9_4]
+[proc udzial krazn centr]
+OPIS=Procentowy udzia³ zestawów centruj¹cych
+SYMBOL=
+JEDNOSTKA=
+HINT=Procentowy udzia³ zestawów centruj¹cych
+[kat wyprzedzenia]
+OPIS=K¹t wyprzedzenia bocznych kr¹¿ników centruj¹cych
+SYMBOL=
+JEDNOSTKA=
+HINT=K¹t wyprzedzenia bocznych kr¹¿ników centruj¹cych
+CONVML=angleCenteringIdler
+[wspolczynnik tarcia kraznik-tasma]
+OPIS=Wspó³czynnik tarcia kr¹¿nik-taœma
+SYMBOL=@m_k-t
+JEDNOSTKA=
+HINT=Wspó³czynnik tarcia kr¹¿nik-taœma
+[masa czesci obrotowych kraznika nadawowego]
+OPIS=Masa czêœci obrotowych kr¹¿nika nadawowego
+SYMBOL=m_e
+JEDNOSTKA=kg
+HINT=Masa czêœci obrotowych kr¹¿nika nadawowego
+[liczba zestawow kraznikow nadawowych]
+OPIS=Liczba zestawów kr¹¿ników nadawowych
+SYMBOL=n_e
+JEDNOSTKA=
+HINT=Liczba zestawów kr¹¿ników nadawowych
+CONVML=numberImpactIdlerSets
+ELEMENT=
+[liczba kraznikow nadawowych w zestawie]
+OPIS=Liczba kr¹¿ników w zestawie nadawowym
+SYMBOL=z_e
+JEDNOSTKA=
+HINT=Liczba kr¹¿ników w zestawie nadawowym
+CONVML=numberImpactIdlers
+ELEMENT=
+[ilosc roboczogodzin]
+OPIS=Iloœæ godzin pracy przenoœnika w ci¹gu roku
+SYMBOL=Ih_r
+JEDNOSTKA=h
+HINT=Iloœæ godzin pracy przenoœnika w ci¹gu roku
+CONVML=amountWorkingHours
+[okladki]
+OPIS=Ok³adki
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[doubleclick]
+OPIS=Dwukrotnie naciœnij klawisz myszki
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[czas rozruchu]
+OPIS=Czas rozruchu
+SYMBOL=t_r
+JEDNOSTKA=s
+HINT=
+[czas hamowania]
+OPIS=Czas hamowania
+SYMBOL=t_h
+JEDNOSTKA=s
+HINT=
+[Pr/Pu]
+OPIS=Wspó³czynnik nadwy¿ki dynamicznej
+SYMBOL=Pr/Pu
+JEDNOSTKA=
+HINT=
+[z szablonu]
+OPIS=Z szablonu
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[z pliku]
+OPIS=Z pliku
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[grafika]
+OPIS=Grafika
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[druk]
+OPIS=Druk
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[wersja jezykowa]
+OPIS=Jêzyk
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[podziel]
+OPIS=Podziel
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[wstaw]
+OPIS=Wstaw
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[usun]
+OPIS=Usuñ
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[anuluj]
+OPIS=Anuluj
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[luk]
+OPIS=£uk
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[naped czolowy]
+OPIS=Napêd czo³owy
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[naped zwrotny]
+OPIS=Napêd zwrotny
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[rozmiar]
+OPIS=Rozmiar
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[dodaj]
+OPIS=Dodaj
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[grid]
+OPIS=Siatka
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[obszar]
+OPIS=Obszar
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[zoom in]
+OPIS=Powiêksz
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[zoom out]
+OPIS=Pomniejsz
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[reset grafika]
+OPIS=Skaluj automatycznie
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=
+ELEMENT=
+[scroll]
+OPIS=Przewiñ
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[masa zredukowana]
+OPIS=Masa zredukowana
+SYMBOL=m_zr
+JEDNOSTKA=kg
+HINT=
+[moment nominalny]
+OPIS=Moment nominalny
+SYMBOL=M_nom
+JEDNOSTKA=Nm
+HINT=
+[moment napedowy]
+OPIS=Moment napêdowy
+SYMBOL=Mn
+JEDNOSTKA=Nm
+HINT=
+[moment hamujacy]
+OPIS=Moment hamuj¹cy
+SYMBOL=Mh
+JEDNOSTKA=Nm
+HINT=
+[naped glowny]
+OPIS=Napêd g³ówny
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[sila zbiegajaca]
+OPIS=Si³a w taœmie zbiegaj¹cej z bêbna napêdowego
+SYMBOL=S
+JEDNOSTKA=N
+HINT=
+[sila UN]
+OPIS=Si³a wywo³ana prac¹ urz¹dzenia napinaj¹cego
+SYMBOL=S_n
+JEDNOSTKA=N
+HINT=
+[sila wymagana]
+OPIS=Wymagana si³a w taœmie
+SYMBOL=S_nw
+JEDNOSTKA=N
+HINT=
+[punkt nabiegania]
+OPIS=Punkt nabiegania taœmy na bêben napêdowy
+SYMBOL=
+JEDNOSTKA=
+HINT=Punkt nabiegania taœmy na bêben napêdowy
+[przesun]
+OPIS=Przesuñ
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[kierunek]
+OPIS=Kierunek
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[uwagi]
+OPIS=Uwagi
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[% obc tasmy]
+OPIS=Procentowe wykorzystanie wytrzyma³oœci taœmy
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[dane konstrukcyjne]
+OPIS=Dane konstrukcyjne przenoœnika
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[parametry sprzezenia ciernego]
+OPIS=Parametry sprzê¿enia ciernego
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[zmien]
+OPIS=Zmieñ
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[obliczenia symulacyjne]
+OPIS=Obliczenia symulacyjne
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[eksport tabeli]
+OPIS=Eksport tabeli do pliku
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[luki w profilu]
+OPIS=£uki wertykalne
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=
+[luki w planie]
+OPIS=£uki horyzontalne
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[skrajnia trasy]
+OPIS=Skrajnia trasy
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[zaladunek dol]
+OPIS=Za³adunek taœmy dolnej
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[material transportowany dol]
+OPIS=Materia³ transportowany na taœmie dolnej
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[numer skrobaka]
+OPIS=Numer skrobaka
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=scraperNumber
+[promien luku wertykalnego]
+OPIS=Promieñ ³uku wertykalnego
+SYMBOL=R_v
+JEDNOSTKA=m
+HINT=£uk w profilu trasy
+CONVML=verticalRadius
+[promien luku horyzontalnego]
+OPIS=Promieñ ³uku horyzontalnego
+SYMBOL=R_h
+JEDNOSTKA=m
+HINT=£uk w planie trasy
+CONVML=horizontalRadius
+[nachylenie zestawow]
+OPIS=K¹t nachylenia zestawów
+SYMBOL=@l
+JEDNOSTKA=°
+HINT=
+CONVML=idlerSetBankingAngle
+[zukosowanie zestawow]
+OPIS=K¹t zukosowania zestawów kr¹¿nikowych
+SYMBOL=@e
+JEDNOSTKA=°
+HINT=
+CONVML=idlerSetTiltAngle
+ELEMENT=
+[kat zmiany kierunku]
+OPIS=K¹t zmiany kierunku odcinka
+SYMBOL=@f
+JEDNOSTKA=°
+HINT=
+CONVML=arcAngleDirection
+[il_skr]
+OPIS=Liczba skrobaków
+SYMBOL=il_skr
+JEDNOSTKA=
+HINT=
+CONVML=amountScrapers
+ELEMENT=
+[skrobak_nacisk]
+OPIS=Nacisk skrobaka
+SYMBOL=N_skr
+JEDNOSTKA=N
+HINT=
+CONVML=scraperPress
+ELEMENT=
+[wt_st]
+OPIS=Wspó³czynnik tarcia miêdzy skrobakiem a taœm¹
+SYMBOL=@m_skr
+JEDNOSTKA=
+HINT=
+CONVML=scraperFrictionCoefficient
+ELEMENT=
+[wytrzymalosc polaczenia]
+OPIS=Wytrzyma³oœæ po³¹czenia
+SYMBOL=K_p
+JEDNOSTKA=%
+HINT=
+CONVML=spliceStrength
+ELEMENT=
+[min dopuszczalna sila]
+OPIS=Minimalna dopuszczalna si³a w taœmie
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=
+ELEMENT=
+[odcinek przejsciowy]
+OPIS=Odcinek przejœciowy
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=
+ELEMENT=
+[dlugosc odcinka przejsciowego]
+OPIS=D³ugoœæ odcinka przejœciowego
+SYMBOL=L_p
+JEDNOSTKA=m
+HINT=
+CONVML=
+ELEMENT=
+[wysokosc podniesienia bebna]
+OPIS=Wysokoœæ podniesienia bêbna
+SYMBOL=H_b
+JEDNOSTKA=m
+HINT=
+CONVML=
+ELEMENT=
+[nowy projekt]
+OPIS=Nowy projekt
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=
+ELEMENT=
+[ostatnio zapisany projekt]
+OPIS=Ostatnio zapisany projekt
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=
+ELEMENT=
+[otworz z]
+OPIS=Otwórz z ...
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=
+ELEMENT=
+[obciaznik]
+OPIS=Obci¹¿nik
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=
+ELEMENT=COUNTERWEIGHT
+[opory przyspieszania nosiwa]
+OPIS=Opory przyspieszania nosiwa w miejscu za³adunku
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=
+ELEMENT=
+[opory tarcia o ograniczenia]
+OPIS=Opory tarcia o ograniczenia boczne
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=
+ELEMENT=
+[plan]
+[widok]
+OPIS=Widok
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=
+ELEMENT=
+[widok okien]
+OPIS=Widok okien
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=
+ELEMENT=
+[odczyt pliku]
+OPIS=Odczyt z pliku
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=
+ELEMENT=
+[domyslny]
+OPIS=Domyœlny
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=
+ELEMENT=
+[charakterystyka sprawnosci napedu]
+OPIS=Charakterystyka sprawnoœci napêdu
+SYMBOL=
+JEDNOSTKA=
+HINT=0-brak, 1-wysoka sprawnoœæ, 2-przeciêtna sprawnoœæ, 3-niska sprawnoœæ,   
+CONVML=
+ELEMENT=
+[wysoka sprawnosc]
+OPIS=wysoka sprawnoœæ
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=
+ELEMENT=
+[przecietna sprawnosc]
+OPIS=przeciêtna sprawnoœæ
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=
+ELEMENT=
+[niska sprawnosc]
+OPIS=niska sprawnoœæ
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=
+ELEMENT=
+[echoes_1_10]
+[echoes_1_11]
+[echoes_1_12]
+[echoes_1_13]
+[echoes_1_14]
+[echoes_1_15]
+[echoes_1_16]
+OPIS=Sortowaæ punkty wg wspó³rzêdnej 
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=
+ELEMENT=
+[echoes_1_17]
+OPIS=Usun¹æ odcinek? : 
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=
+ELEMENT=

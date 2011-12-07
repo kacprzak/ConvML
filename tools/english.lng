@@ -1,0 +1,2759 @@
+[jezyk]
+OPIS=angielski
+SYMBOL=ISO-8859-1
+JEDNOSTKA=1
+HINT=english
+[grubosc tasmy]
+OPIS=Belt thickness
+SYMBOL=g_t
+JEDNOSTKA=mm
+HINT=
+CONVML=thickness
+ELEMENT=BELT_SEGMENT
+[masa jednostkowa tasmy]
+OPIS=Belt mass        
+SYMBOL=m_tj
+JEDNOSTKA=kg/m^2
+HINT=      
+CONVML=mass
+ELEMENT=BELT_SEGMENT
+[grubosc okladki gornej]
+OPIS=Thickness of top cover       
+SYMBOL=g_n
+JEDNOSTKA=mm
+HINT=Thickness of upper cover
+CONVML=topCoverThickness
+ELEMENT=BELT_SEGMENT
+[grubosc okladki dolnej]
+OPIS=Thickness of bottom cover
+SYMBOL=g_b
+JEDNOSTKA=mm
+HINT=
+CONVML=bottomCoverThickness
+ELEMENT=BELT_SEGMENT
+[liczba przekladek]
+OPIS=Number of plies or cables
+SYMBOL=l_p
+JEDNOSTKA=
+HINT=
+CONVML=pliesNumber
+ELEMENT=BELT_SEGMENT
+[oznaczenie tasmy]
+OPIS=Belt description
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=description
+ELEMENT=BELT_SEGMENT
+[dopuszczalne srednice bebnow]
+OPIS=Minimum pulley diameters
+SYMBOL=
+JEDNOSTKA=mm
+HINT=
+CONVML=minimumPulleyDiameters
+[bebny napedowe]
+OPIS=Head & drive pulleys
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[bebny zwrotne]
+OPIS=Tail & takeup pulleys
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[bebny odchylajace]
+OPIS=Snub & bend pulleys
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[sposob rozladunku]
+OPIS=Discharging
+SYMBOL=
+JEDNOSTKA=
+HINT=Over the head pulley, scrapers, trippers
+CONVML=discharging
+[urzadzenie napinajace]
+OPIS=Take-up
+SYMBOL=
+JEDNOSTKA=
+HINT=Winch, hydraulic, pneumatic, gravity, automatic (follow-up)
+CONVML=takeUp
+[sila napinajaca]
+OPIS=Belt take-up tension
+SYMBOL=S_n
+JEDNOSTKA=N
+HINT=
+CONVML=takeUpTension
+ELEMENT=TAKEUP_SYSTEM
+[skok]
+OPIS=Movement of take-up pulley
+SYMBOL=sw
+JEDNOSTKA=m
+HINT=
+CONVML=pulleyTakeUpMovement
+ELEMENT=TAKEUP_SYSTEM
+[dlugosc]
+OPIS=Conveyor length
+SYMBOL=L
+JEDNOSTKA=m
+HINT=Distance between head and tail pulley
+CONVML=length
+ELEMENT=BELT_CONVEYOR
+[szerokosc tasmy]
+OPIS=Belt width
+SYMBOL=B
+JEDNOSTKA=mm
+HINT=Belt width
+CONVML=width
+ELEMENT=BELT
+[wspolczynnik bezpieczenstwa tasmy]
+OPIS=Safety factor
+SYMBOL=s
+JEDNOSTKA=
+HINT=
+CONVML=safetyFactor
+[predkosc]
+OPIS=Belt speed
+SYMBOL=v
+JEDNOSTKA=m/s
+HINT=Belt speed
+CONVML=beltSpeed
+ELEMENT=BELT_CONVEYOR
+[wydajnosc]
+OPIS=Conveyor design capacity
+SYMBOL=Q
+JEDNOSTKA=t/h
+HINT=Location loading points on conveyor profile schematic diagram
+CONVML=designCapacity
+ELEMENT=BELT_CONVEYOR
+[wysokosc spadku]
+OPIS=Fall height of the material onto belt
+SYMBOL=H_s
+JEDNOSTKA=mm
+HINT=Fall height of the material in loading point
+CONVML=heightFallMaterial
+ELEMENT=CHUTE
+[wspolczynnik tarcia]
+OPIS=Friction coefficient between belt and pulley
+SYMBOL=@m
+JEDNOSTKA=
+HINT=
+CONVML=pulleyBeltFriction
+ELEMENT=PULLEY
+[kat nachylenia kraznikow bocznych]
+OPIS=Troughing angle
+SYMBOL=@b
+JEDNOSTKA=°
+HINT=
+CONVML=troughingAngle
+ELEMENT=IDLER
+[krazniki]
+OPIS=Idlers
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=idlers
+[rozstaw]
+OPIS=Idler spacing
+SYMBOL=l
+JEDNOSTKA=m
+HINT=Distance between idler supporting frames 
+CONVML=idlerSetSpacing
+ELEMENT=
+[gorne]
+OPIS=Carry
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=carry
+[dolne]
+OPIS=Return
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=return
+[masa kraznika]
+OPIS=Mass of idler rotating parts
+SYMBOL=m_k
+JEDNOSTKA=kg
+HINT=
+CONVML=massIdlerRotatingParts
+[teoretyczna wydajnosc]
+OPIS=Theoretical capacity
+SYMBOL=Q
+JEDNOSTKA=t/h
+HINT=Theoretical capacity
+[niezbedna moc]
+OPIS=Required power
+SYMBOL=N
+JEDNOSTKA=kW
+HINT=Required power
+[przyspieszenie]
+OPIS=Acceleration
+SYMBOL=a
+JEDNOSTKA=m/s^2
+HINT=
+CONVML=
+[karta]
+OPIS=Catalogue
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[sily]
+OPIS=Belt tensions
+SYMBOL=S
+JEDNOSTKA=N
+HINT=
+[niezbedna wytrzymalosc]
+OPIS=Strength of belt
+SYMBOL=K
+JEDNOSTKA=kN/m
+HINT=Strength of belt
+CONVML=beltStrength
+[kat usypu]
+OPIS=Surcharge angle
+SYMBOL=@r
+JEDNOSTKA=°
+HINT=
+CONVML=surchargeAngle
+ELEMENT=MATERIAL
+[gestosc]
+OPIS=Material density
+SYMBOL=@g
+JEDNOSTKA=kg/m^3
+HINT=
+CONVML=density
+ELEMENT=MATERIAL
+[rodzaj materialu]
+OPIS=Material
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=sort
+ELEMENT=MATERIAL
+[material transportowany]
+OPIS=Material conveyed
+SYMBOL=
+JEDNOSTKA=
+HINT=Material characteristics
+CONVML=conveyedMaterial
+ELEMENT=MATERIAL
+[wysokosc podnoszenia]
+OPIS=Inclination height (lift)
+SYMBOL=H
+JEDNOSTKA=m
+HINT="+" up, "-" down
+CONVML=heightInclination
+ELEMENT=BELT_CONVEYOR
+[kat nachylenia]
+OPIS=Inclination angle  
+SYMBOL=@d
+JEDNOSTKA=°
+HINT="+" up, "-" down
+CONVML=angleInclination 
+ELEMENT=BELT_CONVEYOR
+[obciazenie trasy]
+OPIS=Load
+SYMBOL=
+JEDNOSTKA=%
+HINT=
+CONVML=load
+[wspolczynnik oporu ruchu]
+OPIS=Friction coefficient
+SYMBOL=f
+JEDNOSTKA=
+HINT=
+CONVML=coefficientFriction
+[opory ruchu]
+OPIS=Resistance to motion
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=resistance
+[temperatura pracy]
+OPIS=Ambient temperature
+SYMBOL=T
+JEDNOSTKA=°C
+HINT=
+CONVML=ambientTemperature
+ELEMENT=CONDITIONS
+[temperatura materialu]
+OPIS=Temperature of material
+SYMBOL=Tm
+JEDNOSTKA=°C
+HINT=
+CONVML=temperature
+ELEMENT=MATERIAL
+[zamawiajacy]
+OPIS=Client
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=client
+[srednica kraznika]
+OPIS=Idler diameter
+SYMBOL=D_k
+JEDNOSTKA=mm
+HINT=
+CONVML=diameter
+ELEMENT=IDLER
+[bryly]
+OPIS=Maximum lump size
+SYMBOL=d
+JEDNOSTKA=mm
+HINT=
+CONVML=lumpSizeMaximum
+[lokalizacja]
+OPIS=Location
+SYMBOL=
+JEDNOSTKA=
+HINT=Mining industry, gravel-pits, cement works, lime works, heating power plants, dumps, processing industry    
+CONVML=location
+[kat opasania]
+OPIS=Wrap angle
+SYMBOL=@a
+JEDNOSTKA=°
+HINT=
+CONVML=wrapAngle
+ELEMENT=PULLEY
+[wytrzymalosc tasmy]
+OPIS=Belt class (strength)
+SYMBOL=K_n
+JEDNOSTKA=kN/m
+HINT=
+CONVML=strength
+ELEMENT=BELT_SEGMENT
+[schemat kinematyczny]
+OPIS=Kinematic sketch of conveyor
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=
+[schemat]
+OPIS=Sketch
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=sketch
+[odcinek]
+OPIS=Section
+SYMBOL=
+JEDNOSTKA=
+HINT=Flight
+CONVML=section
+[wspolczynnik poslizgu]
+OPIS=Safety slip factor
+SYMBOL=k_p
+JEDNOSTKA=
+HINT=
+[tasma]
+OPIS=Belt
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=belt
+[rodzaj tasmy]
+OPIS=Type of belt carcass
+SYMBOL=
+JEDNOSTKA=
+HINT=Textile cord (number of plies), steel cord 
+CONVML=carcassType
+ELEMENT=BELT_SEGMENT
+[oznaczenie przenosnika]
+OPIS=Conveyor description
+SYMBOL=
+JEDNOSTKA=
+HINT=Type of conveyor, location in conveyors system
+CONVML=description
+ELEMENT=BELT_CONVEYOR
+[Lodc]
+OPIS=Length
+SYMBOL=L
+JEDNOSTKA=m
+HINT=
+CONVML=length
+ELEMENT=ROUTE_SECTION
+[dodc]
+OPIS=Inclination angle
+SYMBOL=@d
+JEDNOSTKA=°
+HINT=
+CONVML=angleInclination
+ELEMENT=ROUTE_SECTION
+[Hodc]
+OPIS=Lift  
+SYMBOL=H
+JEDNOSTKA=m
+HINT=
+CONVML=lift 
+ELEMENT=ROUTE_SECTION
+[obcodc]
+OPIS=Load
+SYMBOL=
+JEDNOSTKA=%Qn
+HINT=
+CONVML=loadSection
+ELEMENT=ROUTE_SECTION
+[dlugosc petlicy]
+OPIS=Length of belt container
+SYMBOL=L_z
+JEDNOSTKA=m
+HINT=Length of storage unit
+CONVML=lengthContainer
+[grubosc rdzenia tasmy]
+OPIS=Belt carcass thickness
+SYMBOL=g_r
+JEDNOSTKA=mm
+HINT=
+CONVML=carcassThickness
+ELEMENT=BELT_SEGMENT
+[parametry podstawowe]
+OPIS=Main conveyor data
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=
+ELEMENT=
+[profil]
+OPIS=Conveyor profile schematic diagram
+SYMBOL=
+JEDNOSTKA=
+HINT=Direction of belt travel, length & inclination angle of sections, location of loading points
+CONVML=schemaConveyorProfile
+[Nrodc]
+OPIS=Section number
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=number
+ELEMENT=ROUTE_SECTION
+[szkic]
+OPIS=Schematic diagram
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=schematicDiagram
+[trasa]
+OPIS=Conveyor route
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=routeConveyor
+[liczba kraznikow]
+OPIS=Number of rolls in idler set
+SYMBOL=z_k
+JEDNOSTKA=
+HINT=
+CONVML=numberIdlers
+[dlugosc kraznika srodkowego]
+OPIS=Length of idler centre roller
+SYMBOL=L_k
+JEDNOSTKA=mm
+HINT=
+CONVML=length
+ELEMENT=IDLER
+[rodzaj rozruchu]
+OPIS=Start-up device
+SYMBOL=
+JEDNOSTKA=
+HINT=Direct start-up, fluid coupling, thyristor start-up device, frequency controller
+CONVML=startupDevice
+ELEMENT=DRIVE_UNIT
+[stycznik]
+OPIS=Direct start-up
+SYMBOL=
+JEDNOSTKA=
+HINT=Small conveyors (to 30 kW)
+CONVML=directStartup
+ELEMENT=
+[sprzeglo]
+OPIS=Fluid coupling
+SYMBOL=
+JEDNOSTKA=
+HINT=Normal conveyors (motors above 30 kW)
+CONVML=fluidCoupling
+[falownik]
+OPIS=Frequency controller
+SYMBOL=
+JEDNOSTKA=
+HINT=Controlled start-up time or value of driving force
+CONVML=frequencyController
+[tyrystor]
+OPIS=Thyristor start-up device
+SYMBOL=
+JEDNOSTKA=
+HINT=Kr = 1.3 - 2.0
+CONVML=thyristorStartup
+[Mr/Mn]
+OPIS=Drive factor
+SYMBOL=K_r
+JEDNOSTKA=
+HINT=
+CONVML=driveFactor
+ELEMENT=MOTOR
+[Mh/Mn]
+OPIS=Brake factor
+SYMBOL=Kh
+JEDNOSTKA=
+HINT=Brake factor
+CONVML=brakeFactor
+ELEMENT=DRIVE_UNIT
+[moc silnika]
+OPIS=Motor power
+SYMBOL=N_i
+JEDNOSTKA=kW
+HINT=
+CONVML=power
+ELEMENT=MOTOR
+[liczba silnikow]
+OPIS=Number of motors
+SYMBOL=
+JEDNOSTKA=
+HINT=Number of motors
+CONVML=numberMotors
+[sprawnosc napedu]
+OPIS=Efficiency of drive
+SYMBOL=@h
+JEDNOSTKA=
+HINT=
+CONVML=driveEfficiency
+ELEMENT=DRIVE_UNIT
+[rodzaj polaczen]
+OPIS=Belt splicing
+SYMBOL=
+JEDNOSTKA=
+HINT=Vulcanizing, cold bonding, mechanical fasteners 
+CONVML=description
+ELEMENT=BELT_SPLICING
+[podpis]
+OPIS=Signature
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=signature
+[data]
+OPIS=Date
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=date
+[parametry bebnow]
+OPIS=Pulleys - location, diameter, wrap angle, lagging
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[parametry napedow]
+OPIS=Drives - numebr, power, location of drives (motors) - head,tail, tripper
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[ankieta]
+OPIS=Questionnaire QNK
+SYMBOL=
+JEDNOSTKA=
+HINT=Belt Conveyor Data
+[moc zainstalowana]
+OPIS=Installed drive power
+SYMBOL=N_z
+JEDNOSTKA=kW
+HINT=
+CONVML=drivePowerInstalled
+ELEMENT=BELT_CONVEYOR
+[uklad napedowy]
+OPIS=Drive
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=drive
+[warunki pracy przenosnika]
+OPIS=Conditions of conveyor work
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=workConditions
+[gwiazda-trojkat]
+OPIS=Switch star-triangle
+SYMBOL=
+JEDNOSTKA=
+HINT=Only for start-up unloaded conveyors
+CONVML=switchStarTriangle
+[opoznienie]
+OPIS=Retardation
+SYMBOL=b
+JEDNOSTKA=m/s^2
+HINT=
+CONVML=
+[lokalizacja un]
+OPIS=Location of take-up system
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[wciagarkowe]
+OPIS=Winch
+SYMBOL=
+JEDNOSTKA=
+HINT=Winch take-up
+[grawitacyjne]
+OPIS=Gravity
+SYMBOL=
+JEDNOSTKA=
+HINT=Gravity take-up system
+[nadazne]
+OPIS=Automatic, follow-up
+SYMBOL=
+JEDNOSTKA=
+HINT=Automatic, follow-up tension unit
+[hydrauliczne]
+OPIS=Hydraulic
+SYMBOL=
+JEDNOSTKA=
+HINT=Hydraulic take-up system
+[podstawowe wyniki]
+OPIS=Results
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[ustalony]
+OPIS=Stationary work
+SYMBOL=
+JEDNOSTKA=
+HINT=Stationary work
+[rozruch]
+OPIS=Start-up
+SYMBOL=
+JEDNOSTKA=
+HINT=Start-up
+[hamowanie]
+OPIS=Stopping
+SYMBOL=
+JEDNOSTKA=
+HINT=Stopping
+[postoj]
+OPIS=Stop
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[raport]
+OPIS=Report of QNK Calculations
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[sila napedowa]
+OPIS=Drive force
+SYMBOL=P
+JEDNOSTKA=N
+HINT=
+[punkt]
+OPIS=Point
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[przeznaczenie tasmy]
+OPIS=Belt characteristics
+SYMBOL=
+JEDNOSTKA=
+HINT=General use, flame-, fire-resistant, cold or heat resistance
+CONVML=characteristics
+ELEMENT=BELT_SEGMENT
+[przewijanie]
+OPIS=Drive arrangement
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[wspolczynnik straty wytrzymalosci tasmy]
+OPIS=Coefficient of belt splicing
+SYMBOL=r_p
+JEDNOSTKA=
+HINT=
+CONVML=splicingCoefficient
+ELEMENT=BELT_SPLICING
+[informacje]
+OPIS=Information
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[przyspieszenia]
+OPIS=Accelerations
+SYMBOL=a
+JEDNOSTKA=[m/s^2]
+HINT=
+[predkosci]
+OPIS=Speeds
+SYMBOL=v
+JEDNOSTKA=[m/s]
+HINT=
+[ustawienia]
+OPIS=Options
+SYMBOL=
+JEDNOSTKA=
+HINT=Options
+[punkty]
+OPIS=Points
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[zakres]
+OPIS=Range
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[czas]
+OPIS=Time
+SYMBOL=t
+JEDNOSTKA=[s]
+HINT=
+[odczytano]
+OPIS=Read
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[skala]
+OPIS=Scale
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[przemieszczenia]
+OPIS=Displacements
+SYMBOL=
+JEDNOSTKA=[m]
+HINT=
+[kopiuj]
+OPIS=Copy
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[odswiez]
+OPIS=Refresh
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[siatka]
+OPIS=Grid
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[wykres sil]
+OPIS=Graph of tensions
+SYMBOL=
+JEDNOSTKA=
+HINT=Graph of tensions
+[wykresy]
+OPIS=Static graphs
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[analiza dynamiki]
+OPIS=Analysis of dynamics
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[analiza modelu]
+OPIS=Analysis of model
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[otworz]
+OPIS=Open
+SYMBOL=
+JEDNOSTKA=
+HINT=Open
+[drukuj]
+OPIS=Print
+SYMBOL=
+JEDNOSTKA=
+HINT=Print
+[zamknij]
+OPIS=Close
+SYMBOL=
+JEDNOSTKA=
+HINT=Close
+[sily napedowe]
+OPIS=Driving forces
+SYMBOL=Pn
+JEDNOSTKA=[N]
+HINT=
+[sily reakcji]
+OPIS=Reaction forces on drums
+SYMBOL=Pr
+JEDNOSTKA=[N]
+HINT=
+CONVML=
+ELEMENT=
+[podglad wydruku]
+OPIS=Print preview
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[plik]
+OPIS=File
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[opcje]
+OPIS=&Options
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[info]
+OPIS=Info
+SYMBOL=
+JEDNOSTKA=
+HINT=Info
+[linia]
+OPIS=Line graph
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[kolor]
+OPIS=Color graph
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[czysc]
+OPIS=Clear
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[tempo]
+OPIS=Tempo
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[grubosc linii]
+OPIS=Thickness of line
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[schowek]
+OPIS=Clipboard
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[srednica]
+OPIS=Diameter
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=diameter
+[modul sprezystosci]
+OPIS=Modulus of belt elasticity
+SYMBOL=E
+JEDNOSTKA=kN/m
+HINT=
+CONVML=elasticityModulus
+ELEMENT=BELT_SEGMENT
+[zbieganie boczne]
+OPIS=Belt side running of  
+SYMBOL=
+JEDNOSTKA=
+HINT=1-none, 2-small, 3-average, 4-big
+CONVML=beltSideRunning
+ELEMENT=CONDITIONS
+[warunki pracy]
+OPIS=Belt work conditions
+SYMBOL=
+JEDNOSTKA=
+HINT=1-very good, 2-good, 3-average, 4-poor
+CONVML=beltWorkConditions
+ELEMENT=
+[srednica linki]
+OPIS=Cord diameter
+SYMBOL=d_l
+JEDNOSTKA=mm
+HINT=
+CONVML=cableDiameter
+ELEMENT=BELT_SEGMENT
+[typ rdzenia tasmy]
+OPIS=Type of carcass
+SYMBOL=
+JEDNOSTKA=
+HINT=1-textile, 2-steel-cord
+CONVML=carcassType
+ELEMENT=BELT_SEGMENT
+[rozstaw zestawow]
+OPIS=Idler spacing
+SYMBOL=l
+JEDNOSTKA=m
+HINT=Distance between idler supporting frames
+CONVML=idlerSetSpacing
+ELEMENT=
+[dlugosc plaszcza kraznika srodkowego]
+OPIS=Length of idler centre roller
+SYMBOL=L_k
+JEDNOSTKA=mm
+HINT=
+[dlugosc plaszcza kraznika bocznego]
+OPIS=Length of idler side roller
+SYMBOL=L_kb
+JEDNOSTKA=mm
+HINT=
+[typ kraznika - opis]
+OPIS=Idler type - description
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=typeDescription
+ELEMENT=IDLER
+[liczba zestawow]
+OPIS=Number of idler sets
+SYMBOL=n_k
+JEDNOSTKA=
+HINT=
+CONVML=numberIdlerSets
+[typ kraznika]
+OPIS=Type of roller
+SYMBOL=t_kd
+JEDNOSTKA=
+HINT=1 - with rings, 2 - flat  
+CONVML=type
+ELEMENT=IDLER
+[masa calkowita kraznika]
+OPIS=
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=mass
+ELEMENT=IDLER
+[dlugosc osi kraznika]
+OPIS=Lenght
+SYMBOL=l_od
+JEDNOSTKA=mm
+HINT=
+[wspolczynnik oporu obracania a]
+OPIS=
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[wspolczynnik oporu obracania b]
+OPIS=
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[opor kraznika]
+OPIS=Resistance of idler
+SYMBOL=Wk_std
+JEDNOSTKA=N
+HINT=
+CONVML=idlerResistance
+[typ zestawow kraznikowych]
+OPIS=
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=type
+ELEMENT=IDLER_SET
+[bebny]
+OPIS=Pulleys
+SYMBOL=
+JEDNOSTKA=
+HINT=Pulleys
+[oznaczenie]
+OPIS=Symbol
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[wartosc]
+OPIS=Value
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[jednostka]
+OPIS=Unit
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[opis]
+OPIS=Description
+SYMBOL=
+JEDNOSTKA=
+HINT=Description
+CONVML=description
+[obroty nominalne]
+OPIS=Nominal rotational speed
+SYMBOL=n_n
+JEDNOSTKA=1/min
+HINT=
+CONVML=nominalRotationalSpeed
+ELEMENT=MOTOR
+[poslizg]
+OPIS=Slip of fluid coupling
+SYMBOL=s
+JEDNOSTKA=%
+HINT=
+CONVML=slip
+ELEMENT=FLUID_COUPLING
+[przelozenie]
+OPIS=Gear ratio
+SYMBOL=i
+JEDNOSTKA=
+HINT=
+CONVML=gearRatio
+[Nrpkt]
+OPIS=Point
+SYMBOL=No
+JEDNOSTKA=
+HINT=
+CONVML=pointNumber
+ELEMENT=
+[zestaw napedowy]
+OPIS=Drive unit
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=
+ELEMENT=DRIVE_UNIT
+[srednica bebna]
+OPIS=Diameter of pulley
+SYMBOL=D_b
+JEDNOSTKA=mm
+HINT=
+CONVML=diameter
+ELEMENT=PULLEY
+[beben]
+OPIS=Pulley
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=pulley
+[warunki eksploatacyjne]
+OPIS=Work conditions
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[zestawy kraznikowe dolne]
+OPIS=Return idlers
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[zestawy kraznikowe gorne]
+OPIS=Carry idlers
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[kraznik gorny boczny]
+OPIS=Side carry idler
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[kraznik gorny srodkowy]
+OPIS=Central carry idler
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[kraznik dolny srodkowy]
+OPIS=Central return idler
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[kraznik dolny boczny]
+OPIS=Side return idler
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[urzadzenia czyszczace]
+OPIS=Cleaners
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[zaladunek]
+OPIS=Loading
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[kosz]
+OPIS=Chute
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=chute
+[zestawy nadawowe]
+OPIS=Impact idlers
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[prawa autorskie]
+OPIS=Copyright © 2000-2006 EnterTECH. All rights reserved.
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[sekcje gora]
+OPIS=Sections - carry 
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[sekcje dol]
+OPIS=Sections - return 
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[predkosc poziomo]
+OPIS=Horizontal speed
+SYMBOL=v_0
+JEDNOSTKA=m/s
+HINT=Veocity component of conveying speed of material handled in the direction of belt at loading point
+CONVML=horizontalSpeed
+ELEMENT=CHUTE
+[wspolczynnik tarcia kosz]
+OPIS=Friction cofficient between material and skirting
+SYMBOL=@m_o
+JEDNOSTKA=
+HINT=
+CONVML=skirtMaterialFriction
+ELEMENT=CHUTE
+[dlugosc ograniczen]
+OPIS=Length of installation fitted with skirtplates
+SYMBOL=L_o
+JEDNOSTKA=m
+HINT=
+CONVML=skirtLength
+ELEMENT=CHUTE
+[szerokosc ograniczen]
+OPIS=Width between skirtplates
+SYMBOL=B_o
+JEDNOSTKA=m
+HINT=
+CONVML=skirtWidth
+ELEMENT=CHUTE
+[udzial bryl]
+OPIS=
+SYMBOL=p_b
+JEDNOSTKA=%
+HINT=
+CONVML=lumpPercTopSize
+ELEMENT=MATERIAL
+[wsp.tarcia urobek-tasma]
+OPIS=Friction coefficient between belt and material
+SYMBOL=@m_u-t
+JEDNOSTKA=
+HINT=Friction coefficient between belt and material
+CONVML=materialBeltFriction
+[sciernosc]
+OPIS=
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[ostrosc]
+OPIS=
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[gestosc max]
+OPIS=
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[gestosc min]
+OPIS=
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[kat nachylenia max]
+OPIS=
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[kat nachylenia min]
+OPIS=
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[kat usypu min]
+OPIS=
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[kat usypu max]
+OPIS=
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[producent]
+OPIS=Manufacturer
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=manufacturer
+[lozysko]
+OPIS=Bearing
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=
+[wykonanie]
+OPIS=
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[koncowka osi]
+OPIS=
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[liczba bebnow]
+OPIS=Number of pulleys
+SYMBOL=L_b
+JEDNOSTKA=
+HINT=Amount of pulleys
+CONVML=pulleyNumber
+ELEMENT=
+[liczba skrobakow]
+OPIS=Number of scrapers
+SYMBOL=L_sk
+JEDNOSTKA=
+HINT=
+CONVML=numberScrapers
+[liczba odcinkow]
+OPIS=Number of sections
+SYMBOL=L_o
+JEDNOSTKA=
+HINT=
+CONVML=numberSections
+[nazwa]
+OPIS=Name or description
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=
+[przeznaczenie]
+OPIS=Destination
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=
+[liczba rdzenia]
+OPIS=Code of belt carcass 
+SYMBOL=c
+JEDNOSTKA=
+HINT=
+CONVML=carcassCode
+ELEMENT=BELT_SEGMENT
+[masa okladek]
+OPIS=Density of covers
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=coversDesity
+ELEMENT=BELT_SEGMENT
+[oznaczenie okladek]
+OPIS=Cover description
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=coverDescription
+ELEMENT=BELT_SEGMENT
+[liczba zestawow napedowych]
+OPIS=Amount of drives
+SYMBOL=L_nap
+JEDNOSTKA=
+HINT=
+CONVML=amountDrives
+[nrbeb]
+OPIS=Pulley
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=number
+ELEMENT=PULLEY
+[wydajnosc masowa]
+OPIS=
+SYMBOL=Q_m
+JEDNOSTKA=t/h
+HINT=
+CONVML=capacityMass
+[wydajnosc objetosciowa]
+OPIS=
+SYMBOL=Q_v
+JEDNOSTKA=m^3/h
+HINT=
+CONVML=capacityVolume
+[wspolczynnik kz]
+OPIS=
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[masa urobku na 1m]
+OPIS=
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[moment bezwladnosci]
+OPIS=Moment of inertia
+SYMBOL=I
+JEDNOSTKA=kgm^2
+HINT=
+CONVML=inertiaMoment
+[Mmax/Mn]
+OPIS=
+SYMBOL=Mmax/Mn
+JEDNOSTKA=
+HINT=
+[max promien luku]
+OPIS=Maximum value of arc radius
+SYMBOL=R_max
+JEDNOSTKA=m
+HINT=
+CONVML=arcRadiusMax
+[sredni kat nachylenia]
+OPIS=Angle of arc
+SYMBOL=@d_md
+JEDNOSTKA=°
+HINT=
+CONVML=arcAngle
+ELEMENT=BELT_CONVEYOR
+[min dlugosc odcinka]
+OPIS=Minimum length of section
+SYMBOL=L_min
+JEDNOSTKA=m
+HINT=
+CONVML=arcLengthMin
+[promien luku profilu]
+OPIS=
+SYMBOL=R_V
+JEDNOSTKA=m
+HINT=
+[wydajnosc punktu zaladowczego]
+OPIS=Capacity of loading point
+SYMBOL=Q_pz
+JEDNOSTKA=t/h
+HINT=
+CONVML=capacity
+ELEMENT=CHUTE
+[liczba obciaznikow]
+OPIS=
+SYMBOL=n_o
+JEDNOSTKA=
+HINT=
+CONVML=amount
+ELEMENT=
+[liczba krazkow na obciazniku]
+OPIS=Number of discs on counterweight
+SYMBOL=i_o
+JEDNOSTKA=
+HINT=
+CONVML=disksNumber
+ELEMENT=
+[liczba krazkow na wozku]
+OPIS=Number of discs on trolley
+SYMBOL=i_w
+JEDNOSTKA=
+HINT=
+CONVML=disksNumber
+ELEMENT=
+[masa obciaznika]
+OPIS=
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[nosnosc statyczna]
+OPIS=
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=loadRatStatic
+ELEMENT=BEARING
+[nosnosc dynamiczna]
+OPIS=
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=loadRatDynamic
+ELEMENT=BEARING
+[srednica wewnetrzna]
+OPIS=
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[srednica zewnetrzna]
+OPIS=
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[srednica osi]
+OPIS=
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[odsadzenie lozyska]
+OPIS=Bearing offset
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[wyjscie]
+OPIS=Exit
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[zapisz html]
+OPIS=Save HTML report 
+SYMBOL=
+JEDNOSTKA=
+HINT=Save raport HTML
+[wczytaj szablon]
+OPIS=Read template
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[utworz szablon]
+OPIS=Create template
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[zachowaj jako]
+OPIS=Save as ...
+SYMBOL=
+JEDNOSTKA=
+HINT=Save as ...
+[zachowaj]
+OPIS=Save
+SYMBOL=
+JEDNOSTKA=
+HINT=Save
+[nowy]
+OPIS=New project
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[baza danych]
+OPIS=Database
+SYMBOL=
+JEDNOSTKA=
+HINT=Database
+[edycja]
+OPIS=Edit
+SYMBOL=
+JEDNOSTKA=
+HINT=Edit
+[aktywacja]
+OPIS=Activation
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[import]
+OPIS=Import
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[opory dodatkowe]
+OPIS=Extra resistance
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[opory petlicy]
+OPIS=Belt container resistance
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[opory zaladunku]
+OPIS=Loading resistance
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[opory centrowania]
+OPIS=Centering resistance
+SYMBOL=
+JEDNOSTKA=
+HINT=Centering resistance
+[opory dodatkowe inne]
+OPIS=Other extra resistace
+SYMBOL=
+JEDNOSTKA=
+HINT=Table of other extra resistace
+[wyniki]
+OPIS=Results
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[opory]
+OPIS=Resistance
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[material]
+OPIS=Material
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[napinanie]
+OPIS=Take-up
+SYMBOL=
+JEDNOSTKA=
+HINT=Take-up system
+[naped]
+OPIS=Drive
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[profil abb]
+OPIS=Route
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[warunki]
+OPIS=Conditions of work
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[email]
+OPIS=Send e-mail
+SYMBOL=
+JEDNOSTKA=
+HINT=Send e-mail
+[help]
+OPIS=Help
+SYMBOL=
+JEDNOSTKA=
+HINT=Help
+[struktura]
+OPIS=Structural model
+SYMBOL=
+JEDNOSTKA=
+HINT=Structural model
+[zwrotnia]
+OPIS=Tail
+SYMBOL=
+JEDNOSTKA=
+HINT=Tail
+CONVML=
+ELEMENT=TAIL
+[czolo]
+OPIS=Head
+SYMBOL=
+JEDNOSTKA=
+HINT=Head
+[% obc. nap.]
+OPIS=% Dr. Load.
+SYMBOL=
+JEDNOSTKA=
+HINT=% Dr. Load.
+[opor]
+OPIS=Resistance
+SYMBOL=W
+JEDNOSTKA=N
+HINT=Resistance of motion
+[komunikaty]
+OPIS=Messages
+SYMBOL=
+JEDNOSTKA=
+HINT=Messages
+[sila bezwladnosci opoznienia]
+OPIS=Inertia force - deceleration
+SYMBOL=F_bo
+JEDNOSTKA=N
+HINT=Inertia force - deceleration
+[sila bezwladnosci przyspieszenia]
+OPIS=Inertia force - acceleration
+SYMBOL=F_ao
+JEDNOSTKA=N
+HINT=Inertia force - acceleration
+[sila obwodowa]
+OPIS=Peripheral force
+SYMBOL=P
+JEDNOSTKA=N
+HINT=Peripheral force on driving drums
+[tasma sila ciezkosci]
+OPIS=Belt - gravity force
+SYMBOL=F_t
+JEDNOSTKA=N
+HINT=Belt - gravity force
+[material transportowany sila ciezkosci]
+OPIS=Material conveyed - gravity force
+SYMBOL=F_n
+JEDNOSTKA=N
+HINT=Material conveyed - gravity force
+[promien luku]
+OPIS=Radius of arc
+SYMBOL=R
+JEDNOSTKA=m
+HINT=Radius of arc
+CONVML=arcRadius
+[wysokosc]
+OPIS=Height
+SYMBOL=H
+JEDNOSTKA=m
+HINT=
+[trwalosc]
+OPIS=Life
+SYMBOL=L_h
+JEDNOSTKA=h
+HINT=Life
+[lozysko gorny boczny]
+OPIS=Bearing
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[lozysko gorny srodkowy]
+OPIS=Bearing
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[Lpodc]
+OPIS=Length Horiz.
+SYMBOL=Lp
+JEDNOSTKA=m
+HINT=
+CONVML=lengthHoriz
+ELEMENT=ROUTE_SECTION
+[stan obciazenia]
+OPIS=State of load
+SYMBOL=
+JEDNOSTKA=
+HINT=State of load
+[obciazenie pelny przenosnik]
+OPIS=Full loaded conveyor Qn
+SYMBOL=
+JEDNOSTKA=
+HINT=Full loaded conveyor Qn
+[obciazenie pusty przenosnik]
+OPIS=Unloaded conveyor
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[obciazenie max sila]
+OPIS=Max belt tension (load., unload.)
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[obciazenie wznoszace]
+OPIS=Rising flights loaded
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[obciazenie opadajace]
+OPIS=Falling flights loaded
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[f dobre]
+OPIS=Good conditons
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[f normalne]
+OPIS=Normal conditons
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[f zle]
+OPIS=Bad conditons
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[f gornicze]
+OPIS=Underground mine conditons - 0.025 ÷ 0.030
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[f w dol]
+OPIS=Downhill conveyors  - 0.012 ÷ 0.016
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[f niskie temperatury]
+OPIS=Extremly low temperature - 0.035
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[sprzeglo specjalne]
+OPIS=Special fluid coupling
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[tabela dopuszczalnych srednic]
+OPIS=Table of pulley diameters
+SYMBOL=
+JEDNOSTKA=
+HINT=Table of pulley diameters
+[punkt zbiegania]
+OPIS=Point of driving off drum
+SYMBOL=
+JEDNOSTKA=
+HINT=Point of driving off drum
+[wybierz punkt zbiegania]
+OPIS=Choose point of driving off drum
+SYMBOL=
+JEDNOSTKA=
+HINT=Choose point of driving off drum
+[kalkulator wydajnosci kombajnu]
+OPIS=Shearer calculator
+SYMBOL=
+JEDNOSTKA=
+HINT=Calculator of longwall sharer capacity
+[kalkulator parametrow kinematycznych napedu]
+OPIS=Kinematic calculator
+SYMBOL=
+JEDNOSTKA=
+HINT=Calculator of kinematic parameters of drive
+[wyznacz f]
+OPIS=Find f
+SYMBOL=
+JEDNOSTKA=
+HINT=Find of friction coefficient f
+[oblicz f]
+OPIS=Calculate f
+SYMBOL=
+JEDNOSTKA=
+HINT=Calculate of friction coefficient f
+[wspolczynnik fg fd]
+OPIS=Friction cofficients fg and fd
+SYMBOL=
+JEDNOSTKA=
+HINT=Friction cofficients for carry and return  
+[narzedzia]
+OPIS=Tools
+SYMBOL=
+JEDNOSTKA=
+HINT=Tools
+[punkty zaladowcze]
+OPIS=Loading points
+SYMBOL=
+JEDNOSTKA=
+HINT=Select localization of loading points
+CONVML=
+ELEMENT=
+[podzial przenosnika]
+OPIS=Share conveyor
+SYMBOL=
+JEDNOSTKA=
+HINT=Segment conveyor
+[tabela]
+OPIS=Table
+SYMBOL=
+JEDNOSTKA=
+HINT=Table
+[rysunek]
+OPIS=Figure
+SYMBOL=
+JEDNOSTKA=
+HINT=Figure
+[szukaj lokalizacji napedu]
+OPIS=Search of drive localization
+SYMBOL=
+JEDNOSTKA=
+HINT=Search of drive localization
+[szukaj lokalizacji UN]
+OPIS=Search of take-up localization
+SYMBOL=
+JEDNOSTKA=
+HINT=Search of take-up localization
+[nadwyzka mocy napedu]
+OPIS=5-10% drive power oversize
+SYMBOL=
+JEDNOSTKA=
+HINT=5-10% power oversize for multimotor drive     
+[wolny wybieg]
+OPIS=Breaking Mh=0
+SYMBOL=
+JEDNOSTKA=
+HINT=Breaking Mh=0
+[oblicz moc zmienny profil]
+OPIS=Power calculation     
+SYMBOL=
+JEDNOSTKA=
+HINT=Power calculation for variable profile of conveyor route
+[wybierz typ UN]
+OPIS=Choose of take-up system
+SYMBOL=
+JEDNOSTKA=
+HINT=Choose of take-up system
+[korekta sily napinajacej rozruch]
+OPIS=Tension correction (start-up)
+SYMBOL=
+JEDNOSTKA=
+HINT=Tension correction (start-up)
+[korekta sily napinajacej praca ustalona]
+OPIS=Tension correction (stationary work)
+SYMBOL=
+JEDNOSTKA=
+HINT=Tension correction (stationary work)
+[brak korekcji]
+OPIS=No correction
+SYMBOL=
+JEDNOSTKA=
+HINT=No tension correction
+[cofnij]
+OPIS=Undo
+SYMBOL=
+JEDNOSTKA=
+HINT=Undo
+[kalkulator]
+OPIS=Calculator
+SYMBOL=
+JEDNOSTKA=
+HINT=Calculator
+[otworz formularz]
+OPIS=Open blank form
+SYMBOL=
+JEDNOSTKA=
+HINT=Open blank form
+[instrukcja]
+OPIS=Manual
+SYMBOL=
+JEDNOSTKA=
+HINT=Manual
+[o programie]
+OPIS=About ...
+SYMBOL=
+JEDNOSTKA=
+HINT=About ...
+[brak]
+OPIS=none
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=
+ELEMENT=
+[male]
+OPIS=low
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[srednie]
+OPIS=average
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[duze]
+OPIS=big
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[bardzo dobre]
+OPIS=very good
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[dobre]
+OPIS=good
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[zle]
+OPIS=bad
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[k blad]
+OPIS=Error code
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[k dane poprawne]
+OPIS=Data - correct
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[echoes_0_2]
+OPIS=Calculation error in module         
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[echoes_0_3]
+OPIS=No drum drive or to high power of tripper drive
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[echoes_0_4]
+OPIS=Data reading error
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[echoes_0_5]
+OPIS=Error test: 
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[echoes_0_6]
+OPIS=Error database format
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[echoes_0_7]
+OPIS=To low belt tension
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[echoes_1_2]
+OPIS=Required power is greater than installed
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[echoes_1_3]
+OPIS=N less then 0 - adjust friction coefficient - f and drive efficiency 0.95-1.0
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=
+[echoes_1_4]
+OPIS=
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[echoes_1_5]
+OPIS=
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[echoes_1_6]
+OPIS=Unsufficient belt strength
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[echoes_1_15]
+OPIS=Unsufficient length of loading chute
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[echoes_2_2]
+OPIS=
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[echoes_2_29]
+OPIS=
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[echoes_3_2]
+OPIS=
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[echoes_3_3]
+OPIS=
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[echoes_3_4]
+OPIS=Data - correct
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[echoes_4_2]
+OPIS=Resistance to motion of a carry idler set in the conveyor section
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[echoes_4_8]
+OPIS=Minimum lenght of loading chute:    
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[proc udzial krazn centr]
+OPIS=Centering idler set
+SYMBOL=
+JEDNOSTKA=
+HINT=Centering idler set
+[kat wyprzedzenia]
+OPIS=Centering angle of idler
+SYMBOL=
+JEDNOSTKA=
+HINT=Centering angle of idler
+CONVML=angleCenteringIdler
+[wspoczynnik tarcia kraznik-tasma]
+OPIS=Friction coefficient between belt and idler
+SYMBOL=
+JEDNOSTKA=
+HINT=Friction coefficient between belt and idler
+[masa czesci obrotowych kraznika srodkowego]
+OPIS=Mass of rotating parts of central roller
+SYMBOL=m_ks
+JEDNOSTKA=kg
+HINT=Mass of rotating parts of idler
+CONVML=rotatingPartsMass
+ELEMENT=IDLER
+[masa czesci obrotowych kraznika bocznego]
+OPIS=Mass of rotating parts of side roller
+SYMBOL=m_kb
+JEDNOSTKA=kg
+HINT=Mass of rotating parts of idler
+CONVML=
+[masa czesci obrotowych kraznika nadawowego]
+OPIS=Mass of rotating parts of impact idler
+SYMBOL=m_e
+JEDNOSTKA=kg
+HINT=Mass of rotating parts of impact idler
+[liczba zestawow kraznikow nadawowych]
+OPIS=Amount of impact idler sets 
+SYMBOL=n_e
+JEDNOSTKA=
+HINT=Amount of impact idler sets
+CONVML=numberImpactIdlerSets
+ELEMENT=
+[liczba kraznikow nadawowych w zestawie]
+OPIS=Number of impact idlers in set
+SYMBOL=z_e
+JEDNOSTKA=
+HINT=Number of impact idlers in set
+CONVML=numberImpactIdlers
+ELEMENT=
+[echoes_2_9]
+OPIS=
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[echoes_2_3]
+OPIS=Tension correction - take-up system:    
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[echoes_2_4]
+OPIS=Tension correction - return belt sag:   
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[echoes_2_5]
+OPIS=Tension correction - carry belt sag:   
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[echoes_2_6]
+OPIS=No tension correction - belt sag
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[echoes_2_7]
+OPIS=Tension correction - coupling friction on drive drum:   
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[echoes_2_8]
+OPIS=No tension correction
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[echoes_2_11]
+OPIS=Friction resistance modul: 
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[echoes_2_31]
+OPIS=Database reading ...
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[echoes_2_30]
+OPIS=Please wait ...
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[echoes_2_17]
+OPIS=Database update
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[ilosc roboczogodzin]
+OPIS=Amount of working hours per annum
+SYMBOL=Ih_r
+JEDNOSTKA=h
+HINT=Amount of working hours per annum
+CONVML=amountWorkingHours
+[wspolczynnik tarcia kraznik-tasma]
+OPIS=Friction coefficient between belt and idler
+SYMBOL=@m_k-t
+JEDNOSTKA=
+HINT=Friction coefficient between belt and idler
+[okladki]
+OPIS=Covers
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[doubleclick]
+OPIS=Doubleclick of mouse button
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[czas rozruchu]
+OPIS=Start-up time
+SYMBOL=t_r
+JEDNOSTKA=s
+HINT=
+[czas hamowania]
+OPIS=Stopping time
+SYMBOL=t_h
+JEDNOSTKA=s
+HINT=
+[Pr/Pu]
+OPIS=Dynamic coefficient
+SYMBOL=Pr/Pu
+JEDNOSTKA=
+HINT=
+[echoes_4_7]
+OPIS=Loading resistance at one section:   
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[z szablonu]
+OPIS=From template
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[z pliku]
+OPIS=From file
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[grafika]
+OPIS=Graphics
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[druk]
+OPIS=Print
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[wersja jezykowa]
+OPIS=Language
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[echoes_2_32]
+OPIS=Calculations ... Please wait ...
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[podziel]
+OPIS=Share
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[wstaw]
+OPIS=Insert
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[luk]
+OPIS=Arc
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[anuluj]
+OPIS=Cancel
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[usun]
+OPIS=Delete
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[naped czolowy]
+OPIS=Head drive
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[naped zwrotny]
+OPIS=Tail drive
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[rozmiar]
+OPIS=Size
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[dodaj]
+OPIS=Add
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[grid]
+OPIS=Grid
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[obszar]
+OPIS=Area
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[zoom in]
+OPIS=Zoom In
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[zoom out]
+OPIS=Zoom Out
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[scroll]
+OPIS=Scroll
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[reset grafika]
+OPIS=Autoscale
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=
+ELEMENT=
+[masa zredukowana]
+OPIS=Reducted mass
+SYMBOL=m_zr
+JEDNOSTKA=kg
+HINT=
+[moment nominalny]
+OPIS=Nominal torque
+SYMBOL=M_nom
+JEDNOSTKA=Nm
+HINT=
+[moment napedowy]
+OPIS=Drive torque
+SYMBOL=Mn
+JEDNOSTKA=Nm
+HINT=
+[moment hamujacy]
+OPIS=Breaking torque
+SYMBOL=Mh
+JEDNOSTKA=Nm
+HINT=
+[naped glowny]
+OPIS=Main drive
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[komunikatyTT_1_3_3]
+OPIS=
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[komunikatyTT_1_2_1]
+OPIS=Calculated thickness of the belt carcass
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[sila zbiegajaca]
+OPIS=Tension in the belt driving off the drum
+SYMBOL=S
+JEDNOSTKA=N
+HINT=
+[sila UN]
+OPIS=Tension in the belt in the take-up system
+SYMBOL=S_n
+JEDNOSTKA=N
+HINT=
+[sila wymagana]
+OPIS=Required tension in the belt
+SYMBOL=S_nw
+JEDNOSTKA=N
+HINT=
+[punkt nabiegania]
+OPIS=Point of driving on drum
+SYMBOL=
+JEDNOSTKA=
+HINT=Point of driving on drum
+[przesun]
+OPIS=Move
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[kierunek]
+OPIS=Direction
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[uwagi]
+OPIS=Notices
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[% obc tasmy]
+OPIS=% tension load of the belt
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[komunikatyTT_1_1_1]
+OPIS=smaller surcharge angle assumed
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[komunikatyTT_1_1_2]
+OPIS=
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[komunikatyTT_1_1_3]
+OPIS=coefficient friction belt-transported material assumed
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[komunikatyTT_1_1_4]
+OPIS=
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[komunikatyTT_1_2_2]
+OPIS=Calculated thickness of the belt carcass
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[komunikatyTT_1_2_3]
+OPIS=Skirt width calculated
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[komunikatyTT_1_2_4]
+OPIS=
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[komunikatyTT_1_3_1]
+OPIS=Belt mass calculated
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[komunikatyTT_1_3_2]
+OPIS=
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[komunikatyTT_1_3_4]
+OPIS=
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[komunikatyTT_1_4_2]
+OPIS=
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[komunikatyTT_1_4_3]
+OPIS=Skirt length amended
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[komunikatyTT_1_5_1]
+OPIS=Belt side running of smaller than assumed
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[komunikatyTT_1_5_2]
+OPIS=Parameters have been amended
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[komunikatyTT_1_5_3]
+OPIS=
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[komunikatyTT_1_5_4]
+OPIS=
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[komunikatyTT_1_6_1]
+OPIS=
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[komunikatyTT_1_7_1]
+OPIS=
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[komunikatyTT_1_8_1]
+OPIS=
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[komunikatyTT_0_1_1]
+OPIS=wrong side inclination of an idler
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[komunikatyTT_0_1_3]
+OPIS=too small skirt width
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[komunikatyTT_0_2_1]
+OPIS=
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[komunikatyTT_0_3_1]
+OPIS=
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[dane konstrukcyjne]
+OPIS=Data of the belt conveyor
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[parametry sprzezenia ciernego]
+OPIS=Parameters of coupling friction between belt and pulley
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[kat tarcia wewnetrznego]
+OPIS=Angle of repose
+SYMBOL=@f_w
+JEDNOSTKA=°
+HINT=
+CONVML=reposeAngle
+ELEMENT=MATERIAL
+[echoes_2_10]
+OPIS=File not found
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=
+ELEMENT=
+[echoes_2_12]
+OPIS=Belt type not found in the database
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[echoes_2_14]
+OPIS=Database has been updated
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[echoes_2_15]
+OPIS=Database has been extended
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[echoes_2_18]
+OPIS=No record matches the preset criteria
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[echoes_2_21]
+OPIS=Top belt resistance to motion
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[echoes_2_22]
+OPIS=Return belt resistance to motion
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[echoes_2_23]
+OPIS=
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[echoes_2_26]
+OPIS=Belt type
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[zmien]
+OPIS=
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[obliczenia symulacyjne]
+OPIS=Simulations
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[obliczenia symulacyjne]
+OPIS=Simulations
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[eksport tabeli]
+OPIS=Table Export To File
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[luki w profilu]
+OPIS=Vertical curves
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=
+[luki w planie]
+OPIS=Horizontal curves
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[skrajnia trasy]
+OPIS=
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[zaladunek dol]
+OPIS=Loading on return belt
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[material transportowany dol]
+OPIS=Material conveyed on return belt
+SYMBOL=
+JEDNOSTKA=
+HINT=
+[nachylenie zestawow]
+OPIS=Banking angle of idler set
+SYMBOL=@l
+JEDNOSTKA=°
+HINT=
+CONVML=idlerSetBankingAngle
+[zukosowanie zestawow]
+OPIS=Tilt angle of idler set  
+SYMBOL=@e
+JEDNOSTKA=°
+HINT=
+CONVML=idlerSetTiltAngle
+ELEMENT=
+[promien luku horyzontalnego]
+OPIS=Horizontal radius
+SYMBOL=R_h
+JEDNOSTKA=m
+HINT=
+CONVML=horizontalRadius
+[promien luku wertykalnego]
+OPIS=Vertical radius
+SYMBOL=R_v
+JEDNOSTKA=m
+HINT=
+CONVML=verticalRadius
+[kat zmiany kierunku]
+OPIS=Angle of arc direction
+SYMBOL=@f
+JEDNOSTKA=°
+HINT=
+CONVML=arcAngleDirection
+[numer skrobaka]
+OPIS=Number of scraper
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=scraperNumber
+[wytrzymalosc polaczenia]
+OPIS=Strength of splicing
+SYMBOL=K_p
+JEDNOSTKA=%
+HINT=
+CONVML=spliceStrength
+ELEMENT=
+[wt_st]
+OPIS=Friction coefficient between scraper and belt
+SYMBOL=@m_skr
+JEDNOSTKA=
+HINT=
+CONVML=scraperFrictionCoefficient
+ELEMENT=
+[skrobak_nacisk]
+OPIS=Pressure of scraper
+SYMBOL=N_skr
+JEDNOSTKA=N
+HINT=
+CONVML=scraperPress
+ELEMENT=
+[il_skr]
+OPIS=Amount of scrapers
+SYMBOL=il_skr
+JEDNOSTKA=
+HINT=
+CONVML=amountScrapers
+ELEMENT=
+[min dopuszczalna sila]
+OPIS=Minimum belt tension
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=
+ELEMENT=
+[odcinek przejsciowy]
+OPIS=
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=
+ELEMENT=
+[nowy projekt]
+OPIS=New project
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=
+ELEMENT=
+[ostatnio zapisany projekt]
+OPIS=Last saved project
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=
+ELEMENT=
+[otworz z]
+OPIS=Open with ...
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=
+ELEMENT=
+[obciaznik]
+OPIS=Counterweight
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=
+ELEMENT=COUNTERWEIGHT
+[echoes_2_33]
+OPIS=Select a take-up system
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=
+ELEMENT=
+[echoes_2_34]
+OPIS=Read old format data
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=
+ELEMENT=
+[echoes_2_35]
+OPIS=Read new format data
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=
+ELEMENT=
+[opory przyspieszania nosiwa]
+OPIS=Inertial and frictional resistance at the loading point
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=
+ELEMENT=
+[opory tarcia o ograniczenia]
+OPIS=Resistance between handled material and skirtplates
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=
+ELEMENT=
+[widok]
+OPIS=View
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=
+ELEMENT=
+[widok okien]
+OPIS=Windows View
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=
+ELEMENT=
+[odczyt pliku]
+OPIS=Read from file
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=
+ELEMENT=
+[domyslny]
+OPIS=Default
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=
+ELEMENT=
+[charakterystyka sprawnosci napedu]
+OPIS=Charakteristic of the drive efficiency
+SYMBOL=
+JEDNOSTKA=
+HINT=0-none, 1-high, 2-average, 3-low  
+CONVML=
+ELEMENT=
+[wysoka sprawnosc]
+OPIS=high efficiency
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=
+ELEMENT=
+[przecietna sprawnosc]
+OPIS=average efficiency
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=
+ELEMENT=
+[niska sprawnosc]
+OPIS=low efficiency
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=
+ELEMENT=
+[echoes_1_7]
+OPIS=
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=
+ELEMENT=
+[echoes_1_9]
+OPIS=
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=
+ELEMENT=
+[echoes_1_8]
+OPIS=
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=
+ELEMENT=
+[echoes_1_10]
+OPIS=
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=
+ELEMENT=
+[echoes_1_11]
+OPIS=No stability of the belt
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=
+ELEMENT=
+[echoes_1_12]
+OPIS=
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=
+ELEMENT=
+[echoes_1_13]
+OPIS=
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=
+ELEMENT=
+[echoes_1_14]
+OPIS=
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=
+ELEMENT=
+[echoes_1_16]
+OPIS=
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=
+ELEMENT=
+[echoes_1_17]
+OPIS=
+SYMBOL=
+JEDNOSTKA=
+HINT=
+CONVML=
+ELEMENT=
