@@ -10,32 +10,33 @@
 
   <pattern name="RouteSegment pattern">
     <rule context="conv:RouteSegmentType">
-      <assert test="@length">RouteSegementType must have length</assert>
+      <assert test="@length">RouteSegementType must have length.</assert>
     </rule>
     <rule context="conv:RouteSegment[@type]">
       <assert test="not(@length)">
-	RouteSegement with @type cannot redefine @length
+	RouteSegement with @type cannot redefine @length.
       </assert>
-      <!--report test="key('routeSegmentKey', @type)/@length">
-	RouteSegment has length = <value-of select="key('routeSegmentKey', @type)/@length"/>
-      </report-->
     </rule>
     <rule context="conv:RouteSegment[not(@type)]">
       <assert test="@length">
-	RouteSegement must have length or reference to Type
+	RouteSegement must have length or reference to Type.
       </assert>
     </rule>
   </pattern>
 
-  <!--pattern name="RouteSection pattern">
+  <pattern name="RouteSection pattern">
     <rule context="conv:RouteSection[conv:RouteSegment]">
       <let name="segTypes" value="//conv:RouteSegmentType" />
-      <let name="segments" value="conv:RouteSegment" />
+      <let name="subSegLength" value="sum(
+				      for $x in conv:RouteSegment
+				      return if ($x/@length)
+				      then $x/@length
+				      else $segTypes[@typeId = $x/@type]/@length)
+				      "/>
       
-      <report test="$segments">
-	RouteSection length = <value-of select="@length"/>,
-and sub-segments length = <value-of select="sum($segments/@length | $segments[$segTypes[@typeId = @type])"/>
-      </report>    
+      <assert test="number(@length) &gt;= number($subSegLength)">
+	RouteSection length = <value-of select="@length"/> is smaller than sub-segments length = <value-of select="$subSegLength"/>.
+      </assert>    
     </rule>
-  </pattern-->
+  </pattern>
 </schema>
