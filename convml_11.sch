@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <schema xmlns="http://purl.oclc.org/dsdl/schematron"
-	xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+	xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+	queryBinding="xslt2">
   <title>Schematron for ConvML</title>
   <ns prefix="conv" uri="http://www.entertech.com.pl/convml"/>
   <ns prefix="xsl" uri="http://www.w3.org/1999/XSL/Transform"/>
@@ -26,15 +27,15 @@
     </rule>
   </pattern>
 
-  <pattern name="RouteSection pattern">
+  <!--pattern name="RouteSection pattern">
     <rule context="conv:RouteSection[conv:RouteSegment]">
       <let name="segTypes" value="//conv:RouteSegmentType" />
       <let name="segments" value="conv:RouteSegment" />
       
-      <!--report test="$segments">
+      <report test="$segments">
 	RouteSection length = <value-of select="@length"/>,
 and sub-segments length = <value-of select="sum($segments/@length | $segments[$segTypes[@typeId = @type])"/>
-      </report-->    
+      </report>    
     </rule>
-  </pattern>
+  </pattern-->
 </schema>

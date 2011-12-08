@@ -53,18 +53,23 @@ def validate(file, shouldBeValid=true)
   return 0
 end
 
-def xsd_validate(file)
-  schema = "../convml_11.xsd"
+def xsd_validate(file, schema="../convml_11.xsd")
   xsd = Nokogiri::XML::Schema(File.read(schema))
   doc = Nokogiri::XML(File.read(file))
   errors = xsd.validate(doc)  
+end
+
+def xpath2to1(doc, xpath, ns={'conv' => 'http://www.entertech.com.pl/convml'})
+  xpath.gsub!(/\[namespace-uri\(\)='[^']*'\]/, '')
+  xpath.gsub!('*', ns.keys.first)
+  doc.xpath(xpath, ns)
 end
 
 def rule_hints(results_doc, instance_doc, rule_type='failed-assert')
   results = []
 
   results_doc.xpath("//svrl:#{rule_type}").each do |hit|
-    context = instance_doc.xpath(hit['location']).first
+    context = xpath2to1(instance_doc, hit['location']).first
     
     hit.xpath('svrl:text/text()').each do |message|
       results << {
