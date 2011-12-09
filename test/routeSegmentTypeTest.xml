@@ -1,19 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Test referencji do typów segmentu trasy. -->
 <ConvML version="1.2" xmlns="http://www.entertech.com.pl/convml">
   <Types>
-    <BeltSegmentType typeId="bs1" />
-    <BeltSegmentType typeId="22" />
-    <RouteSegmentType typeId="rs1" length="3"/>
+    <RouteSegmentType typeId="rs1" length="20"/>
   </Types>
   <BeltConveyor>
     <Conditions/>
     <Belt>
       <BeltSplice/>
-      <BeltSegment type="bs1"/>
-      <BeltSplice/>
-      <BeltSegment type="bs1"/>
-      <BeltSplice/>
-      <BeltSegment type="22"/>      
+      <BeltSegment/>
     </Belt>
     <Tail length="50" angle="5">
       <Pulley y="2" diameter="1"/>

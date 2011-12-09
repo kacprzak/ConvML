@@ -36,7 +36,21 @@
       
       <assert test="number(@length) &gt;= number($subSegLength)">
 	RouteSection length = <value-of select="@length"/> is smaller than sub-segments length = <value-of select="$subSegLength"/>.
-      </assert>    
+      </assert>
+      <assert test="not(@segmentType)">
+	RouteSection with sub-elements cannot have segmentType attribute.
+      </assert>
+    </rule>
+    <rule context="conv:RouteSection[@segmentType]">
+      <let name="segTypes" value="//conv:RouteSegmentType" />
+
+      <assert test="count(conv:RouteSegement) = 0">
+	RouteSection with segmentType attribute cannot have sub-segments.
+      </assert>
+      <!--assert test="number(@length) &gt;= number($segTypes[@typeId = ./@segmentType]/@length)">
+	RouteSection cannot have sub-segment longer than section itself.
+	<value-of select="@length"/> &gt; <value-of select="$segTypes[@typeId = ./@segmentType]/@length"/>
+      </assert-->
     </rule>
   </pattern>
 </schema>
