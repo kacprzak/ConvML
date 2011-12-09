@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Test referencji do typów segmentu trasy.
+Odcinek trasy odwołuje się do typu segmentu dłuższego niż sam odcinek! -->
+<ConvML version="1.2" xmlns="http://www.entertech.com.pl/convml">
+  <Types>
+    <RouteSegmentType typeId="rs1" length="30"/>
+  </Types>
+  <BeltConveyor>
+    <Conditions/>
+    <Belt>
+      <BeltSplice/>
+      <BeltSegment/>
+    </Belt>
+    <Tail length="50" angle="5">
+      <Pulley y="2" diameter="1"/>
+      <Carry>
+	<Chute>
+	  <Material/>
+	</Chute>
+      </Carry>
+      <Return/>
+    </Tail>
+    <Route>
+      <RouteSection length="50">
+	<RouteSegment type="rs1"/>
+      </RouteSection>
+      <RouteSection length="20" segmentType="rs1" />
+    </Route>
+    <Head length="50" angle="5">
+      <Pulley y="2" diameter="1">
+	<DriveUnit>
+	  <Motor/>
+	  <Coupling/>
+	  <Gearbox/>
+	  <ElectricalEquipment/>
+	</DriveUnit>
+      </Pulley>
+      <Carry/>
+      <Return/>
+    </Head>
+    <ConvElectricalEquipment>
+      <ControlSystem/>
+      <EmergencySystem/>
+      <SignalSystem/>
+      <FireSystem/>
+    </ConvElectricalEquipment>
+  </BeltConveyor>
+</ConvML>
