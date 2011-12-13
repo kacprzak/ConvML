@@ -1,26 +1,42 @@
 require 'nokogiri'
 require 'logger'
+require 'rake/clean'
 require '../tools/multiio.rb'
 
-LOG_FILE = "test.log"
-File.delete(LOG_FILE) if File.exists?(LOG_FILE)
-log_file = File.open(LOG_FILE, "w")
-LOG = Logger.new(MultiIO.new(log_file, STDOUT))
-LOG.formatter = proc do |severity, datetime, progname, msg|
+STRON_SCHEMA = "../convml_11.sch"
+STRON_COMPILED = "convml_11_sch-compiled.xsl"
+XSD_SCHEMA = "../convml_11.xsd"
+
+CLEAN.include('*.svrl')
+CLEAN.include('*.log')
+CLEAN.include(STRON_COMPILED)
+
+FORMATTER = proc do |severity, datetime, progname, msg|
   "#{severity}: #{msg}\n"
 end
 
+log_file = File.open("test.log", "w")
+LOG = Logger.new(MultiIO.new(log_file, STDOUT))
+LOG.formatter = FORMATTER
+
 ERR_LOG = Logger.new('fail.log')
+ERR_LOG.formatter = FORMATTER
+
+# Testowane pliki
+XML_FILES = FileList['*.xml']
+SVRL_FILES = XML_FILES.ext('svrl')
+
+SVRL_FILES.each do |svrl|
+  file svrl => [svrl.ext('xml'), STRON_COMPILED]
+end
 
 task :default => [:test]
 
-task :test => ["convml_11_sch-compiled.xsl"] do
+task :test => [*SVRL_FILES] do
   err_count = 0
-  # Test szablonu
-  err_count += validate "../convml_11_template.xml"
   
   # Testuje poprawne dokumenty
-  Rake::FileList.new("*.xml").exclude("*Fail.xml").each do |f|
+  XML_FILES.exclude("*Fail.xml").each do |f|
     err_count += validate f
   end
   
@@ -44,7 +60,7 @@ def validate(file, shouldBeValid=true)
   ERR_LOG.info msg
 
   errors = xsd_validate file
-  errors += schematron file
+  errors += stron_validate file
   errors.each {|e| ERR_LOG.info e }
 
   if errors.any? && shouldBeValid   
@@ -70,7 +86,7 @@ def xpath2to1(doc, xpath, ns={'conv' => 'http://www.entertech.com.pl/convml'})
   doc.xpath(xpath, ns)
 end
 
-def rule_hints(results_doc, instance_doc, rule_type='failed-assert')
+def rule_hints(results_doc, instance_doc, rule_type)
   results = []
 
   results_doc.xpath("//svrl:#{rule_type}").each do |hit|
@@ -88,22 +104,19 @@ def rule_hints(results_doc, instance_doc, rule_type='failed-assert')
   results  
 end
 
-def schematron(file)
-  xsl_file = "convml_11_sch-compiled.xsl"
-  out_file = "temp.svrl"
-  xslt2_transform(xsl_file, file, out_file)
-  
+def stron_validate(file)
+  report_file = file.ext('svrl') 
   doc = Nokogiri::XML(File.read(file))
-  report = Nokogiri::XML(File.read(out_file))
+  report = Nokogiri::XML(File.read(report_file))
 
   rule_hints(report, doc, 'successful-report').each {|r| LOG.info r}
-  errors = rule_hints(report, doc)
+  errors = rule_hints(report, doc, 'failed-assert')
 end
 
-file "convml_11_sch-compiled.xsl" => ["../convml_11.sch"] do
-  schema_file = "../convml_11.sch"
+file STRON_COMPILED => [STRON_SCHEMA] do
+  schema_file = STRON_SCHEMA
   stron_file = "../thirdparty/iso-schematron-xslt2/iso_svrl_for_xslt2.xsl"
-  output_file = "convml_11_sch-compiled.xsl"
+  output_file = STRON_COMPILED
 
   LOG.info "compiling #{schema_file}"
   xslt2_transform(stron_file, schema_file, output_file)
@@ -113,4 +126,8 @@ def xslt2_transform(xsl_file, in_file, out_file)
   saxon_jar = "../thirdparty/saxon9he.jar"
   flag = "" #"-t"
   sh "java -cp #{saxon_jar} net.sf.saxon.Transform #{flag} -s:#{in_file} -xsl:#{xsl_file} -o:#{out_file}"
+end
+
+rule '.svrl' => '.xml' do |t|
+  xslt2_transform STRON_COMPILED, t.source, t.name
 end
