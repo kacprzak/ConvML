@@ -59,7 +59,7 @@ def validate(file, shouldBeValid=true)
   LOG.info msg
   ERR_LOG.info msg
 
-  errors = xsd_validate file
+  errors = xsd_validate file, XSD_SCHEMA
   errors += stron_validate file
   errors.each {|e| ERR_LOG.info e }
 
@@ -74,7 +74,7 @@ def validate(file, shouldBeValid=true)
   return 0
 end
 
-def xsd_validate(file, schema="../convml_11.xsd")
+def xsd_validate(file, schema)
   xsd = Nokogiri::XML::Schema(File.read(schema))
   doc = Nokogiri::XML(File.read(file))
   errors = xsd.validate(doc)  
