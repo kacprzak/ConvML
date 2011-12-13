@@ -32,7 +32,7 @@ end
 
 task :default => [:test]
 
-task :test => [*SVRL_FILES] do
+task :test => SVRL_FILES do
   err_count = 0
   
   # Testuje poprawne dokumenty
