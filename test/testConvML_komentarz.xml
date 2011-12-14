@@ -4,7 +4,7 @@
     <IdlerType length="380" diameter="108" rotatingPartsMass="6.88" idlerResistance="5" troughingAngle="30" typeId="Kraznik_gorny_boczny"/>
     <IdlerType length="380" diameter="108" rotatingPartsMass="6.88" idlerResistance="5" typeId="Kraznik_gorny_srodkowy"/>
     <IdlerType length="600" diameter="108" rotatingPartsMass="8.42" idlerResistance="5" troughingAngle="15" typeId="Kraznik_dolny_boczny"/>
-    <IdlerSetType typeID="Gorna_trasa">
+    <IdlerSetType typeId="Gorna_trasa">
       <!-- 
 	   kat nachylenia
 	   kat wyprzedzenia krążnikow
@@ -14,14 +14,14 @@
       <Idler type="Kraznik_gorny_srodkowy"/>
       <Idler type="Kraznik_gorny_boczny"/>
     </IdlerSetType>
-    <IdlerSetType typeID="Dolna_trasa">
+    <IdlerSetType typeId="Dolna_trasa">
       <Idler type="Kraznik_dolny_boczny"/>
       <Idler type="Kraznik_dolny_boczny"/>
     </IdlerSetType>
     <!-- 
 	 segment z pochylonymi - nietypowymi zestawami
     -->
-    <RouteSegmentType typeID="Segment1" length="3.00">
+    <RouteSegmentType typeId="Segment1" length="3.00">
       <Carry>
 	<IdlerSet type="Gorna_trasa">
 	</IdlerSet>
