@@ -1,130 +1,129 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ConvML xmlns="http://www.entertech.com.pl/convml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-<Types>
-		<IdlerType length="380" diameter="108" rotatingPartsMass="6.88" idlerResistance="5" troughingAngle="30" typeId="Kraznik_gorny_boczny"/>
-		<IdlerType length="380" diameter="108" rotatingPartsMass="6.88" idlerResistance="5" typeId="Kraznik_gorny_srodkowy"/>
-		<IdlerType length="600" diameter="108" rotatingPartsMass="8.42" idlerResistance="5" troughingAngle="15" typeId="Kraznik_dolny_boczny"/>
-		<IdlerSetType typeID="Gorna_trasa">
-			<!-- 
-			 
-			kat nachylenia
-			kat wyprzedzenia krążnikow
-			kat zukosowania zestawu
-		
-			-->
-			<Idler type="Kraznik_gorny_boczny" troughingAngle="30">
-			</Idler>
-			<Idler type="Kraznik_gorny_srodkowy">
-			</Idler>
-			<Idler type="Kraznik_gorny_boczny">
-			</Idler>
-		</IdlerSetType>
-		<IdlerSetType typeID="Dolna_trasa">
-			<Idler type="Kraznik_dolny_boczny">
-			</Idler>
-			<Idler type="Kraznik_dolny_boczny">
-			</Idler>
-		</IdlerSetType>
-		<!-- 
-			segment z pochylonymi - nietypowymi zestawami
-		
-			-->
-		<RouteSegmentType typeID="Segment1" length="3.00">
-			<Carry><IdlerSet type="Gorna_trasa">
-				</IdlerSet>
-				<IdlerSet type="Gorna_trasa">
-				</IdlerSet>
-			</Carry>
-			<Return>
-				<IdlerSet type="Dolna_trasa">
-				</IdlerSet>
-			</Return>
-		</RouteSegmentType>
-	</Types>
-<BeltConveyor designCapacity="788" beltSpeed="2.00"><Conditions ambientTemperature="-20" beltSideRunning="1" beltWorkConditions="4"/>
-		<Belt width="1000">
-			<BeltSplice spliceStrength="80"/>
-			<BeltSegment manufacturer="SEMPERTRANS Bechat˘w" strength="800" mass="17.70" thickness="15.2" topCoverThickness="6" bottomCoverThickness="4" carcassThickness="5.2" carcassType="1" carcassCode="108.0" pliesNumber="4" coverDescription="X" elasticityModulus="5000"/>
-		</Belt>
-		<Tail>
-			<Carry/>
-			<Return>
-				<Pulley number="6" x="0.5" y="-0.3" diameter="0.3" wrapAngle="-12"/>
-			</Return>
-			<Pulley number="7" x="0" y="0" diameter="0.500" wrapAngle="192"/>
-		</Tail>
-		<Route>
-			<RouteSection segmentType="Segment1" number="1" length="75.0" angle="0.00">
-				<RouteSegment>
-					<Carry><Chute capacity="788" horizontalSpeed="0.00" skirtMaterialFriction="0.60" skirtLength="3.00" skirtWidth="0.65">
-							<Material density="1800" surchargeAngle="15" lumpSizeMaximum="0.250" lumpPercTopSize="20" materialBeltFriction="0.35"/>
-						</Chute>
-					</Carry>
-					<Return>
-							<!-- nie dodawać return carry-->
-					</Return>
-					<Carry><Chute horizontalSpeed="0.00" skirtMaterialFriction="0.60" skirtLength="3.00" skirtWidth="0.65">
-							<Material density="1800" surchargeAngle="15" lumpSizeMaximum="0.250" lumpPercTopSize="20" materialBeltFriction="0.35"/>
-						</Chute>
-					</Carry>
-					<Return>
-					</Return>
-				</RouteSegment>
-			</RouteSection>
-			<RouteSection segmentType="Segment1" number="2" length="75.3" angle="-2.70">
-			</RouteSection>
-			<RouteSection segmentType="Segment1" number="3" length="19.6" angle="-1.58" verticalRadius="-500.00">
-			</RouteSection>
-			<RouteSection segmentType="Segment1" number="4" length="160.0" angle="-0.45" horizontalRadius="500.0">
-			</RouteSection>
-			<RouteSection segmentType="Segment1" number="5" length="16.8" angle="-2.86" verticalRadius="200.00" horizontalRadius="450">
-			</RouteSection>
-			<RouteSection segmentType="Segment1" number="6" length="29.9" angle="-5.26" horizontalRadius="550">
-			</RouteSection>
-			<RouteSection segmentType="Segment1" number="7" length="33.7" angle="-4.30" verticalRadius="-1000" horizontalRadius="600">
-			</RouteSection>
-			<RouteSection segmentType="Segment1" number="8" length="62.0" angle="-3.33">
-			</RouteSection>
-			<RouteSection segmentType="Segment1" number="9" length="55.4" angle="1.21" verticalRadius="-350.00">
-			</RouteSection>
-			<RouteSection number="10" length="4.0" angle="5.74">
-				<RouteSegment>
-					<Carry/>
-					<!-- zestawy krążnikowe-->
-					<Return>
-						<Pulley number="2" x="2.7" y="-1" diameter="0.630" wrapAngle="205"><DriveUnit driveEfficiency="0.92">
-								<Motor power="37" nominalRotationalSpeed="1485"/>
-								<Coupling/>
-								<Gearbox gearRatio="24.961"/>
-								<ElectricalEquipment/>
-							</DriveUnit>
-							<DriveUnit driveEfficiency="0.92">
-								<Motor power="37" nominalRotationalSpeed="1485"/>
-								<Coupling/>
-								<Gearbox gearRatio="24.961"/>
-								<ElectricalEquipment/>
-							</DriveUnit>
-						</Pulley>
-						<Pulley number="3" x="2" y="-0.5" diameter="0.5" wrapAngle="-185"/>
-						<Pulley number="4" x="13" y="-0.5" diameter="0.5" wrapAngle="-180"/>
-						<Pulley number="5" x="4.5" y="-1" diameter="0.5" wrapAngle="180"><TakeUpSystem>
-								<ElectricalEquipment/>
-								<StrechingCar/>
-								<Winch/>
-								<GravitySystem/>
-							</TakeUpSystem>
-						</Pulley>
-					</Return>
-				</RouteSegment>
-			</RouteSection>
-		</Route>
-		<Head>
-			<Pulley number="1" x="0" y="0" diameter="0.63" wrapAngle="160"/>
-		</Head>
-		<ConvElectricalEquipment>
-			<ControlSystem/>
-			<EmergencySystem/>
-			<SignalSystem/>
-			<FireSystem/>
-		</ConvElectricalEquipment>
-	</BeltConveyor></ConvML>
+  <Types>
+    <IdlerType length="380" diameter="108" rotatingPartsMass="6.88" idlerResistance="5" troughingAngle="30" typeId="Kraznik_gorny_boczny"/>
+    <IdlerType length="380" diameter="108" rotatingPartsMass="6.88" idlerResistance="5" typeId="Kraznik_gorny_srodkowy"/>
+    <IdlerType length="600" diameter="108" rotatingPartsMass="8.42" idlerResistance="5" troughingAngle="15" typeId="Kraznik_dolny_boczny"/>
+    <IdlerSetType typeID="Gorna_trasa">
+      <!-- 
+	   kat nachylenia
+	   kat wyprzedzenia krążnikow
+	   kat zukosowania zestawu	   
+      -->
+      <Idler type="Kraznik_gorny_boczny" troughingAngle="30"/>
+      <Idler type="Kraznik_gorny_srodkowy"/>
+      <Idler type="Kraznik_gorny_boczny"/>
+    </IdlerSetType>
+    <IdlerSetType typeID="Dolna_trasa">
+      <Idler type="Kraznik_dolny_boczny"/>
+      <Idler type="Kraznik_dolny_boczny"/>
+    </IdlerSetType>
+    <!-- 
+	 segment z pochylonymi - nietypowymi zestawami
+    -->
+    <RouteSegmentType typeID="Segment1" length="3.00">
+      <Carry>
+	<IdlerSet type="Gorna_trasa">
+	</IdlerSet>
+	<IdlerSet type="Gorna_trasa">
+	</IdlerSet>
+      </Carry>
+      <Return>
+	<IdlerSet type="Dolna_trasa">
+	</IdlerSet>
+      </Return>
+    </RouteSegmentType>
+  </Types>
+  <BeltConveyor designCapacity="788" beltSpeed="2.00">
+    <Conditions ambientTemperature="-20" beltSideRunning="1" beltWorkConditions="4"/>
+    <Belt width="1000">
+      <BeltSplice spliceStrength="80"/>
+      <BeltSegment manufacturer="SEMPERTRANS Bechat˘w" strength="800" mass="17.70" thickness="15.2" topCoverThickness="6" bottomCoverThickness="4" carcassThickness="5.2" carcassType="1" carcassCode="108.0" pliesNumber="4" coverDescription="X" elasticityModulus="5000"/>
+    </Belt>
+    <Tail>
+      <Carry/>
+      <Return>
+	<Pulley number="6" x="0.5" y="-0.3" diameter="0.3" wrapAngle="-12"/>
+      </Return>
+      <Pulley number="7" x="0" y="0" diameter="0.500" wrapAngle="192"/>
+    </Tail>
+    <Route>
+      <RouteSection segmentType="Segment1" number="1" length="75.0" angle="0.00">
+	<RouteSegment>
+	  <Carry>
+	    <Chute capacity="788" horizontalSpeed="0.00" skirtMaterialFriction="0.60" skirtLength="3.00" skirtWidth="0.65">
+	      <Material density="1800" surchargeAngle="15" lumpSizeMaximum="0.250" lumpPercTopSize="20" materialBeltFriction="0.35"/>
+	    </Chute>
+	  </Carry>
+	  <Return>
+	    <!-- nie dodawać return carry-->
+	  </Return>
+	  <Carry>
+	    <Chute horizontalSpeed="0.00" skirtMaterialFriction="0.60" skirtLength="3.00" skirtWidth="0.65">
+	      <Material density="1800" surchargeAngle="15" lumpSizeMaximum="0.250" lumpPercTopSize="20" materialBeltFriction="0.35"/>
+	    </Chute>
+	  </Carry>
+	  <Return>
+	  </Return>
+	</RouteSegment>
+      </RouteSection>
+      <RouteSection segmentType="Segment1" number="2" length="75.3" angle="-2.70">
+      </RouteSection>
+      <RouteSection segmentType="Segment1" number="3" length="19.6" angle="-1.58" verticalRadius="-500.00">
+      </RouteSection>
+      <RouteSection segmentType="Segment1" number="4" length="160.0" angle="-0.45" horizontalRadius="500.0">
+      </RouteSection>
+      <RouteSection segmentType="Segment1" number="5" length="16.8" angle="-2.86" verticalRadius="200.00" horizontalRadius="450">
+      </RouteSection>
+      <RouteSection segmentType="Segment1" number="6" length="29.9" angle="-5.26" horizontalRadius="550">
+      </RouteSection>
+      <RouteSection segmentType="Segment1" number="7" length="33.7" angle="-4.30" verticalRadius="-1000" horizontalRadius="600">
+      </RouteSection>
+      <RouteSection segmentType="Segment1" number="8" length="62.0" angle="-3.33">
+      </RouteSection>
+      <RouteSection segmentType="Segment1" number="9" length="55.4" angle="1.21" verticalRadius="-350.00">
+      </RouteSection>
+      <RouteSection number="10" length="4.0" angle="5.74">
+	<RouteSegment>
+	  <Carry/>
+	  <!-- zestawy krążnikowe-->
+	  <Return>
+	    <Pulley number="2" x="2.7" y="-1" diameter="0.630" wrapAngle="205">
+	      <DriveUnit driveEfficiency="0.92">
+		<Motor power="37" nominalRotationalSpeed="1485"/>
+		<Coupling/>
+		<Gearbox gearRatio="24.961"/>
+		<ElectricalEquipment/>
+	      </DriveUnit>
+	      <DriveUnit driveEfficiency="0.92">
+		<Motor power="37" nominalRotationalSpeed="1485"/>
+		<Coupling/>
+		<Gearbox gearRatio="24.961"/>
+		<ElectricalEquipment/>
+	      </DriveUnit>
+	    </Pulley>
+	    <Pulley number="3" x="2" y="-0.5" diameter="0.5" wrapAngle="-185"/>
+	    <Pulley number="4" x="13" y="-0.5" diameter="0.5" wrapAngle="-180"/>
+	    <Pulley number="5" x="4.5" y="-1" diameter="0.5" wrapAngle="180">
+	      <TakeUpSystem>
+		<ElectricalEquipment/>
+		<StrechingCar/>
+		<Winch/>
+		<GravitySystem/>
+	      </TakeUpSystem>
+	    </Pulley>
+	  </Return>
+	</RouteSegment>
+      </RouteSection>
+    </Route>
+    <Head>
+      <Pulley number="1" x="0" y="0" diameter="0.63" wrapAngle="160"/>
+    </Head>
+    <ConvElectricalEquipment>
+      <ControlSystem/>
+      <EmergencySystem/>
+      <SignalSystem/>
+      <FireSystem/>
+    </ConvElectricalEquipment>
+  </BeltConveyor>
+</ConvML>
