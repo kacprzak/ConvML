@@ -29,6 +29,7 @@
       <xs:selector xpath="conv:Types/conv:MaterialType" />
       <xs:field xpath="@typeId" />
     </xs:key>
+    <!-- ************************************************** -->
     <xs:keyref name="beltSegmentRef" refer="beltSegmentKey">
       <xs:selector xpath="conv:BeltConveyor/conv:Belt/conv:BeltSegment" />
       <xs:field xpath="@type" />
@@ -37,6 +38,7 @@
       <xs:selector xpath="conv:Types/conv:BeltSegmentType" />
       <xs:field xpath="@typeId" />
     </xs:key>
+    <!-- ************************************************** -->
     <xs:keyref name="beltSpliceRef" refer="beltSpliceKey">
       <xs:selector xpath="conv:BeltConveyor/conv:Belt/conv:BeltSplice" />
       <xs:field xpath="@type" />
@@ -45,6 +47,7 @@
       <xs:selector xpath="conv:Types/conv:BeltSpliceType" />
       <xs:field xpath="@typeId" />
     </xs:key>
+    <!-- ************************************************** -->
     <xs:keyref name="idlerRef" refer="idlerKey">
       <xs:selector xpath=".//conv:Idler" />
       <xs:field xpath="@type" />
@@ -53,6 +56,7 @@
       <xs:selector xpath="conv:Types/conv:IdlerType" />
       <xs:field xpath="@typeId" />
     </xs:key>
+    <!-- ************************************************** -->
     <xs:keyref name="idlerSetRef" refer="idlerSetKey">
       <xs:selector xpath=".//conv:IdlerSet" />
       <xs:field xpath="@type" />
@@ -61,6 +65,7 @@
       <xs:selector xpath="conv:Types/conv:IdlerSetType" />
       <xs:field xpath="@typeId" />
     </xs:key>
+    <!-- ************************************************** -->
     <xs:keyref name="routeSegmentRef" refer="routeSegmentKey">
       <xs:selector xpath=".//conv:RouteSegment" />
       <xs:field xpath="@type" />
@@ -77,6 +82,7 @@
   <!-- * -->
   <xs:complexType name="convMLType">
     <xs:sequence>
+      <!-- ****************************** META ***************************** -->
       <xs:element minOccurs="0" maxOccurs="1" name="Meta" nillable="true">
         <xs:complexType>
           <xs:all minOccurs="0">
@@ -108,7 +114,7 @@
           </xs:all>
         </xs:complexType>
       </xs:element>
-      <!-- * -->
+      <!-- ****************************** TYPES ***************************** -->
       <xs:element minOccurs="0" maxOccurs="1" name="Types">
         <xs:complexType>
           <xs:choice minOccurs="0" maxOccurs="unbounded">
