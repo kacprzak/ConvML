@@ -21,51 +21,73 @@
       ***************************************************************************
   -->
   <xs:element name="ConvML" type="convMLType">
-    <xs:keyref name="materialRef" refer="materialKey">
-      <xs:selector xpath=".//conv:Material" />
-      <xs:field xpath="@type" />
-    </xs:keyref>
     <xs:key name="materialKey">
       <xs:selector xpath="conv:Types/conv:MaterialType" />
       <xs:field xpath="@typeId" />
     </xs:key>
-    <!-- ************************************************** -->
-    <xs:keyref name="beltSegmentRef" refer="beltSegmentKey">
-      <xs:selector xpath="conv:BeltConveyor/conv:Belt/conv:BeltSegment" />
+    <xs:keyref name="materialRef" refer="materialKey">
+      <xs:selector xpath=".//conv:Material" />
       <xs:field xpath="@type" />
     </xs:keyref>
+    <!-- ************************************************** -->
     <xs:key name="beltSegmentKey">
       <xs:selector xpath="conv:Types/conv:BeltSegmentType" />
       <xs:field xpath="@typeId" />
     </xs:key>
-    <!-- ************************************************** -->
-    <xs:keyref name="beltSpliceRef" refer="beltSpliceKey">
-      <xs:selector xpath="conv:BeltConveyor/conv:Belt/conv:BeltSplice" />
+    <xs:keyref name="beltSegmentRef" refer="beltSegmentKey">
+      <xs:selector xpath="conv:BeltConveyor/conv:Belt/conv:BeltSegment" />
       <xs:field xpath="@type" />
     </xs:keyref>
+    <!-- ************************************************** -->
     <xs:key name="beltSpliceKey">
       <xs:selector xpath="conv:Types/conv:BeltSpliceType" />
       <xs:field xpath="@typeId" />
     </xs:key>
-    <!-- ************************************************** -->
-    <xs:keyref name="idlerRef" refer="idlerKey">
-      <xs:selector xpath=".//conv:Idler" />
+    <xs:keyref name="beltSpliceRef" refer="beltSpliceKey">
+      <xs:selector xpath="conv:BeltConveyor/conv:Belt/conv:BeltSplice" />
       <xs:field xpath="@type" />
     </xs:keyref>
+    <!-- ************************************************** -->
+    <xs:key name="bearingKey">
+      <xs:selector xpath="conv:Types/conv:BearingType" />
+      <xs:field xpath="@typeId" />
+    </xs:key>
+    <xs:keyref name="bearingRef" refer="bearingKey">
+      <xs:selector xpath=".//conv:Bearing" />
+      <xs:field xpath="@type" />
+    </xs:keyref>
+    <!-- ************************************************** -->
     <xs:key name="idlerKey">
       <xs:selector xpath="conv:Types/conv:IdlerType" />
       <xs:field xpath="@typeId" />
     </xs:key>
-    <!-- ************************************************** -->
-    <xs:keyref name="idlerSetRef" refer="idlerSetKey">
-      <xs:selector xpath=".//conv:IdlerSet" />
+    <xs:keyref name="idlerRef" refer="idlerKey">
+      <xs:selector xpath=".//conv:Idler" />
       <xs:field xpath="@type" />
     </xs:keyref>
+    <!-- ************************************************** -->
     <xs:key name="idlerSetKey">
       <xs:selector xpath="conv:Types/conv:IdlerSetType" />
       <xs:field xpath="@typeId" />
     </xs:key>
+    <xs:keyref name="idlerSetRef" refer="idlerSetKey">
+      <xs:selector xpath=".//conv:IdlerSet" />
+      <xs:field xpath="@type" />
+    </xs:keyref>
     <!-- ************************************************** -->
+    <xs:key name="idlerSetSpecialKey">
+      <xs:selector xpath="conv:Types/conv:IdlerSetSpecialType" />
+      <xs:field xpath="@typeId" />
+    </xs:key>
+    <xs:keyref name="idlerSetSpecialRef" refer="idlerSetSpecialKey">
+      <xs:selector xpath=".//conv:IdlerSetSpecial" />
+      <xs:field xpath="@type" />
+    </xs:keyref>
+    <!-- ************************************************** -->
+    <xs:key name="routeSegmentKey">
+      <xs:selector xpath="conv:Types/conv:RouteSegmentType" />
+      <xs:field xpath="@typeId" />
+    </xs:key>
     <xs:keyref name="routeSegmentRef" refer="routeSegmentKey">
       <xs:selector xpath=".//conv:RouteSegment" />
       <xs:field xpath="@type" />
@@ -74,10 +96,60 @@
       <xs:selector xpath=".//conv:RouteSection" />
       <xs:field xpath="@segmentType" />
     </xs:keyref>
-    <xs:key name="routeSegmentKey">
-      <xs:selector xpath="conv:Types/conv:RouteSegmentType" />
+    <!-- ************************************************** -->
+    <xs:key name="pulleyKey">
+      <xs:selector xpath="conv:Types/conv:PulleyType" />
       <xs:field xpath="@typeId" />
     </xs:key>
+    <xs:keyref name="pulleyRef" refer="pulleyKey">
+      <xs:selector xpath=".//conv:Pulley" />
+      <xs:field xpath="@type" />
+    </xs:keyref>
+    <!-- ************************************************** -->
+    <xs:key name="motorKey">
+      <xs:selector xpath="conv:Types/conv:MotorType" />
+      <xs:field xpath="@typeId" />
+    </xs:key>
+    <xs:keyref name="motorRef" refer="motorKey">
+      <xs:selector xpath=".//conv:Motor" />
+      <xs:field xpath="@type" />
+    </xs:keyref>
+    <!-- ************************************************** -->
+    <xs:key name="brakeKey">
+      <xs:selector xpath="conv:Types/conv:BrakeType" />
+      <xs:field xpath="@typeId" />
+    </xs:key>
+    <xs:keyref name="brakeRef" refer="brakeKey">
+      <xs:selector xpath=".//conv:Brake" />
+      <xs:field xpath="@type" />
+    </xs:keyref>
+    <!-- ************************************************** -->
+    <xs:key name="couplingKey">
+      <xs:selector xpath="conv:Types/conv:CouplingType" />
+      <xs:field xpath="@typeId" />
+    </xs:key>
+    <xs:keyref name="couplingRef" refer="couplingKey">
+      <xs:selector xpath=".//conv:Coupling" />
+      <xs:field xpath="@type" />
+    </xs:keyref>
+    <!-- ************************************************** -->
+    <xs:key name="fluidCouplingKey">
+      <xs:selector xpath="conv:Types/conv:FluidCouplingType" />
+      <xs:field xpath="@typeId" />
+    </xs:key>
+    <xs:keyref name="fluidCouplingRef" refer="fluidCouplingKey">
+      <xs:selector xpath=".//conv:FluidCoupling" />
+      <xs:field xpath="@type" />
+    </xs:keyref>
+    <!-- ************************************************** -->
+    <xs:key name="gearboxKey">
+      <xs:selector xpath="conv:Types/conv:GearboxType" />
+      <xs:field xpath="@typeId" />
+    </xs:key>
+    <xs:keyref name="gearboxRef" refer="gearboxKey">
+      <xs:selector xpath=".//conv:Gearbox" />
+      <xs:field xpath="@type" />
+    </xs:keyref>
   </xs:element>
   <!-- * -->
   <xs:complexType name="convMLType">
@@ -118,60 +190,20 @@
       <xs:element minOccurs="0" maxOccurs="1" name="Types">
         <xs:complexType>
           <xs:choice minOccurs="0" maxOccurs="unbounded">
-            <xs:element name="MaterialType">
-              <xs:complexType>
-                <xs:complexContent mixed="false">
-                  <xs:extension base="materialTypeType">
-                    <xs:attributeGroup ref="typeAttrGroup" />
-                  </xs:extension>
-                </xs:complexContent>
-              </xs:complexType>
-            </xs:element>
-            <xs:element name="BeltSegmentType">
-              <xs:complexType>
-                <xs:complexContent mixed="false">
-                  <xs:extension base="beltSegmentTypeType">
-                    <xs:attributeGroup ref="typeAttrGroup" />
-                  </xs:extension>
-                </xs:complexContent>
-              </xs:complexType>
-            </xs:element>
-            <xs:element name="BeltSpliceType">
-              <xs:complexType>
-                <xs:complexContent mixed="false">
-                  <xs:extension base="beltSpliceTypeType">
-                    <xs:attributeGroup ref="typeAttrGroup" />
-                  </xs:extension>
-                </xs:complexContent>
-              </xs:complexType>
-            </xs:element>
-            <xs:element name="IdlerType">
-              <xs:complexType>
-                <xs:complexContent mixed="false">
-                  <xs:extension base="idlerTypeType">
-                    <xs:attributeGroup ref="typeAttrGroup" />
-                  </xs:extension>
-                </xs:complexContent>
-              </xs:complexType>
-            </xs:element>
-            <xs:element name="IdlerSetType">
-              <xs:complexType>
-                <xs:complexContent mixed="false">
-                  <xs:extension base="idlerSetTypeType">
-                    <xs:attributeGroup ref="typeAttrGroup" />
-                  </xs:extension>
-                </xs:complexContent>
-              </xs:complexType>
-            </xs:element>
-            <xs:element name="RouteSegmentType">
-              <xs:complexType>
-                <xs:complexContent mixed="false">
-                  <xs:extension base="routeSegmentTypeType">
-                    <xs:attributeGroup ref="typeAttrGroup" />
-                  </xs:extension>
-                </xs:complexContent>
-              </xs:complexType>
-            </xs:element>
+            <xs:element ref="MaterialType" />
+            <xs:element ref="BeltSpliceType" />
+            <xs:element ref="BeltSegmentType" />
+            <xs:element ref="RouteSegmentType" />
+            <xs:element ref="IdlerSetType" />
+            <xs:element ref="IdlerSetSpecialType" />
+            <xs:element ref="IdlerType" />
+            <xs:element ref="BearingType" />
+            <xs:element ref="PulleyType" />
+            <xs:element ref="MotorType" />
+            <xs:element ref="BrakeType" />
+            <xs:element ref="CouplingType" />
+            <xs:element ref="FluidCouplingType" />
+            <xs:element ref="GearboxType" />
           </xs:choice>
         </xs:complexType>
       </xs:element>
@@ -216,6 +248,16 @@
       **************************************************************************
   -->
   <xs:element name="Material" type="materialType" />
+  <!-- * -->
+  <xs:element name="MaterialType">
+    <xs:complexType>
+      <xs:complexContent mixed="false">
+        <xs:extension base="materialTypeType">
+          <xs:attributeGroup ref="typeAttrGroup" />
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
   <!-- * -->
   <xs:attributeGroup name="materialAttrGroup">
     <xs:attribute name="name" type="xs:string" />
@@ -285,6 +327,16 @@
   -->
   <xs:element name="BeltSegment" type="beltSegmentType" />
   <!-- * -->
+  <xs:element name="BeltSegmentType">
+    <xs:complexType>
+      <xs:complexContent mixed="false">
+        <xs:extension base="beltSegmentTypeType">
+          <xs:attributeGroup ref="typeAttrGroup" />
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <!-- * -->
   <xs:attributeGroup name="beltSegmentAttrGroup">
     <xs:attribute name="width" type="xs:nonNegativeInteger" />
     <xs:attribute name="strength" type="nonNegativeDecimalType" />
@@ -323,6 +375,16 @@
       **************************************************************************
   -->
   <xs:element name="BeltSplice" type="beltSpliceType" />
+  <!-- * -->
+  <xs:element name="BeltSpliceType">
+    <xs:complexType>
+      <xs:complexContent mixed="false">
+        <xs:extension base="beltSpliceTypeType">
+          <xs:attributeGroup ref="typeAttrGroup" />
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
   <!-- * -->
   <xs:attributeGroup name="beltSpliceAttrGroup">
     <xs:attribute name="spliceStrength" type="nonNegativeDecimalType" />
@@ -411,6 +473,16 @@
   -->
   <xs:element name="Idler" type="idlerType" />
   <!-- * -->
+  <xs:element name="IdlerType">
+    <xs:complexType>
+      <xs:complexContent mixed="false">
+        <xs:extension base="idlerTypeType">
+          <xs:attributeGroup ref="typeAttrGroup" />
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <!-- * -->
   <xs:attributeGroup name="idlerAttrGroup">
     <xs:attribute name="idlerType" type="xs:token" />
     <xs:attribute name="length" type="nonNegativeDecimalType" />
@@ -441,6 +513,16 @@
   -->
   <xs:element name="IdlerSet" type="idlerSetType" />
   <!-- * -->
+  <xs:element name="IdlerSetType">
+    <xs:complexType>
+      <xs:complexContent mixed="false">
+        <xs:extension base="idlerSetTypeType">
+          <xs:attributeGroup ref="typeAttrGroup" />
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <!-- * -->
   <xs:complexType name="idlerSetTypeType">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="5" ref="Idler" />
@@ -464,12 +546,30 @@
   -->
   <xs:element name="IdlerSetSpecial" type="idlerSetSpecialType" />
   <!-- * -->
-  <xs:complexType name="idlerSetSpecialType">
+  <xs:element name="IdlerSetSpecialType">
+    <xs:complexType>
+      <xs:complexContent mixed="false">
+        <xs:extension base="idlerSetSpecialTypeType">
+          <xs:attributeGroup ref="typeAttrGroup" />
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <!-- * -->
+  <xs:complexType name="idlerSetSpecialTypeType">
     <xs:sequence>
       <xs:element maxOccurs="unbounded" ref="Idler" />
     </xs:sequence>
-    <xs:attributeGroup ref="instanceAttrGroup" />
     <xs:attributeGroup ref="commonAttrGroup" />
+  </xs:complexType>
+  <!-- * -->
+  <xs:complexType name="idlerSetSpecialType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="idlerSetSpecialTypeType">
+        <xs:attributeGroup ref="coordinatesAttrGroup" />
+        <xs:attributeGroup ref="instanceAttrGroup" />
+      </xs:extension>
+    </xs:complexContent>
   </xs:complexType>
   <!--
       **************************************************************************
@@ -501,6 +601,16 @@
       **************************************************************************
   -->
   <xs:element name="Pulley" type="pulleyType" />
+  <!-- * -->
+  <xs:element name="PulleyType">
+    <xs:complexType>
+      <xs:complexContent mixed="false">
+        <xs:extension base="pulleyTypeType">
+          <xs:attributeGroup ref="typeAttrGroup" />
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
   <!-- * -->
   <xs:attributeGroup name="pulleyAttrGroup">
     <xs:attributeGroup ref="pulleyIdlerGroup" />
@@ -638,6 +748,16 @@
   -->
   <xs:element name="RouteSegment" type="routeSegmentType" />
   <!-- * -->
+  <xs:element name="RouteSegmentType">
+    <xs:complexType>
+      <xs:complexContent mixed="false">
+        <xs:extension base="routeSegmentTypeType">
+          <xs:attributeGroup ref="typeAttrGroup" />
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <!-- * -->
   <xs:attributeGroup name="routeSegmentAttrGroup">
     <xs:attribute name="length" type="nonNegativeDecimalType" />
   </xs:attributeGroup>
@@ -676,6 +796,16 @@
   -->
   <xs:element name="Motor" type="motorType" />
   <!-- * -->
+  <xs:element name="MotorType">
+    <xs:complexType>
+      <xs:complexContent mixed="false">
+        <xs:extension base="motorTypeType">
+          <xs:attributeGroup ref="typeAttrGroup" />
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <!-- * -->
   <xs:attributeGroup name="motorAttrGroup">
     <xs:attribute name="power" type="nonNegativeDecimalType" />
     <xs:attribute name="nominalRotationalSpeed" type="nonNegativeDecimalType" />
@@ -708,6 +838,16 @@
   -->
   <xs:element name="Brake" type="brakeType" />
   <!-- * -->
+  <xs:element name="BrakeType">
+    <xs:complexType>
+      <xs:complexContent mixed="false">
+        <xs:extension base="brakeTypeType">
+          <xs:attributeGroup ref="typeAttrGroup" />
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <!-- * -->
   <xs:complexType name="brakeTypeType">
     <xs:attributeGroup ref="commonAttrGroup" />
   </xs:complexType>
@@ -726,6 +866,16 @@
   -->
   <xs:element name="Coupling" type="couplingType" />
   <!-- * -->
+  <xs:element name="CouplingType">
+    <xs:complexType>
+      <xs:complexContent mixed="false">
+        <xs:extension base="couplingTypeType">
+          <xs:attributeGroup ref="typeAttrGroup" />
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <!-- * -->
   <xs:complexType name="couplingTypeType">
     <xs:attributeGroup ref="commonAttrGroup" />
   </xs:complexType>
@@ -743,6 +893,16 @@
       **************************************************************************
   -->
   <xs:element name="FluidCoupling" type="fluidCouplingType" />
+  <!-- * -->
+  <xs:element name="FluidCouplingType">
+    <xs:complexType>
+      <xs:complexContent mixed="false">
+        <xs:extension base="fluidCouplingTypeType">
+          <xs:attributeGroup ref="typeAttrGroup" />
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
   <!-- * -->
   <xs:attributeGroup name="fluidCouplingAttrGroup">
     <xs:attribute name="slip" type="nonNegativeDecimalType" />
@@ -767,7 +927,17 @@
   -->
   <xs:element name="Gearbox" type="gearboxType" />
   <!-- * -->
-  <xs:attributeGroup name="gearboxAttrGroup">
+  <xs:element name="GearboxType">
+    <xs:complexType>
+      <xs:complexContent mixed="false">
+        <xs:extension base="gearboxTypeType">
+          <xs:attributeGroup ref="typeAttrGroup" />
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <!-- * -->
+   <xs:attributeGroup name="gearboxAttrGroup">
     <xs:attribute name="gearRatio" type="nonNegativeDecimalType" />
   </xs:attributeGroup>
   <!-- * -->
@@ -792,6 +962,16 @@
       **************************************************************************
   -->
   <xs:element name="Bearing" type="bearingType" />
+  <!-- * -->
+ <xs:element name="BearingType">
+    <xs:complexType>
+      <xs:complexContent mixed="false">
+        <xs:extension base="bearingTypeType">
+          <xs:attributeGroup ref="typeAttrGroup" />
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
   <!-- * -->
   <xs:attributeGroup name="bearingAttrGroup">
     <xs:attribute name="static" type="nonNegativeDecimalType" />
