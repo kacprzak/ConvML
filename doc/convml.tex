@@ -190,7 +190,7 @@ taśmowego.
   \centering
   \includegraphics[width=0.6\textwidth]{png/liquid/Localization}
   \caption{Definicja elementu Localization}
-  \label{fig:conditions-xsd}
+  \label{fig:localization-xsd}
 \end{figure}
 
 \noindent\textbf{Rodzice:} \texttt{ConvML}
@@ -268,7 +268,7 @@ złącze i jeden odcinek.
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.6\textwidth]{png/belt_xsd2}
+  \includegraphics[width=0.6\textwidth]{png/liquid/Belt}
   \caption{Definicja elementu Belt}
   \label{fig:belt-xsd}
 \end{figure}
@@ -372,9 +372,9 @@ się na nim zmiana kierunku taśmy z trasy nośnej na trasę powrotną.
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.6\textwidth]{png/liquid/headTailType}
+  \includegraphics[width=0.6\textwidth]{png/liquid/Head}
   \caption{Definicja typu elementu Head}
-  \label{fig:headTailType-xsd}
+  \label{fig:head-xsd}
 \end{figure}
 
 \noindent\textbf{Rodzice:} \texttt{BeltConveyor}
@@ -409,6 +409,7 @@ bębnem napędowym.  Analogicznie obecność zestawu napinającego ({\tt
 \noindent\textbf{Atrybuty:}
 \begin{description}
 \item[diameter] Średnica [m]
+\item[tubeLength] Długość płaszcza [mm]
 \item[pulleyBeltFriction] Współczynnik tarcia między taśmą a bębnem napędowym
 \item[wrapAngle] Kąt opasania taśmą - $\alpha$ [$^\circ$]
 \item[x] Położenie osi bębna względem elementu nadrzędnego [m]
@@ -614,13 +615,13 @@ występować jedynie jako podelement elementu {\tt Pulley} (Bębna).
 \end{description}
 
 
-\subsubsection{Układ hamulcowy <Break>}
+\subsubsection{Układ hamulcowy <Brake>}
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.6\textwidth]{png/liquid/FluidCoupling}
-  \caption{Definicja elementu Break}
-  \label{fig:break-xsd}
+  \includegraphics[width=0.6\textwidth]{png/liquid/Brake}
+  \caption{Definicja elementu Brake}
+  \label{fig:brake-xsd}
 \end{figure}
 
 \noindent\textbf{Rodzice:} \texttt{DriveUnit}
@@ -684,6 +685,13 @@ występować jedynie jako podelement elementu {\tt Pulley} (Bębna).
 
 \subsubsection{Obciążnik <Counterweight>}
 
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.6\textwidth]{png/liquid/Counterweight}
+  \caption{Definicja elementu Counterweight}
+  \label{fig:counterweight-xsd}
+\end{figure}
+
 \noindent\textbf{Rodzice:} \texttt{GravitySystem}
 
 \noindent\textbf{Atrybuty:}
@@ -694,6 +702,13 @@ występować jedynie jako podelement elementu {\tt Pulley} (Bębna).
 
 
 \subsubsection{Wciągarka <Winch>}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.6\textwidth]{png/liquid/Winch}
+  \caption{Definicja elementu Winch}
+  \label{fig:winch-xsd}
+\end{figure}
 
 \noindent\textbf{Rodzice:} \texttt{TakeUpSystem}
 
@@ -798,7 +813,7 @@ zestawach ({\tt IdlerSet}).
 \begin{description}
 \item[diameter] Średnica krążnika [mm]
 \item[idlerType] Typ krążnika: 1 - z pierścieniami, 2 - gładki
-\item[length] Długość płaszcza krążnika [mm]
+\item[tubeLength] Długość płaszcza krążnika [mm]
 \item[troughingAngle] Kąt nachylenia krążników bocznych - $\beta$ [$^\circ$]
 \item[rotatingPartsMass] Masa części obrotowych krążnika [kg]
 \item[mass] Masa [kg]
@@ -831,7 +846,21 @@ odległości na długości segmentu trasy ({\tt RouteSegment}).
 \noindent\textbf{Rodzice:} \texttt{Carry, Return}
 
 \subsubsection{Płyta ślizgowa <SlipPlate>}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.6\textwidth]{png/liquid/SlipPlate}
+  \caption{Definicja elementu SlipPlate}
+  \label{fig:slipPlate-xsd}
+\end{figure}
+
 \noindent\textbf{Rodzice:} \texttt{Carry, Return}
+
+\noindent\textbf{Atrybuty:}
+\begin{description}
+\item[length] Długość elementu [m]
+\end{description}
+
 
 \subsubsection{Napęd typu taśma-taśma <TTDrive>}
 Napęd pośredni taśma-taśma jest wyposażony w bęben napędowy, napinający oraz
@@ -1036,6 +1065,8 @@ Atrybuty wspólne dla mechanizmów napinających.
 Atrybuty wspólne bębnów i krążników.
 
 \begin{description}
+\item[diameter] Średnica [m]
+\item[tubeLength] Długość płaszcza [mm]
 \item[mass] Masa [kg]
 \item[inertiaMoment] Moment bezwładności - I [$kg*m^2$]
 \end{description}
