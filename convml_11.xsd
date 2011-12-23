@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <xs:schema xmlns="http://www.entertech.com.pl/convml"
-           xmlns:conv="http://www.entertech.com.pl/convml"
-           elementFormDefault="qualified"
-           targetNamespace="http://www.entertech.com.pl/convml"
-           xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	   xmlns:conv="http://www.entertech.com.pl/convml"
+	   elementFormDefault="qualified"
+	   targetNamespace="http://www.entertech.com.pl/convml"
+	   xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:annotation>
     <xs:documentation>
-      Metajęzyk opisu elementów przenośników taśmowych. Służy do zbierania
-      informacji oraz do zarządzania danymi dotyczącymi przenośników.
+      Metajęzyk opisu przenośników taśmowych.
 
       Author: Marcin Kacprzak
       Author: Piotr Kulinowski
@@ -150,6 +149,24 @@
       <xs:selector xpath=".//conv:Gearbox" />
       <xs:field xpath="@type" />
     </xs:keyref>
+    <!-- ************************************************** -->
+    <xs:key name="slipPlateKey">
+      <xs:selector xpath="conv:Types/conv:SlipPlateType" />
+      <xs:field xpath="@typeId" />
+    </xs:key>
+    <xs:keyref name="slipPlateRef" refer="slipPlateKey">
+      <xs:selector xpath=".//conv:SlipPlate" />
+      <xs:field xpath="@type" />
+    </xs:keyref>
+    <!-- ************************************************** -->
+    <xs:key name="winchKey">
+      <xs:selector xpath="conv:Types/conv:WinchType" />
+      <xs:field xpath="@typeId" />
+    </xs:key>
+    <xs:keyref name="winchRef" refer="winchKey">
+      <xs:selector xpath=".//conv:Winch" />
+      <xs:field xpath="@type" />
+    </xs:keyref>
   </xs:element>
   <!-- * -->
   <xs:complexType name="convMLType">
@@ -204,6 +221,8 @@
             <xs:element ref="CouplingType" />
             <xs:element ref="FluidCouplingType" />
             <xs:element ref="GearboxType" />
+            <xs:element ref="SlipPlateType" />
+            <xs:element ref="WinchType" />
           </xs:choice>
         </xs:complexType>
       </xs:element>
@@ -485,8 +504,8 @@
   <!-- * -->
   <xs:attributeGroup name="idlerAttrGroup">
     <xs:attribute name="idlerType" type="xs:token" />
-    <xs:attribute name="length" type="nonNegativeDecimalType" />
     <xs:attribute name="rotatingPartsMass" type="nonNegativeDecimalType" />
+    <xs:attribute name="rotationResistance" type="nonNegativeDecimalType" />
     <xs:attributeGroup ref="pulleyIdlerGroup" />
   </xs:attributeGroup>
   <!-- * -->
@@ -785,9 +804,27 @@
   -->
   <xs:element name="SlipPlate" type="slipPlateType" />
   <!-- * -->
-  <xs:complexType name="slipPlateType">
-    <xs:attributeGroup ref="instanceAttrGroup" />
+  <xs:element name="SlipPlateType">
+    <xs:complexType>
+      <xs:complexContent mixed="false">
+        <xs:extension base="slipPlateTypeType">
+          <xs:attributeGroup ref="typeAttrGroup" />
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <!-- * -->
+  <xs:complexType name="slipPlateTypeType">
+    <xs:attribute name="length" type="nonNegativeDecimalType" />
     <xs:attributeGroup ref="commonAttrGroup" />
+  </xs:complexType>
+  <!-- * -->
+  <xs:complexType name="slipPlateType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="slipPlateTypeType">
+        <xs:attributeGroup ref="instanceAttrGroup" />
+      </xs:extension>
+    </xs:complexContent>
   </xs:complexType>
   <!--
       **************************************************************************
@@ -937,7 +974,7 @@
     </xs:complexType>
   </xs:element>
   <!-- * -->
-   <xs:attributeGroup name="gearboxAttrGroup">
+  <xs:attributeGroup name="gearboxAttrGroup">
     <xs:attribute name="gearRatio" type="nonNegativeDecimalType" />
   </xs:attributeGroup>
   <!-- * -->
@@ -963,7 +1000,7 @@
   -->
   <xs:element name="Bearing" type="bearingType" />
   <!-- * -->
- <xs:element name="BearingType">
+  <xs:element name="BearingType">
     <xs:complexType>
       <xs:complexContent mixed="false">
         <xs:extension base="bearingTypeType">
@@ -1026,10 +1063,27 @@
   -->
   <xs:element name="Winch" type="winchType" />
   <!-- * -->
-  <xs:complexType name="winchType">
+  <xs:element name="WinchType">
+    <xs:complexType>
+      <xs:complexContent mixed="false">
+        <xs:extension base="winchTypeType">
+          <xs:attributeGroup ref="typeAttrGroup" />
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <!-- * -->
+  <xs:complexType name="winchTypeType">
     <xs:attributeGroup ref="takeUpTensionGroup" />
-    <xs:attributeGroup ref="instanceAttrGroup" />
     <xs:attributeGroup ref="commonAttrGroup" />
+  </xs:complexType>
+  <!-- * -->
+  <xs:complexType name="winchType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="winchTypeType">
+        <xs:attributeGroup ref="instanceAttrGroup" />
+      </xs:extension>
+    </xs:complexContent>
   </xs:complexType>
   <!--
       **************************************************************************
@@ -1247,6 +1301,7 @@
   <!-- **************************************************** -->
   <xs:attributeGroup name="pulleyIdlerGroup">
     <xs:attribute name="diameter" type="nonNegativeDecimalType" />
+    <xs:attribute name="tubeLength" type="nonNegativeDecimalType" />
     <xs:attribute name="mass" type="nonNegativeDecimalType" />
     <xs:attribute name="inertiaMoment" type="nonNegativeDecimalType" />
   </xs:attributeGroup>
