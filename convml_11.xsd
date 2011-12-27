@@ -476,6 +476,7 @@
       <xs:element minOccurs="0" ref="ElectricalEquipment" />
       <xs:element minOccurs="0" ref="AdditionalEquipment" />
       <xs:element minOccurs="0" ref="Unload" />
+      <xs:element minOccurs="0" ref="CleaningDevice" />
     </xs:choice>
     <xs:attributeGroup ref="commonAttrGroup" />
   </xs:complexType>
