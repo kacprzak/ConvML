@@ -520,7 +520,8 @@
   <xs:complexType name="idlerType">
     <xs:complexContent mixed="false">
       <xs:extension base="idlerTypeType">
-        <xs:attribute name="troughingAngle" type="nonNegativeDecimalType" />
+        <xs:attribute name="troughAngle" type="nonNegativeDecimalType" />
+	<xs:attribute name="biasAngle" type="nonNegativeDecimalType" />
         <xs:attributeGroup ref="instanceAttrGroup" />
       </xs:extension>
     </xs:complexContent>
@@ -542,17 +543,25 @@
     </xs:complexType>
   </xs:element>
   <!-- * -->
+  <xs:attributeGroup name="idlerSetInstanceAttrGroup">
+    <xs:attribute name="liftAngle" type="xs:decimal" />
+    <xs:attribute name="tiltAngle" type="xs:decimal" />
+    <xs:attribute name="skewAngle" type="xs:decimal" />
+  </xs:attributeGroup>
+  <!-- * -->
   <xs:complexType name="idlerSetTypeType">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="5" ref="Idler" />
     </xs:sequence>
     <xs:attribute name="idlerSetType" type="xs:string" />
+    <xs:attribute name="troughAngle" type="nonNegativeDecimalType" />
     <xs:attributeGroup ref="commonAttrGroup" />
   </xs:complexType>
   <!-- * -->
   <xs:complexType name="idlerSetType">
     <xs:complexContent mixed="false">
       <xs:extension base="idlerSetTypeType">
+	<xs:attributeGroup ref="idlerSetInstanceAttrGroup" />
         <xs:attributeGroup ref="coordinatesAttrGroup" />
         <xs:attributeGroup ref="instanceAttrGroup" />
       </xs:extension>
@@ -579,12 +588,14 @@
     <xs:sequence>
       <xs:element maxOccurs="unbounded" ref="Idler" />
     </xs:sequence>
+    <xs:attribute name="troughAngle" type="xs:decimal" />
     <xs:attributeGroup ref="commonAttrGroup" />
   </xs:complexType>
   <!-- * -->
   <xs:complexType name="idlerSetSpecialType">
     <xs:complexContent mixed="false">
       <xs:extension base="idlerSetSpecialTypeType">
+	<xs:attributeGroup ref="idlerSetInstanceAttrGroup" />
         <xs:attributeGroup ref="coordinatesAttrGroup" />
         <xs:attributeGroup ref="instanceAttrGroup" />
       </xs:extension>
