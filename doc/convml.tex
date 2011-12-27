@@ -6,8 +6,8 @@
 %\usepackage{lmodern}
 \usepackage{times}                              % Font wektorowy
 \usepackage[cm]{fullpage}                       % Cała szerokość strony
-\usepackage[pdftex,bookmarks,colorlinks]{hyperref} % Linki w dokumencie PDF
-%\usepackage[pdftex,bookmarks]{hyperref} % Linki w dokumencie PDF
+%\usepackage[pdftex,bookmarks,colorlinks]{hyperref} % Linki w dokumencie PDF
+\usepackage[pdftex,bookmarks]{hyperref} % Linki w dokumencie PDF
 \usepackage{indentfirst}                        % Wcięcia akapitów
 \usepackage{graphicx}                           % Grafika w png, jpeg, gif
 \usepackage{float}                              % Ulepszone rozmieszczanie
@@ -814,7 +814,8 @@ zestawach ({\tt IdlerSet}).
 \item[diameter] Średnica krążnika [mm]
 \item[idlerType] Typ krążnika: 1 - z pierścieniami, 2 - gładki
 \item[tubeLength] Długość płaszcza krążnika [mm]
-\item[troughingAngle] Kąt nachylenia krążników bocznych - $\beta$ [$^\circ$]
+\item[troughAngle] Kąt nachylenia krążników bocznych - $\beta$ [$^\circ$]
+\item[biasAngle] Kąt wyprzedzenia krążników bocznych [$^\circ$]
 \item[rotatingPartsMass] Masa części obrotowych krążnika [kg]
 \item[mass] Masa [kg]
 \item[inertiaMoment] Moment bezwładności - I [$kg*m^2$]
@@ -837,6 +838,10 @@ odległości na długości segmentu trasy ({\tt RouteSegment}).
 
 \noindent\textbf{Atrybuty:}
 \begin{description}
+\item[troughAngle] Kąt niecki (nachylenia krążników bocznych) - $\beta$ [$^\circ$]
+\item[liftAngle] Kąt nachylenia zestawu - $\lambda$ [$^\circ$]
+\item[skewAngle] Kąt zukosowania zestawu - $\epsilon$ [$^\circ$]
+\item[tiltAngle] Kąt pochylenia zestawu [$^\circ$]
 \item[x] Położenie osi krążnika środkowego względem elementu nadrzędnego [m]
 \item[y] Położenie osi krążnika środkowego względem elementu nadrzędnego [m]
 \end{description}
