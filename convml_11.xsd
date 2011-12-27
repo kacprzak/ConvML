@@ -167,6 +167,51 @@
       <xs:selector xpath=".//conv:Winch" />
       <xs:field xpath="@type" />
     </xs:keyref>
+    <!-- ************************************************** -->
+    <xs:key name="controlSystemKey">
+      <xs:selector xpath="conv:Types/conv:ControlSystemType" />
+      <xs:field xpath="@typeId" />
+    </xs:key>
+    <xs:keyref name="controlSystemRef" refer="controlSystemKey">
+      <xs:selector xpath=".//conv:ControlSystem" />
+      <xs:field xpath="@type" />
+    </xs:keyref>
+    <!-- ************************************************** -->
+    <xs:key name="emergencySystemKey">
+      <xs:selector xpath="conv:Types/conv:EmergencySystemType" />
+      <xs:field xpath="@typeId" />
+    </xs:key>
+    <xs:keyref name="emergencySystemRef" refer="emergencySystemKey">
+      <xs:selector xpath=".//conv:EmergencySystem" />
+      <xs:field xpath="@type" />
+    </xs:keyref>
+    <!-- ************************************************** -->
+    <xs:key name="signalSystemKey">
+      <xs:selector xpath="conv:Types/conv:SignalSystemType" />
+      <xs:field xpath="@typeId" />
+    </xs:key>
+    <xs:keyref name="signalSystemRef" refer="signalSystemKey">
+      <xs:selector xpath=".//conv:SignalSystem" />
+      <xs:field xpath="@type" />
+    </xs:keyref>
+    <!-- ************************************************** -->
+    <xs:key name="fireSystemKey">
+      <xs:selector xpath="conv:Types/conv:FireSystemType" />
+      <xs:field xpath="@typeId" />
+    </xs:key>
+    <xs:keyref name="fireSystemRef" refer="fireSystemKey">
+      <xs:selector xpath=".//conv:FireSystemWinch" />
+      <xs:field xpath="@type" />
+    </xs:keyref>
+    <!-- ************************************************** -->
+    <xs:key name="cleaningDeviceKey">
+      <xs:selector xpath="conv:Types/conv:CleaningDeviceType" />
+      <xs:field xpath="@typeId" />
+    </xs:key>
+    <xs:keyref name="cleaningDeviceRef" refer="cleaningDeviceKey">
+      <xs:selector xpath=".//conv:CleaningDevice" />
+      <xs:field xpath="@type" />
+    </xs:keyref>
   </xs:element>
   <!-- * -->
   <xs:complexType name="convMLType">
@@ -223,6 +268,11 @@
             <xs:element ref="GearboxType" />
             <xs:element ref="SlipPlateType" />
             <xs:element ref="WinchType" />
+            <xs:element ref="ControlSystemType" />
+            <xs:element ref="EmergencySystemType" />
+            <xs:element ref="SignalSystemType" />
+            <xs:element ref="FireSystemType" />
+            <xs:element ref="CleaningDeviceType" />
           </xs:choice>
         </xs:complexType>
       </xs:element>
@@ -321,7 +371,7 @@
     <xs:attribute name="beltSpeed" type="nonNegativeDecimalType" />
     <xs:attribute name="designCapacity" type="xs:nonNegativeInteger" />
     <xs:attribute name="maxCapacity" type="xs:nonNegativeInteger" />
-    <xs:attributeGroup ref="instanceAttrGroup" />
+    <xs:attributeGroup ref="noTypeInstanceAttrGroup" />
     <xs:attributeGroup ref="commonAttrGroup" />
   </xs:complexType>
   <!--
@@ -449,7 +499,7 @@
       <xs:element ref="Return" />
     </xs:all>
     <xs:attributeGroup ref="commonAttrGroup" />
-    <xs:attributeGroup ref="instanceAttrGroup" />
+    <xs:attributeGroup ref="noTypeInstanceAttrGroup" />
     <xs:attributeGroup ref="lengthAngleGroup" />
   </xs:complexType>
   <!--
@@ -623,7 +673,7 @@
     <xs:attribute name="capacity" type="nonNegativeDecimalType" />
     <xs:attribute name="fallHeight" type="nonNegativeDecimalType" />
     <xs:attributeGroup ref="chuteAttrGroup" />
-    <xs:attributeGroup ref="instanceAttrGroup" />
+    <xs:attributeGroup ref="noTypeInstanceAttrGroup" />
     <xs:attributeGroup ref="commonAttrGroup" />
   </xs:complexType>
   <!--
@@ -701,7 +751,7 @@
   <xs:element name="ElectricalEquipment" type="electricalEquipmentType" />
   <!-- * -->
   <xs:complexType name="electricalEquipmentType">
-    <xs:attributeGroup ref="instanceAttrGroup" />
+    <xs:attributeGroup ref="noTypeInstanceAttrGroup" />
     <xs:attributeGroup ref="commonAttrGroup" />
   </xs:complexType>
   <!--
@@ -721,7 +771,7 @@
         <xs:element ref="SlipPlate" />
       </xs:choice>
     </xs:sequence>
-    <xs:attributeGroup ref="instanceAttrGroup" />
+    <xs:attributeGroup ref="noTypeInstanceAttrGroup" />
     <xs:attributeGroup ref="commonAttrGroup" />
   </xs:complexType>
   <!--
@@ -732,7 +782,7 @@
   <xs:element name="CoolingSystem" type="coolingSystemType" />
   <!-- * -->
   <xs:complexType name="coolingSystemType">
-    <xs:attributeGroup ref="instanceAttrGroup" />
+    <xs:attributeGroup ref="noTypeInstanceAttrGroup" />
     <xs:attributeGroup ref="commonAttrGroup" />
   </xs:complexType>
   <!--
@@ -752,7 +802,6 @@
       <xs:element minOccurs="0" maxOccurs="2" ref="PneumaticSystem" />
       <xs:element ref="ElectricalEquipment" />
     </xs:choice>
-    <xs:attributeGroup ref="instanceAttrGroup" />
     <xs:attributeGroup ref="commonAttrGroup" />
   </xs:complexType>
   <!--
@@ -1054,7 +1103,7 @@
   <!-- * -->
   <xs:complexType name="strechingCarType">
     <xs:attributeGroup ref="strechingCarAttrGroup" />
-    <xs:attributeGroup ref="instanceAttrGroup" />
+    <xs:attributeGroup ref="noTypeInstanceAttrGroup" />
     <xs:attributeGroup ref="commonAttrGroup" />
   </xs:complexType>
   <!--
@@ -1065,7 +1114,6 @@
   <xs:element name="RopeSystem" type="ropeSystemType" />
   <!-- * -->
   <xs:complexType name="ropeSystemType">
-    <xs:attributeGroup ref="instanceAttrGroup" />
     <xs:attributeGroup ref="commonAttrGroup" />
   </xs:complexType>
   <!--
@@ -1109,7 +1157,6 @@
       <xs:element minOccurs="0" maxOccurs="2" ref="Counterweight" />
     </xs:sequence>
     <xs:attributeGroup ref="takeUpTensionGroup" />
-    <xs:attributeGroup ref="instanceAttrGroup" />
     <xs:attributeGroup ref="commonAttrGroup" />
   </xs:complexType>
   <!--
@@ -1121,7 +1168,6 @@
   <!-- * -->
   <xs:complexType name="hydraulicSystemType">
     <xs:attributeGroup ref="takeUpTensionGroup" />
-    <xs:attributeGroup ref="instanceAttrGroup" />
     <xs:attributeGroup ref="commonAttrGroup" />
   </xs:complexType>
   <!--
@@ -1133,7 +1179,6 @@
   <!-- * -->
   <xs:complexType name="pneumaticSystemType">
     <xs:attributeGroup ref="takeUpTensionGroup" />
-    <xs:attributeGroup ref="instanceAttrGroup" />
     <xs:attributeGroup ref="commonAttrGroup" />
   </xs:complexType>
   <!--
@@ -1143,9 +1188,26 @@
   -->
   <xs:element name="ControlSystem" type="controlSystemType" />
   <!-- * -->
-  <xs:complexType name="controlSystemType">
-    <xs:attributeGroup ref="instanceAttrGroup" />
+  <xs:element name="ControlSystemType">
+    <xs:complexType>
+      <xs:complexContent mixed="false">
+        <xs:extension base="controlSystemTypeType">
+          <xs:attributeGroup ref="typeAttrGroup" />
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <!-- * -->
+  <xs:complexType name="controlSystemTypeType">
     <xs:attributeGroup ref="commonAttrGroup" />
+  </xs:complexType>
+  <!-- * -->
+  <xs:complexType name="controlSystemType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="controlSystemTypeType">
+        <xs:attributeGroup ref="instanceAttrGroup" />
+      </xs:extension>
+    </xs:complexContent>
   </xs:complexType>
   <!--
       **************************************************************************
@@ -1154,9 +1216,26 @@
   -->
   <xs:element name="EmergencySystem" type="emergencySystemType" />
   <!-- * -->
-  <xs:complexType name="emergencySystemType">
-    <xs:attributeGroup ref="instanceAttrGroup" />
+  <xs:element name="EmergencySystemType">
+    <xs:complexType>
+      <xs:complexContent mixed="false">
+        <xs:extension base="emergencySystemTypeType">
+          <xs:attributeGroup ref="typeAttrGroup" />
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <!-- * -->
+  <xs:complexType name="emergencySystemTypeType">
     <xs:attributeGroup ref="commonAttrGroup" />
+  </xs:complexType>
+  <!-- * -->
+  <xs:complexType name="emergencySystemType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="emergencySystemTypeType">
+        <xs:attributeGroup ref="instanceAttrGroup" />
+      </xs:extension>
+    </xs:complexContent>
   </xs:complexType>
   <!--
       **************************************************************************
@@ -1165,9 +1244,26 @@
   -->
   <xs:element name="SignalSystem" type="signalSystemType" />
   <!-- * -->
-  <xs:complexType name="signalSystemType">
-    <xs:attributeGroup ref="instanceAttrGroup" />
+  <xs:element name="SignalSystemType">
+    <xs:complexType>
+      <xs:complexContent mixed="false">
+        <xs:extension base="signalSystemTypeType">
+          <xs:attributeGroup ref="typeAttrGroup" />
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <!-- * -->
+  <xs:complexType name="signalSystemTypeType">
     <xs:attributeGroup ref="commonAttrGroup" />
+  </xs:complexType>
+  <!-- * -->
+  <xs:complexType name="signalSystemType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="signalSystemTypeType">
+        <xs:attributeGroup ref="instanceAttrGroup" />
+      </xs:extension>
+    </xs:complexContent>
   </xs:complexType>
   <!--
       **************************************************************************
@@ -1176,9 +1272,26 @@
   -->
   <xs:element name="FireSystem" type="fireSystemType" />
   <!-- * -->
+  <xs:element name="FireSystemType">
+    <xs:complexType>
+      <xs:complexContent mixed="false">
+        <xs:extension base="fireSystemTypeType">
+          <xs:attributeGroup ref="typeAttrGroup" />
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <!-- * -->
+  <xs:complexType name="fireSystemTypeType">
+     <xs:attributeGroup ref="commonAttrGroup" />
+  </xs:complexType>
+  <!-- * -->
   <xs:complexType name="fireSystemType">
-    <xs:attributeGroup ref="instanceAttrGroup" />
-    <xs:attributeGroup ref="commonAttrGroup" />
+    <xs:complexContent mixed="false">
+      <xs:extension base="fireSystemTypeType">
+        <xs:attributeGroup ref="instanceAttrGroup" />
+      </xs:extension>
+    </xs:complexContent>
   </xs:complexType>
   <!--
       **************************************************************************
@@ -1211,7 +1324,6 @@
   <xs:element name="Unload" type="unloadType" />
   <!-- * -->
   <xs:complexType name="unloadType">
-    <xs:attributeGroup ref="instanceAttrGroup" />
     <xs:attributeGroup ref="commonAttrGroup" />
   </xs:complexType>
   <!--
@@ -1228,7 +1340,7 @@
   <!-- * -->
   <xs:complexType name="counterweightType">
     <xs:attributeGroup ref="counterweightAttrGroup" />
-    <xs:attributeGroup ref="instanceAttrGroup" />
+    <xs:attributeGroup ref="noTypeInstanceAttrGroup" />
     <xs:attributeGroup ref="commonAttrGroup" />
   </xs:complexType>
   <!--
@@ -1239,7 +1351,7 @@
   <xs:element name="AdditionalEquipment" type="additionalEquipmentType" />
   <!-- * -->
   <xs:complexType name="additionalEquipmentType">
-    <xs:attributeGroup ref="instanceAttrGroup" />
+    <xs:attributeGroup ref="noTypeInstanceAttrGroup" />
     <xs:attributeGroup ref="commonAttrGroup" />
   </xs:complexType>
   <!--
@@ -1249,9 +1361,26 @@
   -->
   <xs:element name="CleaningDevice" type="cleaningDeviceType" />
   <!-- * -->
-  <xs:complexType name="cleaningDeviceType">
-    <xs:attributeGroup ref="instanceAttrGroup" />
+  <xs:element name="CleaningDeviceType">
+    <xs:complexType>
+      <xs:complexContent mixed="false">
+        <xs:extension base="cleaningDeviceTypeType">
+          <xs:attributeGroup ref="typeAttrGroup" />
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <!-- * -->
+  <xs:complexType name="cleaningDeviceTypeType">
     <xs:attributeGroup ref="commonAttrGroup" />
+  </xs:complexType>
+  <!-- * -->
+  <xs:complexType name="cleaningDeviceType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="cleaningDeviceTypeType">
+        <xs:attributeGroup ref="instanceAttrGroup" />
+      </xs:extension>
+    </xs:complexContent>
   </xs:complexType>
   <!--
       **************************************************************************
@@ -1288,9 +1417,15 @@
     <xs:attribute name="productionDate" type="xs:date" />
   </xs:attributeGroup>
   <!-- **************************************************** -->
+  <xs:attributeGroup name="noTypeInstanceAttrGroup">
+    <xs:attribute name="name" type="xs:string" />
+    <xs:attribute name="manufacturer" type="xs:token" />
+    <xs:attribute name="productionDate" type="xs:date" />
+  </xs:attributeGroup>
+  <!-- **************************************************** -->
   <xs:attributeGroup name="typeAttrGroup">
     <xs:attribute name="typeId" type="xs:token" use="required" />
-    <xs:attribute name="typeName" type="xs:token" />
+    <xs:attribute name="typeName" type="xs:string" />
     <xs:attribute name="typeDescription" type="xs:string" />
     <xs:attribute name="manufacturer" type="xs:token" />
   </xs:attributeGroup>
