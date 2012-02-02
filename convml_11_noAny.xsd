@@ -1,0 +1,1460 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema xmlns="http://www.entertech.com.pl/convml"
+	   xmlns:conv="http://www.entertech.com.pl/convml"
+	   elementFormDefault="qualified"
+	   targetNamespace="http://www.entertech.com.pl/convml"
+	   xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:annotation>
+    <xs:documentation>
+      Metajęzyk opisu przenośników taśmowych.
+
+      Author: Marcin Kacprzak
+      Author: Piotr Kulinowski
+      Company: EnterTECH
+      Id: $Id: convml_11.xsd 105 2011-12-27 16:01:27Z kacprzak $
+    </xs:documentation>
+  </xs:annotation>
+  <!--
+      ***************************************************************************
+      * CONVML *
+      ***************************************************************************
+  -->
+  <xs:element name="ConvML" type="convMLType">
+    <xs:key name="materialKey">
+      <xs:selector xpath="conv:Types/conv:MaterialType" />
+      <xs:field xpath="@typeId" />
+    </xs:key>
+    <xs:keyref name="materialRef" refer="materialKey">
+      <xs:selector xpath=".//conv:Material" />
+      <xs:field xpath="@type" />
+    </xs:keyref>
+    <!-- ************************************************** -->
+    <xs:key name="beltSegmentKey">
+      <xs:selector xpath="conv:Types/conv:BeltSegmentType" />
+      <xs:field xpath="@typeId" />
+    </xs:key>
+    <xs:keyref name="beltSegmentRef" refer="beltSegmentKey">
+      <xs:selector xpath="conv:BeltConveyor/conv:Belt/conv:BeltSegment" />
+      <xs:field xpath="@type" />
+    </xs:keyref>
+    <!-- ************************************************** -->
+    <xs:key name="beltSpliceKey">
+      <xs:selector xpath="conv:Types/conv:BeltSpliceType" />
+      <xs:field xpath="@typeId" />
+    </xs:key>
+    <xs:keyref name="beltSpliceRef" refer="beltSpliceKey">
+      <xs:selector xpath="conv:BeltConveyor/conv:Belt/conv:BeltSplice" />
+      <xs:field xpath="@type" />
+    </xs:keyref>
+    <!-- ************************************************** -->
+    <xs:key name="bearingKey">
+      <xs:selector xpath="conv:Types/conv:BearingType" />
+      <xs:field xpath="@typeId" />
+    </xs:key>
+    <xs:keyref name="bearingRef" refer="bearingKey">
+      <xs:selector xpath=".//conv:Bearing" />
+      <xs:field xpath="@type" />
+    </xs:keyref>
+    <!-- ************************************************** -->
+    <xs:key name="idlerKey">
+      <xs:selector xpath="conv:Types/conv:IdlerType" />
+      <xs:field xpath="@typeId" />
+    </xs:key>
+    <xs:keyref name="idlerRef" refer="idlerKey">
+      <xs:selector xpath=".//conv:Idler" />
+      <xs:field xpath="@type" />
+    </xs:keyref>
+    <!-- ************************************************** -->
+    <xs:key name="idlerSetKey">
+      <xs:selector xpath="conv:Types/conv:IdlerSetType" />
+      <xs:field xpath="@typeId" />
+    </xs:key>
+    <xs:keyref name="idlerSetRef" refer="idlerSetKey">
+      <xs:selector xpath=".//conv:IdlerSet" />
+      <xs:field xpath="@type" />
+    </xs:keyref>
+    <!-- ************************************************** -->
+    <xs:key name="idlerSetSpecialKey">
+      <xs:selector xpath="conv:Types/conv:IdlerSetSpecialType" />
+      <xs:field xpath="@typeId" />
+    </xs:key>
+    <xs:keyref name="idlerSetSpecialRef" refer="idlerSetSpecialKey">
+      <xs:selector xpath=".//conv:IdlerSetSpecial" />
+      <xs:field xpath="@type" />
+    </xs:keyref>
+    <!-- ************************************************** -->
+    <xs:key name="routeSegmentKey">
+      <xs:selector xpath="conv:Types/conv:RouteSegmentType" />
+      <xs:field xpath="@typeId" />
+    </xs:key>
+    <xs:keyref name="routeSegmentRef" refer="routeSegmentKey">
+      <xs:selector xpath=".//conv:RouteSegment" />
+      <xs:field xpath="@type" />
+    </xs:keyref>
+    <xs:keyref name="routeSegmentRef_2" refer="routeSegmentKey">
+      <xs:selector xpath=".//conv:RouteSection" />
+      <xs:field xpath="@segmentType" />
+    </xs:keyref>
+    <!-- ************************************************** -->
+    <xs:key name="pulleyKey">
+      <xs:selector xpath="conv:Types/conv:PulleyType" />
+      <xs:field xpath="@typeId" />
+    </xs:key>
+    <xs:keyref name="pulleyRef" refer="pulleyKey">
+      <xs:selector xpath=".//conv:Pulley" />
+      <xs:field xpath="@type" />
+    </xs:keyref>
+    <!-- ************************************************** -->
+    <xs:key name="motorKey">
+      <xs:selector xpath="conv:Types/conv:MotorType" />
+      <xs:field xpath="@typeId" />
+    </xs:key>
+    <xs:keyref name="motorRef" refer="motorKey">
+      <xs:selector xpath=".//conv:Motor" />
+      <xs:field xpath="@type" />
+    </xs:keyref>
+    <!-- ************************************************** -->
+    <xs:key name="brakeKey">
+      <xs:selector xpath="conv:Types/conv:BrakeType" />
+      <xs:field xpath="@typeId" />
+    </xs:key>
+    <xs:keyref name="brakeRef" refer="brakeKey">
+      <xs:selector xpath=".//conv:Brake" />
+      <xs:field xpath="@type" />
+    </xs:keyref>
+    <!-- ************************************************** -->
+    <xs:key name="couplingKey">
+      <xs:selector xpath="conv:Types/conv:CouplingType" />
+      <xs:field xpath="@typeId" />
+    </xs:key>
+    <xs:keyref name="couplingRef" refer="couplingKey">
+      <xs:selector xpath=".//conv:Coupling" />
+      <xs:field xpath="@type" />
+    </xs:keyref>
+    <!-- ************************************************** -->
+    <xs:key name="fluidCouplingKey">
+      <xs:selector xpath="conv:Types/conv:FluidCouplingType" />
+      <xs:field xpath="@typeId" />
+    </xs:key>
+    <xs:keyref name="fluidCouplingRef" refer="fluidCouplingKey">
+      <xs:selector xpath=".//conv:FluidCoupling" />
+      <xs:field xpath="@type" />
+    </xs:keyref>
+    <!-- ************************************************** -->
+    <xs:key name="gearboxKey">
+      <xs:selector xpath="conv:Types/conv:GearboxType" />
+      <xs:field xpath="@typeId" />
+    </xs:key>
+    <xs:keyref name="gearboxRef" refer="gearboxKey">
+      <xs:selector xpath=".//conv:Gearbox" />
+      <xs:field xpath="@type" />
+    </xs:keyref>
+    <!-- ************************************************** -->
+    <xs:key name="slipPlateKey">
+      <xs:selector xpath="conv:Types/conv:SlipPlateType" />
+      <xs:field xpath="@typeId" />
+    </xs:key>
+    <xs:keyref name="slipPlateRef" refer="slipPlateKey">
+      <xs:selector xpath=".//conv:SlipPlate" />
+      <xs:field xpath="@type" />
+    </xs:keyref>
+    <!-- ************************************************** -->
+    <xs:key name="winchKey">
+      <xs:selector xpath="conv:Types/conv:WinchType" />
+      <xs:field xpath="@typeId" />
+    </xs:key>
+    <xs:keyref name="winchRef" refer="winchKey">
+      <xs:selector xpath=".//conv:Winch" />
+      <xs:field xpath="@type" />
+    </xs:keyref>
+    <!-- ************************************************** -->
+    <xs:key name="controlSystemKey">
+      <xs:selector xpath="conv:Types/conv:ControlSystemType" />
+      <xs:field xpath="@typeId" />
+    </xs:key>
+    <xs:keyref name="controlSystemRef" refer="controlSystemKey">
+      <xs:selector xpath=".//conv:ControlSystem" />
+      <xs:field xpath="@type" />
+    </xs:keyref>
+    <!-- ************************************************** -->
+    <xs:key name="emergencySystemKey">
+      <xs:selector xpath="conv:Types/conv:EmergencySystemType" />
+      <xs:field xpath="@typeId" />
+    </xs:key>
+    <xs:keyref name="emergencySystemRef" refer="emergencySystemKey">
+      <xs:selector xpath=".//conv:EmergencySystem" />
+      <xs:field xpath="@type" />
+    </xs:keyref>
+    <!-- ************************************************** -->
+    <xs:key name="signalSystemKey">
+      <xs:selector xpath="conv:Types/conv:SignalSystemType" />
+      <xs:field xpath="@typeId" />
+    </xs:key>
+    <xs:keyref name="signalSystemRef" refer="signalSystemKey">
+      <xs:selector xpath=".//conv:SignalSystem" />
+      <xs:field xpath="@type" />
+    </xs:keyref>
+    <!-- ************************************************** -->
+    <xs:key name="fireSystemKey">
+      <xs:selector xpath="conv:Types/conv:FireSystemType" />
+      <xs:field xpath="@typeId" />
+    </xs:key>
+    <xs:keyref name="fireSystemRef" refer="fireSystemKey">
+      <xs:selector xpath=".//conv:FireSystemWinch" />
+      <xs:field xpath="@type" />
+    </xs:keyref>
+    <!-- ************************************************** -->
+    <xs:key name="cleaningDeviceKey">
+      <xs:selector xpath="conv:Types/conv:CleaningDeviceType" />
+      <xs:field xpath="@typeId" />
+    </xs:key>
+    <xs:keyref name="cleaningDeviceRef" refer="cleaningDeviceKey">
+      <xs:selector xpath=".//conv:CleaningDevice" />
+      <xs:field xpath="@type" />
+    </xs:keyref>
+  </xs:element>
+  <!-- * -->
+  <xs:complexType name="convMLType">
+    <xs:sequence>
+      <!-- ****************************** META ***************************** -->
+      <xs:element minOccurs="0" maxOccurs="1" name="Meta" nillable="true">
+        <xs:complexType>
+          <xs:all minOccurs="0">
+            <xs:element name="Generator" type="xs:string" />
+            <xs:element name="Title" type="xs:string" />
+            <xs:element name="Description" type="xs:string" />
+            <xs:element name="Creator" type="xs:token" />
+            <xs:element name="CreationDate" type="xs:dateTime" />
+            <xs:element name="ModifiedBy" type="xs:token" />
+            <xs:element name="ModifiedDate" type="xs:dateTime" />
+            <xs:element name="Language">
+              <xs:complexType>
+                <xs:simpleContent>
+                  <xs:extension base="xs:token">
+                    <xs:attribute name="link" type="xs:anyURI" />
+                  </xs:extension>
+                </xs:simpleContent>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="UnitSystem">
+              <xs:complexType>
+                <xs:simpleContent>
+                  <xs:extension base="xs:token">
+                    <xs:attribute name="link" type="xs:anyURI" />
+                  </xs:extension>
+                </xs:simpleContent>
+              </xs:complexType>
+            </xs:element>
+          </xs:all>
+        </xs:complexType>
+      </xs:element>
+      <!-- ****************************** TYPES ***************************** -->
+      <xs:element minOccurs="0" maxOccurs="1" name="Types">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element ref="MaterialType" />
+            <xs:element ref="BeltSpliceType" />
+            <xs:element ref="BeltSegmentType" />
+            <xs:element ref="RouteSegmentType" />
+            <xs:element ref="IdlerSetType" />
+            <xs:element ref="IdlerSetSpecialType" />
+            <xs:element ref="IdlerType" />
+            <xs:element ref="BearingType" />
+            <xs:element ref="PulleyType" />
+            <xs:element ref="MotorType" />
+            <xs:element ref="BrakeType" />
+            <xs:element ref="CouplingType" />
+            <xs:element ref="FluidCouplingType" />
+            <xs:element ref="GearboxType" />
+            <xs:element ref="SlipPlateType" />
+            <xs:element ref="WinchType" />
+            <xs:element ref="ControlSystemType" />
+            <xs:element ref="EmergencySystemType" />
+            <xs:element ref="SignalSystemType" />
+            <xs:element ref="FireSystemType" />
+            <xs:element ref="CleaningDeviceType" />
+          </xs:choice>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="1" maxOccurs="unbounded" ref="BeltConveyor" />
+    </xs:sequence>
+    <xs:attribute fixed="1.2" name="version" type="xs:token" />
+    <xs:attributeGroup ref="commonAttrGroup" />
+  </xs:complexType>
+  <!--
+      **************************************************************************
+      * LOCALIZATION *
+      **************************************************************************
+  -->
+  <xs:element name="Localization" type="localizationType" />
+  <!-- * -->
+  <xs:complexType name="localizationType">
+    <xs:attribute name="localization" type="xs:token" />
+    <xs:attribute name="mine" type="xs:token" />
+    <xs:attribute name="mineArea" type="xs:token" />
+    <xs:attribute name="convDivision" type="xs:token" />
+    <xs:attribute name="mineDivision" type="xs:string" />
+    <xs:attributeGroup ref="commonAttrGroup" />
+  </xs:complexType>
+  <!--
+      **************************************************************************
+      * CONDITIONS *
+      **************************************************************************
+  -->
+  <xs:element name="Conditions" type="conditionsType" />
+  <!-- * -->
+  <xs:complexType name="conditionsType">
+    <xs:attribute name="ambientTemperature" type="xs:decimal" />
+    <xs:attribute name="workConditions" type="oneToFourEnumType" />
+    <xs:attribute name="beltWorkConditions" type="oneToFourEnumType" />
+    <xs:attribute name="beltSideRunning" type="oneToFourEnumType" />
+    <xs:attribute name="workingHoursPerYear" type="xs:nonNegativeInteger" />
+    <xs:attributeGroup ref="commonAttrGroup" />
+  </xs:complexType>
+  <!--
+      **************************************************************************
+      * MATERIAL *
+      **************************************************************************
+  -->
+  <xs:element name="Material" type="materialType" />
+  <!-- * -->
+  <xs:element name="MaterialType">
+    <xs:complexType>
+      <xs:complexContent mixed="false">
+        <xs:extension base="materialTypeType">
+          <xs:attributeGroup ref="typeAttrGroup" />
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <!-- * -->
+  <xs:attributeGroup name="materialAttrGroup">
+    <xs:attribute name="name" type="xs:string" />
+    <xs:attribute name="density" type="nonNegativeDecimalType" />
+    <xs:attribute name="surchargeAngle" type="nonNegativeDecimalType" />
+    <xs:attribute name="reposeAngle" type="nonNegativeDecimalType" />
+    <xs:attribute name="lumpSizeMaximum" type="nonNegativeDecimalType" />
+    <xs:attribute name="lumpPercTopSize" type="nonNegativeDecimalType" />
+  </xs:attributeGroup>
+  <!-- * -->
+  <xs:complexType name="materialTypeType">
+    <xs:attributeGroup ref="materialAttrGroup" />
+    <xs:attributeGroup ref="commonAttrGroup" />
+  </xs:complexType>
+  <!-- * -->
+  <xs:complexType name="materialType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="materialTypeType">
+        <xs:attribute name="materialBeltFriction" type="nonNegativeDecimalType" />
+        <xs:attribute name="temperature" type="nonNegativeDecimalType" />
+        <xs:attributeGroup ref="instanceAttrGroup" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <!--
+      **************************************************************************
+      * BELT CONVEYOR *
+      **************************************************************************
+  -->
+  <xs:element name="BeltConveyor" type="beltConveyorType" />
+  <!-- * -->
+  <xs:complexType name="beltConveyorType">
+    <xs:sequence>
+      <xs:element minOccurs="0" ref="Localization" />
+      <xs:element ref="Conditions" />
+      <xs:element ref="Belt" />
+      <xs:element ref="Tail" />
+      <xs:element ref="Route" />
+      <xs:element ref="Head" />
+      <xs:element ref="ConvElectricalEquipment" />
+    </xs:sequence>
+    <xs:attribute name="beltSpeed" type="nonNegativeDecimalType" />
+    <xs:attribute name="designCapacity" type="xs:nonNegativeInteger" />
+    <xs:attribute name="maxCapacity" type="xs:nonNegativeInteger" />
+    <xs:attributeGroup ref="noTypeInstanceAttrGroup" />
+    <xs:attributeGroup ref="commonAttrGroup" />
+  </xs:complexType>
+  <!--
+      **************************************************************************
+      * BELT *
+      **************************************************************************
+  -->
+  <xs:element name="Belt" type="beltType" />
+  <!-- * -->
+  <xs:complexType name="beltType">
+    <xs:sequence minOccurs="0" maxOccurs="unbounded">
+      <xs:element ref="BeltSplice" />
+      <xs:element ref="BeltSegment" />
+    </xs:sequence>
+    <xs:attribute name="width" type="xs:nonNegativeInteger" />
+    <xs:attributeGroup ref="commonAttrGroup" />
+  </xs:complexType>
+  <!--
+      ***************************************************************************
+      * BELT SEGMENT *
+      ***************************************************************************
+  -->
+  <xs:element name="BeltSegment" type="beltSegmentType" />
+  <!-- * -->
+  <xs:element name="BeltSegmentType">
+    <xs:complexType>
+      <xs:complexContent mixed="false">
+        <xs:extension base="beltSegmentTypeType">
+          <xs:attributeGroup ref="typeAttrGroup" />
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <!-- * -->
+  <xs:attributeGroup name="beltSegmentAttrGroup">
+    <xs:attribute name="width" type="xs:nonNegativeInteger" />
+    <xs:attribute name="strength" type="nonNegativeDecimalType" />
+    <xs:attribute name="mass" type="nonNegativeDecimalType" />
+    <xs:attribute name="thickness" type="nonNegativeDecimalType" />
+    <xs:attribute name="topCoverThickness" type="nonNegativeDecimalType" />
+    <xs:attribute name="bottomCoverThickness" type="nonNegativeDecimalType" />
+    <xs:attribute name="carcassThickness" type="nonNegativeDecimalType" />
+    <xs:attribute name="carcassType" type="xs:token" />
+    <xs:attribute name="carcassCode" type="xs:token" />
+    <xs:attribute name="elasticityModulus" type="nonNegativeDecimalType" />
+    <xs:attribute name="pliesNumber" type="xs:nonNegativeInteger" />
+    <xs:attribute name="cableDiameter" type="nonNegativeDecimalType" />
+    <xs:attribute name="coverDescription" type="xs:token" />
+    <xs:attribute name="coversDensity" type="nonNegativeDecimalType" />
+  </xs:attributeGroup>
+  <!-- * -->
+  <xs:complexType name="beltSegmentTypeType">
+    <xs:attributeGroup ref="beltSegmentAttrGroup" />
+    <xs:attributeGroup ref="commonAttrGroup" />
+  </xs:complexType>
+  <!-- * -->
+  <xs:complexType name="beltSegmentType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="beltSegmentTypeType">
+        <xs:attribute name="length" type="nonNegativeDecimalType" />
+        <xs:attribute name="certificate" type="xs:string" />
+        <xs:attribute name="signature" type="xs:string" />
+        <xs:attributeGroup ref="instanceAttrGroup" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <!--
+      **************************************************************************
+      * BELT SPLICE *
+      **************************************************************************
+  -->
+  <xs:element name="BeltSplice" type="beltSpliceType" />
+  <!-- * -->
+  <xs:element name="BeltSpliceType">
+    <xs:complexType>
+      <xs:complexContent mixed="false">
+        <xs:extension base="beltSpliceTypeType">
+          <xs:attributeGroup ref="typeAttrGroup" />
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <!-- * -->
+  <xs:attributeGroup name="beltSpliceAttrGroup">
+    <xs:attribute name="spliceStrength" type="nonNegativeDecimalType" />
+    <xs:attribute name="spliceType" type="xs:string" />
+  </xs:attributeGroup>
+  <!-- * -->
+  <xs:complexType name="beltSpliceTypeType">
+    <xs:attributeGroup ref="beltSpliceAttrGroup" />
+    <xs:attributeGroup ref="commonAttrGroup" />
+  </xs:complexType>
+  <!-- * -->
+  <xs:complexType name="beltSpliceType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="beltSpliceTypeType">
+        <xs:attribute name="signature" type="xs:string" />
+        <xs:attributeGroup ref="instanceAttrGroup" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <!--
+      **************************************************************************
+      * ROUTE *
+      **************************************************************************
+  -->
+  <xs:element name="Route" type="routeType" />
+  <!-- * -->
+  <xs:complexType name="routeType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" ref="RouteSection" />
+    </xs:sequence>
+  </xs:complexType>
+  <!--
+      **************************************************************************
+      * HEAD *
+      **************************************************************************
+  -->
+  <xs:element name="Head" type="headTailType" />
+  <!-- * -->
+  <xs:complexType name="headTailType">
+    <xs:all>
+      <xs:element ref="Pulley" />
+      <xs:element ref="Carry" />
+      <xs:element ref="Return" />
+    </xs:all>
+    <xs:attributeGroup ref="commonAttrGroup" />
+    <xs:attributeGroup ref="noTypeInstanceAttrGroup" />
+    <xs:attributeGroup ref="lengthAngleGroup" />
+  </xs:complexType>
+  <!--
+      **************************************************************************
+      * TAIL *
+      **************************************************************************
+  -->
+  <xs:element name="Tail" type="headTailType" />
+  <!--
+      **************************************************************************
+      * CARRY *
+      **************************************************************************
+  -->
+  <xs:element name="Carry" type="carryReturnType" />
+  <!-- * -->
+  <xs:complexType name="carryReturnType">
+    <xs:choice maxOccurs="unbounded">
+      <xs:element minOccurs="0" ref="Pulley" />
+      <xs:element minOccurs="0" ref="TTDrive" />
+      <xs:element minOccurs="0" ref="Chute" />
+      <xs:element minOccurs="0" ref="IdlerSet" />
+      <xs:element minOccurs="0" ref="IdlerSetSpecial" />
+      <xs:element minOccurs="0" ref="SlipPlate" />
+      <xs:element minOccurs="0" ref="ElectricalEquipment" />
+      <xs:element minOccurs="0" ref="AdditionalEquipment" />
+      <xs:element minOccurs="0" ref="Unload" />
+      <xs:element minOccurs="0" ref="CleaningDevice" />
+    </xs:choice>
+    <xs:attributeGroup ref="commonAttrGroup" />
+  </xs:complexType>
+  <!--
+      **************************************************************************
+      * RETURN *
+      **************************************************************************
+  -->
+  <xs:element name="Return" type="carryReturnType" />
+  <!--
+      **************************************************************************
+      * IDLER *
+      **************************************************************************
+  -->
+  <xs:element name="Idler" type="idlerType" />
+  <!-- * -->
+  <xs:element name="IdlerType">
+    <xs:complexType>
+      <xs:complexContent mixed="false">
+        <xs:extension base="idlerTypeType">
+          <xs:attributeGroup ref="typeAttrGroup" />
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <!-- * -->
+  <xs:attributeGroup name="idlerAttrGroup">
+    <xs:attribute name="idlerType" type="xs:token" />
+    <xs:attribute name="rotatingPartsMass" type="nonNegativeDecimalType" />
+    <xs:attribute name="rotationResistance" type="nonNegativeDecimalType" />
+    <xs:attributeGroup ref="pulleyIdlerGroup" />
+  </xs:attributeGroup>
+  <!-- * -->
+  <xs:complexType name="idlerTypeType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="2" ref="Bearing" />
+    </xs:sequence>
+    <xs:attributeGroup ref="idlerAttrGroup" />
+    <xs:attributeGroup ref="commonAttrGroup" />
+  </xs:complexType>
+  <!-- * -->
+  <xs:complexType name="idlerType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="idlerTypeType">
+        <xs:attribute name="troughAngle" type="nonNegativeDecimalType" />
+	<xs:attribute name="biasAngle" type="nonNegativeDecimalType" />
+        <xs:attributeGroup ref="instanceAttrGroup" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <!--
+      **************************************************************************
+      * IDLER SET *
+      **************************************************************************
+  -->
+  <xs:element name="IdlerSet" type="idlerSetType" />
+  <!-- * -->
+  <xs:element name="IdlerSetType">
+    <xs:complexType>
+      <xs:complexContent mixed="false">
+        <xs:extension base="idlerSetTypeType">
+          <xs:attributeGroup ref="typeAttrGroup" />
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <!-- * -->
+  <xs:attributeGroup name="idlerSetInstanceAttrGroup">
+    <xs:attribute name="liftAngle" type="xs:decimal" />
+    <xs:attribute name="tiltAngle" type="xs:decimal" />
+    <xs:attribute name="skewAngle" type="xs:decimal" />
+  </xs:attributeGroup>
+  <!-- * -->
+  <xs:complexType name="idlerSetTypeType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="5" ref="Idler" />
+    </xs:sequence>
+    <xs:attribute name="idlerSetType" type="xs:string" />
+    <xs:attribute name="troughAngle" type="nonNegativeDecimalType" />
+    <xs:attributeGroup ref="commonAttrGroup" />
+  </xs:complexType>
+  <!-- * -->
+  <xs:complexType name="idlerSetType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="idlerSetTypeType">
+	<xs:attributeGroup ref="idlerSetInstanceAttrGroup" />
+        <xs:attributeGroup ref="coordinatesAttrGroup" />
+        <xs:attributeGroup ref="instanceAttrGroup" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <!--
+      **************************************************************************
+      * IDLER SET SPECIAL *
+      **************************************************************************
+  -->
+  <xs:element name="IdlerSetSpecial" type="idlerSetSpecialType" />
+  <!-- * -->
+  <xs:element name="IdlerSetSpecialType">
+    <xs:complexType>
+      <xs:complexContent mixed="false">
+        <xs:extension base="idlerSetSpecialTypeType">
+          <xs:attributeGroup ref="typeAttrGroup" />
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <!-- * -->
+  <xs:complexType name="idlerSetSpecialTypeType">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" ref="Idler" />
+    </xs:sequence>
+    <xs:attribute name="troughAngle" type="xs:decimal" />
+    <xs:attributeGroup ref="commonAttrGroup" />
+  </xs:complexType>
+  <!-- * -->
+  <xs:complexType name="idlerSetSpecialType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="idlerSetSpecialTypeType">
+	<xs:attributeGroup ref="idlerSetInstanceAttrGroup" />
+        <xs:attributeGroup ref="coordinatesAttrGroup" />
+        <xs:attributeGroup ref="instanceAttrGroup" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <!--
+      **************************************************************************
+      * CHUTE *
+      **************************************************************************
+  -->
+  <xs:element name="Chute" type="chuteType" />
+  <!-- * -->
+  <xs:attributeGroup name="chuteAttrGroup">
+    <xs:attribute name="skirtLength" type="nonNegativeDecimalType" />
+    <xs:attribute name="skirtWidth" type="nonNegativeDecimalType" />
+  </xs:attributeGroup>
+  <!-- * -->
+  <xs:complexType name="chuteType">
+    <xs:sequence>
+      <xs:element ref="Material" />
+    </xs:sequence>
+    <xs:attribute name="horizontalSpeed" type="nonNegativeDecimalType" />
+    <xs:attribute name="skirtMaterialFriction" type="nonNegativeDecimalType" />
+    <xs:attribute name="capacity" type="nonNegativeDecimalType" />
+    <xs:attribute name="fallHeight" type="nonNegativeDecimalType" />
+    <xs:attributeGroup ref="chuteAttrGroup" />
+    <xs:attributeGroup ref="noTypeInstanceAttrGroup" />
+    <xs:attributeGroup ref="commonAttrGroup" />
+  </xs:complexType>
+  <!--
+      **************************************************************************
+      * PULLEY *
+      **************************************************************************
+  -->
+  <xs:element name="Pulley" type="pulleyType" />
+  <!-- * -->
+  <xs:element name="PulleyType">
+    <xs:complexType>
+      <xs:complexContent mixed="false">
+        <xs:extension base="pulleyTypeType">
+          <xs:attributeGroup ref="typeAttrGroup" />
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <!-- * -->
+  <xs:attributeGroup name="pulleyAttrGroup">
+    <xs:attributeGroup ref="pulleyIdlerGroup" />
+  </xs:attributeGroup>
+  <!-- * -->
+  <xs:complexType name="pulleyTypeType">
+    <xs:sequence minOccurs="0">
+      <xs:choice minOccurs="0">
+        <xs:element maxOccurs="2" ref="DriveUnit" />
+        <xs:element ref="TakeUpSystem" />
+      </xs:choice>
+      <xs:element minOccurs="0" ref="Unload" />
+    </xs:sequence>
+    <xs:attributeGroup ref="pulleyAttrGroup" />
+    <xs:attributeGroup ref="commonAttrGroup" />
+  </xs:complexType>
+  <!-- * -->
+  <xs:complexType name="pulleyType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="pulleyTypeType">
+        <xs:attributeGroup ref="coordinatesAttrGroup" />
+        <xs:attribute name="pulleyBeltFriction" type="nonNegativeDecimalType" />
+        <xs:attribute name="wrapAngle" type="xs:decimal" />
+        <xs:attribute name="rotation">
+          <xs:simpleType>
+            <xs:restriction base="xs:token">
+              <xs:enumeration value="cw" />
+              <xs:enumeration value="ccw" />
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:attribute>
+        <xs:attributeGroup ref="instanceAttrGroup" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <!--
+      **************************************************************************
+      * CONV ELECTRICAL EQUIPMENT *
+      **************************************************************************
+  -->
+  <xs:element name="ConvElectricalEquipment" type="convElectricalEquipmentType" />
+  <!-- * -->
+  <xs:complexType name="convElectricalEquipmentType">
+    <xs:sequence>
+      <xs:element ref="ControlSystem" />
+      <xs:element ref="EmergencySystem" />
+      <xs:element ref="SignalSystem" />
+      <xs:element ref="FireSystem" />
+    </xs:sequence>
+    <xs:attributeGroup ref="commonAttrGroup" />
+  </xs:complexType>
+  <!--
+      **************************************************************************
+      * ELECTRICAL EQUIPMENT *
+      **************************************************************************
+  -->
+  <xs:element name="ElectricalEquipment" type="electricalEquipmentType" />
+  <!-- * -->
+  <xs:complexType name="electricalEquipmentType">
+    <xs:attributeGroup ref="noTypeInstanceAttrGroup" />
+    <xs:attributeGroup ref="commonAttrGroup" />
+  </xs:complexType>
+  <!--
+      **************************************************************************
+      * TT DRIVE *
+      **************************************************************************
+  -->
+  <xs:element name="TTDrive" type="ttDriveType" />
+  <!-- * -->
+  <xs:complexType name="ttDriveType">
+    <xs:sequence>
+      <xs:element ref="Belt" />
+      <xs:element maxOccurs="2" ref="Pulley" />
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="IdlerSet" />
+        <xs:element ref="IdlerSetSpecial" />
+        <xs:element ref="SlipPlate" />
+      </xs:choice>
+    </xs:sequence>
+    <xs:attributeGroup ref="noTypeInstanceAttrGroup" />
+    <xs:attributeGroup ref="commonAttrGroup" />
+  </xs:complexType>
+  <!--
+      **************************************************************************
+      * COOLING SYSTEM *
+      **************************************************************************
+  -->
+  <xs:element name="CoolingSystem" type="coolingSystemType" />
+  <!-- * -->
+  <xs:complexType name="coolingSystemType">
+    <xs:attributeGroup ref="noTypeInstanceAttrGroup" />
+    <xs:attributeGroup ref="commonAttrGroup" />
+  </xs:complexType>
+  <!--
+      **************************************************************************
+      * TAKE UP SYSTEM *
+      **************************************************************************
+  -->
+  <xs:element name="TakeUpSystem" type="takeUpSystemType" />
+  <!-- * -->
+  <xs:complexType name="takeUpSystemType">
+    <xs:choice maxOccurs="unbounded">
+      <xs:element ref="StrechingCar" />
+      <xs:element minOccurs="0" ref="RopeSystem" />
+      <xs:element minOccurs="0" ref="Winch" />
+      <xs:element minOccurs="0" maxOccurs="2" ref="GravitySystem" />
+      <xs:element minOccurs="0" maxOccurs="2" ref="HydraulicSystem" />
+      <xs:element minOccurs="0" maxOccurs="2" ref="PneumaticSystem" />
+      <xs:element ref="ElectricalEquipment" />
+    </xs:choice>
+    <xs:attributeGroup ref="commonAttrGroup" />
+  </xs:complexType>
+  <!--
+      **************************************************************************
+      * ROUTE SECTION *
+      **************************************************************************
+  -->
+  <xs:element name="RouteSection" type="routeSectionType" />
+  <!-- * -->
+  <xs:complexType name="routeSectionType">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element ref="RouteSegment" />
+    </xs:choice>
+    <xs:attributeGroup ref="lengthAngleGroup" />
+    <xs:attribute name="verticalRadius" type="xs:decimal" />
+    <xs:attribute name="horizontalRadius" type="xs:decimal" />
+    <xs:attribute name="segmentType" type="xs:token" />
+    <xs:attributeGroup ref="commonAttrGroup" />
+  </xs:complexType>
+  <!--
+      **************************************************************************
+      * ROUTE SEGMENT *
+      **************************************************************************
+  -->
+  <xs:element name="RouteSegment" type="routeSegmentType" />
+  <!-- * -->
+  <xs:element name="RouteSegmentType">
+    <xs:complexType>
+      <xs:complexContent mixed="false">
+        <xs:extension base="routeSegmentTypeType">
+          <xs:attributeGroup ref="typeAttrGroup" />
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <!-- * -->
+  <xs:attributeGroup name="routeSegmentAttrGroup">
+    <xs:attribute name="length" type="nonNegativeDecimalType" />
+  </xs:attributeGroup>
+  <!-- * -->
+  <xs:complexType name="routeSegmentTypeType">
+    <xs:sequence minOccurs="0">
+      <xs:element ref="Carry" />
+      <xs:element ref="Return" />
+    </xs:sequence>
+    <xs:attributeGroup ref="routeSegmentAttrGroup" />
+    <xs:attributeGroup ref="commonAttrGroup" />
+  </xs:complexType>
+  <!-- * -->
+  <xs:complexType name="routeSegmentType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="routeSegmentTypeType">
+        <xs:attributeGroup ref="instanceAttrGroup" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <!--
+      **************************************************************************
+      * SLIP PLATE *
+      **************************************************************************
+  -->
+  <xs:element name="SlipPlate" type="slipPlateType" />
+  <!-- * -->
+  <xs:element name="SlipPlateType">
+    <xs:complexType>
+      <xs:complexContent mixed="false">
+        <xs:extension base="slipPlateTypeType">
+          <xs:attributeGroup ref="typeAttrGroup" />
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <!-- * -->
+  <xs:complexType name="slipPlateTypeType">
+    <xs:attribute name="length" type="nonNegativeDecimalType" />
+    <xs:attributeGroup ref="commonAttrGroup" />
+  </xs:complexType>
+  <!-- * -->
+  <xs:complexType name="slipPlateType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="slipPlateTypeType">
+        <xs:attributeGroup ref="instanceAttrGroup" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <!--
+      **************************************************************************
+      * MOTOR *
+      **************************************************************************
+  -->
+  <xs:element name="Motor" type="motorType" />
+  <!-- * -->
+  <xs:element name="MotorType">
+    <xs:complexType>
+      <xs:complexContent mixed="false">
+        <xs:extension base="motorTypeType">
+          <xs:attributeGroup ref="typeAttrGroup" />
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <!-- * -->
+  <xs:attributeGroup name="motorAttrGroup">
+    <xs:attribute name="power" type="nonNegativeDecimalType" />
+    <xs:attribute name="nominalRotationalSpeed" type="nonNegativeDecimalType" />
+    <xs:attribute name="startupFactor" type="nonNegativeDecimalType" />
+    <xs:attribute name="overloadFactor" type="nonNegativeDecimalType" />
+    <xs:attribute name="inertiaMoment" type="nonNegativeDecimalType" />
+    <xs:attribute name="voltage" type="xs:decimal" />
+    <xs:attribute name="currentRated" type="xs:decimal" />
+  </xs:attributeGroup>
+  <!-- * -->
+  <xs:complexType name="motorTypeType">
+    <xs:sequence>
+      <xs:element minOccurs="0" ref="CoolingSystem" />
+    </xs:sequence>
+    <xs:attributeGroup ref="motorAttrGroup" />
+    <xs:attributeGroup ref="commonAttrGroup" />
+  </xs:complexType>
+  <!-- * -->
+  <xs:complexType name="motorType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="motorTypeType">
+        <xs:attributeGroup ref="instanceAttrGroup" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <!--
+      **************************************************************************
+      * BRAKE *
+      **************************************************************************
+  -->
+  <xs:element name="Brake" type="brakeType" />
+  <!-- * -->
+  <xs:element name="BrakeType">
+    <xs:complexType>
+      <xs:complexContent mixed="false">
+        <xs:extension base="brakeTypeType">
+          <xs:attributeGroup ref="typeAttrGroup" />
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <!-- * -->
+  <xs:complexType name="brakeTypeType">
+    <xs:attributeGroup ref="commonAttrGroup" />
+  </xs:complexType>
+  <!-- * -->
+  <xs:complexType name="brakeType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="brakeTypeType">
+        <xs:attributeGroup ref="instanceAttrGroup" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <!--
+      **************************************************************************
+      * COUPLING *
+      **************************************************************************
+  -->
+  <xs:element name="Coupling" type="couplingType" />
+  <!-- * -->
+  <xs:element name="CouplingType">
+    <xs:complexType>
+      <xs:complexContent mixed="false">
+        <xs:extension base="couplingTypeType">
+          <xs:attributeGroup ref="typeAttrGroup" />
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <!-- * -->
+  <xs:complexType name="couplingTypeType">
+    <xs:attributeGroup ref="commonAttrGroup" />
+  </xs:complexType>
+  <!-- * -->
+  <xs:complexType name="couplingType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="couplingTypeType">
+        <xs:attributeGroup ref="instanceAttrGroup" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <!--
+      **************************************************************************
+      * FLUID COUPLING *
+      **************************************************************************
+  -->
+  <xs:element name="FluidCoupling" type="fluidCouplingType" />
+  <!-- * -->
+  <xs:element name="FluidCouplingType">
+    <xs:complexType>
+      <xs:complexContent mixed="false">
+        <xs:extension base="fluidCouplingTypeType">
+          <xs:attributeGroup ref="typeAttrGroup" />
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <!-- * -->
+  <xs:attributeGroup name="fluidCouplingAttrGroup">
+    <xs:attribute name="slip" type="nonNegativeDecimalType" />
+  </xs:attributeGroup>
+  <!-- * -->
+  <xs:complexType name="fluidCouplingTypeType">
+    <xs:attributeGroup ref="fluidCouplingAttrGroup" />
+    <xs:attributeGroup ref="commonAttrGroup" />
+  </xs:complexType>
+  <!-- * -->
+  <xs:complexType name="fluidCouplingType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="fluidCouplingTypeType">
+        <xs:attributeGroup ref="instanceAttrGroup" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <!--
+      **************************************************************************
+      * GEARBOX *
+      **************************************************************************
+  -->
+  <xs:element name="Gearbox" type="gearboxType" />
+  <!-- * -->
+  <xs:element name="GearboxType">
+    <xs:complexType>
+      <xs:complexContent mixed="false">
+        <xs:extension base="gearboxTypeType">
+          <xs:attributeGroup ref="typeAttrGroup" />
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <!-- * -->
+  <xs:attributeGroup name="gearboxAttrGroup">
+    <xs:attribute name="gearRatio" type="nonNegativeDecimalType" />
+  </xs:attributeGroup>
+  <!-- * -->
+  <xs:complexType name="gearboxTypeType">
+    <xs:sequence>
+      <xs:element minOccurs="0" ref="CoolingSystem" />
+    </xs:sequence>
+    <xs:attributeGroup ref="gearboxAttrGroup" />
+    <xs:attributeGroup ref="commonAttrGroup" />
+  </xs:complexType>
+  <!-- * -->
+  <xs:complexType name="gearboxType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="gearboxTypeType">
+        <xs:attributeGroup ref="instanceAttrGroup" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <!--
+      **************************************************************************
+      * BEARING *
+      **************************************************************************
+  -->
+  <xs:element name="Bearing" type="bearingType" />
+  <!-- * -->
+  <xs:element name="BearingType">
+    <xs:complexType>
+      <xs:complexContent mixed="false">
+        <xs:extension base="bearingTypeType">
+          <xs:attributeGroup ref="typeAttrGroup" />
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <!-- * -->
+  <xs:attributeGroup name="bearingAttrGroup">
+    <xs:attribute name="static" type="nonNegativeDecimalType" />
+    <xs:attribute name="dynamic" type="nonNegativeDecimalType" />
+    <xs:attribute name="diameterOutside" type="nonNegativeDecimalType" />
+    <xs:attribute name="diameterInside" type="nonNegativeDecimalType" />
+  </xs:attributeGroup>
+  <!-- * -->
+  <xs:complexType name="bearingTypeType">
+    <xs:attributeGroup ref="bearingAttrGroup" />
+    <xs:attributeGroup ref="commonAttrGroup" />
+  </xs:complexType>
+  <!-- * -->
+  <xs:complexType name="bearingType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="bearingTypeType">
+        <xs:attributeGroup ref="instanceAttrGroup" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <!--
+      **************************************************************************
+      * STRECHING CAR *
+      **************************************************************************
+  -->
+  <xs:element name="StrechingCar" type="strechingCarType" />
+  <!-- * -->
+  <xs:attributeGroup name="strechingCarAttrGroup">
+    <xs:attribute name="numberOfDiscs" type="xs:nonNegativeInteger" />
+  </xs:attributeGroup>
+  <!-- * -->
+  <xs:complexType name="strechingCarType">
+    <xs:attributeGroup ref="strechingCarAttrGroup" />
+    <xs:attributeGroup ref="noTypeInstanceAttrGroup" />
+    <xs:attributeGroup ref="commonAttrGroup" />
+  </xs:complexType>
+  <!--
+      **************************************************************************
+      * ROPE SYSTEM *
+      **************************************************************************
+  -->
+  <xs:element name="RopeSystem" type="ropeSystemType" />
+  <!-- * -->
+  <xs:complexType name="ropeSystemType">
+    <xs:attributeGroup ref="commonAttrGroup" />
+  </xs:complexType>
+  <!--
+      **************************************************************************
+      * WINCH *
+      **************************************************************************
+  -->
+  <xs:element name="Winch" type="winchType" />
+  <!-- * -->
+  <xs:element name="WinchType">
+    <xs:complexType>
+      <xs:complexContent mixed="false">
+        <xs:extension base="winchTypeType">
+          <xs:attributeGroup ref="typeAttrGroup" />
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <!-- * -->
+  <xs:complexType name="winchTypeType">
+    <xs:attributeGroup ref="takeUpTensionGroup" />
+    <xs:attributeGroup ref="commonAttrGroup" />
+  </xs:complexType>
+  <!-- * -->
+  <xs:complexType name="winchType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="winchTypeType">
+        <xs:attributeGroup ref="instanceAttrGroup" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <!--
+      **************************************************************************
+      * GRAVITY SYSTEM *
+      **************************************************************************
+  -->
+  <xs:element name="GravitySystem" type="gravitySystemType" />
+  <!-- * -->
+  <xs:complexType name="gravitySystemType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="2" ref="Counterweight" />
+    </xs:sequence>
+    <xs:attributeGroup ref="takeUpTensionGroup" />
+    <xs:attributeGroup ref="commonAttrGroup" />
+  </xs:complexType>
+  <!--
+      **************************************************************************
+      * HYDRAULIC SYSTEM *
+      **************************************************************************
+  -->
+  <xs:element name="HydraulicSystem" type="hydraulicSystemType" />
+  <!-- * -->
+  <xs:complexType name="hydraulicSystemType">
+    <xs:attributeGroup ref="takeUpTensionGroup" />
+    <xs:attributeGroup ref="commonAttrGroup" />
+  </xs:complexType>
+  <!--
+      **************************************************************************
+      * PNEUMATIC SYSTEM *
+      **************************************************************************
+  -->
+  <xs:element name="PneumaticSystem" type="pneumaticSystemType" />
+  <!-- * -->
+  <xs:complexType name="pneumaticSystemType">
+    <xs:attributeGroup ref="takeUpTensionGroup" />
+    <xs:attributeGroup ref="commonAttrGroup" />
+  </xs:complexType>
+  <!--
+      **************************************************************************
+      * CONTROL SYSTEM *
+      **************************************************************************
+  -->
+  <xs:element name="ControlSystem" type="controlSystemType" />
+  <!-- * -->
+  <xs:element name="ControlSystemType">
+    <xs:complexType>
+      <xs:complexContent mixed="false">
+        <xs:extension base="controlSystemTypeType">
+          <xs:attributeGroup ref="typeAttrGroup" />
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <!-- * -->
+  <xs:complexType name="controlSystemTypeType">
+    <xs:attributeGroup ref="commonAttrGroup" />
+  </xs:complexType>
+  <!-- * -->
+  <xs:complexType name="controlSystemType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="controlSystemTypeType">
+        <xs:attributeGroup ref="instanceAttrGroup" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <!--
+      **************************************************************************
+      * EMERGENCY SYSTEM *
+      **************************************************************************
+  -->
+  <xs:element name="EmergencySystem" type="emergencySystemType" />
+  <!-- * -->
+  <xs:element name="EmergencySystemType">
+    <xs:complexType>
+      <xs:complexContent mixed="false">
+        <xs:extension base="emergencySystemTypeType">
+          <xs:attributeGroup ref="typeAttrGroup" />
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <!-- * -->
+  <xs:complexType name="emergencySystemTypeType">
+    <xs:attributeGroup ref="commonAttrGroup" />
+  </xs:complexType>
+  <!-- * -->
+  <xs:complexType name="emergencySystemType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="emergencySystemTypeType">
+        <xs:attributeGroup ref="instanceAttrGroup" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <!--
+      **************************************************************************
+      * SIGNAL SYSTEM *
+      **************************************************************************
+  -->
+  <xs:element name="SignalSystem" type="signalSystemType" />
+  <!-- * -->
+  <xs:element name="SignalSystemType">
+    <xs:complexType>
+      <xs:complexContent mixed="false">
+        <xs:extension base="signalSystemTypeType">
+          <xs:attributeGroup ref="typeAttrGroup" />
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <!-- * -->
+  <xs:complexType name="signalSystemTypeType">
+    <xs:attributeGroup ref="commonAttrGroup" />
+  </xs:complexType>
+  <!-- * -->
+  <xs:complexType name="signalSystemType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="signalSystemTypeType">
+        <xs:attributeGroup ref="instanceAttrGroup" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <!--
+      **************************************************************************
+      * FIRE SYSTEM *
+      **************************************************************************
+  -->
+  <xs:element name="FireSystem" type="fireSystemType" />
+  <!-- * -->
+  <xs:element name="FireSystemType">
+    <xs:complexType>
+      <xs:complexContent mixed="false">
+        <xs:extension base="fireSystemTypeType">
+          <xs:attributeGroup ref="typeAttrGroup" />
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <!-- * -->
+  <xs:complexType name="fireSystemTypeType">
+     <xs:attributeGroup ref="commonAttrGroup" />
+  </xs:complexType>
+  <!-- * -->
+  <xs:complexType name="fireSystemType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="fireSystemTypeType">
+        <xs:attributeGroup ref="instanceAttrGroup" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <!--
+      **************************************************************************
+      * DRIVE UNIT *
+      **************************************************************************
+  -->
+  <xs:element name="DriveUnit" type="driveUnitType" />
+  <!-- * -->
+  <xs:complexType name="driveUnitType">
+    <xs:choice maxOccurs="unbounded">
+      <xs:element ref="Motor" />
+      <xs:element maxOccurs="2" ref="Coupling" />
+      <xs:element minOccurs="0" ref="Brake" />
+      <xs:element minOccurs="0" ref="FluidCoupling" />
+      <xs:element ref="Gearbox" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" ref="AdditionalEquipment" />
+      <xs:element ref="ElectricalEquipment" />
+    </xs:choice>
+    <xs:attribute name="dynamicSurplusFactor" type="nonNegativeDecimalType" />
+    <xs:attribute name="brakeFactor" type="nonNegativeDecimalType" />
+    <xs:attribute name="driveEfficiency" type="nonNegativeDecimalType" />
+    <xs:attribute name="startupControlSystem" type="xs:token" />
+    <xs:attributeGroup ref="commonAttrGroup" />
+  </xs:complexType>
+  <!--
+      **************************************************************************
+      * UNLOAD *
+      **************************************************************************
+  -->
+  <xs:element name="Unload" type="unloadType" />
+  <!-- * -->
+  <xs:complexType name="unloadType">
+    <xs:attributeGroup ref="commonAttrGroup" />
+  </xs:complexType>
+  <!--
+      **************************************************************************
+      * COUNTERWEIGHT *
+      **************************************************************************
+  -->
+  <xs:element name="Counterweight" type="counterweightType" />
+  <!-- * -->
+  <xs:attributeGroup name="counterweightAttrGroup">
+    <xs:attribute name="numberOfDiscs" type="xs:nonNegativeInteger" />
+    <xs:attribute name="mass" type="nonNegativeDecimalType" />
+  </xs:attributeGroup>
+  <!-- * -->
+  <xs:complexType name="counterweightType">
+    <xs:attributeGroup ref="counterweightAttrGroup" />
+    <xs:attributeGroup ref="noTypeInstanceAttrGroup" />
+    <xs:attributeGroup ref="commonAttrGroup" />
+  </xs:complexType>
+  <!--
+      **************************************************************************
+      * ADDITIONAL EQUIPMENT *
+      **************************************************************************
+  -->
+  <xs:element name="AdditionalEquipment" type="additionalEquipmentType" />
+  <!-- * -->
+  <xs:complexType name="additionalEquipmentType">
+    <xs:attributeGroup ref="noTypeInstanceAttrGroup" />
+    <xs:attributeGroup ref="commonAttrGroup" />
+  </xs:complexType>
+  <!--
+      **************************************************************************
+      * CLEANING DEVICE *
+      **************************************************************************
+  -->
+  <xs:element name="CleaningDevice" type="cleaningDeviceType" />
+  <!-- * -->
+  <xs:element name="CleaningDeviceType">
+    <xs:complexType>
+      <xs:complexContent mixed="false">
+        <xs:extension base="cleaningDeviceTypeType">
+          <xs:attributeGroup ref="typeAttrGroup" />
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <!-- * -->
+  <xs:complexType name="cleaningDeviceTypeType">
+    <xs:attributeGroup ref="commonAttrGroup" />
+  </xs:complexType>
+  <!-- * -->
+  <xs:complexType name="cleaningDeviceType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="cleaningDeviceTypeType">
+        <xs:attributeGroup ref="instanceAttrGroup" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <!--
+      **************************************************************************
+      * SIMPLE TYPES                                                           *
+      **************************************************************************
+  -->
+  <xs:simpleType name="nonNegativeDecimalType">
+    <xs:restriction base="xs:decimal">
+      <xs:minInclusive value="0" />
+    </xs:restriction>
+  </xs:simpleType>
+  <!-- **************************************************** -->
+  <xs:simpleType name="oneToFourEnumType">
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="1" />
+      <xs:enumeration value="2" />
+      <xs:enumeration value="3" />
+      <xs:enumeration value="4" />
+    </xs:restriction>
+  </xs:simpleType>
+  <!--
+      **************************************************************************
+      * ATTRIBUTE GROUPS                                                       *
+      **************************************************************************
+  -->
+  <xs:attributeGroup name="commonAttrGroup">
+    <xs:attribute name="id" type="xs:ID" />
+    <xs:attribute name="description" type="xs:string" />
+    <!--xs:anyAttribute namespace="##any" processContents="lax" /-->
+  </xs:attributeGroup>
+  <!-- **************************************************** -->
+  <xs:attributeGroup name="instanceAttrGroup">
+    <xs:attribute name="type" type="xs:token" />
+    <xs:attribute name="productionDate" type="xs:date" />
+  </xs:attributeGroup>
+  <!-- **************************************************** -->
+  <xs:attributeGroup name="noTypeInstanceAttrGroup">
+    <xs:attribute name="name" type="xs:string" />
+    <xs:attribute name="manufacturer" type="xs:token" />
+    <xs:attribute name="productionDate" type="xs:date" />
+  </xs:attributeGroup>
+  <!-- **************************************************** -->
+  <xs:attributeGroup name="typeAttrGroup">
+    <xs:attribute name="typeId" type="xs:token" use="required" />
+    <xs:attribute name="typeName" type="xs:string" />
+    <xs:attribute name="typeDescription" type="xs:string" />
+    <xs:attribute name="manufacturer" type="xs:token" />
+  </xs:attributeGroup>
+  <!-- **************************************************** -->
+  <xs:attributeGroup name="lengthAngleGroup">
+    <xs:attribute name="length" type="nonNegativeDecimalType" use="required" />
+    <xs:attribute name="angle">
+      <xs:simpleType>
+        <xs:restriction base="xs:decimal">
+          <xs:minInclusive value="-90" />
+          <xs:maxInclusive value="90" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <!-- **************************************************** -->
+  <xs:attributeGroup name="takeUpTensionGroup">
+    <xs:attribute name="takeUpTension" type="xs:decimal" />
+  </xs:attributeGroup>
+  <!-- **************************************************** -->
+  <xs:attributeGroup name="pulleyIdlerGroup">
+    <xs:attribute name="diameter" type="nonNegativeDecimalType" />
+    <xs:attribute name="tubeLength" type="nonNegativeDecimalType" />
+    <xs:attribute name="mass" type="nonNegativeDecimalType" />
+    <xs:attribute name="inertiaMoment" type="nonNegativeDecimalType" />
+  </xs:attributeGroup>
+  <!-- **************************************************** -->
+  <xs:attributeGroup name="coordinatesAttrGroup">
+    <xs:attribute name="x" type="xs:decimal" />
+    <xs:attribute name="y" type="xs:decimal" />
+  </xs:attributeGroup>
+</xs:schema>

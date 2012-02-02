@@ -5,7 +5,7 @@ require '../tools/multiio.rb'
 
 STRON_SCHEMA = "../convml_11.sch"
 STRON_COMPILED = "convml_11_sch-compiled.xsl"
-XSD_SCHEMA = "../convml_11.xsd"
+XSD_SCHEMA = "../convml_11_noAny.xsd"
 
 CLEAN.include('*.svrl')
 CLEAN.include('*.log')
