@@ -11,7 +11,7 @@
       Author: Marcin Kacprzak
       Author: Piotr Kulinowski
       Company: EnterTECH
-      Id: $Id: convml_11.xsd 105 2011-12-27 16:01:27Z kacprzak $
+      Id: $Id: convml_11.xsd 110 2012-02-03 10:51:48Z kacprzak $
     </xs:documentation>
   </xs:annotation>
   <!--
@@ -640,7 +640,7 @@
       <xs:element maxOccurs="unbounded" ref="Idler" />
     </xs:sequence>
     <xs:attribute name="troughAngle" type="xs:decimal" />
-    <xs:attribute name="troughAngles" type="upto5decimalList" />
+    <xs:attribute name="troughAngles" type="decimalList" />
     <xs:attribute name="biasAngle" type="xs:decimal" />
     <xs:attributeGroup ref="commonAttrGroup" />
   </xs:complexType>

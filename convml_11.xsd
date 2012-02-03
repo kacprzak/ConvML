@@ -640,7 +640,7 @@
       <xs:element maxOccurs="unbounded" ref="Idler" />
     </xs:sequence>
     <xs:attribute name="troughAngle" type="xs:decimal" />
-    <xs:attribute name="troughAngles" type="upto5decimalList" />
+    <xs:attribute name="troughAngles" type="decimalList" />
     <xs:attribute name="biasAngle" type="xs:decimal" />
     <xs:attributeGroup ref="commonAttrGroup" />
   </xs:complexType>
