@@ -5,7 +5,8 @@ require '../tools/multiio.rb'
 
 STRON_SCHEMA = "../convml_11.sch"
 STRON_COMPILED = "convml_11_sch-compiled.xsl"
-XSD_SCHEMA = "../convml_11_noAny.xsd"
+XSD_SCHEMA = "../convml_11.xsd"
+XSD_SCHEMA_NOANY = "../convml_11_noAny.xsd"
 
 CLEAN.include('*.svrl')
 CLEAN.include('*.log')
@@ -30,7 +31,7 @@ SVRL_FILES.each do |svrl|
   file svrl => [svrl.ext('xml'), STRON_COMPILED]
 end
 
-task :default => [:test]
+task :default => [XSD_SCHEMA_NOANY, :test]
 
 task :test => SVRL_FILES do
   err_count = 0
@@ -59,7 +60,7 @@ def validate(file, shouldBeValid=true)
   LOG.info msg
   ERR_LOG.info msg
 
-  errors = xsd_validate file, XSD_SCHEMA
+  errors = xsd_validate file, XSD_SCHEMA_NOANY
   errors += stron_validate file
   errors.each {|e| ERR_LOG.info e }
 
@@ -120,6 +121,13 @@ file STRON_COMPILED => [STRON_SCHEMA] do
 
   LOG.info "compiling #{schema_file}"
   xslt2_transform(stron_file, schema_file, output_file)
+end
+
+file XSD_SCHEMA_NOANY => [XSD_SCHEMA] do
+  LOG.info "updating noAny schema"
+  text = File.read(XSD_SCHEMA)
+  replace = text.gsub!('<xs:anyAttribute namespace="##any" processContents="lax" />',"")
+  File.open(XSD_SCHEMA_NOANY, "w") {|file| file.puts replace }
 end
 
 def xslt2_transform(xsl_file, in_file, out_file)

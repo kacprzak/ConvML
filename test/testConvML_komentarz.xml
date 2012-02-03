@@ -3,12 +3,12 @@
   <Types>
     <IdlerType tubeLength="380" diameter="108" rotatingPartsMass="6.88" rotationResistance="5" typeId="Kraznik_gorny"/>
     <IdlerType tubeLength="600" diameter="108" rotatingPartsMass="8.42" rotationResistance="5" typeId="Kraznik_dolny"/>
-    <IdlerSetType typeId="Gorna_trasa" troughAngle="30">
+    <IdlerSetType typeId="Gorna_trasa" troughAngles="30 0 35">
       <Idler type="Kraznik_gorny"/>
       <Idler type="Kraznik_gorny"/>
       <Idler type="Kraznik_gorny"/>
     </IdlerSetType>
-    <IdlerSetType typeId="Dolna_trasa" troughAngle="15">
+    <IdlerSetType typeId="Dolna_trasa" troughAngle="15" biasAngle="1">
       <Idler type="Kraznik_dolny"/>
       <Idler type="Kraznik_dolny"/>
     </IdlerSetType>

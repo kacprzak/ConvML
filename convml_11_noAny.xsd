@@ -571,8 +571,6 @@
   <xs:complexType name="idlerType">
     <xs:complexContent mixed="false">
       <xs:extension base="idlerTypeType">
-        <xs:attribute name="troughAngle" type="nonNegativeDecimalType" />
-	<xs:attribute name="biasAngle" type="nonNegativeDecimalType" />
         <xs:attributeGroup ref="instanceAttrGroup" />
       </xs:extension>
     </xs:complexContent>
@@ -606,6 +604,8 @@
     </xs:sequence>
     <xs:attribute name="idlerSetType" type="xs:string" />
     <xs:attribute name="troughAngle" type="nonNegativeDecimalType" />
+    <xs:attribute name="troughAngles" type="upto5nonNegativeDecimalList" />
+    <xs:attribute name="biasAngle" type="nonNegativeDecimalType" />
     <xs:attributeGroup ref="commonAttrGroup" />
   </xs:complexType>
   <!-- * -->
@@ -640,6 +640,8 @@
       <xs:element maxOccurs="unbounded" ref="Idler" />
     </xs:sequence>
     <xs:attribute name="troughAngle" type="xs:decimal" />
+    <xs:attribute name="troughAngles" type="upto5decimalList" />
+    <xs:attribute name="biasAngle" type="xs:decimal" />
     <xs:attributeGroup ref="commonAttrGroup" />
   </xs:complexType>
   <!-- * -->
@@ -1387,6 +1389,26 @@
       * SIMPLE TYPES                                                           *
       **************************************************************************
   -->
+  <xs:simpleType name="upto5nonNegativeDecimalList">
+    <xs:restriction base="nonNegativeDecimalList">
+      <xs:maxLength value="5" />
+    </xs:restriction>
+  </xs:simpleType>
+  <!-- **************************************************** -->
+  <xs:simpleType name="upto5decimalList">
+    <xs:restriction base="decimalList">
+      <xs:maxLength value="5" />
+    </xs:restriction>
+  </xs:simpleType>
+  <!-- **************************************************** -->
+  <xs:simpleType name="decimalList">
+    <xs:list itemType="xs:decimal" />
+  </xs:simpleType>
+  <!-- **************************************************** -->
+  <xs:simpleType name="nonNegativeDecimalList">
+    <xs:list itemType="nonNegativeDecimalType" />
+  </xs:simpleType>
+  <!-- **************************************************** -->
   <xs:simpleType name="nonNegativeDecimalType">
     <xs:restriction base="xs:decimal">
       <xs:minInclusive value="0" />
@@ -1409,7 +1431,7 @@
   <xs:attributeGroup name="commonAttrGroup">
     <xs:attribute name="id" type="xs:ID" />
     <xs:attribute name="description" type="xs:string" />
-    <!--xs:anyAttribute namespace="##any" processContents="lax" /-->
+    
   </xs:attributeGroup>
   <!-- **************************************************** -->
   <xs:attributeGroup name="instanceAttrGroup">
