@@ -11,7 +11,7 @@
       Author: Marcin Kacprzak
       Author: Piotr Kulinowski
       Company: EnterTECH
-      Id: $Id: convml_11.xsd 110 2012-02-03 10:51:48Z kacprzak $
+      Id: $Id: convml_11.xsd 111 2012-02-03 11:11:49Z kacprzak $
     </xs:documentation>
   </xs:annotation>
   <!--
@@ -368,6 +368,7 @@
       <xs:element ref="Head" />
       <xs:element ref="ConvElectricalEquipment" />
     </xs:sequence>
+    <xs:attribute name="uuid" type="xs:token" use="required" />
     <xs:attribute name="beltSpeed" type="nonNegativeDecimalType" />
     <xs:attribute name="designCapacity" type="xs:nonNegativeInteger" />
     <xs:attribute name="maxCapacity" type="xs:nonNegativeInteger" />
@@ -529,6 +530,7 @@
       <xs:element minOccurs="0" ref="CleaningDevice" />
     </xs:choice>
     <xs:attributeGroup ref="commonAttrGroup" />
+    <xs:attribute name="y" type="xs:decimal" />
   </xs:complexType>
   <!--
       **************************************************************************

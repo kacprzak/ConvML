@@ -368,6 +368,7 @@
       <xs:element ref="Head" />
       <xs:element ref="ConvElectricalEquipment" />
     </xs:sequence>
+    <xs:attribute name="uuid" type="xs:token" use="required" />
     <xs:attribute name="beltSpeed" type="nonNegativeDecimalType" />
     <xs:attribute name="designCapacity" type="xs:nonNegativeInteger" />
     <xs:attribute name="maxCapacity" type="xs:nonNegativeInteger" />
@@ -529,6 +530,7 @@
       <xs:element minOccurs="0" ref="CleaningDevice" />
     </xs:choice>
     <xs:attributeGroup ref="commonAttrGroup" />
+    <xs:attribute name="y" type="xs:decimal" />
   </xs:complexType>
   <!--
       **************************************************************************

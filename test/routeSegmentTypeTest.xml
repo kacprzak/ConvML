@@ -4,7 +4,7 @@
   <Types>
     <RouteSegmentType typeId="rs1" length="20"/>
   </Types>
-  <BeltConveyor>
+  <BeltConveyor uuid="345a11c0-517f-11e1-b86c-0800200c9a66">
     <Conditions/>
     <Belt>
       <BeltSplice/>

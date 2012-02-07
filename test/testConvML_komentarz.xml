@@ -25,7 +25,7 @@
       </Return>
     </RouteSegmentType>
   </Types>
-  <BeltConveyor designCapacity="788" beltSpeed="2.00">
+  <BeltConveyor uuid="c77a0f60-517e-11e1-b86c-0800200c9a66" designCapacity="788" beltSpeed="2.00">
     <Conditions ambientTemperature="-20" beltSideRunning="1" beltWorkConditions="4"/>
     <Belt width="1000">
       <BeltSplice spliceStrength="80"/>
