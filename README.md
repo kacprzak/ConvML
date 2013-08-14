@@ -57,7 +57,7 @@ Przykładowo element *Material* za pomocą atrybutu *type* może wskazywać na
 element *MaterialType*, którego wartość atrybutu *typeId* zgadza się z
 wartością atrybutu *type* elementu odwołującego się.
 
-Do modelowania takich powiązań wykorzystano technikę key/keyref będącą częścią
+Do modelowania takich powiązań wykorzystano technikę `key/keyref` będącą częścią
 standardu XML Schema.
 
 
@@ -73,7 +73,7 @@ ten język. Są to pliki:
 
 Plik są zgodne z formatem *Java properties*.
 
-Uwaga!: pliki te najlepiej edytować dedykowanym edytorem ponieważ są one kodowane
+Uwaga! Pliki te najlepiej edytować dedykowanym edytorem ponieważ są one kodowane
 za pomocą ISO-8859-1. Znaki UNICODE są zapisywane za pomocą sekwencji \uHHHH,
 gdzie HHHH to hexadecymalny kod znaku UNICODE. Edytor programu NetBeans ukrywa
 ten szczegół przed użytkownikiem co znacznie ułatwia pracę.
@@ -93,8 +93,8 @@ Polecenie:
 
     $ rake test
     
-uruchamia sprawdzanie poprawności dokumentów znajdujących się w katalogu xml.
-Dokumenty w tym katalogu, których nazwa kończy się sufiksem Fail, nie powinny
+uruchamia sprawdzanie poprawności dokumentów znajdujących się w katalogu `test`.
+Dokumenty w tym katalogu, których nazwa kończy się sufiksem *Fail*, nie powinny
 przejść walidacji pozytywnie. W razie negatywnego wyniku walidacji któregoś z
 dokumentów (lub pozytywnego dla dokumentów zawierających błędy) procedura
 testowa wyświetli ostrzeżenie.
